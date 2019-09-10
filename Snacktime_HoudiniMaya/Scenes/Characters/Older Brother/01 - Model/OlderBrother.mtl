@@ -1,22 +1,28 @@
-newmtl initialShadingGroup
+newmtl OlderBrother_Model_02:YoungBrother_003:initialShadingGroup
+illum 4
+Kd 0.50 0.41 0.22
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl OlderBrother_Model_02:YoungerBrother:initialShadingGroup
 illum 4
 Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert2SG
+newmtl OlderBrother_Model_02:YoungerBrother_Model_03:lambert2SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert3SG
+newmtl OlderBrother_Model_02:YoungerBrother_Model_03:lambert3SG
 illum 4
-Kd 0.06 0.02 0.00
+Kd 0.28 0.17 0.09
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl phong1SG
+newmtl OlderBrother_Model_02:YoungerBrother_Model_03:phong1SG
 illum 4
 Kd 1.00 1.00 1.00
 Ka 0.00 0.00 0.00
@@ -24,7 +30,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 18.00
-newmtl phong2SG
+newmtl OlderBrother_Model_02:YoungerBrother_Model_03:phong2SG
 illum 4
 Kd 0.06 0.16 0.33
 Ka 0.00 0.00 0.00
