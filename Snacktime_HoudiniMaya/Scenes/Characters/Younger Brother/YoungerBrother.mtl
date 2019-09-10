@@ -1,0 +1,58 @@
+newmtl Head_BSH_BaseSG2
+illum 4
+Kd 0.60 0.52 0.38
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.29 0.32
+Ns 3.43
+newmtl LittleBoy_L_Eye_geoSG
+illum 4
+Kd 0.80 0.80 0.80
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl LittleBoy_R_Brow_geoSG
+illum 4
+Kd 0.05 0.02 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.29 0.32
+Ns 3.43
+newmtl YoungBrother_003:initialShadingGroup
+illum 4
+Kd 0.75 0.65 0.47
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl phong1SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl phong3SG
+illum 4
+Kd 0.00 0.54 1.00
+Ka 0.00 0.00 0.00
+Tf 0.73 0.73 0.73
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
