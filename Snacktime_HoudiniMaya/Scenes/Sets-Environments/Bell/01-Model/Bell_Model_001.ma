@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Bell_Model_001.ma
-//Last modified: Mon, Sep 16, 2019 12:12:10 PM
+//Last modified: Mon, Sep 16, 2019 12:13:02 PM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "55B57113-4ADB-39FC-D357-E9AF5FF1C004";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.831447336999724 5.246144256091581 4.763060279995706 ;
+	setAttr ".t" -type "double3" 4.1623140629628397 5.2525359566973373 5.7935894695405032 ;
 	setAttr ".r" -type "double3" -360.33835272813832 -342.20000000007616 -6.5243452303684459e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8FFC59D6-4F3E-A9BC-56AA-C3B3C867B0E8";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 4.5246555236121164;
+	setAttr ".coi" 5.6070159324824838;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
