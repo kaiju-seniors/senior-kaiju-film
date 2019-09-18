@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Shot 46 Animation.ma
-//Last modified: Wed, Sep 18, 2019 03:33:19 PM
+//Last modified: Wed, Sep 18, 2019 03:42:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "bedroom" -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
@@ -2402,7 +2402,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls" "translate" " -type \"double3\" 0 0 -11.19949626528359765"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
-		"translate" " -type \"double3\" -2.46633710090995173 -14.08165639261302537 0"
+		"translate" " -type \"double3\" -1.31877154052358492 -14.17545118459936049 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"translateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
@@ -2412,8 +2412,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
-		"rotate" " -type \"double3\" -1.96672587326931425 0.19351629405421947 4.56258590196268798"
-		
+		"rotate" " -type \"double3\" 0 0 3.66562530782412788"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
@@ -2451,7 +2450,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_03_ctl_grp|OlderBrother1:Spine_03_ctl" 
 		"rotateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:R_Clavicle_ctl_grp|OlderBrother1:R_Clavicle_ctl" 
-		"rotate" " -type \"double3\" 0 0.10515310797020121 0"
+		"rotate" " -type \"double3\" 0 23.25739329223258167 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:R_Clavicle_ctl_grp|OlderBrother1:R_Clavicle_ctl" 
 		"rotateY" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:L_Clavicle_ctl_grp|OlderBrother1:L_Clavicle_ctl" 
@@ -2465,7 +2464,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_05_ctl_grp|OlderBrother1:Spine_05_ctl" 
 		"rotateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_01_ctl_grp|OlderBrother1:R_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" -0.55407501632741352 21.779369484671534 -71.31871749019386186"
+		"rotate" " -type \"double3\" 8.05856805713412072 7.50550004591444253 -64.95560655774971792"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_01_ctl_grp|OlderBrother1:R_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -2474,7 +2473,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_01_ctl_grp|OlderBrother1:R_FK_Arm_01_ctl" 
 		"rotateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_02_ctl_grp|OlderBrother1:R_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" -53.26584214452489618 14.725986496260834 -14.82470389439047054"
+		"rotate" " -type \"double3\" -34.20487954850018752 62.8296378400965736 -4.69062896658448469"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_02_ctl_grp|OlderBrother1:R_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -2483,7 +2482,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_02_ctl_grp|OlderBrother1:R_FK_Arm_02_ctl" 
 		"rotateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_03_ctl_grp|OlderBrother1:R_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" -9.36167381074476701 -10.359840634271686 7.32013623446316597"
+		"rotate" " -type \"double3\" -9.36167381074476701 22.61666548065258553 -16.6196589824218357"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_03_ctl_grp|OlderBrother1:R_FK_Arm_03_ctl" 
 		"rotateY" " -av"
@@ -2529,7 +2528,7 @@ createNode reference -n "OlderBrotherRN";
 		"translate" " -type \"double3\" -0.62510661087531905 0.070172975436599144 0.87177158754215911"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" -1.30073642756773844 -30.35473263765191376 -66.78439974959174208"
+		"rotate" " -type \"double3\" -6.49755492183718442 -32.33309537552936064 -56.11502185652019392"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -2538,7 +2537,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
 		"rotateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" -34.42271744867907302 -92.95478019310851892 3.33953798529370083"
+		"rotate" " -type \"double3\" 12.17477605914127992 -71.68130025980971709 -22.21804921762817031"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -2547,7 +2546,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
 		"rotateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 -14.81601937583974404"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
@@ -3061,8 +3060,8 @@ createNode animCurveTL -n "Master_Eye_ctrl_translateZ";
 	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 35 3.9925070748264329e-16 55 3.9925070748264329e-16
 		 61 1.6237882997265712e-14 80 1.4306309970587867e-14;
 select -ne :time1;
-	setAttr ".o" 29;
-	setAttr ".unw" 29;
+	setAttr ".o" 10;
+	setAttr ".unw" 10;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
