@@ -1,18 +1,18 @@
 //Maya ASCII 2018ff09 scene
 //Name: Shot 42 Layout.ma
-//Last modified: Tue, Sep 17, 2019 07:26:35 PM
+//Last modified: Tue, Sep 17, 2019 07:35:20 PM
 //Codeset: 1252
 file -rdi 1 -ns "bedroom" -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/WIP/bedroom.ma";
-file -rdi 1 -ns "OlderBrother_Rig_01" -rfn "OlderBrother_Rig_01RN" -op "v=0;p=17;f=0"
-		 -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_02.ma";
-file -rdi 1 -ns "YoungerBrother_Rig_03___ready_for_skinning" -rfn "YoungerBrother_Rig_03___ready_for_skinningRN"
+file -rdi 1 -ns "OlderBrother" -rfn "OlderBrother_Rig_01RN" -op "v=0;p=17;f=0"
+		 -typ "mayaAscii" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/OlderBrother.ma";
+file -rdi 1 -ns "Younger_Brother" -rfn "YoungerBrother_Rig_03___ready_for_skinningRN"
 		 -op "v=0;p=17;f=0" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/YoungerBrother.ma";
 file -r -ns "bedroom" -dr 1 -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/WIP/bedroom.ma";
-file -r -ns "OlderBrother_Rig_01" -dr 1 -rfn "OlderBrother_Rig_01RN" -op "v=0;p=17;f=0"
-		 -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_02.ma";
-file -r -ns "YoungerBrother_Rig_03___ready_for_skinning" -dr 1 -rfn "YoungerBrother_Rig_03___ready_for_skinningRN"
+file -r -ns "OlderBrother" -dr 1 -rfn "OlderBrother_Rig_01RN" -op "v=0;p=17;f=0"
+		 -typ "mayaAscii" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/OlderBrother.ma";
+file -r -ns "Younger_Brother" -dr 1 -rfn "YoungerBrother_Rig_03___ready_for_skinningRN"
 		 -op "v=0;p=17;f=0" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/YoungerBrother.ma";
 requires maya "2018ff09";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "2.0.1";
@@ -28,8 +28,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C13149B4-405E-DE7F-F490-1EA4CEE240A6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 87.022413964750598 57.299977532912862 52.632031538919996 ;
-	setAttr ".r" -type "double3" -26.738352729587554 -245.79999999999836 0 ;
+	setAttr ".t" -type "double3" 75.35196764012575 75.627844182419835 80.276912137971507 ;
+	setAttr ".r" -type "double3" -51.938352729583855 -283.39999999999333 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "421955A1-4B13-35B5-97E3-ED9FD7C431CF";
 	setAttr -k off ".v" no;
@@ -112,22 +112,22 @@ createNode camera -n "Main_CameraShape" -p "Main_Camera";
 	setAttr ".dfg" yes;
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "ECEB2C01-4961-54BA-F950-90ACEB0AECD7";
-	setAttr -s 43 ".lnk";
-	setAttr -s 43 ".slnk";
+	rename -uid "10ADEE82-415F-FBBA-24BE-DEA4EC872EA1";
+	setAttr -s 135 ".lnk";
+	setAttr -s 135 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "72D33502-4747-9275-D56D-6BB688503410";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
+	rename -uid "87F2C59D-4CB8-8D84-D558-888DC9891FDB";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 1 0 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "14D37DDB-437D-E741-5E07-4DA231CE1A81";
+	rename -uid "C3D1059A-4434-DC6C-694A-EDA76C71DEB1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "4C896726-475B-F536-3B02-8CB1E5A41B59";
+	rename -uid "4FC55DD0-4329-B654-2113-A2B190CB29B3";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "22E57F6B-4334-A0D4-5174-ABBBF08985D4";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "EC8C3852-4FB0-3DA5-B4CB-F28CB0A44B6B";
+	rename -uid "07DA2840-4586-E141-1054-58A0590A0834";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "998E275D-47F4-0442-3A0B-D7AF6B148BD5";
 	setAttr ".g" yes;
@@ -419,211 +419,19 @@ createNode reference -n "bedroomRN";
 lockNode -l 1 ;
 createNode reference -n "OlderBrother_Rig_01RN";
 	rename -uid "3BD7063A-4877-E0B4-C7A4-60B0372CEA0C";
-	setAttr ".fn[0]" -type "string" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_01.ma";
+	setAttr -s 4 ".fn";
+	setAttr ".fn[0]" -type "string" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya/Scenes/Characters/Older Brother/Older Brother";
+	setAttr ".fn[1]" -type "string" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/OlderBrother.ma";
+	setAttr ".fn[2]" -type "string" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_02.ma";
+	setAttr ".fn[3]" -type "string" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_01.ma";
 	setAttr -s 683 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
-	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
-	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
 	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
-	setAttr ".phl[197]" 0;
 	setAttr ".phl[198]" 0;
-	setAttr ".phl[199]" 0;
+	setAttr ".phl[199]" 8.8817841970012523e-16;
 	setAttr ".phl[200]" 0;
-	setAttr ".phl[201]" 0;
-	setAttr ".phl[202]" 0;
-	setAttr ".phl[203]" 0;
+	setAttr ".phl[201]" -6.245004513516508e-17;
+	setAttr ".phl[202]" 1.9428902930940239e-16;
+	setAttr ".phl[203]" -2.1640675362810669e-16;
 	setAttr ".phl[204]" 0;
 	setAttr ".phl[205]" 0;
 	setAttr ".phl[206]" 0;
@@ -1104,9 +912,185 @@ createNode reference -n "OlderBrother_Rig_01RN";
 	setAttr ".phl[681]" 0;
 	setAttr ".phl[682]" 0;
 	setAttr ".phl[683]" 0;
+	setAttr ".phl[684]" 0;
+	setAttr ".phl[685]" 0;
+	setAttr ".phl[686]" 0;
+	setAttr ".phl[687]" 0;
+	setAttr ".phl[688]" 0;
+	setAttr ".phl[689]" 0;
+	setAttr ".phl[690]" 0;
+	setAttr ".phl[691]" 0;
+	setAttr ".phl[692]" 0;
+	setAttr ".phl[693]" 0;
+	setAttr ".phl[694]" 0;
+	setAttr ".phl[695]" 0;
+	setAttr ".phl[696]" 0;
+	setAttr ".phl[697]" 0;
+	setAttr ".phl[698]" 0;
+	setAttr ".phl[699]" 0;
+	setAttr ".phl[700]" 0;
+	setAttr ".phl[701]" 0;
+	setAttr ".phl[702]" 0;
+	setAttr ".phl[703]" 0;
+	setAttr ".phl[704]" 0;
+	setAttr ".phl[705]" 0;
+	setAttr ".phl[706]" 0;
+	setAttr ".phl[707]" 0;
+	setAttr ".phl[708]" 0;
+	setAttr ".phl[709]" 0;
+	setAttr ".phl[710]" 0;
+	setAttr ".phl[711]" 0;
+	setAttr ".phl[712]" 0;
+	setAttr ".phl[713]" 0;
+	setAttr ".phl[714]" 0;
+	setAttr ".phl[715]" 0;
+	setAttr ".phl[716]" 0;
+	setAttr ".phl[717]" 0;
+	setAttr ".phl[718]" 0;
+	setAttr ".phl[719]" 0;
+	setAttr ".phl[720]" 0;
+	setAttr ".phl[721]" 0;
+	setAttr ".phl[722]" 0;
+	setAttr ".phl[723]" 0;
+	setAttr ".phl[724]" 0;
+	setAttr ".phl[725]" 0;
+	setAttr ".phl[726]" 0;
+	setAttr ".phl[727]" 0;
+	setAttr ".phl[728]" 0;
+	setAttr ".phl[729]" 0;
+	setAttr ".phl[730]" 0;
+	setAttr ".phl[731]" 0;
+	setAttr ".phl[732]" 0;
+	setAttr ".phl[733]" 0;
+	setAttr ".phl[734]" 0;
+	setAttr ".phl[735]" 0;
+	setAttr ".phl[736]" 0;
+	setAttr ".phl[737]" 0;
+	setAttr ".phl[738]" 0;
+	setAttr ".phl[739]" 0;
+	setAttr ".phl[740]" 0;
+	setAttr ".phl[741]" 0;
+	setAttr ".phl[742]" 0;
+	setAttr ".phl[743]" 0;
+	setAttr ".phl[744]" 0;
+	setAttr ".phl[745]" 0;
+	setAttr ".phl[746]" 0;
+	setAttr ".phl[747]" 0;
+	setAttr ".phl[748]" 0;
+	setAttr ".phl[749]" 0;
+	setAttr ".phl[750]" 0;
+	setAttr ".phl[751]" 0;
+	setAttr ".phl[752]" 0;
+	setAttr ".phl[753]" 0;
+	setAttr ".phl[754]" 0;
+	setAttr ".phl[755]" 0;
+	setAttr ".phl[756]" 0;
+	setAttr ".phl[757]" 0;
+	setAttr ".phl[758]" 0;
+	setAttr ".phl[759]" 0;
+	setAttr ".phl[760]" 0;
+	setAttr ".phl[761]" 0;
+	setAttr ".phl[762]" 0;
+	setAttr ".phl[763]" 0;
+	setAttr ".phl[764]" 0;
+	setAttr ".phl[765]" 0;
+	setAttr ".phl[766]" 0;
+	setAttr ".phl[767]" 0;
+	setAttr ".phl[768]" 0;
+	setAttr ".phl[769]" 0;
+	setAttr ".phl[770]" 0;
+	setAttr ".phl[771]" 0;
+	setAttr ".phl[772]" 0;
+	setAttr ".phl[773]" 0;
+	setAttr ".phl[774]" 0;
+	setAttr ".phl[775]" 0;
+	setAttr ".phl[776]" 0;
+	setAttr ".phl[777]" 0;
+	setAttr ".phl[778]" 0;
+	setAttr ".phl[779]" 0;
+	setAttr ".phl[780]" 0;
+	setAttr ".phl[781]" 0;
+	setAttr ".phl[782]" 0;
+	setAttr ".phl[783]" 0;
+	setAttr ".phl[784]" 0;
+	setAttr ".phl[785]" 0;
+	setAttr ".phl[786]" 0;
+	setAttr ".phl[787]" 0;
+	setAttr ".phl[788]" 0;
+	setAttr ".phl[789]" 0;
+	setAttr ".phl[790]" 0;
+	setAttr ".phl[791]" 0;
+	setAttr ".phl[792]" 0;
+	setAttr ".phl[793]" 0;
+	setAttr ".phl[794]" 0;
+	setAttr ".phl[795]" 0;
+	setAttr ".phl[796]" 0;
+	setAttr ".phl[797]" 0;
+	setAttr ".phl[798]" 0;
+	setAttr ".phl[799]" 0;
+	setAttr ".phl[800]" 0;
+	setAttr ".phl[801]" 0;
+	setAttr ".phl[802]" 0;
+	setAttr ".phl[803]" 0;
+	setAttr ".phl[804]" 0;
+	setAttr ".phl[805]" 0;
+	setAttr ".phl[806]" 0;
+	setAttr ".phl[807]" 0;
+	setAttr ".phl[808]" 0;
+	setAttr ".phl[809]" 0;
+	setAttr ".phl[810]" 0;
+	setAttr ".phl[811]" 0;
+	setAttr ".phl[812]" 0;
+	setAttr ".phl[813]" 0;
+	setAttr ".phl[814]" 0;
+	setAttr ".phl[815]" 0;
+	setAttr ".phl[816]" 0;
+	setAttr ".phl[817]" 0;
+	setAttr ".phl[818]" 0;
+	setAttr ".phl[819]" 0;
+	setAttr ".phl[820]" 0;
+	setAttr ".phl[821]" 0;
+	setAttr ".phl[822]" 0;
+	setAttr ".phl[823]" 0;
+	setAttr ".phl[824]" 0;
+	setAttr ".phl[825]" 0;
+	setAttr ".phl[826]" 0;
+	setAttr ".phl[827]" 0;
+	setAttr ".phl[828]" 0;
+	setAttr ".phl[829]" 0;
+	setAttr ".phl[830]" 0;
+	setAttr ".phl[831]" 0;
+	setAttr ".phl[832]" 0;
+	setAttr ".phl[833]" 0;
+	setAttr ".phl[834]" 0;
+	setAttr ".phl[835]" 0;
+	setAttr ".phl[836]" 0;
+	setAttr ".phl[837]" 0;
+	setAttr ".phl[838]" 0;
+	setAttr ".phl[839]" 0;
+	setAttr ".phl[840]" 0;
+	setAttr ".phl[841]" 0;
+	setAttr ".phl[842]" 0;
+	setAttr ".phl[843]" 0;
+	setAttr ".phl[844]" 0;
+	setAttr ".phl[845]" 0;
+	setAttr ".phl[846]" 0;
+	setAttr ".phl[847]" 0;
+	setAttr ".phl[848]" 0;
+	setAttr ".phl[849]" 0;
+	setAttr ".phl[850]" 0;
+	setAttr ".phl[851]" 0;
+	setAttr ".phl[852]" 0;
+	setAttr ".phl[853]" 0;
+	setAttr ".phl[854]" 0;
+	setAttr ".phl[855]" 0;
+	setAttr ".phl[856]" 0;
+	setAttr ".phl[857]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"OlderBrother_Rig_01RN"
-		"OlderBrother_Rig_01RN" 9
+		"OlderBrother_Rig_01RN" 48
+		1 |OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Older_Boy_Geo|OlderBrother_Rig_01:OlderBoy_Body_Geo" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Older_Boy_Geo|OlderBrother_Rig_01:OlderBoy_Body_Geo" 
@@ -1125,45 +1109,11 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Older_Boy_Geo|OlderBrother_Rig_01:OlderBoy_L_Brow_geo|OlderBrother_Rig_01:OlderBoy_L_Brow_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		"OlderBrother_Rig_01RN" 708
-		1 |OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl 
-		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Joints|OlderBrother_Rig_01:COG|OlderBrother_Rig_01:Hips" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Joints|OlderBrother_Rig_01:COG|OlderBrother_Rig_01:Hips" 
-		"rotateX" " -av"
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Joints|OlderBrother_Rig_01:COG|OlderBrother_Rig_01:Hips" 
-		"rotateY" " -av"
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Joints|OlderBrother_Rig_01:COG|OlderBrother_Rig_01:Hips" 
-		"rotateZ" " -av"
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Joints|OlderBrother_Rig_01:COG|OlderBrother_Rig_01:Spine_01_jnt|OlderBrother_Rig_01:Spine_02_jnt|OlderBrother_Rig_01:Spine_03_jnt|OlderBrother_Rig_01:L_Clavicle_jnt|OlderBrother_Rig_01:L_RK_Arm_01_jnt" 
-		"rotate" " -type \"double3\" 0.74750679029084943 -50.93173120084259864 -34.14935862958765966"
-		
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Joints|OlderBrother_Rig_01:COG|OlderBrother_Rig_01:Spine_01_jnt|OlderBrother_Rig_01:Spine_02_jnt|OlderBrother_Rig_01:Spine_03_jnt|OlderBrother_Rig_01:L_Clavicle_jnt|OlderBrother_Rig_01:L_RK_Arm_01_jnt" 
-		"rotateX" " -av"
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Joints|OlderBrother_Rig_01:COG|OlderBrother_Rig_01:Spine_01_jnt|OlderBrother_Rig_01:Spine_02_jnt|OlderBrother_Rig_01:Spine_03_jnt|OlderBrother_Rig_01:L_Clavicle_jnt|OlderBrother_Rig_01:L_RK_Arm_01_jnt" 
-		"rotateY" " -av"
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Joints|OlderBrother_Rig_01:COG|OlderBrother_Rig_01:Spine_01_jnt|OlderBrother_Rig_01:Spine_02_jnt|OlderBrother_Rig_01:Spine_03_jnt|OlderBrother_Rig_01:L_Clavicle_jnt|OlderBrother_Rig_01:L_RK_Arm_01_jnt" 
-		"rotateZ" " -av"
 		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl" 
 		"blendParent1" " -k 1"
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl" 
-		"translate" " -type \"double3\" 48.08711872471589288 0 86.52601358197094328"
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl" 
-		"translateZ" " -av"
 		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:OlderBrother_Geometry|OlderBrother_Rig_01:OlderBrother_Body_geo|OlderBrother_Rig_01:OlderBrother_Body_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:OlderBrother_Geometry|OlderBrother_Rig_01:OlderBrother_Body_geo|OlderBrother_Rig_01:OlderBrother_Body_geoShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:OlderBrother_Geometry|OlderBrother_Rig_01:OlderBrother_L_Brow_geo|OlderBrother_Rig_01:OlderBrother_L_Brow_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:OlderBrother_Geometry|OlderBrother_Rig_01:OlderBrother_R_Brow_geo|OlderBrother_Rig_01:OlderBrother_R_Brow_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:OlderBrother_Geometry|OlderBrother_Rig_01:OlderBrother_R_Eye_geo|OlderBrother_Rig_01:OlderBrother_R_Eye_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:OlderBrother_Geometry|OlderBrother_Rig_01:OlderBrother_L_Eye_geo|OlderBrother_Rig_01:OlderBrother_L_Eye_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:OlderBrother_Geometry|OlderBrother_Rig_01:Blendshapes_geo|OlderBrother_Rig_01:OlderBrother_Head_BSH_Base_geo|OlderBrother_Rig_01:OlderBrother_Head_BSH_Base_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		3 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl|OlderBrother_Rig_01:L_IK_Leg_04_ctl_parentConstraint1.constraintTranslateX" 
 		"|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl.translateX" 
@@ -1183,276 +1133,6 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		3 "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl|OlderBrother_Rig_01:L_IK_Leg_04_ctl_parentConstraint2.constraintRotateZ" 
 		"|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl.rotateZ" 
 		""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[1]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[2]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[3]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[4]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[5]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[6]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[7]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[8]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[9]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[10]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[11]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:COG_ctl_grp|OlderBrother_Rig_01:COG_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[12]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[13]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[14]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[15]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[16]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[17]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[18]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[19]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[20]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[21]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[22]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[23]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Hips_ctl_grp|OlderBrother_Rig_01:Hips_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[24]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[25]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[26]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[27]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[28]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[29]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[30]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[31]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[32]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[33]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[34]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[35]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_01_ctl_grp|OlderBrother_Rig_01:Spine_01_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[36]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[37]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[38]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[39]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[40]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[41]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[42]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[43]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[44]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[45]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[46]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[47]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_02_ctl_grp|OlderBrother_Rig_01:Spine_02_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[48]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[49]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[50]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[51]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[52]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[53]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[54]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[55]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[56]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[57]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[58]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[59]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_03_ctl_grp|OlderBrother_Rig_01:Spine_03_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[60]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[61]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[62]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[63]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[64]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[65]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[66]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[67]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[68]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[69]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[70]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[71]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Clavicle_ctl_grp|OlderBrother_Rig_01:R_Clavicle_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[72]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[73]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[74]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[75]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[76]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[77]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[78]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[79]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[80]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[81]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[82]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[83]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Clavicle_ctl_grp|OlderBrother_Rig_01:L_Clavicle_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[84]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[85]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[86]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[87]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[88]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[89]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[90]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[91]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[92]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[93]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[94]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[95]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_04_ctl_grp|OlderBrother_Rig_01:Spine_04_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[96]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[97]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[98]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[99]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[100]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[101]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[102]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[103]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[104]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[105]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[106]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[107]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Spine_05_ctl_grp|OlderBrother_Rig_01:Spine_05_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[108]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[109]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[110]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[111]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[112]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[113]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[114]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[115]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[116]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[117]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[118]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[119]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_01_jnt_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[120]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[121]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[122]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[123]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[124]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[125]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[126]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[127]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[128]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[129]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[130]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[131]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.Length_1" 
-		"OlderBrother_Rig_01RN.placeHolderList[132]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.Length_2" 
-		"OlderBrother_Rig_01RN.placeHolderList[133]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.Stretchy" 
-		"OlderBrother_Rig_01RN.placeHolderList[134]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:R_Leg_IK_Handle_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[135]" ""
 		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_04_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[136]" ""
 		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_04_ctl.translateY" 
@@ -1477,84 +1157,6 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		"OlderBrother_Rig_01RN.placeHolderList[146]" ""
 		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:R_IK_Leg_04_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[147]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[148]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[149]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[150]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[151]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[152]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[153]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[154]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[155]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[156]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[157]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[158]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls3|OlderBrother_Rig_01:R_Leg_IK_Controls|OlderBrother_Rig_01:R_Leg_PV_ctl_grp|OlderBrother_Rig_01:R_Leg_PV_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[159]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[160]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[161]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[162]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[163]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[164]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[165]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[166]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[167]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[168]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[169]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[170]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_01_jnt_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[171]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.translateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[172]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.translateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[173]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.translateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[174]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.rotateX" 
-		"OlderBrother_Rig_01RN.placeHolderList[175]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.rotateY" 
-		"OlderBrother_Rig_01RN.placeHolderList[176]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.rotateZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[177]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.scaleX" 
-		"OlderBrother_Rig_01RN.placeHolderList[178]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.scaleY" 
-		"OlderBrother_Rig_01RN.placeHolderList[179]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.scaleZ" 
-		"OlderBrother_Rig_01RN.placeHolderList[180]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.Follow_Translates" 
-		"OlderBrother_Rig_01RN.placeHolderList[181]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.Follow_Rotates" 
-		"OlderBrother_Rig_01RN.placeHolderList[182]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.Length_1" 
-		"OlderBrother_Rig_01RN.placeHolderList[183]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.Length_2" 
-		"OlderBrother_Rig_01RN.placeHolderList[184]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.Stretchy" 
-		"OlderBrother_Rig_01RN.placeHolderList[185]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl_grp|OlderBrother_Rig_01:L_Leg_IK_Handle_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[186]" ""
 		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[187]" ""
 		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl.translateY" 
@@ -1595,1044 +1197,1426 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		5 3 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_IK_Leg_04_ctl_grp|OlderBrother_Rig_01:L_IK_Leg_04_ctl|OlderBrother_Rig_01:L_IK_Leg_04_ctl_parentConstraint2.constraintRotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[203]" "OlderBrother_Rig_01:L_IK_Leg_04_ctl.rz"
 		
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.translateX" 
+		"OlderBrother_Rig_01RN" 669
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Joints|OlderBrother:COG|OlderBrother:Hips" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Joints|OlderBrother:COG|OlderBrother:Hips" 
+		"rotateX" " -av"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Joints|OlderBrother:COG|OlderBrother:Hips" 
+		"rotateY" " -av"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Joints|OlderBrother:COG|OlderBrother:Hips" 
+		"rotateZ" " -av"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Joints|OlderBrother:COG|OlderBrother:Spine_01_jnt|OlderBrother:Spine_02_jnt|OlderBrother:Spine_03_jnt|OlderBrother:L_Clavicle_jnt|OlderBrother:L_RK_Arm_01_jnt" 
+		"rotate" " -type \"double3\" 0.74750679029086697 -50.93173120084258443 -34.14935862958766677"
+		
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Joints|OlderBrother:COG|OlderBrother:Spine_01_jnt|OlderBrother:Spine_02_jnt|OlderBrother:Spine_03_jnt|OlderBrother:L_Clavicle_jnt|OlderBrother:L_RK_Arm_01_jnt" 
+		"rotateX" " -av"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Joints|OlderBrother:COG|OlderBrother:Spine_01_jnt|OlderBrother:Spine_02_jnt|OlderBrother:Spine_03_jnt|OlderBrother:L_Clavicle_jnt|OlderBrother:L_RK_Arm_01_jnt" 
+		"rotateY" " -av"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Joints|OlderBrother:COG|OlderBrother:Spine_01_jnt|OlderBrother:Spine_02_jnt|OlderBrother:Spine_03_jnt|OlderBrother:L_Clavicle_jnt|OlderBrother:L_RK_Arm_01_jnt" 
+		"rotateZ" " -av"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl" 
+		"translate" " -type \"double3\" 48.08711872471589288 0 86.52601358197094328"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl" 
+		"translateZ" " -av"
+		2 "|OlderBrother:OIder_Brother|OlderBrother:OlderBrother_Geometry|OlderBrother:OlderBrother_L_Brow_geo|OlderBrother:OlderBrother_L_Brow_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother:OIder_Brother|OlderBrother:OlderBrother_Geometry|OlderBrother:OlderBrother_R_Brow_geo|OlderBrother:OlderBrother_R_Brow_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother:OIder_Brother|OlderBrother:OlderBrother_Geometry|OlderBrother:OlderBrother_R_Eye_geo|OlderBrother:OlderBrother_R_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother:OIder_Brother|OlderBrother:OlderBrother_Geometry|OlderBrother:OlderBrother_L_Eye_geo|OlderBrother:OlderBrother_L_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother:OIder_Brother|OlderBrother:OlderBrother_Geometry|OlderBrother:Blendshapes_geo|OlderBrother:OlderBrother_Head_BSH_Base_geo|OlderBrother:OlderBrother_Head_BSH_Base_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[204]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[205]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[206]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[207]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[208]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[209]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[210]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[211]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[212]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[213]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[214]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls2|OlderBrother_Rig_01:L_Leg_IK_Controls|OlderBrother_Rig_01:L_Leg_PV_ctl_grp|OlderBrother_Rig_01:L_Leg_PV_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:COG_ctl_grp|OlderBrother:COG_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[215]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[216]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[217]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[218]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[219]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[220]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[221]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[222]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[223]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[224]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[225]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[226]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Hips_ctl_grp|OlderBrother:Hips_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[227]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[228]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[229]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[230]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[231]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[232]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[233]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[234]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[235]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[236]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[237]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[238]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_01_ctl_grp|OlderBrother:Spine_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[239]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[240]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[241]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[242]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[243]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[244]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[245]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[246]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[247]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[248]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[249]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[250]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:R_FK_Arm_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_02_ctl_grp|OlderBrother:Spine_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[251]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[252]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[253]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[254]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[255]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[256]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[257]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[258]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[259]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[260]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[261]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[262]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_03_ctl_grp|OlderBrother:Spine_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[263]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[264]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[265]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[266]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[267]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[268]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[269]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[270]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[271]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[272]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[273]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[274]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[275]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[276]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[277]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[278]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[279]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[280]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[281]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[282]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[283]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[284]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[285]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[286]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger5_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[287]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[288]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[289]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[290]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[291]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[292]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[293]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[294]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[295]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[296]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[297]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[298]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_04_ctl_grp|OlderBrother:Spine_04_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[299]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[300]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[301]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[302]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[303]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[304]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[305]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[306]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[307]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[308]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[309]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[310]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Spine_05_ctl_grp|OlderBrother:Spine_05_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[311]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[312]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[313]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[314]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[315]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[316]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[317]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[318]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[319]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[320]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[321]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[322]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger4_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_01_ctl_grp|OlderBrother:R_FK_Arm_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[323]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[324]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[325]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[326]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[327]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[328]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[329]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[330]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[331]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[332]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[333]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[334]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[335]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[336]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[337]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[338]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[339]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[340]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[341]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[342]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[343]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[344]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[345]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[346]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[347]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[348]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[349]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[350]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[351]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[352]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[353]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[354]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[355]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[356]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[357]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[358]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger2_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[359]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[360]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[361]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[362]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[363]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[364]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[365]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[366]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[367]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[368]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[369]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[370]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[371]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[372]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[373]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[374]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[375]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[376]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[377]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[378]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[379]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[380]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[381]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[382]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[383]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[384]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[385]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[386]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[387]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[388]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[389]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[390]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[391]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[392]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[393]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[394]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger1_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[395]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[396]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[397]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[398]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[399]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[400]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[401]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[402]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[403]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[404]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[405]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[406]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[407]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[408]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[409]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[410]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[411]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[412]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[413]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[414]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[415]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[416]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[417]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[418]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[419]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[420]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[421]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[422]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[423]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[424]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[425]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[426]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[427]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[428]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[429]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[430]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls1|OlderBrother_Rig_01:R_Arm_FK_Controls|OlderBrother_Rig_01:R_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:R_FK_Finger3_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[431]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[432]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[433]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[434]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[435]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[436]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[437]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[438]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[439]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[440]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[441]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[442]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_01_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[443]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[444]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[445]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[446]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[447]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[448]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[449]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[450]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[451]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[452]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[453]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[454]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_02_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[455]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[456]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[457]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[458]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[459]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[460]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[461]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[462]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[463]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[464]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[465]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[466]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Arm_03_ctl_grp|OlderBrother_Rig_01:L_FK_Arm_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_01_ctl_grp|OlderBrother:R_FK_Finger1_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[467]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[468]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[469]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[470]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[471]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[472]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[473]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[474]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[475]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[476]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[477]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[478]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_02_ctl_grp|OlderBrother:R_FK_Finger1_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[479]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[480]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[481]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[482]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[483]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[484]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[485]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[486]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[487]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[488]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[489]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[490]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[491]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[492]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[493]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[494]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[495]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[496]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[497]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[498]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[499]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[500]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[501]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[502]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger5_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger5_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[503]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[504]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[505]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[506]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[507]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[508]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[509]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[510]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[511]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[512]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[513]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[514]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[515]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[516]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[517]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[518]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[519]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[520]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[521]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[522]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[523]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[524]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[525]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[526]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[527]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[528]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[529]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[530]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[531]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[532]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[533]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[534]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[535]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[536]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[537]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[538]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger4_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger4_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_01_ctl_grp|OlderBrother:L_FK_Arm_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[539]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[540]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[541]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[542]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[543]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[544]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[545]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[546]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[547]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[548]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[549]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[550]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[551]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[552]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[553]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[554]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[555]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[556]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[557]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[558]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[559]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[560]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[561]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[562]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[563]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[564]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[565]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[566]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[567]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[568]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[569]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[570]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[571]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[572]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[573]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[574]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger2_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger2_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[575]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[576]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[577]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[578]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[579]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[580]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[581]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[582]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[583]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[584]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[585]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[586]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[587]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[588]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[589]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[590]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[591]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[592]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[593]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[594]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[595]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[596]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[597]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[598]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[599]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[600]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[601]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[602]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[603]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[604]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[605]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[606]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[607]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[608]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[609]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[610]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger1_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger1_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[611]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[612]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[613]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[614]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[615]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[616]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[617]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[618]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[619]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[620]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[621]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[622]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_01_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_01_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[623]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[624]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[625]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[626]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[627]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[628]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[629]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[630]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[631]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[632]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[633]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[634]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_02_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_02_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[635]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[636]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[637]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[638]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[639]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[640]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[641]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[642]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[643]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[644]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[645]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[646]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Arm_FK_Controls|OlderBrother_Rig_01:L_FK_Finger3_03_ctl_grp|OlderBrother_Rig_01:L_FK_Finger3_03_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[647]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[648]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[649]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.Leg_IKFK" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[650]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[651]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[652]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[653]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[654]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[655]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[656]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[657]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[658]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[659]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:L_Leg_IKFK_Switch_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[660]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.Follow_Translates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[661]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.Follow_Rotates" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[662]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.Leg_IKFK" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[663]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[664]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[665]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[666]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.visibility" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[667]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[668]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[669]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[670]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl.visibility" 
 		"OlderBrother_Rig_01RN.placeHolderList[671]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.translateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[672]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl_grp|OlderBrother_Rig_01:R_Leg_IKFK_Switch_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.translateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[673]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.translateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.translateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[674]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.translateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.rotateX" 
 		"OlderBrother_Rig_01RN.placeHolderList[675]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.translateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.rotateY" 
 		"OlderBrother_Rig_01RN.placeHolderList[676]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.rotateY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.rotateZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[677]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.rotateX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.scaleX" 
 		"OlderBrother_Rig_01RN.placeHolderList[678]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.rotateZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.scaleY" 
 		"OlderBrother_Rig_01RN.placeHolderList[679]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.scaleX" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.scaleZ" 
 		"OlderBrother_Rig_01RN.placeHolderList[680]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.scaleY" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.Follow_Translates" 
 		"OlderBrother_Rig_01RN.placeHolderList[681]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.scaleZ" 
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.Follow_Rotates" 
 		"OlderBrother_Rig_01RN.placeHolderList[682]" ""
-		5 4 "OlderBrother_Rig_01RN" "|OlderBrother_Rig_01:OIder_Brother|OlderBrother_Rig_01:Controls|OlderBrother_Rig_01:Master_ctl_grp|OlderBrother_Rig_01:Master_ctl.visibility" 
-		"OlderBrother_Rig_01RN.placeHolderList[683]" "";
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[683]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[684]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[685]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[686]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[687]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[688]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[689]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[690]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[691]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[692]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[693]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[694]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[695]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[696]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[697]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[698]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[699]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[700]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[701]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[702]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[703]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[704]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[705]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[706]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[707]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[708]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[709]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[710]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[711]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[712]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[713]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[714]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[715]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[716]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[717]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[718]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[719]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[720]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[721]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[722]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[723]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[724]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[725]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[726]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[727]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[728]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[729]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[730]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[731]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[732]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[733]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[734]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[735]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[736]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[737]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[738]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[739]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[740]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[741]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[742]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[743]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[744]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[745]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.Leg_IKFK" 
+		"OlderBrother_Rig_01RN.placeHolderList[746]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[747]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[748]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[749]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[750]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[751]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[752]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[753]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[754]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[755]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Leg_IKFK_Switch_ctl_grp|OlderBrother:L_Leg_IKFK_Switch_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[756]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[757]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[758]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.Leg_IKFK" 
+		"OlderBrother_Rig_01RN.placeHolderList[759]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[760]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[761]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[762]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[763]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[764]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[765]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[766]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[767]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[768]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Leg_IKFK_Switch_ctl_grp|OlderBrother:R_Leg_IKFK_Switch_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[769]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[770]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[771]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[772]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[773]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[774]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[775]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[776]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[777]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[778]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Master_ctl_grp|OlderBrother:Master_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[779]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[780]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[781]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[782]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[783]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[784]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[785]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[786]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[787]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[788]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[789]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[790]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_IK_Leg_01_jnt_ctl_grp|OlderBrother:L_IK_Leg_01_jnt_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[791]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[792]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[793]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[794]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[795]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[796]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.Length_1" 
+		"OlderBrother_Rig_01RN.placeHolderList[797]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.Length_2" 
+		"OlderBrother_Rig_01RN.placeHolderList[798]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.Stretchy" 
+		"OlderBrother_Rig_01RN.placeHolderList[799]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[800]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[801]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[802]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[803]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[804]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[805]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_IK_Handle_ctl_grp|OlderBrother:L_Leg_IK_Handle_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[806]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[807]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[808]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[809]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[810]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[811]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[812]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[813]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[814]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[815]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[816]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[817]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls3|OlderBrother:L_Leg_IK_Controls|OlderBrother:L_Leg_PV_ctl_grp|OlderBrother:L_Leg_PV_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[818]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[819]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[820]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[821]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[822]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[823]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[824]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[825]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[826]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[827]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[828]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[829]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_IK_Leg_01_jnt_ctl_grp|OlderBrother:R_IK_Leg_01_jnt_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[830]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[831]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[832]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[833]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[834]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[835]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.Length_1" 
+		"OlderBrother_Rig_01RN.placeHolderList[836]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.Length_2" 
+		"OlderBrother_Rig_01RN.placeHolderList[837]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.Stretchy" 
+		"OlderBrother_Rig_01RN.placeHolderList[838]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[839]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[840]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[841]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[842]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[843]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[844]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_IK_Handle_ctl_grp|OlderBrother:R_Leg_IK_Handle_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[845]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.translateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[846]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.translateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[847]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.translateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[848]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.Follow_Translates" 
+		"OlderBrother_Rig_01RN.placeHolderList[849]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.Follow_Rotates" 
+		"OlderBrother_Rig_01RN.placeHolderList[850]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.rotateX" 
+		"OlderBrother_Rig_01RN.placeHolderList[851]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.rotateY" 
+		"OlderBrother_Rig_01RN.placeHolderList[852]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.rotateZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[853]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.visibility" 
+		"OlderBrother_Rig_01RN.placeHolderList[854]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.scaleX" 
+		"OlderBrother_Rig_01RN.placeHolderList[855]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.scaleY" 
+		"OlderBrother_Rig_01RN.placeHolderList[856]" ""
+		5 4 "OlderBrother_Rig_01RN" "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls2|OlderBrother:R_Leg_IK_Controls|OlderBrother:R_Leg_PV_ctl_grp|OlderBrother:R_Leg_PV_ctl.scaleZ" 
+		"OlderBrother_Rig_01RN.placeHolderList[857]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 	rename -uid "ADBF0E2A-44EB-C72A-2E36-4B94C2BC0BDE";
-	setAttr ".fn[0]" -type "string" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/04 - Rig/YoungerBrother_Rig_03 - ready for skinning.ma";
+	setAttr -s 2 ".fn";
+	setAttr ".fn[0]" -type "string" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/YoungerBrother.ma";
+	setAttr ".fn[1]" -type "string" "Z:/KaijuFilmRepo/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/04 - Rig/YoungerBrother_Rig_03 - ready for skinning.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"YoungerBrother_Rig_03___ready_for_skinningRN"
 		"YoungerBrother_Rig_03___ready_for_skinningRN" 0
 		"YoungerBrother_Rig_03___ready_for_skinningRN" 35
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:Controls|YoungerBrother_Rig_03___ready_for_skinning:Master_ctl_grp|YoungerBrother_Rig_03___ready_for_skinning:Master_ctl" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:Controls|Younger_Brother:Master_ctl_grp|Younger_Brother:Master_ctl" 
 		"translate" " -type \"double3\" 53.94079082153386651 0 11.27496154273850237"
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:Controls|YoungerBrother_Rig_03___ready_for_skinning:Face_Controls|YoungerBrother_Rig_03___ready_for_skinning:Master_Eyes_ctrl_grp|YoungerBrother_Rig_03___ready_for_skinning:Master_Eyes_ctrl" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:Controls|Younger_Brother:Face_Controls|Younger_Brother:Master_Eyes_ctrl_grp|Younger_Brother:Master_Eyes_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:Controls|YoungerBrother_Rig_03___ready_for_skinning:Spine_03_ctl_grp|YoungerBrother_Rig_03___ready_for_skinning:Spine_03_ctl" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:Controls|Younger_Brother:Spine_03_ctl_grp|Younger_Brother:Spine_03_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:Controls|YoungerBrother_Rig_03___ready_for_skinning:Spine_03_ctl_grp|YoungerBrother_Rig_03___ready_for_skinning:Spine_03_ctl" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:Controls|Younger_Brother:Spine_03_ctl_grp|Younger_Brother:Spine_03_ctl" 
 		"translateX" " -av"
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:Controls|YoungerBrother_Rig_03___ready_for_skinning:Spine_03_ctl_grp|YoungerBrother_Rig_03___ready_for_skinning:Spine_03_ctl" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:Controls|Younger_Brother:Spine_03_ctl_grp|Younger_Brother:Spine_03_ctl" 
 		"translateY" " -av"
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:Controls|YoungerBrother_Rig_03___ready_for_skinning:Spine_03_ctl_grp|YoungerBrother_Rig_03___ready_for_skinning:Spine_03_ctl" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:Controls|Younger_Brother:Spine_03_ctl_grp|Younger_Brother:Spine_03_ctl" 
 		"translateZ" " -av"
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:Controls|YoungerBrother_Rig_03___ready_for_skinning:Head_Ctrl_grp|YoungerBrother_Rig_03___ready_for_skinning:Head_Ctrl|YoungerBrother_Rig_03___ready_for_skinning:L_TearWell_grp|YoungerBrother_Rig_03___ready_for_skinning:L_TearWell|YoungerBrother_Rig_03___ready_for_skinning:L_TearWellShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:Controls|Younger_Brother:Head_Ctrl_grp|Younger_Brother:Head_Ctrl|Younger_Brother:L_TearWell_grp|Younger_Brother:L_TearWell|Younger_Brother:L_TearWellShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:Controls|YoungerBrother_Rig_03___ready_for_skinning:Head_Ctrl_grp|YoungerBrother_Rig_03___ready_for_skinning:Head_Ctrl|YoungerBrother_Rig_03___ready_for_skinning:R_TearWell_grp|YoungerBrother_Rig_03___ready_for_skinning:R_TearWell|YoungerBrother_Rig_03___ready_for_skinning:R_TearWellShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:Controls|Younger_Brother:Head_Ctrl_grp|Younger_Brother:Head_Ctrl|Younger_Brother:R_TearWell_grp|Younger_Brother:R_TearWell|Younger_Brother:R_TearWellShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_Geo_HighPoly|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_Geo_HighPolyShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:LittleBoy_Body_Geo_HighPoly|Younger_Brother:LittleBoy_Body_Geo_HighPolyShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_Geo_HighPoly|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_Geo_HighPolyShapeOrig" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:LittleBoy_Body_Geo_HighPoly|Younger_Brother:LittleBoy_Body_Geo_HighPolyShapeOrig" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_L_Eye_geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_L_Eye_geoShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:LittleBoy_L_Eye_geo|Younger_Brother:LittleBoy_L_Eye_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_R_Eye_geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_R_Eye_geoShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:LittleBoy_R_Eye_geo|Younger_Brother:LittleBoy_R_Eye_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_R_Brow_geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_R_Brow_geoShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:LittleBoy_R_Brow_geo|Younger_Brother:LittleBoy_R_Brow_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_R_Brow_geo2|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_R_Brow_geo2Shape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:LittleBoy_R_Brow_geo2|Younger_Brother:LittleBoy_R_Brow_geo2Shape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:Head_BSH_Base|YoungerBrother_Rig_03___ready_for_skinning:Head_BSH_BaseShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:Head_BSH_Base|Younger_Brother:Head_BSH_BaseShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:Head_BSH_Base|YoungerBrother_Rig_03___ready_for_skinning:Head_BSH_BaseShapeOrig" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:Head_BSH_Base|Younger_Brother:Head_BSH_BaseShapeOrig" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:Lip_Pout|YoungerBrother_Rig_03___ready_for_skinning:Lip_PoutShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:Lip_Pout|Younger_Brother:Lip_PoutShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:L_Mouth_Wide|YoungerBrother_Rig_03___ready_for_skinning:L_Mouth_WideShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:L_Mouth_Wide|Younger_Brother:L_Mouth_WideShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:R_Mouth_Wide|YoungerBrother_Rig_03___ready_for_skinning:R_Mouth_WideShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:R_Mouth_Wide|Younger_Brother:R_Mouth_WideShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:L_Mouth_Up|YoungerBrother_Rig_03___ready_for_skinning:L_Mouth_UpShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:L_Mouth_Up|Younger_Brother:L_Mouth_UpShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:R_Mouth_Up|YoungerBrother_Rig_03___ready_for_skinning:R_Mouth_UpShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:R_Mouth_Up|Younger_Brother:R_Mouth_UpShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:R_Mouth_Down|YoungerBrother_Rig_03___ready_for_skinning:R_Mouth_DownShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:R_Mouth_Down|Younger_Brother:R_Mouth_DownShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:L_Mouth_Down|YoungerBrother_Rig_03___ready_for_skinning:L_Mouth_DownShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:L_Mouth_Down|Younger_Brother:L_Mouth_DownShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:R_brow_in|YoungerBrother_Rig_03___ready_for_skinning:R_brow_inShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:R_brow_in|Younger_Brother:R_brow_inShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:L_brow_in|YoungerBrother_Rig_03___ready_for_skinning:L_brow_inShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:L_brow_in|Younger_Brother:L_brow_inShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:R_brow_up|YoungerBrother_Rig_03___ready_for_skinning:R_brow_upShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:R_brow_up|Younger_Brother:R_brow_upShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:L_brow_up|YoungerBrother_Rig_03___ready_for_skinning:L_brow_upShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:L_brow_up|Younger_Brother:L_brow_upShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:R_nose_sneer|YoungerBrother_Rig_03___ready_for_skinning:R_nose_sneerShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:R_nose_sneer|Younger_Brother:R_nose_sneerShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:L_nose_sneer|YoungerBrother_Rig_03___ready_for_skinning:L_nose_sneerShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:L_nose_sneer|Younger_Brother:L_nose_sneerShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:R_Cheek_puff|YoungerBrother_Rig_03___ready_for_skinning:R_Cheek_puffShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:R_Cheek_puff|Younger_Brother:R_Cheek_puffShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:BlendShapes_geo_grp|YoungerBrother_Rig_03___ready_for_skinning:L_Cheek_puff|YoungerBrother_Rig_03___ready_for_skinning:L_Cheek_puffShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:BlendShapes_geo_grp|Younger_Brother:L_Cheek_puff|Younger_Brother:L_Cheek_puffShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:Base_to_snap_to|YoungerBrother_Rig_03___ready_for_skinning:For_Snapping|YoungerBrother_Rig_03___ready_for_skinning:For_SnappingShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:Base_to_snap_to|Younger_Brother:For_Snapping|Younger_Brother:For_SnappingShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:Base_to_snap_to|YoungerBrother_Rig_03___ready_for_skinning:For_Snapping|YoungerBrother_Rig_03___ready_for_skinning:For_SnappingShape1" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Geometry|Younger_Brother:Base_to_snap_to|Younger_Brother:For_Snapping|Younger_Brother:For_SnappingShape1" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_Geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_GeoShape" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Body_Geo|Younger_Brother:LittleBoy_Body_GeoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_Geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_GeoShapeOrig" 
+		2 "|Younger_Brother:YoungerBrother|Younger_Brother:LittleBoy_Body_Geo|Younger_Brother:LittleBoy_Body_GeoShapeOrig" 
 		"aiTranslator" " -type \"string\" \"polymesh\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -3333,7 +3317,7 @@ createNode animCurveTA -n "L_FK_Arm_03_ctl_rotateY";
 	rename -uid "201BC0B7-4A12-AB81-0253-4FA70CBBCE1D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -26.793766978468209;
+	setAttr ".ktv[0]"  1 -26.793766978468213;
 createNode animCurveTA -n "L_FK_Arm_03_ctl_rotateZ";
 	rename -uid "7B2D12AD-45DA-203D-C4BA-2DB7D85F059A";
 	setAttr ".tan" 18;
@@ -6162,20 +6146,20 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 43 ".st";
+	setAttr -s 46 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 45 ".s";
+	setAttr -s 48 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 123 ".u";
+	setAttr -s 140 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 8 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 3 ".tx";
+	setAttr -s 4 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 126 ".dsm";
+	setAttr -s 137 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 19 ".gn";
 select -ne :initialParticleSE;
@@ -6193,148 +6177,756 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 5 ".sol";
-connectAttr "COG_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[1]";
-connectAttr "COG_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[2]";
-connectAttr "COG_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[3]";
-connectAttr "COG_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[4]";
-connectAttr "COG_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[5]";
-connectAttr "COG_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[6]";
-connectAttr "COG_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[7]";
-connectAttr "COG_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[8]";
-connectAttr "COG_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[9]";
-connectAttr "COG_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[10]";
-connectAttr "COG_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[11]";
-connectAttr "COG_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[12]";
-connectAttr "Hips_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[13]";
-connectAttr "Hips_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[14]";
-connectAttr "Hips_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[15]";
-connectAttr "Hips_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[16]";
-connectAttr "Hips_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[17]";
-connectAttr "Hips_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[18]";
-connectAttr "Hips_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[19]";
-connectAttr "Hips_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[20]";
-connectAttr "Hips_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[21]";
-connectAttr "Hips_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[22]";
-connectAttr "Hips_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[23]";
-connectAttr "Hips_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[24]";
-connectAttr "Spine_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[25]";
-connectAttr "Spine_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[26]";
-connectAttr "Spine_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[27]";
-connectAttr "Spine_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[28]";
-connectAttr "Spine_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[29]";
-connectAttr "Spine_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[30]";
-connectAttr "Spine_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[31]";
-connectAttr "Spine_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[32]";
-connectAttr "Spine_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[33]";
-connectAttr "Spine_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[34]";
-connectAttr "Spine_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[35]";
-connectAttr "Spine_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[36]";
-connectAttr "Spine_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[37]";
-connectAttr "Spine_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[38]";
-connectAttr "Spine_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[39]";
-connectAttr "Spine_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[40]";
-connectAttr "Spine_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[41]";
-connectAttr "Spine_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[42]";
-connectAttr "Spine_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[43]";
-connectAttr "Spine_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[44]";
-connectAttr "Spine_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[45]";
-connectAttr "Spine_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[46]";
-connectAttr "Spine_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[47]";
-connectAttr "Spine_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[48]";
-connectAttr "Spine_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[49]";
-connectAttr "Spine_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[50]";
-connectAttr "Spine_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[51]";
-connectAttr "Spine_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[52]";
-connectAttr "Spine_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[53]";
-connectAttr "Spine_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[54]";
-connectAttr "Spine_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[55]";
-connectAttr "Spine_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[56]";
-connectAttr "Spine_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[57]";
-connectAttr "Spine_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[58]";
-connectAttr "Spine_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[59]";
-connectAttr "Spine_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[60]";
-connectAttr "R_Clavicle_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[61]";
-connectAttr "R_Clavicle_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[62]";
-connectAttr "R_Clavicle_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[63]";
-connectAttr "R_Clavicle_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[64]";
-connectAttr "R_Clavicle_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[65]";
-connectAttr "R_Clavicle_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[66]";
-connectAttr "R_Clavicle_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[67]";
-connectAttr "R_Clavicle_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[68]";
-connectAttr "R_Clavicle_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[69]";
-connectAttr "R_Clavicle_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[70]"
+	setAttr -s 6 ".sol";
+connectAttr "COG_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[204]";
+connectAttr "COG_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[205]";
+connectAttr "COG_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[206]";
+connectAttr "COG_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[207]";
+connectAttr "COG_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[208]";
+connectAttr "COG_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[209]";
+connectAttr "COG_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[210]";
+connectAttr "COG_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[211]";
+connectAttr "COG_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[212]";
+connectAttr "COG_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[213]";
+connectAttr "COG_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[214]";
+connectAttr "COG_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[215]";
+connectAttr "Hips_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[216]";
+connectAttr "Hips_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[217]";
+connectAttr "Hips_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[218]";
+connectAttr "Hips_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[219]";
+connectAttr "Hips_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[220]";
+connectAttr "Hips_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[221]";
+connectAttr "Hips_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[222]";
+connectAttr "Hips_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[223]";
+connectAttr "Hips_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[224]";
+connectAttr "Hips_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[225]";
+connectAttr "Hips_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[226]";
+connectAttr "Hips_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[227]";
+connectAttr "Spine_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[228]";
+connectAttr "Spine_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[229]";
+connectAttr "Spine_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[230]";
+connectAttr "Spine_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[231]";
+connectAttr "Spine_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[232]";
+connectAttr "Spine_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[233]";
+connectAttr "Spine_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[234]";
+connectAttr "Spine_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[235]";
+connectAttr "Spine_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[236]";
+connectAttr "Spine_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[237]";
+connectAttr "Spine_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[238]";
+connectAttr "Spine_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[239]";
+connectAttr "Spine_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[240]";
+connectAttr "Spine_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[241]";
+connectAttr "Spine_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[242]";
+connectAttr "Spine_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[243]";
+connectAttr "Spine_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[244]";
+connectAttr "Spine_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[245]";
+connectAttr "Spine_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[246]";
+connectAttr "Spine_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[247]";
+connectAttr "Spine_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[248]";
+connectAttr "Spine_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[249]";
+connectAttr "Spine_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[250]";
+connectAttr "Spine_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[251]";
+connectAttr "Spine_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[252]";
+connectAttr "Spine_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[253]";
+connectAttr "Spine_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[254]";
+connectAttr "Spine_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[255]";
+connectAttr "Spine_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[256]";
+connectAttr "Spine_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[257]";
+connectAttr "Spine_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[258]";
+connectAttr "Spine_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[259]";
+connectAttr "Spine_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[260]";
+connectAttr "Spine_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[261]";
+connectAttr "Spine_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[262]";
+connectAttr "Spine_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[263]";
+connectAttr "R_Clavicle_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[264]";
+connectAttr "R_Clavicle_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[265]";
+connectAttr "R_Clavicle_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[266]";
+connectAttr "R_Clavicle_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[267]";
+connectAttr "R_Clavicle_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[268]";
+connectAttr "R_Clavicle_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[269]";
+connectAttr "R_Clavicle_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[270]";
+connectAttr "R_Clavicle_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[271]";
+connectAttr "R_Clavicle_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[272]";
+connectAttr "R_Clavicle_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[273]"
 		;
-connectAttr "R_Clavicle_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[71]";
-connectAttr "R_Clavicle_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[72]";
-connectAttr "L_Clavicle_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[73]";
-connectAttr "L_Clavicle_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[74]";
-connectAttr "L_Clavicle_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[75]";
-connectAttr "L_Clavicle_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[76]";
-connectAttr "L_Clavicle_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[77]";
-connectAttr "L_Clavicle_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[78]";
-connectAttr "L_Clavicle_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[79]";
-connectAttr "L_Clavicle_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[80]";
-connectAttr "L_Clavicle_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[81]";
-connectAttr "L_Clavicle_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[82]"
+connectAttr "R_Clavicle_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[274]";
+connectAttr "R_Clavicle_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[275]";
+connectAttr "L_Clavicle_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[276]";
+connectAttr "L_Clavicle_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[277]";
+connectAttr "L_Clavicle_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[278]";
+connectAttr "L_Clavicle_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[279]";
+connectAttr "L_Clavicle_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[280]";
+connectAttr "L_Clavicle_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[281]";
+connectAttr "L_Clavicle_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[282]";
+connectAttr "L_Clavicle_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[283]";
+connectAttr "L_Clavicle_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[284]";
+connectAttr "L_Clavicle_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[285]"
 		;
-connectAttr "L_Clavicle_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[83]";
-connectAttr "L_Clavicle_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[84]";
-connectAttr "Spine_04_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[85]";
-connectAttr "Spine_04_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[86]";
-connectAttr "Spine_04_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[87]";
-connectAttr "Spine_04_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[88]";
-connectAttr "Spine_04_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[89]";
-connectAttr "Spine_04_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[90]";
-connectAttr "Spine_04_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[91]";
-connectAttr "Spine_04_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[92]";
-connectAttr "Spine_04_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[93]";
-connectAttr "Spine_04_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[94]";
-connectAttr "Spine_04_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[95]";
-connectAttr "Spine_04_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[96]";
-connectAttr "Spine_05_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[97]";
-connectAttr "Spine_05_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[98]";
-connectAttr "Spine_05_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[99]";
-connectAttr "Spine_05_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[100]";
-connectAttr "Spine_05_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[101]";
-connectAttr "Spine_05_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[102]";
-connectAttr "Spine_05_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[103]";
-connectAttr "Spine_05_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[104]";
-connectAttr "Spine_05_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[105]";
-connectAttr "Spine_05_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[106]";
-connectAttr "Spine_05_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[107]";
-connectAttr "Spine_05_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[108]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[109]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[110]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[111]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[112]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[113]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[114]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[115]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[116]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[117]";
-connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[118]"
+connectAttr "L_Clavicle_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[286]";
+connectAttr "L_Clavicle_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[287]";
+connectAttr "Spine_04_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[288]";
+connectAttr "Spine_04_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[289]";
+connectAttr "Spine_04_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[290]";
+connectAttr "Spine_04_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[291]";
+connectAttr "Spine_04_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[292]";
+connectAttr "Spine_04_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[293]";
+connectAttr "Spine_04_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[294]";
+connectAttr "Spine_04_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[295]";
+connectAttr "Spine_04_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[296]";
+connectAttr "Spine_04_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[297]";
+connectAttr "Spine_04_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[298]";
+connectAttr "Spine_04_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[299]";
+connectAttr "Spine_05_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[300]";
+connectAttr "Spine_05_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[301]";
+connectAttr "Spine_05_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[302]";
+connectAttr "Spine_05_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[303]";
+connectAttr "Spine_05_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[304]";
+connectAttr "Spine_05_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[305]";
+connectAttr "Spine_05_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[306]";
+connectAttr "Spine_05_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[307]";
+connectAttr "Spine_05_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[308]";
+connectAttr "Spine_05_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[309]";
+connectAttr "Spine_05_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[310]";
+connectAttr "Spine_05_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[311]";
+connectAttr "R_FK_Arm_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[312]";
+connectAttr "R_FK_Arm_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[313]";
+connectAttr "R_FK_Arm_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[314]";
+connectAttr "R_FK_Arm_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[315]";
+connectAttr "R_FK_Arm_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[316]";
+connectAttr "R_FK_Arm_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[317]";
+connectAttr "R_FK_Arm_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[318]";
+connectAttr "R_FK_Arm_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[319]";
+connectAttr "R_FK_Arm_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[320]";
+connectAttr "R_FK_Arm_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[321]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[119]"
+connectAttr "R_FK_Arm_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[322]";
+connectAttr "R_FK_Arm_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[323]";
+connectAttr "R_FK_Arm_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[324]";
+connectAttr "R_FK_Arm_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[325]";
+connectAttr "R_FK_Arm_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[326]";
+connectAttr "R_FK_Arm_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[327]";
+connectAttr "R_FK_Arm_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[328]";
+connectAttr "R_FK_Arm_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[329]";
+connectAttr "R_FK_Arm_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[330]";
+connectAttr "R_FK_Arm_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[331]";
+connectAttr "R_FK_Arm_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[332]";
+connectAttr "R_FK_Arm_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[333]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[120]";
-connectAttr "R_Leg_IK_Handle_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[121]";
-connectAttr "R_Leg_IK_Handle_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[122]";
-connectAttr "R_Leg_IK_Handle_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[123]";
-connectAttr "R_Leg_IK_Handle_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[124]";
-connectAttr "R_Leg_IK_Handle_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[125]";
-connectAttr "R_Leg_IK_Handle_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[126]";
-connectAttr "R_Leg_IK_Handle_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[127]";
-connectAttr "R_Leg_IK_Handle_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[128]";
-connectAttr "R_Leg_IK_Handle_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[129]";
-connectAttr "R_Leg_IK_Handle_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[130]"
+connectAttr "R_FK_Arm_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[334]";
+connectAttr "R_FK_Arm_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[335]";
+connectAttr "R_FK_Arm_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[336]";
+connectAttr "R_FK_Arm_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[337]";
+connectAttr "R_FK_Arm_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[338]";
+connectAttr "R_FK_Arm_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[339]";
+connectAttr "R_FK_Arm_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[340]";
+connectAttr "R_FK_Arm_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[341]";
+connectAttr "R_FK_Arm_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[342]";
+connectAttr "R_FK_Arm_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[343]";
+connectAttr "R_FK_Arm_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[344]";
+connectAttr "R_FK_Arm_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[345]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[131]"
+connectAttr "R_FK_Arm_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[346]";
+connectAttr "R_FK_Arm_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[347]";
+connectAttr "R_FK_Finger5_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[348]";
+connectAttr "R_FK_Finger5_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[349]";
+connectAttr "R_FK_Finger5_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[350]";
+connectAttr "R_FK_Finger5_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[351]";
+connectAttr "R_FK_Finger5_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[352]";
+connectAttr "R_FK_Finger5_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[353]";
+connectAttr "R_FK_Finger5_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[354]";
+connectAttr "R_FK_Finger5_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[355]";
+connectAttr "R_FK_Finger5_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[356]";
+connectAttr "R_FK_Finger5_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[357]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_Length_1.o" "OlderBrother_Rig_01RN.phl[132]";
-connectAttr "R_Leg_IK_Handle_ctl_Length_2.o" "OlderBrother_Rig_01RN.phl[133]";
-connectAttr "R_Leg_IK_Handle_ctl_Stretchy.o" "OlderBrother_Rig_01RN.phl[134]";
-connectAttr "R_Leg_IK_Handle_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[135]";
+connectAttr "R_FK_Finger5_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[358]"
+		;
+connectAttr "R_FK_Finger5_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[359]";
+connectAttr "R_FK_Finger5_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[360]";
+connectAttr "R_FK_Finger5_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[361]";
+connectAttr "R_FK_Finger5_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[362]";
+connectAttr "R_FK_Finger5_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[363]";
+connectAttr "R_FK_Finger5_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[364]";
+connectAttr "R_FK_Finger5_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[365]";
+connectAttr "R_FK_Finger5_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[366]";
+connectAttr "R_FK_Finger5_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[367]";
+connectAttr "R_FK_Finger5_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[368]";
+connectAttr "R_FK_Finger5_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[369]"
+		;
+connectAttr "R_FK_Finger5_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[370]"
+		;
+connectAttr "R_FK_Finger5_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[371]";
+connectAttr "R_FK_Finger5_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[372]";
+connectAttr "R_FK_Finger5_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[373]";
+connectAttr "R_FK_Finger5_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[374]";
+connectAttr "R_FK_Finger5_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[375]";
+connectAttr "R_FK_Finger5_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[376]";
+connectAttr "R_FK_Finger5_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[377]";
+connectAttr "R_FK_Finger5_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[378]";
+connectAttr "R_FK_Finger5_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[379]";
+connectAttr "R_FK_Finger5_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[380]";
+connectAttr "R_FK_Finger5_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[381]"
+		;
+connectAttr "R_FK_Finger5_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[382]"
+		;
+connectAttr "R_FK_Finger5_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[383]";
+connectAttr "R_FK_Finger4_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[384]";
+connectAttr "R_FK_Finger4_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[385]";
+connectAttr "R_FK_Finger4_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[386]";
+connectAttr "R_FK_Finger4_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[387]";
+connectAttr "R_FK_Finger4_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[388]";
+connectAttr "R_FK_Finger4_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[389]";
+connectAttr "R_FK_Finger4_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[390]";
+connectAttr "R_FK_Finger4_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[391]";
+connectAttr "R_FK_Finger4_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[392]";
+connectAttr "R_FK_Finger4_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[393]"
+		;
+connectAttr "R_FK_Finger4_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[394]"
+		;
+connectAttr "R_FK_Finger4_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[395]";
+connectAttr "R_FK_Finger4_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[396]";
+connectAttr "R_FK_Finger4_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[397]";
+connectAttr "R_FK_Finger4_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[398]";
+connectAttr "R_FK_Finger4_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[399]";
+connectAttr "R_FK_Finger4_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[400]";
+connectAttr "R_FK_Finger4_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[401]";
+connectAttr "R_FK_Finger4_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[402]";
+connectAttr "R_FK_Finger4_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[403]";
+connectAttr "R_FK_Finger4_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[404]";
+connectAttr "R_FK_Finger4_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[405]"
+		;
+connectAttr "R_FK_Finger4_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[406]"
+		;
+connectAttr "R_FK_Finger4_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[407]";
+connectAttr "R_FK_Finger4_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[408]";
+connectAttr "R_FK_Finger4_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[409]";
+connectAttr "R_FK_Finger4_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[410]";
+connectAttr "R_FK_Finger4_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[411]";
+connectAttr "R_FK_Finger4_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[412]";
+connectAttr "R_FK_Finger4_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[413]";
+connectAttr "R_FK_Finger4_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[414]";
+connectAttr "R_FK_Finger4_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[415]";
+connectAttr "R_FK_Finger4_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[416]";
+connectAttr "R_FK_Finger4_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[417]"
+		;
+connectAttr "R_FK_Finger4_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[418]"
+		;
+connectAttr "R_FK_Finger4_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[419]";
+connectAttr "R_FK_Finger2_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[420]";
+connectAttr "R_FK_Finger2_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[421]";
+connectAttr "R_FK_Finger2_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[422]";
+connectAttr "R_FK_Finger2_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[423]";
+connectAttr "R_FK_Finger2_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[424]";
+connectAttr "R_FK_Finger2_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[425]";
+connectAttr "R_FK_Finger2_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[426]";
+connectAttr "R_FK_Finger2_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[427]";
+connectAttr "R_FK_Finger2_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[428]";
+connectAttr "R_FK_Finger2_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[429]"
+		;
+connectAttr "R_FK_Finger2_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[430]"
+		;
+connectAttr "R_FK_Finger2_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[431]";
+connectAttr "R_FK_Finger2_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[432]";
+connectAttr "R_FK_Finger2_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[433]";
+connectAttr "R_FK_Finger2_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[434]";
+connectAttr "R_FK_Finger2_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[435]";
+connectAttr "R_FK_Finger2_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[436]";
+connectAttr "R_FK_Finger2_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[437]";
+connectAttr "R_FK_Finger2_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[438]";
+connectAttr "R_FK_Finger2_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[439]";
+connectAttr "R_FK_Finger2_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[440]";
+connectAttr "R_FK_Finger2_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[441]"
+		;
+connectAttr "R_FK_Finger2_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[442]"
+		;
+connectAttr "R_FK_Finger2_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[443]";
+connectAttr "R_FK_Finger2_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[444]";
+connectAttr "R_FK_Finger2_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[445]";
+connectAttr "R_FK_Finger2_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[446]";
+connectAttr "R_FK_Finger2_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[447]";
+connectAttr "R_FK_Finger2_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[448]";
+connectAttr "R_FK_Finger2_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[449]";
+connectAttr "R_FK_Finger2_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[450]";
+connectAttr "R_FK_Finger2_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[451]";
+connectAttr "R_FK_Finger2_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[452]";
+connectAttr "R_FK_Finger2_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[453]"
+		;
+connectAttr "R_FK_Finger2_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[454]"
+		;
+connectAttr "R_FK_Finger2_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[455]";
+connectAttr "R_FK_Finger1_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[456]";
+connectAttr "R_FK_Finger1_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[457]";
+connectAttr "R_FK_Finger1_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[458]";
+connectAttr "R_FK_Finger1_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[459]";
+connectAttr "R_FK_Finger1_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[460]";
+connectAttr "R_FK_Finger1_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[461]";
+connectAttr "R_FK_Finger1_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[462]";
+connectAttr "R_FK_Finger1_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[463]";
+connectAttr "R_FK_Finger1_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[464]";
+connectAttr "R_FK_Finger1_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[465]"
+		;
+connectAttr "R_FK_Finger1_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[466]"
+		;
+connectAttr "R_FK_Finger1_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[467]";
+connectAttr "R_FK_Finger1_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[468]";
+connectAttr "R_FK_Finger1_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[469]";
+connectAttr "R_FK_Finger1_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[470]";
+connectAttr "R_FK_Finger1_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[471]";
+connectAttr "R_FK_Finger1_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[472]";
+connectAttr "R_FK_Finger1_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[473]";
+connectAttr "R_FK_Finger1_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[474]";
+connectAttr "R_FK_Finger1_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[475]";
+connectAttr "R_FK_Finger1_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[476]";
+connectAttr "R_FK_Finger1_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[477]"
+		;
+connectAttr "R_FK_Finger1_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[478]"
+		;
+connectAttr "R_FK_Finger1_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[479]";
+connectAttr "R_FK_Finger1_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[480]";
+connectAttr "R_FK_Finger1_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[481]";
+connectAttr "R_FK_Finger1_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[482]";
+connectAttr "R_FK_Finger1_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[483]";
+connectAttr "R_FK_Finger1_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[484]";
+connectAttr "R_FK_Finger1_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[485]";
+connectAttr "R_FK_Finger1_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[486]";
+connectAttr "R_FK_Finger1_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[487]";
+connectAttr "R_FK_Finger1_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[488]";
+connectAttr "R_FK_Finger1_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[489]"
+		;
+connectAttr "R_FK_Finger1_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[490]"
+		;
+connectAttr "R_FK_Finger1_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[491]";
+connectAttr "R_FK_Finger3_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[492]";
+connectAttr "R_FK_Finger3_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[493]";
+connectAttr "R_FK_Finger3_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[494]";
+connectAttr "R_FK_Finger3_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[495]";
+connectAttr "R_FK_Finger3_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[496]";
+connectAttr "R_FK_Finger3_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[497]";
+connectAttr "R_FK_Finger3_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[498]";
+connectAttr "R_FK_Finger3_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[499]";
+connectAttr "R_FK_Finger3_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[500]";
+connectAttr "R_FK_Finger3_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[501]"
+		;
+connectAttr "R_FK_Finger3_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[502]"
+		;
+connectAttr "R_FK_Finger3_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[503]";
+connectAttr "R_FK_Finger3_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[504]";
+connectAttr "R_FK_Finger3_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[505]";
+connectAttr "R_FK_Finger3_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[506]";
+connectAttr "R_FK_Finger3_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[507]";
+connectAttr "R_FK_Finger3_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[508]";
+connectAttr "R_FK_Finger3_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[509]";
+connectAttr "R_FK_Finger3_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[510]";
+connectAttr "R_FK_Finger3_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[511]";
+connectAttr "R_FK_Finger3_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[512]";
+connectAttr "R_FK_Finger3_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[513]"
+		;
+connectAttr "R_FK_Finger3_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[514]"
+		;
+connectAttr "R_FK_Finger3_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[515]";
+connectAttr "R_FK_Finger3_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[516]";
+connectAttr "R_FK_Finger3_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[517]";
+connectAttr "R_FK_Finger3_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[518]";
+connectAttr "R_FK_Finger3_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[519]";
+connectAttr "R_FK_Finger3_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[520]";
+connectAttr "R_FK_Finger3_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[521]";
+connectAttr "R_FK_Finger3_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[522]";
+connectAttr "R_FK_Finger3_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[523]";
+connectAttr "R_FK_Finger3_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[524]";
+connectAttr "R_FK_Finger3_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[525]"
+		;
+connectAttr "R_FK_Finger3_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[526]"
+		;
+connectAttr "R_FK_Finger3_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[527]";
+connectAttr "L_FK_Arm_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[528]";
+connectAttr "L_FK_Arm_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[529]";
+connectAttr "L_FK_Arm_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[530]";
+connectAttr "L_FK_Arm_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[531]";
+connectAttr "L_FK_Arm_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[532]";
+connectAttr "L_FK_Arm_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[533]";
+connectAttr "L_FK_Arm_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[534]";
+connectAttr "L_FK_Arm_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[535]";
+connectAttr "L_FK_Arm_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[536]";
+connectAttr "L_FK_Arm_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[537]"
+		;
+connectAttr "L_FK_Arm_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[538]";
+connectAttr "L_FK_Arm_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[539]";
+connectAttr "L_FK_Arm_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[540]";
+connectAttr "L_FK_Arm_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[541]";
+connectAttr "L_FK_Arm_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[542]";
+connectAttr "L_FK_Arm_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[543]";
+connectAttr "L_FK_Arm_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[544]";
+connectAttr "L_FK_Arm_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[545]";
+connectAttr "L_FK_Arm_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[546]";
+connectAttr "L_FK_Arm_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[547]";
+connectAttr "L_FK_Arm_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[548]";
+connectAttr "L_FK_Arm_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[549]"
+		;
+connectAttr "L_FK_Arm_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[550]";
+connectAttr "L_FK_Arm_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[551]";
+connectAttr "L_FK_Arm_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[552]";
+connectAttr "L_FK_Arm_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[553]";
+connectAttr "L_FK_Arm_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[554]";
+connectAttr "L_FK_Arm_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[555]";
+connectAttr "L_FK_Arm_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[556]";
+connectAttr "L_FK_Arm_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[557]";
+connectAttr "L_FK_Arm_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[558]";
+connectAttr "L_FK_Arm_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[559]";
+connectAttr "L_FK_Arm_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[560]";
+connectAttr "L_FK_Arm_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[561]"
+		;
+connectAttr "L_FK_Arm_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[562]";
+connectAttr "L_FK_Arm_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[563]";
+connectAttr "L_FK_Finger5_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[564]";
+connectAttr "L_FK_Finger5_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[565]";
+connectAttr "L_FK_Finger5_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[566]";
+connectAttr "L_FK_Finger5_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[567]";
+connectAttr "L_FK_Finger5_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[568]";
+connectAttr "L_FK_Finger5_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[569]";
+connectAttr "L_FK_Finger5_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[570]";
+connectAttr "L_FK_Finger5_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[571]";
+connectAttr "L_FK_Finger5_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[572]";
+connectAttr "L_FK_Finger5_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[573]"
+		;
+connectAttr "L_FK_Finger5_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[574]"
+		;
+connectAttr "L_FK_Finger5_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[575]";
+connectAttr "L_FK_Finger5_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[576]";
+connectAttr "L_FK_Finger5_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[577]";
+connectAttr "L_FK_Finger5_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[578]";
+connectAttr "L_FK_Finger5_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[579]";
+connectAttr "L_FK_Finger5_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[580]";
+connectAttr "L_FK_Finger5_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[581]";
+connectAttr "L_FK_Finger5_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[582]";
+connectAttr "L_FK_Finger5_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[583]";
+connectAttr "L_FK_Finger5_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[584]";
+connectAttr "L_FK_Finger5_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[585]"
+		;
+connectAttr "L_FK_Finger5_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[586]"
+		;
+connectAttr "L_FK_Finger5_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[587]";
+connectAttr "L_FK_Finger5_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[588]";
+connectAttr "L_FK_Finger5_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[589]";
+connectAttr "L_FK_Finger5_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[590]";
+connectAttr "L_FK_Finger5_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[591]";
+connectAttr "L_FK_Finger5_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[592]";
+connectAttr "L_FK_Finger5_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[593]";
+connectAttr "L_FK_Finger5_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[594]";
+connectAttr "L_FK_Finger5_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[595]";
+connectAttr "L_FK_Finger5_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[596]";
+connectAttr "L_FK_Finger5_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[597]"
+		;
+connectAttr "L_FK_Finger5_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[598]"
+		;
+connectAttr "L_FK_Finger5_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[599]";
+connectAttr "L_FK_Finger4_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[600]";
+connectAttr "L_FK_Finger4_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[601]";
+connectAttr "L_FK_Finger4_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[602]";
+connectAttr "L_FK_Finger4_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[603]";
+connectAttr "L_FK_Finger4_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[604]";
+connectAttr "L_FK_Finger4_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[605]";
+connectAttr "L_FK_Finger4_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[606]";
+connectAttr "L_FK_Finger4_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[607]";
+connectAttr "L_FK_Finger4_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[608]";
+connectAttr "L_FK_Finger4_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[609]"
+		;
+connectAttr "L_FK_Finger4_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[610]"
+		;
+connectAttr "L_FK_Finger4_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[611]";
+connectAttr "L_FK_Finger4_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[612]";
+connectAttr "L_FK_Finger4_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[613]";
+connectAttr "L_FK_Finger4_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[614]";
+connectAttr "L_FK_Finger4_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[615]";
+connectAttr "L_FK_Finger4_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[616]";
+connectAttr "L_FK_Finger4_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[617]";
+connectAttr "L_FK_Finger4_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[618]";
+connectAttr "L_FK_Finger4_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[619]";
+connectAttr "L_FK_Finger4_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[620]";
+connectAttr "L_FK_Finger4_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[621]"
+		;
+connectAttr "L_FK_Finger4_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[622]"
+		;
+connectAttr "L_FK_Finger4_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[623]";
+connectAttr "L_FK_Finger4_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[624]";
+connectAttr "L_FK_Finger4_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[625]";
+connectAttr "L_FK_Finger4_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[626]";
+connectAttr "L_FK_Finger4_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[627]";
+connectAttr "L_FK_Finger4_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[628]";
+connectAttr "L_FK_Finger4_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[629]";
+connectAttr "L_FK_Finger4_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[630]";
+connectAttr "L_FK_Finger4_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[631]";
+connectAttr "L_FK_Finger4_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[632]";
+connectAttr "L_FK_Finger4_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[633]"
+		;
+connectAttr "L_FK_Finger4_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[634]"
+		;
+connectAttr "L_FK_Finger4_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[635]";
+connectAttr "L_FK_Finger2_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[636]";
+connectAttr "L_FK_Finger2_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[637]";
+connectAttr "L_FK_Finger2_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[638]";
+connectAttr "L_FK_Finger2_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[639]";
+connectAttr "L_FK_Finger2_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[640]";
+connectAttr "L_FK_Finger2_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[641]";
+connectAttr "L_FK_Finger2_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[642]";
+connectAttr "L_FK_Finger2_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[643]";
+connectAttr "L_FK_Finger2_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[644]";
+connectAttr "L_FK_Finger2_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[645]"
+		;
+connectAttr "L_FK_Finger2_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[646]"
+		;
+connectAttr "L_FK_Finger2_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[647]";
+connectAttr "L_FK_Finger2_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[648]";
+connectAttr "L_FK_Finger2_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[649]";
+connectAttr "L_FK_Finger2_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[650]";
+connectAttr "L_FK_Finger2_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[651]";
+connectAttr "L_FK_Finger2_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[652]";
+connectAttr "L_FK_Finger2_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[653]";
+connectAttr "L_FK_Finger2_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[654]";
+connectAttr "L_FK_Finger2_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[655]";
+connectAttr "L_FK_Finger2_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[656]";
+connectAttr "L_FK_Finger2_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[657]"
+		;
+connectAttr "L_FK_Finger2_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[658]"
+		;
+connectAttr "L_FK_Finger2_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[659]";
+connectAttr "L_FK_Finger2_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[660]";
+connectAttr "L_FK_Finger2_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[661]";
+connectAttr "L_FK_Finger2_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[662]";
+connectAttr "L_FK_Finger2_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[663]";
+connectAttr "L_FK_Finger2_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[664]";
+connectAttr "L_FK_Finger2_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[665]";
+connectAttr "L_FK_Finger2_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[666]";
+connectAttr "L_FK_Finger2_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[667]";
+connectAttr "L_FK_Finger2_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[668]";
+connectAttr "L_FK_Finger2_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[669]"
+		;
+connectAttr "L_FK_Finger2_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[670]"
+		;
+connectAttr "L_FK_Finger2_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[671]";
+connectAttr "L_FK_Finger1_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[672]";
+connectAttr "L_FK_Finger1_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[673]";
+connectAttr "L_FK_Finger1_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[674]";
+connectAttr "L_FK_Finger1_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[675]";
+connectAttr "L_FK_Finger1_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[676]";
+connectAttr "L_FK_Finger1_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[677]";
+connectAttr "L_FK_Finger1_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[678]";
+connectAttr "L_FK_Finger1_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[679]";
+connectAttr "L_FK_Finger1_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[680]";
+connectAttr "L_FK_Finger1_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[681]"
+		;
+connectAttr "L_FK_Finger1_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[682]"
+		;
+connectAttr "L_FK_Finger1_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[683]";
+connectAttr "L_FK_Finger1_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[684]";
+connectAttr "L_FK_Finger1_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[685]";
+connectAttr "L_FK_Finger1_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[686]";
+connectAttr "L_FK_Finger1_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[687]";
+connectAttr "L_FK_Finger1_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[688]";
+connectAttr "L_FK_Finger1_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[689]";
+connectAttr "L_FK_Finger1_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[690]";
+connectAttr "L_FK_Finger1_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[691]";
+connectAttr "L_FK_Finger1_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[692]";
+connectAttr "L_FK_Finger1_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[693]"
+		;
+connectAttr "L_FK_Finger1_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[694]"
+		;
+connectAttr "L_FK_Finger1_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[695]";
+connectAttr "L_FK_Finger1_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[696]";
+connectAttr "L_FK_Finger1_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[697]";
+connectAttr "L_FK_Finger1_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[698]";
+connectAttr "L_FK_Finger1_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[699]";
+connectAttr "L_FK_Finger1_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[700]";
+connectAttr "L_FK_Finger1_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[701]";
+connectAttr "L_FK_Finger1_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[702]";
+connectAttr "L_FK_Finger1_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[703]";
+connectAttr "L_FK_Finger1_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[704]";
+connectAttr "L_FK_Finger1_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[705]"
+		;
+connectAttr "L_FK_Finger1_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[706]"
+		;
+connectAttr "L_FK_Finger1_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[707]";
+connectAttr "L_FK_Finger3_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[708]";
+connectAttr "L_FK_Finger3_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[709]";
+connectAttr "L_FK_Finger3_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[710]";
+connectAttr "L_FK_Finger3_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[711]";
+connectAttr "L_FK_Finger3_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[712]";
+connectAttr "L_FK_Finger3_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[713]";
+connectAttr "L_FK_Finger3_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[714]";
+connectAttr "L_FK_Finger3_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[715]";
+connectAttr "L_FK_Finger3_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[716]";
+connectAttr "L_FK_Finger3_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[717]"
+		;
+connectAttr "L_FK_Finger3_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[718]"
+		;
+connectAttr "L_FK_Finger3_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[719]";
+connectAttr "L_FK_Finger3_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[720]";
+connectAttr "L_FK_Finger3_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[721]";
+connectAttr "L_FK_Finger3_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[722]";
+connectAttr "L_FK_Finger3_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[723]";
+connectAttr "L_FK_Finger3_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[724]";
+connectAttr "L_FK_Finger3_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[725]";
+connectAttr "L_FK_Finger3_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[726]";
+connectAttr "L_FK_Finger3_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[727]";
+connectAttr "L_FK_Finger3_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[728]";
+connectAttr "L_FK_Finger3_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[729]"
+		;
+connectAttr "L_FK_Finger3_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[730]"
+		;
+connectAttr "L_FK_Finger3_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[731]";
+connectAttr "L_FK_Finger3_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[732]";
+connectAttr "L_FK_Finger3_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[733]";
+connectAttr "L_FK_Finger3_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[734]";
+connectAttr "L_FK_Finger3_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[735]";
+connectAttr "L_FK_Finger3_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[736]";
+connectAttr "L_FK_Finger3_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[737]";
+connectAttr "L_FK_Finger3_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[738]";
+connectAttr "L_FK_Finger3_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[739]";
+connectAttr "L_FK_Finger3_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[740]";
+connectAttr "L_FK_Finger3_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[741]"
+		;
+connectAttr "L_FK_Finger3_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[742]"
+		;
+connectAttr "L_FK_Finger3_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[743]";
+connectAttr "L_Leg_IKFK_Switch_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[744]"
+		;
+connectAttr "L_Leg_IKFK_Switch_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[745]"
+		;
+connectAttr "L_Leg_IKFK_Switch_ctl_Leg_IKFK.o" "OlderBrother_Rig_01RN.phl[746]";
+connectAttr "L_Leg_IKFK_Switch_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[747]";
+connectAttr "L_Leg_IKFK_Switch_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[748]";
+connectAttr "L_Leg_IKFK_Switch_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[749]";
+connectAttr "L_Leg_IKFK_Switch_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[750]"
+		;
+connectAttr "L_Leg_IKFK_Switch_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[751]"
+		;
+connectAttr "L_Leg_IKFK_Switch_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[752]"
+		;
+connectAttr "L_Leg_IKFK_Switch_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[753]"
+		;
+connectAttr "L_Leg_IKFK_Switch_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[754]";
+connectAttr "L_Leg_IKFK_Switch_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[755]";
+connectAttr "L_Leg_IKFK_Switch_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[756]";
+connectAttr "R_Leg_IKFK_Switch_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[757]"
+		;
+connectAttr "R_Leg_IKFK_Switch_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[758]"
+		;
+connectAttr "R_Leg_IKFK_Switch_ctl_Leg_IKFK.o" "OlderBrother_Rig_01RN.phl[759]";
+connectAttr "R_Leg_IKFK_Switch_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[760]";
+connectAttr "R_Leg_IKFK_Switch_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[761]";
+connectAttr "R_Leg_IKFK_Switch_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[762]";
+connectAttr "R_Leg_IKFK_Switch_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[763]"
+		;
+connectAttr "R_Leg_IKFK_Switch_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[764]"
+		;
+connectAttr "R_Leg_IKFK_Switch_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[765]"
+		;
+connectAttr "R_Leg_IKFK_Switch_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[766]"
+		;
+connectAttr "R_Leg_IKFK_Switch_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[767]";
+connectAttr "R_Leg_IKFK_Switch_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[768]";
+connectAttr "R_Leg_IKFK_Switch_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[769]";
+connectAttr "Master_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[770]";
+connectAttr "Master_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[771]";
+connectAttr "Master_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[772]";
+connectAttr "Master_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[773]";
+connectAttr "Master_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[774]";
+connectAttr "Master_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[775]";
+connectAttr "Master_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[776]";
+connectAttr "Master_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[777]";
+connectAttr "Master_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[778]";
+connectAttr "Master_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[779]";
+connectAttr "L_IK_Leg_01_jnt_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[780]";
+connectAttr "L_IK_Leg_01_jnt_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[781]";
+connectAttr "L_IK_Leg_01_jnt_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[782]";
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[783]";
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[784]";
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[785]";
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[786]";
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[787]";
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[788]";
+connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[789]"
+		;
+connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[790]"
+		;
+connectAttr "L_IK_Leg_01_jnt_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[791]";
+connectAttr "L_Leg_IK_Handle_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[792]";
+connectAttr "L_Leg_IK_Handle_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[793]";
+connectAttr "L_Leg_IK_Handle_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[794]";
+connectAttr "L_Leg_IK_Handle_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[795]"
+		;
+connectAttr "L_Leg_IK_Handle_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[796]"
+		;
+connectAttr "L_Leg_IK_Handle_ctl_Length_1.o" "OlderBrother_Rig_01RN.phl[797]";
+connectAttr "L_Leg_IK_Handle_ctl_Length_2.o" "OlderBrother_Rig_01RN.phl[798]";
+connectAttr "L_Leg_IK_Handle_ctl_Stretchy.o" "OlderBrother_Rig_01RN.phl[799]";
+connectAttr "L_Leg_IK_Handle_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[800]";
+connectAttr "L_Leg_IK_Handle_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[801]";
+connectAttr "L_Leg_IK_Handle_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[802]";
+connectAttr "L_Leg_IK_Handle_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[803]";
+connectAttr "L_Leg_IK_Handle_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[804]";
+connectAttr "L_Leg_IK_Handle_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[805]";
+connectAttr "L_Leg_IK_Handle_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[806]";
+connectAttr "L_Leg_PV_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[807]";
+connectAttr "L_Leg_PV_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[808]";
+connectAttr "L_Leg_PV_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[809]";
+connectAttr "L_Leg_PV_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[810]";
+connectAttr "L_Leg_PV_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[811]";
+connectAttr "L_Leg_PV_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[812]";
+connectAttr "L_Leg_PV_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[813]";
+connectAttr "L_Leg_PV_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[814]";
+connectAttr "L_Leg_PV_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[815]";
+connectAttr "L_Leg_PV_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[816]";
+connectAttr "L_Leg_PV_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[817]";
+connectAttr "L_Leg_PV_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[818]";
+connectAttr "R_IK_Leg_01_jnt_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[819]";
+connectAttr "R_IK_Leg_01_jnt_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[820]";
+connectAttr "R_IK_Leg_01_jnt_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[821]";
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[822]";
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[823]";
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[824]";
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[825]";
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[826]";
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[827]";
+connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[828]"
+		;
+connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[829]"
+		;
+connectAttr "R_IK_Leg_01_jnt_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[830]";
+connectAttr "R_Leg_IK_Handle_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[831]";
+connectAttr "R_Leg_IK_Handle_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[832]";
+connectAttr "R_Leg_IK_Handle_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[833]";
+connectAttr "R_Leg_IK_Handle_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[834]"
+		;
+connectAttr "R_Leg_IK_Handle_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[835]"
+		;
+connectAttr "R_Leg_IK_Handle_ctl_Length_1.o" "OlderBrother_Rig_01RN.phl[836]";
+connectAttr "R_Leg_IK_Handle_ctl_Length_2.o" "OlderBrother_Rig_01RN.phl[837]";
+connectAttr "R_Leg_IK_Handle_ctl_Stretchy.o" "OlderBrother_Rig_01RN.phl[838]";
+connectAttr "R_Leg_IK_Handle_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[839]";
+connectAttr "R_Leg_IK_Handle_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[840]";
+connectAttr "R_Leg_IK_Handle_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[841]";
+connectAttr "R_Leg_IK_Handle_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[842]";
+connectAttr "R_Leg_IK_Handle_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[843]";
+connectAttr "R_Leg_IK_Handle_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[844]";
+connectAttr "R_Leg_IK_Handle_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[845]";
+connectAttr "R_Leg_PV_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[846]";
+connectAttr "R_Leg_PV_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[847]";
+connectAttr "R_Leg_PV_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[848]";
+connectAttr "R_Leg_PV_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[849]";
+connectAttr "R_Leg_PV_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[850]";
+connectAttr "R_Leg_PV_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[851]";
+connectAttr "R_Leg_PV_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[852]";
+connectAttr "R_Leg_PV_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[853]";
+connectAttr "R_Leg_PV_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[854]";
+connectAttr "R_Leg_PV_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[855]";
+connectAttr "R_Leg_PV_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[856]";
+connectAttr "R_Leg_PV_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[857]";
+relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+connectAttr "layerManager.dli[0]" "defaultLayer.id";
+connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "sharedReferenceNode.sr" "bedroomRN.sr";
 connectAttr "R_IK_Leg_04_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[136]";
 connectAttr "R_IK_Leg_04_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[137]";
 connectAttr "R_IK_Leg_04_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[138]";
@@ -6348,49 +6940,6 @@ connectAttr "R_IK_Leg_04_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[145
 		;
 connectAttr "R_IK_Leg_04_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[146]";
 connectAttr "R_IK_Leg_04_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[147]";
-connectAttr "R_Leg_PV_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[148]";
-connectAttr "R_Leg_PV_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[149]";
-connectAttr "R_Leg_PV_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[150]";
-connectAttr "R_Leg_PV_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[151]";
-connectAttr "R_Leg_PV_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[152]";
-connectAttr "R_Leg_PV_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[153]";
-connectAttr "R_Leg_PV_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[154]";
-connectAttr "R_Leg_PV_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[155]";
-connectAttr "R_Leg_PV_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[156]";
-connectAttr "R_Leg_PV_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[157]";
-connectAttr "R_Leg_PV_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[158]";
-connectAttr "R_Leg_PV_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[159]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[160]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[161]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[162]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[163]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[164]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[165]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[166]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[167]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[168]";
-connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[169]"
-		;
-connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[170]"
-		;
-connectAttr "L_IK_Leg_01_jnt_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[171]";
-connectAttr "L_Leg_IK_Handle_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[172]";
-connectAttr "L_Leg_IK_Handle_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[173]";
-connectAttr "L_Leg_IK_Handle_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[174]";
-connectAttr "L_Leg_IK_Handle_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[175]";
-connectAttr "L_Leg_IK_Handle_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[176]";
-connectAttr "L_Leg_IK_Handle_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[177]";
-connectAttr "L_Leg_IK_Handle_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[178]";
-connectAttr "L_Leg_IK_Handle_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[179]";
-connectAttr "L_Leg_IK_Handle_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[180]";
-connectAttr "L_Leg_IK_Handle_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[181]"
-		;
-connectAttr "L_Leg_IK_Handle_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[182]"
-		;
-connectAttr "L_Leg_IK_Handle_ctl_Length_1.o" "OlderBrother_Rig_01RN.phl[183]";
-connectAttr "L_Leg_IK_Handle_ctl_Length_2.o" "OlderBrother_Rig_01RN.phl[184]";
-connectAttr "L_Leg_IK_Handle_ctl_Stretchy.o" "OlderBrother_Rig_01RN.phl[185]";
-connectAttr "L_Leg_IK_Handle_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[186]";
 connectAttr "pairBlend1.otx" "OlderBrother_Rig_01RN.phl[187]";
 connectAttr "pairBlend1.oty" "OlderBrother_Rig_01RN.phl[188]";
 connectAttr "pairBlend1.otz" "OlderBrother_Rig_01RN.phl[189]";
@@ -6400,580 +6949,8 @@ connectAttr "pairBlend1.orz" "OlderBrother_Rig_01RN.phl[192]";
 connectAttr "L_IK_Leg_04_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[193]"
 		;
 connectAttr "L_IK_Leg_04_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[194]";
-connectAttr "OlderBrother_Rig_01RN.phl[195]" "pairBlend1.w";
 connectAttr "L_IK_Leg_04_ctl_blendParent1.o" "OlderBrother_Rig_01RN.phl[196]";
 connectAttr "L_IK_Leg_04_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[197]";
-connectAttr "OlderBrother_Rig_01RN.phl[198]" "pairBlend1.itx2";
-connectAttr "OlderBrother_Rig_01RN.phl[199]" "pairBlend1.ity2";
-connectAttr "OlderBrother_Rig_01RN.phl[200]" "pairBlend1.itz2";
-connectAttr "OlderBrother_Rig_01RN.phl[201]" "pairBlend1.irx2";
-connectAttr "OlderBrother_Rig_01RN.phl[202]" "pairBlend1.iry2";
-connectAttr "OlderBrother_Rig_01RN.phl[203]" "pairBlend1.irz2";
-connectAttr "L_Leg_PV_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[204]";
-connectAttr "L_Leg_PV_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[205]";
-connectAttr "L_Leg_PV_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[206]";
-connectAttr "L_Leg_PV_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[207]";
-connectAttr "L_Leg_PV_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[208]";
-connectAttr "L_Leg_PV_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[209]";
-connectAttr "L_Leg_PV_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[210]";
-connectAttr "L_Leg_PV_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[211]";
-connectAttr "L_Leg_PV_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[212]";
-connectAttr "L_Leg_PV_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[213]";
-connectAttr "L_Leg_PV_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[214]";
-connectAttr "L_Leg_PV_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[215]";
-connectAttr "R_FK_Arm_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[216]";
-connectAttr "R_FK_Arm_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[217]";
-connectAttr "R_FK_Arm_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[218]";
-connectAttr "R_FK_Arm_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[219]";
-connectAttr "R_FK_Arm_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[220]";
-connectAttr "R_FK_Arm_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[221]";
-connectAttr "R_FK_Arm_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[222]";
-connectAttr "R_FK_Arm_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[223]";
-connectAttr "R_FK_Arm_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[224]";
-connectAttr "R_FK_Arm_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[225]"
-		;
-connectAttr "R_FK_Arm_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[226]";
-connectAttr "R_FK_Arm_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[227]";
-connectAttr "R_FK_Arm_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[228]";
-connectAttr "R_FK_Arm_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[229]";
-connectAttr "R_FK_Arm_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[230]";
-connectAttr "R_FK_Arm_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[231]";
-connectAttr "R_FK_Arm_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[232]";
-connectAttr "R_FK_Arm_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[233]";
-connectAttr "R_FK_Arm_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[234]";
-connectAttr "R_FK_Arm_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[235]";
-connectAttr "R_FK_Arm_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[236]";
-connectAttr "R_FK_Arm_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[237]"
-		;
-connectAttr "R_FK_Arm_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[238]";
-connectAttr "R_FK_Arm_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[239]";
-connectAttr "R_FK_Arm_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[240]";
-connectAttr "R_FK_Arm_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[241]";
-connectAttr "R_FK_Arm_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[242]";
-connectAttr "R_FK_Arm_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[243]";
-connectAttr "R_FK_Arm_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[244]";
-connectAttr "R_FK_Arm_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[245]";
-connectAttr "R_FK_Arm_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[246]";
-connectAttr "R_FK_Arm_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[247]";
-connectAttr "R_FK_Arm_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[248]";
-connectAttr "R_FK_Arm_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[249]"
-		;
-connectAttr "R_FK_Arm_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[250]";
-connectAttr "R_FK_Arm_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[251]";
-connectAttr "R_FK_Finger5_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[252]";
-connectAttr "R_FK_Finger5_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[253]";
-connectAttr "R_FK_Finger5_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[254]";
-connectAttr "R_FK_Finger5_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[255]";
-connectAttr "R_FK_Finger5_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[256]";
-connectAttr "R_FK_Finger5_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[257]";
-connectAttr "R_FK_Finger5_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[258]";
-connectAttr "R_FK_Finger5_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[259]";
-connectAttr "R_FK_Finger5_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[260]";
-connectAttr "R_FK_Finger5_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[261]"
-		;
-connectAttr "R_FK_Finger5_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[262]"
-		;
-connectAttr "R_FK_Finger5_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[263]";
-connectAttr "R_FK_Finger5_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[264]";
-connectAttr "R_FK_Finger5_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[265]";
-connectAttr "R_FK_Finger5_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[266]";
-connectAttr "R_FK_Finger5_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[267]";
-connectAttr "R_FK_Finger5_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[268]";
-connectAttr "R_FK_Finger5_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[269]";
-connectAttr "R_FK_Finger5_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[270]";
-connectAttr "R_FK_Finger5_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[271]";
-connectAttr "R_FK_Finger5_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[272]";
-connectAttr "R_FK_Finger5_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[273]"
-		;
-connectAttr "R_FK_Finger5_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[274]"
-		;
-connectAttr "R_FK_Finger5_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[275]";
-connectAttr "R_FK_Finger5_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[276]";
-connectAttr "R_FK_Finger5_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[277]";
-connectAttr "R_FK_Finger5_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[278]";
-connectAttr "R_FK_Finger5_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[279]";
-connectAttr "R_FK_Finger5_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[280]";
-connectAttr "R_FK_Finger5_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[281]";
-connectAttr "R_FK_Finger5_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[282]";
-connectAttr "R_FK_Finger5_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[283]";
-connectAttr "R_FK_Finger5_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[284]";
-connectAttr "R_FK_Finger5_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[285]"
-		;
-connectAttr "R_FK_Finger5_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[286]"
-		;
-connectAttr "R_FK_Finger5_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[287]";
-connectAttr "R_FK_Finger4_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[288]";
-connectAttr "R_FK_Finger4_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[289]";
-connectAttr "R_FK_Finger4_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[290]";
-connectAttr "R_FK_Finger4_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[291]";
-connectAttr "R_FK_Finger4_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[292]";
-connectAttr "R_FK_Finger4_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[293]";
-connectAttr "R_FK_Finger4_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[294]";
-connectAttr "R_FK_Finger4_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[295]";
-connectAttr "R_FK_Finger4_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[296]";
-connectAttr "R_FK_Finger4_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[297]"
-		;
-connectAttr "R_FK_Finger4_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[298]"
-		;
-connectAttr "R_FK_Finger4_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[299]";
-connectAttr "R_FK_Finger4_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[300]";
-connectAttr "R_FK_Finger4_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[301]";
-connectAttr "R_FK_Finger4_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[302]";
-connectAttr "R_FK_Finger4_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[303]";
-connectAttr "R_FK_Finger4_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[304]";
-connectAttr "R_FK_Finger4_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[305]";
-connectAttr "R_FK_Finger4_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[306]";
-connectAttr "R_FK_Finger4_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[307]";
-connectAttr "R_FK_Finger4_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[308]";
-connectAttr "R_FK_Finger4_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[309]"
-		;
-connectAttr "R_FK_Finger4_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[310]"
-		;
-connectAttr "R_FK_Finger4_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[311]";
-connectAttr "R_FK_Finger4_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[312]";
-connectAttr "R_FK_Finger4_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[313]";
-connectAttr "R_FK_Finger4_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[314]";
-connectAttr "R_FK_Finger4_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[315]";
-connectAttr "R_FK_Finger4_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[316]";
-connectAttr "R_FK_Finger4_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[317]";
-connectAttr "R_FK_Finger4_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[318]";
-connectAttr "R_FK_Finger4_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[319]";
-connectAttr "R_FK_Finger4_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[320]";
-connectAttr "R_FK_Finger4_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[321]"
-		;
-connectAttr "R_FK_Finger4_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[322]"
-		;
-connectAttr "R_FK_Finger4_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[323]";
-connectAttr "R_FK_Finger2_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[324]";
-connectAttr "R_FK_Finger2_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[325]";
-connectAttr "R_FK_Finger2_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[326]";
-connectAttr "R_FK_Finger2_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[327]";
-connectAttr "R_FK_Finger2_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[328]";
-connectAttr "R_FK_Finger2_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[329]";
-connectAttr "R_FK_Finger2_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[330]";
-connectAttr "R_FK_Finger2_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[331]";
-connectAttr "R_FK_Finger2_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[332]";
-connectAttr "R_FK_Finger2_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[333]"
-		;
-connectAttr "R_FK_Finger2_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[334]"
-		;
-connectAttr "R_FK_Finger2_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[335]";
-connectAttr "R_FK_Finger2_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[336]";
-connectAttr "R_FK_Finger2_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[337]";
-connectAttr "R_FK_Finger2_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[338]";
-connectAttr "R_FK_Finger2_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[339]";
-connectAttr "R_FK_Finger2_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[340]";
-connectAttr "R_FK_Finger2_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[341]";
-connectAttr "R_FK_Finger2_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[342]";
-connectAttr "R_FK_Finger2_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[343]";
-connectAttr "R_FK_Finger2_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[344]";
-connectAttr "R_FK_Finger2_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[345]"
-		;
-connectAttr "R_FK_Finger2_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[346]"
-		;
-connectAttr "R_FK_Finger2_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[347]";
-connectAttr "R_FK_Finger2_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[348]";
-connectAttr "R_FK_Finger2_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[349]";
-connectAttr "R_FK_Finger2_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[350]";
-connectAttr "R_FK_Finger2_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[351]";
-connectAttr "R_FK_Finger2_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[352]";
-connectAttr "R_FK_Finger2_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[353]";
-connectAttr "R_FK_Finger2_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[354]";
-connectAttr "R_FK_Finger2_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[355]";
-connectAttr "R_FK_Finger2_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[356]";
-connectAttr "R_FK_Finger2_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[357]"
-		;
-connectAttr "R_FK_Finger2_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[358]"
-		;
-connectAttr "R_FK_Finger2_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[359]";
-connectAttr "R_FK_Finger1_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[360]";
-connectAttr "R_FK_Finger1_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[361]";
-connectAttr "R_FK_Finger1_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[362]";
-connectAttr "R_FK_Finger1_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[363]";
-connectAttr "R_FK_Finger1_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[364]";
-connectAttr "R_FK_Finger1_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[365]";
-connectAttr "R_FK_Finger1_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[366]";
-connectAttr "R_FK_Finger1_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[367]";
-connectAttr "R_FK_Finger1_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[368]";
-connectAttr "R_FK_Finger1_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[369]"
-		;
-connectAttr "R_FK_Finger1_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[370]"
-		;
-connectAttr "R_FK_Finger1_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[371]";
-connectAttr "R_FK_Finger1_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[372]";
-connectAttr "R_FK_Finger1_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[373]";
-connectAttr "R_FK_Finger1_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[374]";
-connectAttr "R_FK_Finger1_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[375]";
-connectAttr "R_FK_Finger1_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[376]";
-connectAttr "R_FK_Finger1_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[377]";
-connectAttr "R_FK_Finger1_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[378]";
-connectAttr "R_FK_Finger1_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[379]";
-connectAttr "R_FK_Finger1_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[380]";
-connectAttr "R_FK_Finger1_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[381]"
-		;
-connectAttr "R_FK_Finger1_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[382]"
-		;
-connectAttr "R_FK_Finger1_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[383]";
-connectAttr "R_FK_Finger1_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[384]";
-connectAttr "R_FK_Finger1_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[385]";
-connectAttr "R_FK_Finger1_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[386]";
-connectAttr "R_FK_Finger1_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[387]";
-connectAttr "R_FK_Finger1_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[388]";
-connectAttr "R_FK_Finger1_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[389]";
-connectAttr "R_FK_Finger1_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[390]";
-connectAttr "R_FK_Finger1_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[391]";
-connectAttr "R_FK_Finger1_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[392]";
-connectAttr "R_FK_Finger1_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[393]"
-		;
-connectAttr "R_FK_Finger1_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[394]"
-		;
-connectAttr "R_FK_Finger1_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[395]";
-connectAttr "R_FK_Finger3_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[396]";
-connectAttr "R_FK_Finger3_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[397]";
-connectAttr "R_FK_Finger3_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[398]";
-connectAttr "R_FK_Finger3_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[399]";
-connectAttr "R_FK_Finger3_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[400]";
-connectAttr "R_FK_Finger3_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[401]";
-connectAttr "R_FK_Finger3_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[402]";
-connectAttr "R_FK_Finger3_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[403]";
-connectAttr "R_FK_Finger3_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[404]";
-connectAttr "R_FK_Finger3_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[405]"
-		;
-connectAttr "R_FK_Finger3_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[406]"
-		;
-connectAttr "R_FK_Finger3_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[407]";
-connectAttr "R_FK_Finger3_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[408]";
-connectAttr "R_FK_Finger3_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[409]";
-connectAttr "R_FK_Finger3_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[410]";
-connectAttr "R_FK_Finger3_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[411]";
-connectAttr "R_FK_Finger3_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[412]";
-connectAttr "R_FK_Finger3_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[413]";
-connectAttr "R_FK_Finger3_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[414]";
-connectAttr "R_FK_Finger3_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[415]";
-connectAttr "R_FK_Finger3_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[416]";
-connectAttr "R_FK_Finger3_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[417]"
-		;
-connectAttr "R_FK_Finger3_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[418]"
-		;
-connectAttr "R_FK_Finger3_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[419]";
-connectAttr "R_FK_Finger3_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[420]";
-connectAttr "R_FK_Finger3_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[421]";
-connectAttr "R_FK_Finger3_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[422]";
-connectAttr "R_FK_Finger3_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[423]";
-connectAttr "R_FK_Finger3_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[424]";
-connectAttr "R_FK_Finger3_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[425]";
-connectAttr "R_FK_Finger3_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[426]";
-connectAttr "R_FK_Finger3_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[427]";
-connectAttr "R_FK_Finger3_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[428]";
-connectAttr "R_FK_Finger3_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[429]"
-		;
-connectAttr "R_FK_Finger3_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[430]"
-		;
-connectAttr "R_FK_Finger3_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[431]";
-connectAttr "L_FK_Arm_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[432]";
-connectAttr "L_FK_Arm_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[433]";
-connectAttr "L_FK_Arm_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[434]";
-connectAttr "L_FK_Arm_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[435]";
-connectAttr "L_FK_Arm_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[436]";
-connectAttr "L_FK_Arm_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[437]";
-connectAttr "L_FK_Arm_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[438]";
-connectAttr "L_FK_Arm_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[439]";
-connectAttr "L_FK_Arm_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[440]";
-connectAttr "L_FK_Arm_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[441]"
-		;
-connectAttr "L_FK_Arm_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[442]";
-connectAttr "L_FK_Arm_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[443]";
-connectAttr "L_FK_Arm_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[444]";
-connectAttr "L_FK_Arm_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[445]";
-connectAttr "L_FK_Arm_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[446]";
-connectAttr "L_FK_Arm_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[447]";
-connectAttr "L_FK_Arm_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[448]";
-connectAttr "L_FK_Arm_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[449]";
-connectAttr "L_FK_Arm_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[450]";
-connectAttr "L_FK_Arm_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[451]";
-connectAttr "L_FK_Arm_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[452]";
-connectAttr "L_FK_Arm_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[453]"
-		;
-connectAttr "L_FK_Arm_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[454]";
-connectAttr "L_FK_Arm_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[455]";
-connectAttr "L_FK_Arm_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[456]";
-connectAttr "L_FK_Arm_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[457]";
-connectAttr "L_FK_Arm_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[458]";
-connectAttr "L_FK_Arm_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[459]";
-connectAttr "L_FK_Arm_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[460]";
-connectAttr "L_FK_Arm_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[461]";
-connectAttr "L_FK_Arm_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[462]";
-connectAttr "L_FK_Arm_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[463]";
-connectAttr "L_FK_Arm_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[464]";
-connectAttr "L_FK_Arm_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[465]"
-		;
-connectAttr "L_FK_Arm_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[466]";
-connectAttr "L_FK_Arm_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[467]";
-connectAttr "L_FK_Finger5_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[468]";
-connectAttr "L_FK_Finger5_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[469]";
-connectAttr "L_FK_Finger5_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[470]";
-connectAttr "L_FK_Finger5_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[471]";
-connectAttr "L_FK_Finger5_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[472]";
-connectAttr "L_FK_Finger5_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[473]";
-connectAttr "L_FK_Finger5_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[474]";
-connectAttr "L_FK_Finger5_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[475]";
-connectAttr "L_FK_Finger5_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[476]";
-connectAttr "L_FK_Finger5_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[477]"
-		;
-connectAttr "L_FK_Finger5_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[478]"
-		;
-connectAttr "L_FK_Finger5_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[479]";
-connectAttr "L_FK_Finger5_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[480]";
-connectAttr "L_FK_Finger5_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[481]";
-connectAttr "L_FK_Finger5_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[482]";
-connectAttr "L_FK_Finger5_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[483]";
-connectAttr "L_FK_Finger5_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[484]";
-connectAttr "L_FK_Finger5_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[485]";
-connectAttr "L_FK_Finger5_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[486]";
-connectAttr "L_FK_Finger5_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[487]";
-connectAttr "L_FK_Finger5_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[488]";
-connectAttr "L_FK_Finger5_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[489]"
-		;
-connectAttr "L_FK_Finger5_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[490]"
-		;
-connectAttr "L_FK_Finger5_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[491]";
-connectAttr "L_FK_Finger5_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[492]";
-connectAttr "L_FK_Finger5_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[493]";
-connectAttr "L_FK_Finger5_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[494]";
-connectAttr "L_FK_Finger5_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[495]";
-connectAttr "L_FK_Finger5_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[496]";
-connectAttr "L_FK_Finger5_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[497]";
-connectAttr "L_FK_Finger5_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[498]";
-connectAttr "L_FK_Finger5_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[499]";
-connectAttr "L_FK_Finger5_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[500]";
-connectAttr "L_FK_Finger5_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[501]"
-		;
-connectAttr "L_FK_Finger5_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[502]"
-		;
-connectAttr "L_FK_Finger5_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[503]";
-connectAttr "L_FK_Finger4_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[504]";
-connectAttr "L_FK_Finger4_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[505]";
-connectAttr "L_FK_Finger4_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[506]";
-connectAttr "L_FK_Finger4_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[507]";
-connectAttr "L_FK_Finger4_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[508]";
-connectAttr "L_FK_Finger4_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[509]";
-connectAttr "L_FK_Finger4_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[510]";
-connectAttr "L_FK_Finger4_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[511]";
-connectAttr "L_FK_Finger4_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[512]";
-connectAttr "L_FK_Finger4_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[513]"
-		;
-connectAttr "L_FK_Finger4_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[514]"
-		;
-connectAttr "L_FK_Finger4_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[515]";
-connectAttr "L_FK_Finger4_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[516]";
-connectAttr "L_FK_Finger4_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[517]";
-connectAttr "L_FK_Finger4_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[518]";
-connectAttr "L_FK_Finger4_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[519]";
-connectAttr "L_FK_Finger4_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[520]";
-connectAttr "L_FK_Finger4_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[521]";
-connectAttr "L_FK_Finger4_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[522]";
-connectAttr "L_FK_Finger4_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[523]";
-connectAttr "L_FK_Finger4_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[524]";
-connectAttr "L_FK_Finger4_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[525]"
-		;
-connectAttr "L_FK_Finger4_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[526]"
-		;
-connectAttr "L_FK_Finger4_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[527]";
-connectAttr "L_FK_Finger4_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[528]";
-connectAttr "L_FK_Finger4_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[529]";
-connectAttr "L_FK_Finger4_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[530]";
-connectAttr "L_FK_Finger4_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[531]";
-connectAttr "L_FK_Finger4_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[532]";
-connectAttr "L_FK_Finger4_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[533]";
-connectAttr "L_FK_Finger4_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[534]";
-connectAttr "L_FK_Finger4_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[535]";
-connectAttr "L_FK_Finger4_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[536]";
-connectAttr "L_FK_Finger4_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[537]"
-		;
-connectAttr "L_FK_Finger4_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[538]"
-		;
-connectAttr "L_FK_Finger4_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[539]";
-connectAttr "L_FK_Finger2_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[540]";
-connectAttr "L_FK_Finger2_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[541]";
-connectAttr "L_FK_Finger2_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[542]";
-connectAttr "L_FK_Finger2_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[543]";
-connectAttr "L_FK_Finger2_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[544]";
-connectAttr "L_FK_Finger2_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[545]";
-connectAttr "L_FK_Finger2_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[546]";
-connectAttr "L_FK_Finger2_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[547]";
-connectAttr "L_FK_Finger2_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[548]";
-connectAttr "L_FK_Finger2_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[549]"
-		;
-connectAttr "L_FK_Finger2_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[550]"
-		;
-connectAttr "L_FK_Finger2_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[551]";
-connectAttr "L_FK_Finger2_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[552]";
-connectAttr "L_FK_Finger2_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[553]";
-connectAttr "L_FK_Finger2_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[554]";
-connectAttr "L_FK_Finger2_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[555]";
-connectAttr "L_FK_Finger2_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[556]";
-connectAttr "L_FK_Finger2_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[557]";
-connectAttr "L_FK_Finger2_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[558]";
-connectAttr "L_FK_Finger2_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[559]";
-connectAttr "L_FK_Finger2_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[560]";
-connectAttr "L_FK_Finger2_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[561]"
-		;
-connectAttr "L_FK_Finger2_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[562]"
-		;
-connectAttr "L_FK_Finger2_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[563]";
-connectAttr "L_FK_Finger2_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[564]";
-connectAttr "L_FK_Finger2_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[565]";
-connectAttr "L_FK_Finger2_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[566]";
-connectAttr "L_FK_Finger2_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[567]";
-connectAttr "L_FK_Finger2_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[568]";
-connectAttr "L_FK_Finger2_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[569]";
-connectAttr "L_FK_Finger2_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[570]";
-connectAttr "L_FK_Finger2_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[571]";
-connectAttr "L_FK_Finger2_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[572]";
-connectAttr "L_FK_Finger2_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[573]"
-		;
-connectAttr "L_FK_Finger2_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[574]"
-		;
-connectAttr "L_FK_Finger2_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[575]";
-connectAttr "L_FK_Finger1_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[576]";
-connectAttr "L_FK_Finger1_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[577]";
-connectAttr "L_FK_Finger1_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[578]";
-connectAttr "L_FK_Finger1_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[579]";
-connectAttr "L_FK_Finger1_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[580]";
-connectAttr "L_FK_Finger1_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[581]";
-connectAttr "L_FK_Finger1_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[582]";
-connectAttr "L_FK_Finger1_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[583]";
-connectAttr "L_FK_Finger1_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[584]";
-connectAttr "L_FK_Finger1_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[585]"
-		;
-connectAttr "L_FK_Finger1_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[586]"
-		;
-connectAttr "L_FK_Finger1_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[587]";
-connectAttr "L_FK_Finger1_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[588]";
-connectAttr "L_FK_Finger1_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[589]";
-connectAttr "L_FK_Finger1_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[590]";
-connectAttr "L_FK_Finger1_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[591]";
-connectAttr "L_FK_Finger1_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[592]";
-connectAttr "L_FK_Finger1_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[593]";
-connectAttr "L_FK_Finger1_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[594]";
-connectAttr "L_FK_Finger1_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[595]";
-connectAttr "L_FK_Finger1_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[596]";
-connectAttr "L_FK_Finger1_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[597]"
-		;
-connectAttr "L_FK_Finger1_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[598]"
-		;
-connectAttr "L_FK_Finger1_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[599]";
-connectAttr "L_FK_Finger1_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[600]";
-connectAttr "L_FK_Finger1_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[601]";
-connectAttr "L_FK_Finger1_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[602]";
-connectAttr "L_FK_Finger1_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[603]";
-connectAttr "L_FK_Finger1_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[604]";
-connectAttr "L_FK_Finger1_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[605]";
-connectAttr "L_FK_Finger1_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[606]";
-connectAttr "L_FK_Finger1_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[607]";
-connectAttr "L_FK_Finger1_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[608]";
-connectAttr "L_FK_Finger1_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[609]"
-		;
-connectAttr "L_FK_Finger1_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[610]"
-		;
-connectAttr "L_FK_Finger1_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[611]";
-connectAttr "L_FK_Finger3_01_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[612]";
-connectAttr "L_FK_Finger3_01_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[613]";
-connectAttr "L_FK_Finger3_01_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[614]";
-connectAttr "L_FK_Finger3_01_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[615]";
-connectAttr "L_FK_Finger3_01_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[616]";
-connectAttr "L_FK_Finger3_01_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[617]";
-connectAttr "L_FK_Finger3_01_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[618]";
-connectAttr "L_FK_Finger3_01_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[619]";
-connectAttr "L_FK_Finger3_01_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[620]";
-connectAttr "L_FK_Finger3_01_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[621]"
-		;
-connectAttr "L_FK_Finger3_01_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[622]"
-		;
-connectAttr "L_FK_Finger3_01_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[623]";
-connectAttr "L_FK_Finger3_02_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[624]";
-connectAttr "L_FK_Finger3_02_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[625]";
-connectAttr "L_FK_Finger3_02_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[626]";
-connectAttr "L_FK_Finger3_02_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[627]";
-connectAttr "L_FK_Finger3_02_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[628]";
-connectAttr "L_FK_Finger3_02_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[629]";
-connectAttr "L_FK_Finger3_02_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[630]";
-connectAttr "L_FK_Finger3_02_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[631]";
-connectAttr "L_FK_Finger3_02_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[632]";
-connectAttr "L_FK_Finger3_02_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[633]"
-		;
-connectAttr "L_FK_Finger3_02_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[634]"
-		;
-connectAttr "L_FK_Finger3_02_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[635]";
-connectAttr "L_FK_Finger3_03_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[636]";
-connectAttr "L_FK_Finger3_03_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[637]";
-connectAttr "L_FK_Finger3_03_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[638]";
-connectAttr "L_FK_Finger3_03_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[639]";
-connectAttr "L_FK_Finger3_03_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[640]";
-connectAttr "L_FK_Finger3_03_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[641]";
-connectAttr "L_FK_Finger3_03_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[642]";
-connectAttr "L_FK_Finger3_03_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[643]";
-connectAttr "L_FK_Finger3_03_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[644]";
-connectAttr "L_FK_Finger3_03_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[645]"
-		;
-connectAttr "L_FK_Finger3_03_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[646]"
-		;
-connectAttr "L_FK_Finger3_03_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[647]";
-connectAttr "L_Leg_IKFK_Switch_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[648]"
-		;
-connectAttr "L_Leg_IKFK_Switch_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[649]"
-		;
-connectAttr "L_Leg_IKFK_Switch_ctl_Leg_IKFK.o" "OlderBrother_Rig_01RN.phl[650]";
-connectAttr "L_Leg_IKFK_Switch_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[651]";
-connectAttr "L_Leg_IKFK_Switch_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[652]";
-connectAttr "L_Leg_IKFK_Switch_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[653]";
-connectAttr "L_Leg_IKFK_Switch_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[654]"
-		;
-connectAttr "L_Leg_IKFK_Switch_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[655]"
-		;
-connectAttr "L_Leg_IKFK_Switch_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[656]"
-		;
-connectAttr "L_Leg_IKFK_Switch_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[657]"
-		;
-connectAttr "L_Leg_IKFK_Switch_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[658]";
-connectAttr "L_Leg_IKFK_Switch_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[659]";
-connectAttr "L_Leg_IKFK_Switch_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[660]";
-connectAttr "R_Leg_IKFK_Switch_ctl_Follow_Translates.o" "OlderBrother_Rig_01RN.phl[661]"
-		;
-connectAttr "R_Leg_IKFK_Switch_ctl_Follow_Rotates.o" "OlderBrother_Rig_01RN.phl[662]"
-		;
-connectAttr "R_Leg_IKFK_Switch_ctl_Leg_IKFK.o" "OlderBrother_Rig_01RN.phl[663]";
-connectAttr "R_Leg_IKFK_Switch_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[664]";
-connectAttr "R_Leg_IKFK_Switch_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[665]";
-connectAttr "R_Leg_IKFK_Switch_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[666]";
-connectAttr "R_Leg_IKFK_Switch_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[667]"
-		;
-connectAttr "R_Leg_IKFK_Switch_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[668]"
-		;
-connectAttr "R_Leg_IKFK_Switch_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[669]"
-		;
-connectAttr "R_Leg_IKFK_Switch_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[670]"
-		;
-connectAttr "R_Leg_IKFK_Switch_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[671]";
-connectAttr "R_Leg_IKFK_Switch_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[672]";
-connectAttr "R_Leg_IKFK_Switch_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[673]";
-connectAttr "Master_ctl_translateX.o" "OlderBrother_Rig_01RN.phl[674]";
-connectAttr "Master_ctl_translateY.o" "OlderBrother_Rig_01RN.phl[675]";
-connectAttr "Master_ctl_translateZ.o" "OlderBrother_Rig_01RN.phl[676]";
-connectAttr "Master_ctl_rotateY.o" "OlderBrother_Rig_01RN.phl[677]";
-connectAttr "Master_ctl_rotateX.o" "OlderBrother_Rig_01RN.phl[678]";
-connectAttr "Master_ctl_rotateZ.o" "OlderBrother_Rig_01RN.phl[679]";
-connectAttr "Master_ctl_scaleX.o" "OlderBrother_Rig_01RN.phl[680]";
-connectAttr "Master_ctl_scaleY.o" "OlderBrother_Rig_01RN.phl[681]";
-connectAttr "Master_ctl_scaleZ.o" "OlderBrother_Rig_01RN.phl[682]";
-connectAttr "Master_ctl_visibility.o" "OlderBrother_Rig_01RN.phl[683]";
-relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-connectAttr "layerManager.dli[0]" "defaultLayer.id";
-connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "sharedReferenceNode.sr" "bedroomRN.sr";
 connectAttr "sharedReferenceNode.sr" "OlderBrother_Rig_01RN.sr";
 connectAttr "sharedReferenceNode.sr" "YoungerBrother_Rig_03___ready_for_skinningRN.sr"
 		;
@@ -6981,6 +6958,13 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "OlderBrother_Rig_01RN.phl[195]" "pairBlend1.w";
+connectAttr "OlderBrother_Rig_01RN.phl[198]" "pairBlend1.itx2";
+connectAttr "OlderBrother_Rig_01RN.phl[199]" "pairBlend1.ity2";
+connectAttr "OlderBrother_Rig_01RN.phl[200]" "pairBlend1.itz2";
+connectAttr "OlderBrother_Rig_01RN.phl[201]" "pairBlend1.irx2";
+connectAttr "OlderBrother_Rig_01RN.phl[202]" "pairBlend1.iry2";
+connectAttr "OlderBrother_Rig_01RN.phl[203]" "pairBlend1.irz2";
 connectAttr "pairBlend1_inRotateX1.o" "pairBlend1.irx1";
 connectAttr "pairBlend1_inRotateY1.o" "pairBlend1.iry1";
 connectAttr "pairBlend1_inRotateZ1.o" "pairBlend1.irz1";
