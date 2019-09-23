@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 48 Layout.ma
-//Last modified: Mon, Sep 23, 2019 11:21:28 AM
+//Name: Shot 48 Animation.ma
+//Last modified: Mon, Sep 23, 2019 11:21:56 AM
 //Codeset: 1252
 file -rdi 1 -ns "bedroom" -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
@@ -4257,4 +4257,4 @@ connectAttr "sharedReferenceNode.sr" "YoungerBrother_Rig_03___ready_for_skinning
 		;
 connectAttr "deleteComponent1.og" "deleteComponent2.ig";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Shot 48 Layout.ma
+// End of Shot 48 Animation.ma
