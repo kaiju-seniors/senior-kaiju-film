@@ -1,0 +1,16 @@
+newmtl ClothesYB:Denim_FRONT_3765
+illum 4
+Kd 0.29 0.29 0.29
+Ka 0.07 0.07 0.07
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.08 0.08 0.08
+Ns 28.76
+newmtl ClothesYB:Shirt_FRONT_3769
+illum 4
+Kd 0.11 0.40 0.40
+Ka 0.03 0.10 0.10
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.08 0.08 0.08
+Ns 28.76
