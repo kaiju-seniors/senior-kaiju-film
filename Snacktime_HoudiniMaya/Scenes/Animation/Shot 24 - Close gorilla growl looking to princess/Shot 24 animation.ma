@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Shot 24 animation.ma
-//Last modified: Fri, Oct 11, 2019 11:04:22 AM
+//Last modified: Fri, Oct 11, 2019 12:18:54 PM
 //Codeset: 1252
 file -rdi 1 -ns "Kong" -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -rdi 1 -ns "Zilla" -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
@@ -23,13 +23,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "6BEC6232-4C0D-3732-F1DC-19981CC59556";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 115.12603898757285 23.906392421063835 253.69078891271064 ;
-	setAttr ".r" -type "double3" 12.261647270445771 -111.39999999998584 0 ;
+	setAttr ".t" -type "double3" 124.16203230939243 27.039589623550643 266.25873428481327 ;
+	setAttr ".r" -type "double3" -3.3383527295558784 -50.599999999984163 3.131796304994349e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DAC345C1-4D9A-30C4-724C-1BBDDF63290B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 17.097860331472095;
+	setAttr ".coi" 12.106169922905082;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -95,7 +95,7 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
-	setAttr ".coi" 14.543995410351144;
+	setAttr ".coi" 11.484855637084692;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -118,28 +118,28 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AD8A56D3-4C4B-2BB5-97B3-569BC4148A4A";
+	rename -uid "4B1E294C-46F7-0309-C81B-4582D92A86BC";
 	setAttr -s 13 ".lnk";
 	setAttr -s 13 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9F777D46-42A4-994A-092C-9EB782D68608";
+	rename -uid "4C36ACBD-445C-9A64-4698-F984B3605D68";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 1 2 ;
 	setAttr -s 3 ".bspr";
 	setAttr -s 3 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F46C2124-4118-659D-2D25-288DEC9F2E1F";
+	rename -uid "4FD69EB3-4635-3F85-953E-B48E80709B8F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0EE6BA4A-4E16-B302-31CC-8EB00B0C99D4";
+	rename -uid "B589D50D-4CEF-3AA1-1FE9-189E167F874A";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A407C3C7-4578-2E46-9023-0D96CB853F1D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B7CD170E-4A35-8B15-8EF7-4995DAE97B21";
+	rename -uid "A06D9627-4959-00FA-D5A5-AFADFDACC7A3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "ABCD2AC1-4B84-3248-35AC-589F68DD492A";
 	setAttr ".g" yes;
 createNode reference -n "KongRN";
 	rename -uid "A7557272-488F-FCBF-52B1-B7BCDB92ABB0";
-	setAttr -s 1684 ".phl";
+	setAttr -s 854 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -994,985 +994,18 @@ createNode reference -n "KongRN";
 	setAttr ".phl[852]" 0;
 	setAttr ".phl[853]" 0;
 	setAttr ".phl[854]" 0;
-	setAttr ".phl[855]" 0;
-	setAttr ".phl[856]" 0;
-	setAttr ".phl[857]" 0;
-	setAttr ".phl[858]" 0;
-	setAttr ".phl[859]" 0;
-	setAttr ".phl[860]" 0;
-	setAttr ".phl[861]" 0;
-	setAttr ".phl[862]" 0;
-	setAttr ".phl[863]" 0;
-	setAttr ".phl[864]" 0;
-	setAttr ".phl[865]" 0;
-	setAttr ".phl[866]" 0;
-	setAttr ".phl[867]" 0;
-	setAttr ".phl[868]" 0;
-	setAttr ".phl[869]" 0;
-	setAttr ".phl[870]" 0;
-	setAttr ".phl[871]" 0;
-	setAttr ".phl[872]" 0;
-	setAttr ".phl[873]" 0;
-	setAttr ".phl[874]" 0;
-	setAttr ".phl[875]" 0;
-	setAttr ".phl[876]" 0;
-	setAttr ".phl[877]" 0;
-	setAttr ".phl[878]" 0;
-	setAttr ".phl[879]" 0;
-	setAttr ".phl[880]" 0;
-	setAttr ".phl[881]" 0;
-	setAttr ".phl[882]" 0;
-	setAttr ".phl[883]" 0;
-	setAttr ".phl[884]" 0;
-	setAttr ".phl[885]" 0;
-	setAttr ".phl[886]" 0;
-	setAttr ".phl[887]" 0;
-	setAttr ".phl[888]" 0;
-	setAttr ".phl[889]" 0;
-	setAttr ".phl[890]" 0;
-	setAttr ".phl[891]" 0;
-	setAttr ".phl[892]" 0;
-	setAttr ".phl[893]" 0;
-	setAttr ".phl[894]" 0;
-	setAttr ".phl[895]" 0;
-	setAttr ".phl[896]" 0;
-	setAttr ".phl[897]" 0;
-	setAttr ".phl[898]" 0;
-	setAttr ".phl[899]" 0;
-	setAttr ".phl[900]" 0;
-	setAttr ".phl[901]" 0;
-	setAttr ".phl[902]" 0;
-	setAttr ".phl[903]" 0;
-	setAttr ".phl[904]" 0;
-	setAttr ".phl[905]" 0;
-	setAttr ".phl[906]" 0;
-	setAttr ".phl[907]" 0;
-	setAttr ".phl[908]" 0;
-	setAttr ".phl[909]" 0;
-	setAttr ".phl[910]" 0;
-	setAttr ".phl[911]" 0;
-	setAttr ".phl[912]" 0;
-	setAttr ".phl[913]" 0;
-	setAttr ".phl[914]" 0;
-	setAttr ".phl[915]" 0;
-	setAttr ".phl[916]" 0;
-	setAttr ".phl[917]" 0;
-	setAttr ".phl[918]" 0;
-	setAttr ".phl[919]" 0;
-	setAttr ".phl[920]" 0;
-	setAttr ".phl[921]" 0;
-	setAttr ".phl[922]" 0;
-	setAttr ".phl[923]" 0;
-	setAttr ".phl[924]" 0;
-	setAttr ".phl[925]" 0;
-	setAttr ".phl[926]" 0;
-	setAttr ".phl[927]" 0;
-	setAttr ".phl[928]" 0;
-	setAttr ".phl[929]" 0;
-	setAttr ".phl[930]" 0;
-	setAttr ".phl[931]" 0;
-	setAttr ".phl[932]" 0;
-	setAttr ".phl[933]" 0;
-	setAttr ".phl[934]" 0;
-	setAttr ".phl[935]" 0;
-	setAttr ".phl[936]" 0;
-	setAttr ".phl[937]" 0;
-	setAttr ".phl[938]" 0;
-	setAttr ".phl[939]" 0;
-	setAttr ".phl[940]" 0;
-	setAttr ".phl[941]" 0;
-	setAttr ".phl[942]" 0;
-	setAttr ".phl[943]" 0;
-	setAttr ".phl[944]" 0;
-	setAttr ".phl[945]" 0;
-	setAttr ".phl[946]" 0;
-	setAttr ".phl[947]" 0;
-	setAttr ".phl[948]" 0;
-	setAttr ".phl[949]" 0;
-	setAttr ".phl[950]" 0;
-	setAttr ".phl[951]" 0;
-	setAttr ".phl[952]" 0;
-	setAttr ".phl[953]" 0;
-	setAttr ".phl[954]" 0;
-	setAttr ".phl[955]" 0;
-	setAttr ".phl[956]" 0;
-	setAttr ".phl[957]" 0;
-	setAttr ".phl[958]" 0;
-	setAttr ".phl[959]" 0;
-	setAttr ".phl[960]" 0;
-	setAttr ".phl[961]" 0;
-	setAttr ".phl[962]" 0;
-	setAttr ".phl[963]" 0;
-	setAttr ".phl[964]" 0;
-	setAttr ".phl[965]" 0;
-	setAttr ".phl[966]" 0;
-	setAttr ".phl[967]" 0;
-	setAttr ".phl[968]" 0;
-	setAttr ".phl[969]" 0;
-	setAttr ".phl[970]" 0;
-	setAttr ".phl[971]" 0;
-	setAttr ".phl[972]" 0;
-	setAttr ".phl[973]" 0;
-	setAttr ".phl[974]" 0;
-	setAttr ".phl[975]" 0;
-	setAttr ".phl[976]" 0;
-	setAttr ".phl[977]" 0;
-	setAttr ".phl[978]" 0;
-	setAttr ".phl[979]" 0;
-	setAttr ".phl[980]" 0;
-	setAttr ".phl[981]" 0;
-	setAttr ".phl[982]" 0;
-	setAttr ".phl[983]" 0;
-	setAttr ".phl[984]" 0;
-	setAttr ".phl[985]" 0;
-	setAttr ".phl[986]" 0;
-	setAttr ".phl[987]" 0;
-	setAttr ".phl[988]" 0;
-	setAttr ".phl[989]" 0;
-	setAttr ".phl[990]" 0;
-	setAttr ".phl[991]" 0;
-	setAttr ".phl[992]" 0;
-	setAttr ".phl[993]" 0;
-	setAttr ".phl[994]" 0;
-	setAttr ".phl[995]" 0;
-	setAttr ".phl[996]" 0;
-	setAttr ".phl[997]" 0;
-	setAttr ".phl[998]" 0;
-	setAttr ".phl[999]" 0;
-	setAttr ".phl[1000]" 0;
-	setAttr ".phl[1001]" 0;
-	setAttr ".phl[1002]" 0;
-	setAttr ".phl[1003]" 0;
-	setAttr ".phl[1004]" 0;
-	setAttr ".phl[1005]" 0;
-	setAttr ".phl[1006]" 0;
-	setAttr ".phl[1007]" 0;
-	setAttr ".phl[1008]" 0;
-	setAttr ".phl[1009]" 0;
-	setAttr ".phl[1010]" 0;
-	setAttr ".phl[1011]" 0;
-	setAttr ".phl[1012]" 0;
-	setAttr ".phl[1013]" 0;
-	setAttr ".phl[1014]" 0;
-	setAttr ".phl[1015]" 0;
-	setAttr ".phl[1016]" 0;
-	setAttr ".phl[1017]" 0;
-	setAttr ".phl[1018]" 0;
-	setAttr ".phl[1019]" 0;
-	setAttr ".phl[1020]" 0;
-	setAttr ".phl[1021]" 0;
-	setAttr ".phl[1022]" 0;
-	setAttr ".phl[1023]" 0;
-	setAttr ".phl[1024]" 0;
-	setAttr ".phl[1025]" 0;
-	setAttr ".phl[1026]" 0;
-	setAttr ".phl[1027]" 0;
-	setAttr ".phl[1028]" 0;
-	setAttr ".phl[1029]" 0;
-	setAttr ".phl[1030]" 0;
-	setAttr ".phl[1031]" 0;
-	setAttr ".phl[1032]" 0;
-	setAttr ".phl[1033]" 0;
-	setAttr ".phl[1034]" 0;
-	setAttr ".phl[1035]" 0;
-	setAttr ".phl[1036]" 0;
-	setAttr ".phl[1037]" 0;
-	setAttr ".phl[1038]" 0;
-	setAttr ".phl[1039]" 0;
-	setAttr ".phl[1040]" 0;
-	setAttr ".phl[1041]" 0;
-	setAttr ".phl[1042]" 0;
-	setAttr ".phl[1043]" 0;
-	setAttr ".phl[1044]" 0;
-	setAttr ".phl[1045]" 0;
-	setAttr ".phl[1046]" 0;
-	setAttr ".phl[1047]" 0;
-	setAttr ".phl[1048]" 0;
-	setAttr ".phl[1049]" 0;
-	setAttr ".phl[1050]" 0;
-	setAttr ".phl[1051]" 0;
-	setAttr ".phl[1052]" 0;
-	setAttr ".phl[1053]" 0;
-	setAttr ".phl[1054]" 0;
-	setAttr ".phl[1055]" 0;
-	setAttr ".phl[1056]" 0;
-	setAttr ".phl[1057]" 0;
-	setAttr ".phl[1058]" 0;
-	setAttr ".phl[1059]" 0;
-	setAttr ".phl[1060]" 0;
-	setAttr ".phl[1061]" 0;
-	setAttr ".phl[1062]" 0;
-	setAttr ".phl[1063]" 0;
-	setAttr ".phl[1064]" 0;
-	setAttr ".phl[1065]" 0;
-	setAttr ".phl[1066]" 0;
-	setAttr ".phl[1067]" 0;
-	setAttr ".phl[1068]" 0;
-	setAttr ".phl[1069]" 0;
-	setAttr ".phl[1070]" 0;
-	setAttr ".phl[1071]" 0;
-	setAttr ".phl[1072]" 0;
-	setAttr ".phl[1073]" 0;
-	setAttr ".phl[1074]" 0;
-	setAttr ".phl[1075]" 0;
-	setAttr ".phl[1076]" 0;
-	setAttr ".phl[1077]" 0;
-	setAttr ".phl[1078]" 0;
-	setAttr ".phl[1079]" 0;
-	setAttr ".phl[1080]" 0;
-	setAttr ".phl[1081]" 0;
-	setAttr ".phl[1082]" 0;
-	setAttr ".phl[1083]" 0;
-	setAttr ".phl[1084]" 0;
-	setAttr ".phl[1085]" 0;
-	setAttr ".phl[1086]" 0;
-	setAttr ".phl[1087]" 0;
-	setAttr ".phl[1088]" 0;
-	setAttr ".phl[1089]" 0;
-	setAttr ".phl[1090]" 0;
-	setAttr ".phl[1091]" 0;
-	setAttr ".phl[1092]" 0;
-	setAttr ".phl[1093]" 0;
-	setAttr ".phl[1094]" 0;
-	setAttr ".phl[1095]" 0;
-	setAttr ".phl[1096]" 0;
-	setAttr ".phl[1097]" 0;
-	setAttr ".phl[1098]" 0;
-	setAttr ".phl[1099]" 0;
-	setAttr ".phl[1100]" 0;
-	setAttr ".phl[1101]" 0;
-	setAttr ".phl[1102]" 0;
-	setAttr ".phl[1103]" 0;
-	setAttr ".phl[1104]" 0;
-	setAttr ".phl[1105]" 0;
-	setAttr ".phl[1106]" 0;
-	setAttr ".phl[1107]" 0;
-	setAttr ".phl[1108]" 0;
-	setAttr ".phl[1109]" 0;
-	setAttr ".phl[1110]" 0;
-	setAttr ".phl[1111]" 0;
-	setAttr ".phl[1112]" 0;
-	setAttr ".phl[1113]" 0;
-	setAttr ".phl[1114]" 0;
-	setAttr ".phl[1115]" 0;
-	setAttr ".phl[1116]" 0;
-	setAttr ".phl[1117]" 0;
-	setAttr ".phl[1118]" 0;
-	setAttr ".phl[1119]" 0;
-	setAttr ".phl[1120]" 0;
-	setAttr ".phl[1121]" 0;
-	setAttr ".phl[1122]" 0;
-	setAttr ".phl[1123]" 0;
-	setAttr ".phl[1124]" 0;
-	setAttr ".phl[1125]" 0;
-	setAttr ".phl[1126]" 0;
-	setAttr ".phl[1127]" 0;
-	setAttr ".phl[1128]" 0;
-	setAttr ".phl[1129]" 0;
-	setAttr ".phl[1130]" 0;
-	setAttr ".phl[1131]" 0;
-	setAttr ".phl[1132]" 0;
-	setAttr ".phl[1133]" 0;
-	setAttr ".phl[1134]" 0;
-	setAttr ".phl[1135]" 0;
-	setAttr ".phl[1136]" 0;
-	setAttr ".phl[1137]" 0;
-	setAttr ".phl[1138]" 0;
-	setAttr ".phl[1139]" 0;
-	setAttr ".phl[1140]" 0;
-	setAttr ".phl[1141]" 0;
-	setAttr ".phl[1142]" 0;
-	setAttr ".phl[1143]" 0;
-	setAttr ".phl[1144]" 0;
-	setAttr ".phl[1145]" 0;
-	setAttr ".phl[1146]" 0;
-	setAttr ".phl[1147]" 0;
-	setAttr ".phl[1148]" 0;
-	setAttr ".phl[1149]" 0;
-	setAttr ".phl[1150]" 0;
-	setAttr ".phl[1151]" 0;
-	setAttr ".phl[1152]" 0;
-	setAttr ".phl[1153]" 0;
-	setAttr ".phl[1154]" 0;
-	setAttr ".phl[1155]" 0;
-	setAttr ".phl[1156]" 0;
-	setAttr ".phl[1157]" 0;
-	setAttr ".phl[1158]" 0;
-	setAttr ".phl[1159]" 0;
-	setAttr ".phl[1160]" 0;
-	setAttr ".phl[1161]" 0;
-	setAttr ".phl[1162]" 0;
-	setAttr ".phl[1163]" 0;
-	setAttr ".phl[1164]" 0;
-	setAttr ".phl[1165]" 0;
-	setAttr ".phl[1166]" 0;
-	setAttr ".phl[1167]" 0;
-	setAttr ".phl[1168]" 0;
-	setAttr ".phl[1169]" 0;
-	setAttr ".phl[1170]" 0;
-	setAttr ".phl[1171]" 0;
-	setAttr ".phl[1172]" 0;
-	setAttr ".phl[1173]" 0;
-	setAttr ".phl[1174]" 0;
-	setAttr ".phl[1175]" 0;
-	setAttr ".phl[1176]" 0;
-	setAttr ".phl[1177]" 0;
-	setAttr ".phl[1178]" 0;
-	setAttr ".phl[1179]" 0;
-	setAttr ".phl[1180]" 0;
-	setAttr ".phl[1181]" 0;
-	setAttr ".phl[1182]" 0;
-	setAttr ".phl[1183]" 0;
-	setAttr ".phl[1184]" 0;
-	setAttr ".phl[1185]" 0;
-	setAttr ".phl[1186]" 0;
-	setAttr ".phl[1187]" 0;
-	setAttr ".phl[1188]" 0;
-	setAttr ".phl[1189]" 0;
-	setAttr ".phl[1190]" 0;
-	setAttr ".phl[1191]" 0;
-	setAttr ".phl[1192]" 0;
-	setAttr ".phl[1193]" 0;
-	setAttr ".phl[1194]" 0;
-	setAttr ".phl[1195]" 0;
-	setAttr ".phl[1196]" 0;
-	setAttr ".phl[1197]" 0;
-	setAttr ".phl[1198]" 0;
-	setAttr ".phl[1199]" 0;
-	setAttr ".phl[1200]" 0;
-	setAttr ".phl[1201]" 0;
-	setAttr ".phl[1202]" 0;
-	setAttr ".phl[1203]" 0;
-	setAttr ".phl[1204]" 0;
-	setAttr ".phl[1205]" 0;
-	setAttr ".phl[1206]" 0;
-	setAttr ".phl[1207]" 0;
-	setAttr ".phl[1208]" 0;
-	setAttr ".phl[1209]" 0;
-	setAttr ".phl[1210]" 0;
-	setAttr ".phl[1211]" 0;
-	setAttr ".phl[1212]" 0;
-	setAttr ".phl[1213]" 0;
-	setAttr ".phl[1214]" 0;
-	setAttr ".phl[1215]" 0;
-	setAttr ".phl[1216]" 0;
-	setAttr ".phl[1217]" 0;
-	setAttr ".phl[1218]" 0;
-	setAttr ".phl[1219]" 0;
-	setAttr ".phl[1220]" 0;
-	setAttr ".phl[1221]" 0;
-	setAttr ".phl[1222]" 0;
-	setAttr ".phl[1223]" 0;
-	setAttr ".phl[1224]" 0;
-	setAttr ".phl[1225]" 0;
-	setAttr ".phl[1226]" 0;
-	setAttr ".phl[1227]" 0;
-	setAttr ".phl[1228]" 0;
-	setAttr ".phl[1229]" 0;
-	setAttr ".phl[1230]" 0;
-	setAttr ".phl[1231]" 0;
-	setAttr ".phl[1232]" 0;
-	setAttr ".phl[1233]" 0;
-	setAttr ".phl[1234]" 0;
-	setAttr ".phl[1235]" 0;
-	setAttr ".phl[1236]" 0;
-	setAttr ".phl[1237]" 0;
-	setAttr ".phl[1238]" 0;
-	setAttr ".phl[1239]" 0;
-	setAttr ".phl[1240]" 0;
-	setAttr ".phl[1241]" 0;
-	setAttr ".phl[1242]" 0;
-	setAttr ".phl[1243]" 0;
-	setAttr ".phl[1244]" 0;
-	setAttr ".phl[1245]" 0;
-	setAttr ".phl[1246]" 0;
-	setAttr ".phl[1247]" 0;
-	setAttr ".phl[1248]" 0;
-	setAttr ".phl[1249]" 0;
-	setAttr ".phl[1250]" 0;
-	setAttr ".phl[1251]" 0;
-	setAttr ".phl[1252]" 0;
-	setAttr ".phl[1253]" 0;
-	setAttr ".phl[1254]" 0;
-	setAttr ".phl[1255]" 0;
-	setAttr ".phl[1256]" 0;
-	setAttr ".phl[1257]" 0;
-	setAttr ".phl[1258]" 0;
-	setAttr ".phl[1259]" 0;
-	setAttr ".phl[1260]" 0;
-	setAttr ".phl[1261]" 0;
-	setAttr ".phl[1262]" 0;
-	setAttr ".phl[1263]" 0;
-	setAttr ".phl[1264]" 0;
-	setAttr ".phl[1265]" 0;
-	setAttr ".phl[1266]" 0;
-	setAttr ".phl[1267]" 0;
-	setAttr ".phl[1268]" 0;
-	setAttr ".phl[1269]" 0;
-	setAttr ".phl[1270]" 0;
-	setAttr ".phl[1271]" 0;
-	setAttr ".phl[1272]" 0;
-	setAttr ".phl[1273]" 0;
-	setAttr ".phl[1274]" 0;
-	setAttr ".phl[1275]" 0;
-	setAttr ".phl[1276]" 0;
-	setAttr ".phl[1277]" 0;
-	setAttr ".phl[1278]" 0;
-	setAttr ".phl[1279]" 0;
-	setAttr ".phl[1280]" 0;
-	setAttr ".phl[1281]" 0;
-	setAttr ".phl[1282]" 0;
-	setAttr ".phl[1283]" 0;
-	setAttr ".phl[1284]" 0;
-	setAttr ".phl[1285]" 0;
-	setAttr ".phl[1286]" 0;
-	setAttr ".phl[1287]" 0;
-	setAttr ".phl[1288]" 0;
-	setAttr ".phl[1289]" 0;
-	setAttr ".phl[1290]" 0;
-	setAttr ".phl[1291]" 0;
-	setAttr ".phl[1292]" 0;
-	setAttr ".phl[1293]" 0;
-	setAttr ".phl[1294]" 0;
-	setAttr ".phl[1295]" 0;
-	setAttr ".phl[1296]" 0;
-	setAttr ".phl[1297]" 0;
-	setAttr ".phl[1298]" 0;
-	setAttr ".phl[1299]" 0;
-	setAttr ".phl[1300]" 0;
-	setAttr ".phl[1301]" 0;
-	setAttr ".phl[1302]" 0;
-	setAttr ".phl[1303]" 0;
-	setAttr ".phl[1304]" 0;
-	setAttr ".phl[1305]" 0;
-	setAttr ".phl[1306]" 0;
-	setAttr ".phl[1307]" 0;
-	setAttr ".phl[1308]" 0;
-	setAttr ".phl[1309]" 0;
-	setAttr ".phl[1310]" 0;
-	setAttr ".phl[1311]" 0;
-	setAttr ".phl[1312]" 0;
-	setAttr ".phl[1313]" 0;
-	setAttr ".phl[1314]" 0;
-	setAttr ".phl[1315]" 0;
-	setAttr ".phl[1316]" 0;
-	setAttr ".phl[1317]" 0;
-	setAttr ".phl[1318]" 0;
-	setAttr ".phl[1319]" 0;
-	setAttr ".phl[1320]" 0;
-	setAttr ".phl[1321]" 0;
-	setAttr ".phl[1322]" 0;
-	setAttr ".phl[1323]" 0;
-	setAttr ".phl[1324]" 0;
-	setAttr ".phl[1325]" 0;
-	setAttr ".phl[1326]" 0;
-	setAttr ".phl[1327]" 0;
-	setAttr ".phl[1328]" 0;
-	setAttr ".phl[1329]" 0;
-	setAttr ".phl[1330]" 0;
-	setAttr ".phl[1331]" 0;
-	setAttr ".phl[1332]" 0;
-	setAttr ".phl[1333]" 0;
-	setAttr ".phl[1334]" 0;
-	setAttr ".phl[1335]" 0;
-	setAttr ".phl[1336]" 0;
-	setAttr ".phl[1337]" 0;
-	setAttr ".phl[1338]" 0;
-	setAttr ".phl[1339]" 0;
-	setAttr ".phl[1340]" 0;
-	setAttr ".phl[1341]" 0;
-	setAttr ".phl[1342]" 0;
-	setAttr ".phl[1343]" 0;
-	setAttr ".phl[1344]" 0;
-	setAttr ".phl[1345]" 0;
-	setAttr ".phl[1346]" 0;
-	setAttr ".phl[1347]" 0;
-	setAttr ".phl[1348]" 0;
-	setAttr ".phl[1349]" 0;
-	setAttr ".phl[1350]" 0;
-	setAttr ".phl[1351]" 0;
-	setAttr ".phl[1352]" 0;
-	setAttr ".phl[1353]" 0;
-	setAttr ".phl[1354]" 0;
-	setAttr ".phl[1355]" 0;
-	setAttr ".phl[1356]" 0;
-	setAttr ".phl[1357]" 0;
-	setAttr ".phl[1358]" 0;
-	setAttr ".phl[1359]" 0;
-	setAttr ".phl[1360]" 0;
-	setAttr ".phl[1361]" 0;
-	setAttr ".phl[1362]" 0;
-	setAttr ".phl[1363]" 0;
-	setAttr ".phl[1364]" 0;
-	setAttr ".phl[1365]" 0;
-	setAttr ".phl[1366]" 0;
-	setAttr ".phl[1367]" 0;
-	setAttr ".phl[1368]" 0;
-	setAttr ".phl[1369]" 0;
-	setAttr ".phl[1370]" 0;
-	setAttr ".phl[1371]" 0;
-	setAttr ".phl[1372]" 0;
-	setAttr ".phl[1373]" 0;
-	setAttr ".phl[1374]" 0;
-	setAttr ".phl[1375]" 0;
-	setAttr ".phl[1376]" 0;
-	setAttr ".phl[1377]" 0;
-	setAttr ".phl[1378]" 0;
-	setAttr ".phl[1379]" 0;
-	setAttr ".phl[1380]" 0;
-	setAttr ".phl[1381]" 0;
-	setAttr ".phl[1382]" 0;
-	setAttr ".phl[1383]" 0;
-	setAttr ".phl[1384]" 0;
-	setAttr ".phl[1385]" 0;
-	setAttr ".phl[1386]" 0;
-	setAttr ".phl[1387]" 0;
-	setAttr ".phl[1388]" 0;
-	setAttr ".phl[1389]" 0;
-	setAttr ".phl[1390]" 0;
-	setAttr ".phl[1391]" 0;
-	setAttr ".phl[1392]" 0;
-	setAttr ".phl[1393]" 0;
-	setAttr ".phl[1394]" 0;
-	setAttr ".phl[1395]" 0;
-	setAttr ".phl[1396]" 0;
-	setAttr ".phl[1397]" 0;
-	setAttr ".phl[1398]" 0;
-	setAttr ".phl[1399]" 0;
-	setAttr ".phl[1400]" 0;
-	setAttr ".phl[1401]" 0;
-	setAttr ".phl[1402]" 0;
-	setAttr ".phl[1403]" 0;
-	setAttr ".phl[1404]" 0;
-	setAttr ".phl[1405]" 0;
-	setAttr ".phl[1406]" 0;
-	setAttr ".phl[1407]" 0;
-	setAttr ".phl[1408]" 0;
-	setAttr ".phl[1409]" 0;
-	setAttr ".phl[1410]" 0;
-	setAttr ".phl[1411]" 0;
-	setAttr ".phl[1412]" 0;
-	setAttr ".phl[1413]" 0;
-	setAttr ".phl[1414]" 0;
-	setAttr ".phl[1415]" 0;
-	setAttr ".phl[1416]" 0;
-	setAttr ".phl[1417]" 0;
-	setAttr ".phl[1418]" 0;
-	setAttr ".phl[1419]" 0;
-	setAttr ".phl[1420]" 0;
-	setAttr ".phl[1421]" 0;
-	setAttr ".phl[1422]" 0;
-	setAttr ".phl[1423]" 0;
-	setAttr ".phl[1424]" 0;
-	setAttr ".phl[1425]" 0;
-	setAttr ".phl[1426]" 0;
-	setAttr ".phl[1427]" 0;
-	setAttr ".phl[1428]" 0;
-	setAttr ".phl[1429]" 0;
-	setAttr ".phl[1430]" 0;
-	setAttr ".phl[1431]" 0;
-	setAttr ".phl[1432]" 0;
-	setAttr ".phl[1433]" 0;
-	setAttr ".phl[1434]" 0;
-	setAttr ".phl[1435]" 0;
-	setAttr ".phl[1436]" 0;
-	setAttr ".phl[1437]" 0;
-	setAttr ".phl[1438]" 0;
-	setAttr ".phl[1439]" 0;
-	setAttr ".phl[1440]" 0;
-	setAttr ".phl[1441]" 0;
-	setAttr ".phl[1442]" 0;
-	setAttr ".phl[1443]" 0;
-	setAttr ".phl[1444]" 0;
-	setAttr ".phl[1445]" 0;
-	setAttr ".phl[1446]" 0;
-	setAttr ".phl[1447]" 0;
-	setAttr ".phl[1448]" 0;
-	setAttr ".phl[1449]" 0;
-	setAttr ".phl[1450]" 0;
-	setAttr ".phl[1451]" 0;
-	setAttr ".phl[1452]" 0;
-	setAttr ".phl[1453]" 0;
-	setAttr ".phl[1454]" 0;
-	setAttr ".phl[1455]" 0;
-	setAttr ".phl[1456]" 0;
-	setAttr ".phl[1457]" 0;
-	setAttr ".phl[1458]" 0;
-	setAttr ".phl[1459]" 0;
-	setAttr ".phl[1460]" 0;
-	setAttr ".phl[1461]" 0;
-	setAttr ".phl[1462]" 0;
-	setAttr ".phl[1463]" 0;
-	setAttr ".phl[1464]" 0;
-	setAttr ".phl[1465]" 0;
-	setAttr ".phl[1466]" 0;
-	setAttr ".phl[1467]" 0;
-	setAttr ".phl[1468]" 0;
-	setAttr ".phl[1469]" 0;
-	setAttr ".phl[1470]" 0;
-	setAttr ".phl[1471]" 0;
-	setAttr ".phl[1472]" 0;
-	setAttr ".phl[1473]" 0;
-	setAttr ".phl[1474]" 0;
-	setAttr ".phl[1475]" 0;
-	setAttr ".phl[1476]" 0;
-	setAttr ".phl[1477]" 0;
-	setAttr ".phl[1478]" 0;
-	setAttr ".phl[1479]" 0;
-	setAttr ".phl[1480]" 0;
-	setAttr ".phl[1481]" 0;
-	setAttr ".phl[1482]" 0;
-	setAttr ".phl[1483]" 0;
-	setAttr ".phl[1484]" 0;
-	setAttr ".phl[1485]" 0;
-	setAttr ".phl[1486]" 0;
-	setAttr ".phl[1487]" 0;
-	setAttr ".phl[1488]" 0;
-	setAttr ".phl[1489]" 0;
-	setAttr ".phl[1490]" 0;
-	setAttr ".phl[1491]" 0;
-	setAttr ".phl[1492]" 0;
-	setAttr ".phl[1493]" 0;
-	setAttr ".phl[1494]" 0;
-	setAttr ".phl[1495]" 0;
-	setAttr ".phl[1496]" 0;
-	setAttr ".phl[1497]" 0;
-	setAttr ".phl[1498]" 0;
-	setAttr ".phl[1499]" 0;
-	setAttr ".phl[1500]" 0;
-	setAttr ".phl[1501]" 0;
-	setAttr ".phl[1502]" 0;
-	setAttr ".phl[1503]" 0;
-	setAttr ".phl[1504]" 0;
-	setAttr ".phl[1505]" 0;
-	setAttr ".phl[1506]" 0;
-	setAttr ".phl[1507]" 0;
-	setAttr ".phl[1508]" 0;
-	setAttr ".phl[1509]" 0;
-	setAttr ".phl[1510]" 0;
-	setAttr ".phl[1511]" 0;
-	setAttr ".phl[1512]" 0;
-	setAttr ".phl[1513]" 0;
-	setAttr ".phl[1514]" 0;
-	setAttr ".phl[1515]" 0;
-	setAttr ".phl[1516]" 0;
-	setAttr ".phl[1517]" 0;
-	setAttr ".phl[1518]" 0;
-	setAttr ".phl[1519]" 0;
-	setAttr ".phl[1520]" 0;
-	setAttr ".phl[1521]" 0;
-	setAttr ".phl[1522]" 0;
-	setAttr ".phl[1523]" 0;
-	setAttr ".phl[1524]" 0;
-	setAttr ".phl[1525]" 0;
-	setAttr ".phl[1526]" 0;
-	setAttr ".phl[1527]" 0;
-	setAttr ".phl[1528]" 0;
-	setAttr ".phl[1529]" 0;
-	setAttr ".phl[1530]" 0;
-	setAttr ".phl[1531]" 0;
-	setAttr ".phl[1532]" 0;
-	setAttr ".phl[1533]" 0;
-	setAttr ".phl[1534]" 0;
-	setAttr ".phl[1535]" 0;
-	setAttr ".phl[1536]" 0;
-	setAttr ".phl[1537]" 0;
-	setAttr ".phl[1538]" 0;
-	setAttr ".phl[1539]" 0;
-	setAttr ".phl[1540]" 0;
-	setAttr ".phl[1541]" 0;
-	setAttr ".phl[1542]" 0;
-	setAttr ".phl[1543]" 0;
-	setAttr ".phl[1544]" 0;
-	setAttr ".phl[1545]" 0;
-	setAttr ".phl[1546]" 0;
-	setAttr ".phl[1547]" 0;
-	setAttr ".phl[1548]" 0;
-	setAttr ".phl[1549]" 0;
-	setAttr ".phl[1550]" 0;
-	setAttr ".phl[1551]" 0;
-	setAttr ".phl[1552]" 0;
-	setAttr ".phl[1553]" 0;
-	setAttr ".phl[1554]" 0;
-	setAttr ".phl[1555]" 0;
-	setAttr ".phl[1556]" 0;
-	setAttr ".phl[1557]" 0;
-	setAttr ".phl[1558]" 0;
-	setAttr ".phl[1559]" 0;
-	setAttr ".phl[1560]" 0;
-	setAttr ".phl[1561]" 0;
-	setAttr ".phl[1562]" 0;
-	setAttr ".phl[1563]" 0;
-	setAttr ".phl[1564]" 0;
-	setAttr ".phl[1565]" 0;
-	setAttr ".phl[1566]" 0;
-	setAttr ".phl[1567]" 0;
-	setAttr ".phl[1568]" 0;
-	setAttr ".phl[1569]" 0;
-	setAttr ".phl[1570]" 0;
-	setAttr ".phl[1571]" 0;
-	setAttr ".phl[1572]" 0;
-	setAttr ".phl[1573]" 0;
-	setAttr ".phl[1574]" 0;
-	setAttr ".phl[1575]" 0;
-	setAttr ".phl[1576]" 0;
-	setAttr ".phl[1577]" 0;
-	setAttr ".phl[1578]" 0;
-	setAttr ".phl[1579]" 0;
-	setAttr ".phl[1580]" 0;
-	setAttr ".phl[1581]" 0;
-	setAttr ".phl[1582]" 0;
-	setAttr ".phl[1583]" 0;
-	setAttr ".phl[1584]" 0;
-	setAttr ".phl[1585]" 0;
-	setAttr ".phl[1586]" 0;
-	setAttr ".phl[1587]" 0;
-	setAttr ".phl[1588]" 0;
-	setAttr ".phl[1589]" 0;
-	setAttr ".phl[1590]" 0;
-	setAttr ".phl[1591]" 0;
-	setAttr ".phl[1592]" 0;
-	setAttr ".phl[1593]" 0;
-	setAttr ".phl[1594]" 0;
-	setAttr ".phl[1595]" 0;
-	setAttr ".phl[1596]" 0;
-	setAttr ".phl[1597]" 0;
-	setAttr ".phl[1598]" 0;
-	setAttr ".phl[1599]" 0;
-	setAttr ".phl[1600]" 0;
-	setAttr ".phl[1601]" 0;
-	setAttr ".phl[1602]" 0;
-	setAttr ".phl[1603]" 0;
-	setAttr ".phl[1604]" 0;
-	setAttr ".phl[1605]" 0;
-	setAttr ".phl[1606]" 0;
-	setAttr ".phl[1607]" 0;
-	setAttr ".phl[1608]" 0;
-	setAttr ".phl[1609]" 0;
-	setAttr ".phl[1610]" 0;
-	setAttr ".phl[1611]" 0;
-	setAttr ".phl[1612]" 0;
-	setAttr ".phl[1613]" 0;
-	setAttr ".phl[1614]" 0;
-	setAttr ".phl[1615]" 0;
-	setAttr ".phl[1616]" 0;
-	setAttr ".phl[1617]" 0;
-	setAttr ".phl[1618]" 0;
-	setAttr ".phl[1619]" 0;
-	setAttr ".phl[1620]" 0;
-	setAttr ".phl[1621]" 0;
-	setAttr ".phl[1622]" 0;
-	setAttr ".phl[1623]" 0;
-	setAttr ".phl[1624]" 0;
-	setAttr ".phl[1625]" 0;
-	setAttr ".phl[1626]" 0;
-	setAttr ".phl[1627]" 0;
-	setAttr ".phl[1628]" 0;
-	setAttr ".phl[1629]" 0;
-	setAttr ".phl[1630]" 0;
-	setAttr ".phl[1631]" 0;
-	setAttr ".phl[1632]" 0;
-	setAttr ".phl[1633]" 0;
-	setAttr ".phl[1634]" 0;
-	setAttr ".phl[1635]" 0;
-	setAttr ".phl[1636]" 0;
-	setAttr ".phl[1637]" 0;
-	setAttr ".phl[1638]" 0;
-	setAttr ".phl[1639]" 0;
-	setAttr ".phl[1640]" 0;
-	setAttr ".phl[1641]" 0;
-	setAttr ".phl[1642]" 0;
-	setAttr ".phl[1643]" 0;
-	setAttr ".phl[1644]" 0;
-	setAttr ".phl[1645]" 0;
-	setAttr ".phl[1646]" 0;
-	setAttr ".phl[1647]" 0;
-	setAttr ".phl[1648]" 0;
-	setAttr ".phl[1649]" 0;
-	setAttr ".phl[1650]" 0;
-	setAttr ".phl[1651]" 0;
-	setAttr ".phl[1652]" 0;
-	setAttr ".phl[1653]" 0;
-	setAttr ".phl[1654]" 0;
-	setAttr ".phl[1655]" 0;
-	setAttr ".phl[1656]" 0;
-	setAttr ".phl[1657]" 0;
-	setAttr ".phl[1658]" 0;
-	setAttr ".phl[1659]" 0;
-	setAttr ".phl[1660]" 0;
-	setAttr ".phl[1661]" 0;
-	setAttr ".phl[1662]" 0;
-	setAttr ".phl[1663]" 0;
-	setAttr ".phl[1664]" 0;
-	setAttr ".phl[1665]" 0;
-	setAttr ".phl[1666]" 0;
-	setAttr ".phl[1667]" 0;
-	setAttr ".phl[1668]" 0;
-	setAttr ".phl[1669]" 0;
-	setAttr ".phl[1670]" 0;
-	setAttr ".phl[1671]" 0;
-	setAttr ".phl[1672]" 0;
-	setAttr ".phl[1673]" 0;
-	setAttr ".phl[1674]" 0;
-	setAttr ".phl[1675]" 0;
-	setAttr ".phl[1676]" 0;
-	setAttr ".phl[1677]" 0;
-	setAttr ".phl[1678]" 0;
-	setAttr ".phl[1679]" 0;
-	setAttr ".phl[1680]" 0;
-	setAttr ".phl[1681]" 0;
-	setAttr ".phl[1682]" 0;
-	setAttr ".phl[1683]" 0;
-	setAttr ".phl[1684]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"KongRN"
-		"KongRN" 2
+		"KongRN" 3
 		2 "|Kong:Kong|Kong:Deformers|Kong:Tongue_Stretch_splineikHandle" "translate" 
 		" -type \"double3\" 136.29352942461139264 29.8236130762775602 260.40643962087813179"
 		
 		2 "|Kong:Kong|Kong:Deformers|Kong:Tongue_Stretch_splineikHandle" "rotate" 
 		" -type \"double3\" 0.019072129976210276 179.83264441205258777 6.50148608802434502"
 		
-		"KongRN" 1817
-		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "translate" 
-		" -type \"double3\" 0 0 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "translateX" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "translateY" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "translateZ" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "rotate" " -type \"double3\" 0.51752376404894129 -5.50283780315728333 -0.22673062093501442"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "rotateZ" " -av"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "rotateY" " -av"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "rotateX" " -av"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl" 
-		"translateX" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl" 
-		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl" 
-		"translateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl" 
-		"rotate" " -type \"double3\" 0 0 6.05288044247227575"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl" 
-		"rotateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_01_ctrl_grp|Kong:L_Brow_01_ctrl" 
-		"translate" " -type \"double3\" 0 -0.5 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_01_ctrl_grp|Kong:L_Brow_01_ctrl" 
-		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl" 
-		"translate" " -type \"double3\" -0.5 -0.5 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl" 
-		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl" 
-		"translateX" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl" 
-		"translate" " -type \"double3\" -0.49967401178980886 -0.5 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl" 
-		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl" 
-		"translateX" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:UpperLip_Pucker_ctrl_grp|Kong:UpperLip_Pucker_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:UpperLip_Pucker_ctrl_grp|Kong:UpperLip_Pucker_ctrl" 
-		"translateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Nose_ctrl_grp|Kong:L_Nose_ctrl" 
-		"translateX" " -av 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Nose_ctrl_grp|Kong:L_Nose_ctrl" 
-		"translateY" " -av 0"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Nose_ctrl_grp|Kong:L_Nose_ctrl" 
 		"translateZ" " 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl" 
-		"translate" " -type \"double3\" 0 -1 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl" 
-		"translateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl" 
-		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl" 
-		"translate" " -type \"double3\" 0 -1 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl" 
-		"translateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl" 
-		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl" 
-		"translate" " -type \"double3\" 0 0.52487745387638807 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl" 
-		"translateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl" 
-		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotate" 
-		" -type \"double3\" 0.59489845000234387 -2.65334336961392836 11.61881594548421148"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotateZ" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotateX" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotateY" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotate" 
-		" -type \"double3\" 0.15918154183608163 1.5405890931446764 15.37466392990375397"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotateZ" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotateX" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotateY" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotate" 
-		" -type \"double3\" 2.16184669482710135 5.04514164250496755 -6.18778582649370978"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotateX" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotateY" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotateZ" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
-		"rotate" " -type \"double3\" 4.16683874902883833 -9.53820130094929297 16.22479998218127051"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
-		"rotateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
-		"rotateX" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
-		"rotateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotate" 
-		" -type \"double3\" -2.9731486433442802 1.03716339074368813 14.50799312521011153"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotateZ" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotateX" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotateY" 
-		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Master_ctl_grp|Kong:Master_Offset|Kong:Master_ctl" 
-		"translate" " -type \"double3\" 6.31097437280760865 0 11.66926988044728297"
-		2 "|Kong:Kong|Kong:Controls|Kong:Master_ctl_grp|Kong:Master_Offset|Kong:Master_ctl" 
-		"rotate" " -type \"double3\" 0 269.8315611745333058 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_Leg_PV_ctl_grp|Kong:L_Leg_PV_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"translateX" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"translateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"rotate" " -type \"double3\" 0.20361704767833111 -3.61558141161959101 7.14399676419344676"
-		
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"rotateZ" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"rotateX" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"rotateY" " -av"
+		"KongRN" 944
 		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl" "translateX" 
@@ -2006,13 +1039,13 @@ createNode reference -n "KongRN";
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_01_ctrl_grp|Kong:L_Brow_01_ctrl" 
 		"translateY" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl" 
-		"translate" " -type \"double3\" -0.5 -0.5 0"
+		"translate" " -type \"double3\" -0.5 -0.045068211105132726 0"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl" 
 		"translateY" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl" 
 		"translateX" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl" 
-		"translate" " -type \"double3\" -0.49967401178980886 -0.5 0"
+		"translate" " -type \"double3\" -0.5 -0.097063062755588153 0"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl" 
 		"translateY" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl" 
@@ -2022,47 +1055,91 @@ createNode reference -n "KongRN";
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:UpperLip_Pucker_ctrl_grp|Kong:UpperLip_Pucker_ctrl" 
 		"translateZ" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Nose_ctrl_grp|Kong:L_Nose_ctrl" 
-		"translateX" " -av 0"
+		"translateX" " -av 0.50385795288098778"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Nose_ctrl_grp|Kong:L_Nose_ctrl" 
-		"translateY" " -av 0"
+		"translateY" " -av 0.62075265927953349"
+		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Nose_ctrl_grp|Kong:R_Nose_ctrl" 
+		"translateX" " -av 0"
+		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Nose_ctrl_grp|Kong:R_Nose_ctrl" 
+		"translateY" " -av 0.47465415872197086"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl" 
-		"translate" " -type \"double3\" 0 -1 0"
+		"translate" " -type \"double3\" 0 -1 0.74074074074074281"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl" 
 		"translateZ" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl" 
 		"translateY" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl" 
+		"rotateX" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl" 
-		"translate" " -type \"double3\" 0 -1 0"
+		"translate" " -type \"double3\" 0 -1 0.97010947558325489"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl" 
 		"translateZ" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl" 
 		"translateY" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl" 
-		"translate" " -type \"double3\" 0 0.52487745387638807 0"
+		"translate" " -type \"double3\" 0 0.015688862350891064 0.26114843716433284"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl" 
 		"translateZ" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl" 
 		"translateY" " -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotate" 
-		" -type \"double3\" 0.59489845000234387 -2.65334336961392836 11.61881594548421148"
+		2 "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl" 
+		"Arm_IKFK" " -av -k 1 1"
+		2 "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_02_ctl_grp|Kong:L_FK_Arm_02_ctl" 
+		"rotate" " -type \"double3\" -61.44766051568036858 -79.83458539345924976 67.15184580487839128"
 		
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotateZ" 
+		2 "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl" 
+		"rotate" " -type \"double3\" 32.42143218246190628 36.51035356998475834 -34.40205272521213686"
+		
+		2 "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl" 
+		"rotateZ" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl" 
+		"rotateX" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl" 
+		"rotateY" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl" "rotate" 
+		" -type \"double3\" 0 0 1.01152830849435404"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl" "rotateZ" 
 		" -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotate" 
+		" -type \"double3\" 0.92905457214242293 -3.95707639261758759 13.34813696046832199"
+		
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotateX" 
 		" -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotateY" 
 		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotate" 
-		" -type \"double3\" 0.15918154183608163 1.5405890931446764 15.37466392990375397"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotateZ" 
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl" "rotateZ" 
 		" -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotate" 
+		" -type \"double3\" 0.62014154003260824 0.24810275216193375 17.10975464852021943"
+		
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotateX" 
 		" -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotateY" 
 		" -av"
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotate" 
-		" -type \"double3\" 2.16184669482710135 5.04514164250496755 -6.18778582649370978"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl" "rotateZ" 
+		" -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl" 
+		"rotate" " -type \"double3\" 2.07700792552869284 21.25181814090678145 5.71368459330704415"
 		
+		2 "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl" 
+		"rotateX" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl" 
+		"rotateY" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl" 
+		"rotateZ" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl" 
+		"rotate" " -type \"double3\" -0.38831966655640532 -12.79873410053436622 16.68266100353827852"
+		
+		2 "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl" 
+		"rotateZ" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl" 
+		"rotateX" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl" 
+		"rotateY" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotate" 
+		" -type \"double3\" 3.53923779801054161 5.63031896227227246 -9.660356091839299"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotateX" 
 		" -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotateY" 
@@ -2070,22 +1147,31 @@ createNode reference -n "KongRN";
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl" "rotateZ" 
 		" -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
-		"rotate" " -type \"double3\" 4.16683874902883833 -9.53820130094929297 16.22479998218127051"
+		"translate" " -type \"double3\" 0.13909082565450404 0.10900472111771038 -0.022485348222122684"
 		
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
-		"rotateZ" " -av"
+		"translateX" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
+		"translateY" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
+		"translateZ" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
+		"rotate" " -type \"double3\" -1.1241079860321066 4.40953546725687673 12.47774964945845433"
+		
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
 		"rotateX" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
 		"rotateY" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl" 
+		"rotateZ" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotate" 
-		" -type \"double3\" -2.9731486433442802 1.03716339074368813 14.50799312521011153"
+		" -type \"double3\" -2.52544547227784166 -0.15838370339786198 16.31109485317947616"
 		
-		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotateZ" 
-		" -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotateX" 
 		" -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotateY" 
+		" -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl" "rotateZ" 
 		" -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Master_ctl_grp|Kong:Master_Offset|Kong:Master_ctl" 
 		"translate" " -type \"double3\" 6.31097437280760865 0 11.66926988044728297"
@@ -2102,14 +1188,14 @@ createNode reference -n "KongRN";
 		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
 		"translateZ" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"rotate" " -type \"double3\" 0.20361704767833111 -3.61558141161959101 7.14399676419344676"
+		"rotate" " -type \"double3\" -5.52415154434325562 10.02427978762293215 2.38853513124605232"
 		
-		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
-		"rotateZ" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
 		"rotateX" " -av"
 		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
 		"rotateY" " -av"
+		2 "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl" 
+		"rotateZ" " -av"
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.FaceControlsVis" 
 		"KongRN.placeHolderList[1]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.translateX" 
@@ -2214,11 +1300,11 @@ createNode reference -n "KongRN";
 		"KongRN.placeHolderList[51]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.translateZ" 
 		"KongRN.placeHolderList[52]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.rotateZ" 
-		"KongRN.placeHolderList[53]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.rotateX" 
-		"KongRN.placeHolderList[54]" ""
+		"KongRN.placeHolderList[53]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.rotateY" 
+		"KongRN.placeHolderList[54]" ""
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.rotateZ" 
 		"KongRN.placeHolderList[55]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.scaleX" 
 		"KongRN.placeHolderList[56]" ""
@@ -2982,2502 +2068,842 @@ createNode reference -n "KongRN";
 		"KongRN.placeHolderList[435]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.scaleZ" 
 		"KongRN.placeHolderList[436]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.Follow_Translates" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.Follow_Translates" 
 		"KongRN.placeHolderList[437]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.Follow_Rotates" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.Follow_Rotates" 
 		"KongRN.placeHolderList[438]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.translateX" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.translateX" 
 		"KongRN.placeHolderList[439]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.translateY" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.translateY" 
 		"KongRN.placeHolderList[440]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.translateZ" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.translateZ" 
 		"KongRN.placeHolderList[441]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.rotateZ" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.rotateX" 
 		"KongRN.placeHolderList[442]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.rotateX" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.rotateY" 
 		"KongRN.placeHolderList[443]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.rotateY" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.rotateZ" 
 		"KongRN.placeHolderList[444]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.scaleX" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.scaleX" 
 		"KongRN.placeHolderList[445]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.scaleY" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.scaleY" 
 		"KongRN.placeHolderList[446]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.scaleZ" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.scaleZ" 
 		"KongRN.placeHolderList[447]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.visibility" 
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_FK_Controls|Kong:L_FK_Arm_01_ctl_grp|Kong:L_FK_Arm_01_ctl.visibility" 
 		"KongRN.placeHolderList[448]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[449]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[450]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.translateX" 
-		"KongRN.placeHolderList[451]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.translateY" 
-		"KongRN.placeHolderList[452]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.translateZ" 
-		"KongRN.placeHolderList[453]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.rotateY" 
-		"KongRN.placeHolderList[454]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.rotateX" 
-		"KongRN.placeHolderList[455]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[456]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.scaleX" 
-		"KongRN.placeHolderList[457]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.scaleY" 
-		"KongRN.placeHolderList[458]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[459]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.visibility" 
-		"KongRN.placeHolderList[460]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[461]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[462]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.translateX" 
-		"KongRN.placeHolderList[463]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.translateY" 
-		"KongRN.placeHolderList[464]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.translateZ" 
-		"KongRN.placeHolderList[465]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.rotateX" 
-		"KongRN.placeHolderList[466]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.rotateY" 
-		"KongRN.placeHolderList[467]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[468]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.scaleX" 
-		"KongRN.placeHolderList[469]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.scaleY" 
-		"KongRN.placeHolderList[470]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[471]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.visibility" 
-		"KongRN.placeHolderList[472]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[473]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[474]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.translateX" 
-		"KongRN.placeHolderList[475]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.translateY" 
-		"KongRN.placeHolderList[476]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.translateZ" 
-		"KongRN.placeHolderList[477]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.rotateX" 
-		"KongRN.placeHolderList[478]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.rotateY" 
-		"KongRN.placeHolderList[479]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[480]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.scaleX" 
-		"KongRN.placeHolderList[481]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.scaleY" 
-		"KongRN.placeHolderList[482]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[483]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.visibility" 
-		"KongRN.placeHolderList[484]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[485]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[486]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.translateX" 
-		"KongRN.placeHolderList[487]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.translateY" 
-		"KongRN.placeHolderList[488]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.translateZ" 
-		"KongRN.placeHolderList[489]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.rotateX" 
-		"KongRN.placeHolderList[490]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.rotateY" 
-		"KongRN.placeHolderList[491]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[492]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.scaleX" 
-		"KongRN.placeHolderList[493]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.scaleY" 
-		"KongRN.placeHolderList[494]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[495]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.visibility" 
-		"KongRN.placeHolderList[496]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[497]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[498]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.translateX" 
-		"KongRN.placeHolderList[499]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.translateY" 
-		"KongRN.placeHolderList[500]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.translateZ" 
-		"KongRN.placeHolderList[501]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.rotateX" 
-		"KongRN.placeHolderList[502]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.rotateY" 
-		"KongRN.placeHolderList[503]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[504]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.scaleX" 
-		"KongRN.placeHolderList[505]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.scaleY" 
-		"KongRN.placeHolderList[506]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[507]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.visibility" 
-		"KongRN.placeHolderList[508]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[509]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[510]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.translateX" 
-		"KongRN.placeHolderList[511]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.translateY" 
-		"KongRN.placeHolderList[512]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.translateZ" 
-		"KongRN.placeHolderList[513]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.rotateX" 
-		"KongRN.placeHolderList[514]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.rotateY" 
-		"KongRN.placeHolderList[515]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[516]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.scaleX" 
-		"KongRN.placeHolderList[517]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.scaleY" 
-		"KongRN.placeHolderList[518]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[519]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.visibility" 
-		"KongRN.placeHolderList[520]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[521]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[522]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.translateX" 
-		"KongRN.placeHolderList[523]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.translateY" 
-		"KongRN.placeHolderList[524]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.translateZ" 
-		"KongRN.placeHolderList[525]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.rotateX" 
-		"KongRN.placeHolderList[526]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.rotateY" 
-		"KongRN.placeHolderList[527]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[528]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.scaleX" 
-		"KongRN.placeHolderList[529]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.scaleY" 
-		"KongRN.placeHolderList[530]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[531]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.visibility" 
-		"KongRN.placeHolderList[532]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[533]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[534]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.translateX" 
-		"KongRN.placeHolderList[535]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.translateY" 
-		"KongRN.placeHolderList[536]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.translateZ" 
-		"KongRN.placeHolderList[537]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.rotateX" 
-		"KongRN.placeHolderList[538]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.rotateY" 
-		"KongRN.placeHolderList[539]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[540]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.scaleX" 
-		"KongRN.placeHolderList[541]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.scaleY" 
-		"KongRN.placeHolderList[542]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[543]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.visibility" 
-		"KongRN.placeHolderList[544]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[545]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[546]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.translateX" 
-		"KongRN.placeHolderList[547]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.translateY" 
-		"KongRN.placeHolderList[548]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.translateZ" 
-		"KongRN.placeHolderList[549]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.rotateX" 
-		"KongRN.placeHolderList[550]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.rotateY" 
-		"KongRN.placeHolderList[551]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[552]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.scaleX" 
-		"KongRN.placeHolderList[553]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.scaleY" 
-		"KongRN.placeHolderList[554]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[555]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.visibility" 
-		"KongRN.placeHolderList[556]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[557]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[558]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.translateX" 
-		"KongRN.placeHolderList[559]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.translateY" 
-		"KongRN.placeHolderList[560]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.translateZ" 
-		"KongRN.placeHolderList[561]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.rotateX" 
-		"KongRN.placeHolderList[562]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.rotateY" 
-		"KongRN.placeHolderList[563]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[564]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.scaleX" 
-		"KongRN.placeHolderList[565]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.scaleY" 
-		"KongRN.placeHolderList[566]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[567]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.visibility" 
-		"KongRN.placeHolderList[568]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[569]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[570]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.translateX" 
-		"KongRN.placeHolderList[571]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.translateY" 
-		"KongRN.placeHolderList[572]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.translateZ" 
-		"KongRN.placeHolderList[573]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.rotateX" 
-		"KongRN.placeHolderList[574]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.rotateY" 
-		"KongRN.placeHolderList[575]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[576]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.scaleX" 
-		"KongRN.placeHolderList[577]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.scaleY" 
-		"KongRN.placeHolderList[578]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[579]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.visibility" 
-		"KongRN.placeHolderList[580]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[581]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[582]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.translateX" 
-		"KongRN.placeHolderList[583]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.translateY" 
-		"KongRN.placeHolderList[584]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.translateZ" 
-		"KongRN.placeHolderList[585]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.rotateX" 
-		"KongRN.placeHolderList[586]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.rotateY" 
-		"KongRN.placeHolderList[587]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[588]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.scaleX" 
-		"KongRN.placeHolderList[589]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.scaleY" 
-		"KongRN.placeHolderList[590]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[591]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.visibility" 
-		"KongRN.placeHolderList[592]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[593]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[594]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.translateX" 
-		"KongRN.placeHolderList[595]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.translateY" 
-		"KongRN.placeHolderList[596]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.translateZ" 
-		"KongRN.placeHolderList[597]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.rotateX" 
-		"KongRN.placeHolderList[598]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.rotateY" 
-		"KongRN.placeHolderList[599]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[600]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.scaleX" 
-		"KongRN.placeHolderList[601]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.scaleY" 
-		"KongRN.placeHolderList[602]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[603]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.visibility" 
-		"KongRN.placeHolderList[604]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[605]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[606]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.translateX" 
-		"KongRN.placeHolderList[607]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.translateY" 
-		"KongRN.placeHolderList[608]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.translateZ" 
-		"KongRN.placeHolderList[609]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.rotateX" 
-		"KongRN.placeHolderList[610]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.rotateY" 
-		"KongRN.placeHolderList[611]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[612]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.scaleX" 
-		"KongRN.placeHolderList[613]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.scaleY" 
-		"KongRN.placeHolderList[614]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[615]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.visibility" 
-		"KongRN.placeHolderList[616]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[617]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[618]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.translateX" 
-		"KongRN.placeHolderList[619]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.translateY" 
-		"KongRN.placeHolderList[620]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.translateZ" 
-		"KongRN.placeHolderList[621]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.rotateX" 
-		"KongRN.placeHolderList[622]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.rotateY" 
-		"KongRN.placeHolderList[623]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[624]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.scaleX" 
-		"KongRN.placeHolderList[625]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.scaleY" 
-		"KongRN.placeHolderList[626]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[627]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.visibility" 
-		"KongRN.placeHolderList[628]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[629]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[630]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.translateX" 
-		"KongRN.placeHolderList[631]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.translateY" 
-		"KongRN.placeHolderList[632]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.translateZ" 
-		"KongRN.placeHolderList[633]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.rotateX" 
-		"KongRN.placeHolderList[634]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.rotateY" 
-		"KongRN.placeHolderList[635]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[636]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.scaleX" 
-		"KongRN.placeHolderList[637]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.scaleY" 
-		"KongRN.placeHolderList[638]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[639]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.visibility" 
-		"KongRN.placeHolderList[640]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[641]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[642]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.translateX" 
-		"KongRN.placeHolderList[643]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.translateY" 
-		"KongRN.placeHolderList[644]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.translateZ" 
-		"KongRN.placeHolderList[645]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.rotateX" 
-		"KongRN.placeHolderList[646]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.rotateY" 
-		"KongRN.placeHolderList[647]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[648]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.scaleX" 
-		"KongRN.placeHolderList[649]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.scaleY" 
-		"KongRN.placeHolderList[650]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[651]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.visibility" 
-		"KongRN.placeHolderList[652]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[653]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[654]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.translateX" 
-		"KongRN.placeHolderList[655]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.translateY" 
-		"KongRN.placeHolderList[656]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.translateZ" 
-		"KongRN.placeHolderList[657]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.rotateX" 
-		"KongRN.placeHolderList[658]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.rotateY" 
-		"KongRN.placeHolderList[659]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.rotateZ" 
-		"KongRN.placeHolderList[660]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.scaleX" 
-		"KongRN.placeHolderList[661]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.scaleY" 
-		"KongRN.placeHolderList[662]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.scaleZ" 
-		"KongRN.placeHolderList[663]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.visibility" 
-		"KongRN.placeHolderList[664]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[665]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[666]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.translateX" 
-		"KongRN.placeHolderList[667]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.translateY" 
-		"KongRN.placeHolderList[668]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.translateZ" 
-		"KongRN.placeHolderList[669]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.rotateX" 
-		"KongRN.placeHolderList[670]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.rotateY" 
-		"KongRN.placeHolderList[671]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.rotateZ" 
-		"KongRN.placeHolderList[672]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.scaleX" 
-		"KongRN.placeHolderList[673]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.scaleY" 
-		"KongRN.placeHolderList[674]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.scaleZ" 
-		"KongRN.placeHolderList[675]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.visibility" 
-		"KongRN.placeHolderList[676]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[677]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[678]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.translateX" 
-		"KongRN.placeHolderList[679]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.translateY" 
-		"KongRN.placeHolderList[680]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.translateZ" 
-		"KongRN.placeHolderList[681]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[682]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.rotateX" 
-		"KongRN.placeHolderList[683]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.rotateY" 
-		"KongRN.placeHolderList[684]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.scaleX" 
-		"KongRN.placeHolderList[685]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.scaleY" 
-		"KongRN.placeHolderList[686]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[687]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.visibility" 
-		"KongRN.placeHolderList[688]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[689]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[690]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.translateX" 
-		"KongRN.placeHolderList[691]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.translateY" 
-		"KongRN.placeHolderList[692]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.translateZ" 
-		"KongRN.placeHolderList[693]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[694]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.rotateX" 
-		"KongRN.placeHolderList[695]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.rotateY" 
-		"KongRN.placeHolderList[696]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.scaleX" 
-		"KongRN.placeHolderList[697]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.scaleY" 
-		"KongRN.placeHolderList[698]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[699]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.visibility" 
-		"KongRN.placeHolderList[700]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.translateX" 
-		"KongRN.placeHolderList[701]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.translateY" 
-		"KongRN.placeHolderList[702]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.translateZ" 
-		"KongRN.placeHolderList[703]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[704]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.rotateX" 
-		"KongRN.placeHolderList[705]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.rotateY" 
-		"KongRN.placeHolderList[706]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.scaleX" 
-		"KongRN.placeHolderList[707]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.scaleY" 
-		"KongRN.placeHolderList[708]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[709]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.visibility" 
-		"KongRN.placeHolderList[710]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.translateX" 
-		"KongRN.placeHolderList[711]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.translateY" 
-		"KongRN.placeHolderList[712]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.translateZ" 
-		"KongRN.placeHolderList[713]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.rotateX" 
-		"KongRN.placeHolderList[714]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.rotateY" 
-		"KongRN.placeHolderList[715]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.rotateZ" 
-		"KongRN.placeHolderList[716]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.scaleX" 
-		"KongRN.placeHolderList[717]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.scaleY" 
-		"KongRN.placeHolderList[718]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.scaleZ" 
-		"KongRN.placeHolderList[719]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[720]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[721]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.visibility" 
-		"KongRN.placeHolderList[722]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.translateX" 
-		"KongRN.placeHolderList[723]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.translateY" 
-		"KongRN.placeHolderList[724]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.translateZ" 
-		"KongRN.placeHolderList[725]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.rotateZ" 
-		"KongRN.placeHolderList[726]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.rotateX" 
-		"KongRN.placeHolderList[727]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.rotateY" 
-		"KongRN.placeHolderList[728]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.scaleX" 
-		"KongRN.placeHolderList[729]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.scaleY" 
-		"KongRN.placeHolderList[730]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.scaleZ" 
-		"KongRN.placeHolderList[731]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[732]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[733]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.visibility" 
-		"KongRN.placeHolderList[734]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[735]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[736]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.translateX" 
-		"KongRN.placeHolderList[737]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.translateY" 
-		"KongRN.placeHolderList[738]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.translateZ" 
-		"KongRN.placeHolderList[739]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.rotateX" 
-		"KongRN.placeHolderList[740]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.rotateY" 
-		"KongRN.placeHolderList[741]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.rotateZ" 
-		"KongRN.placeHolderList[742]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.scaleX" 
-		"KongRN.placeHolderList[743]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.scaleY" 
-		"KongRN.placeHolderList[744]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.scaleZ" 
-		"KongRN.placeHolderList[745]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.visibility" 
-		"KongRN.placeHolderList[746]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[747]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[748]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.translateX" 
-		"KongRN.placeHolderList[749]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.translateY" 
-		"KongRN.placeHolderList[750]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.translateZ" 
-		"KongRN.placeHolderList[751]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.rotateZ" 
-		"KongRN.placeHolderList[752]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.rotateX" 
-		"KongRN.placeHolderList[753]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.rotateY" 
-		"KongRN.placeHolderList[754]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.scaleX" 
-		"KongRN.placeHolderList[755]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.scaleY" 
-		"KongRN.placeHolderList[756]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.scaleZ" 
-		"KongRN.placeHolderList[757]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.visibility" 
-		"KongRN.placeHolderList[758]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.translateX" 
-		"KongRN.placeHolderList[759]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.translateY" 
-		"KongRN.placeHolderList[760]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.translateZ" 
-		"KongRN.placeHolderList[761]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.rotateZ" 
-		"KongRN.placeHolderList[762]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.rotateX" 
-		"KongRN.placeHolderList[763]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.rotateY" 
-		"KongRN.placeHolderList[764]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.scaleX" 
-		"KongRN.placeHolderList[765]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.scaleY" 
-		"KongRN.placeHolderList[766]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.scaleZ" 
-		"KongRN.placeHolderList[767]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[768]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[769]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.visibility" 
-		"KongRN.placeHolderList[770]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[771]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[772]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.translateX" 
-		"KongRN.placeHolderList[773]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.translateY" 
-		"KongRN.placeHolderList[774]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.translateZ" 
-		"KongRN.placeHolderList[775]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.rotateX" 
-		"KongRN.placeHolderList[776]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.rotateY" 
-		"KongRN.placeHolderList[777]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.rotateZ" 
-		"KongRN.placeHolderList[778]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.scaleX" 
-		"KongRN.placeHolderList[779]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.scaleY" 
-		"KongRN.placeHolderList[780]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.scaleZ" 
-		"KongRN.placeHolderList[781]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.visibility" 
-		"KongRN.placeHolderList[782]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[783]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[784]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.translateX" 
-		"KongRN.placeHolderList[785]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.translateY" 
-		"KongRN.placeHolderList[786]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.translateZ" 
-		"KongRN.placeHolderList[787]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.rotateX" 
-		"KongRN.placeHolderList[788]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.rotateY" 
-		"KongRN.placeHolderList[789]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.rotateZ" 
-		"KongRN.placeHolderList[790]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.scaleX" 
-		"KongRN.placeHolderList[791]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.scaleY" 
-		"KongRN.placeHolderList[792]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.scaleZ" 
-		"KongRN.placeHolderList[793]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.visibility" 
-		"KongRN.placeHolderList[794]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.translateX" 
-		"KongRN.placeHolderList[795]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.translateY" 
-		"KongRN.placeHolderList[796]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.translateZ" 
-		"KongRN.placeHolderList[797]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[798]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.rotateX" 
-		"KongRN.placeHolderList[799]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.rotateY" 
-		"KongRN.placeHolderList[800]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.scaleX" 
-		"KongRN.placeHolderList[801]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.scaleY" 
-		"KongRN.placeHolderList[802]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[803]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.visibility" 
-		"KongRN.placeHolderList[804]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[805]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[806]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[807]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[808]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.translateX" 
-		"KongRN.placeHolderList[809]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.translateY" 
-		"KongRN.placeHolderList[810]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.translateZ" 
-		"KongRN.placeHolderList[811]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.rotateX" 
-		"KongRN.placeHolderList[812]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.rotateY" 
-		"KongRN.placeHolderList[813]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[814]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.scaleX" 
-		"KongRN.placeHolderList[815]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.scaleY" 
-		"KongRN.placeHolderList[816]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[817]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.visibility" 
-		"KongRN.placeHolderList[818]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[819]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[820]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.translateX" 
-		"KongRN.placeHolderList[821]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.translateY" 
-		"KongRN.placeHolderList[822]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.translateZ" 
-		"KongRN.placeHolderList[823]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.rotateX" 
-		"KongRN.placeHolderList[824]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.rotateY" 
-		"KongRN.placeHolderList[825]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[826]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.scaleX" 
-		"KongRN.placeHolderList[827]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.scaleY" 
-		"KongRN.placeHolderList[828]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[829]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.visibility" 
-		"KongRN.placeHolderList[830]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[831]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[832]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.translateX" 
-		"KongRN.placeHolderList[833]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.translateY" 
-		"KongRN.placeHolderList[834]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.translateZ" 
-		"KongRN.placeHolderList[835]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.rotateX" 
-		"KongRN.placeHolderList[836]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.rotateY" 
-		"KongRN.placeHolderList[837]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[838]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.scaleX" 
-		"KongRN.placeHolderList[839]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.scaleY" 
-		"KongRN.placeHolderList[840]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[841]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.visibility" 
-		"KongRN.placeHolderList[842]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.FaceControlsVis" 
-		"KongRN.placeHolderList[843]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.translateX" 
-		"KongRN.placeHolderList[844]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.translateY" 
-		"KongRN.placeHolderList[845]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.translateZ" 
-		"KongRN.placeHolderList[846]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.rotateZ" 
-		"KongRN.placeHolderList[847]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.rotateY" 
-		"KongRN.placeHolderList[848]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.rotateX" 
-		"KongRN.placeHolderList[849]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.scaleX" 
-		"KongRN.placeHolderList[850]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.scaleY" 
-		"KongRN.placeHolderList[851]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.scaleZ" 
-		"KongRN.placeHolderList[852]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.visibility" 
-		"KongRN.placeHolderList[853]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[854]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Head_ctl_grp|Kong:Head_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[855]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.Blink" 
-		"KongRN.placeHolderList[856]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.Follow" 
-		"KongRN.placeHolderList[857]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.L_Up_Lid" 
-		"KongRN.placeHolderList[858]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.R_Up_Lid" 
-		"KongRN.placeHolderList[859]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.L_Low_Lid" 
-		"KongRN.placeHolderList[860]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.R_Low_Lid" 
-		"KongRN.placeHolderList[861]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.rotateX" 
-		"KongRN.placeHolderList[862]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.rotateY" 
-		"KongRN.placeHolderList[863]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.rotateZ" 
-		"KongRN.placeHolderList[864]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.visibility" 
-		"KongRN.placeHolderList[865]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.translateX" 
-		"KongRN.placeHolderList[866]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.translateY" 
-		"KongRN.placeHolderList[867]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.translateZ" 
-		"KongRN.placeHolderList[868]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.scaleX" 
-		"KongRN.placeHolderList[869]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.scaleY" 
-		"KongRN.placeHolderList[870]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl.scaleZ" 
-		"KongRN.placeHolderList[871]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.translateX" 
-		"KongRN.placeHolderList[872]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.translateY" 
-		"KongRN.placeHolderList[873]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.translateZ" 
-		"KongRN.placeHolderList[874]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.rotateX" 
-		"KongRN.placeHolderList[875]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.rotateY" 
-		"KongRN.placeHolderList[876]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.rotateZ" 
-		"KongRN.placeHolderList[877]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.visibility" 
-		"KongRN.placeHolderList[878]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.scaleX" 
-		"KongRN.placeHolderList[879]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.scaleY" 
-		"KongRN.placeHolderList[880]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:R_eye_ctrl_grp|Kong:R_eye_ctrl.scaleZ" 
-		"KongRN.placeHolderList[881]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.translateX" 
-		"KongRN.placeHolderList[882]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.translateY" 
-		"KongRN.placeHolderList[883]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.translateZ" 
-		"KongRN.placeHolderList[884]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.rotateX" 
-		"KongRN.placeHolderList[885]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.rotateY" 
-		"KongRN.placeHolderList[886]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.rotateZ" 
-		"KongRN.placeHolderList[887]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.visibility" 
-		"KongRN.placeHolderList[888]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.scaleX" 
-		"KongRN.placeHolderList[889]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.scaleY" 
-		"KongRN.placeHolderList[890]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Master_eyes_ctrl_grp|Kong:Master_eyes_ctrl|Kong:L_eye_ctrl_grp|Kong:L_eye_ctrl.scaleZ" 
-		"KongRN.placeHolderList[891]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.translateX" 
-		"KongRN.placeHolderList[892]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.translateY" 
-		"KongRN.placeHolderList[893]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.translateZ" 
-		"KongRN.placeHolderList[894]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.rotateZ" 
-		"KongRN.placeHolderList[895]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.rotateX" 
-		"KongRN.placeHolderList[896]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.rotateY" 
-		"KongRN.placeHolderList[897]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.scaleX" 
-		"KongRN.placeHolderList[898]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.scaleY" 
-		"KongRN.placeHolderList[899]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.scaleZ" 
-		"KongRN.placeHolderList[900]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.visibility" 
-		"KongRN.placeHolderList[901]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[902]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Jaw_ctl_grp|Kong:Jaw_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[903]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_01_ctrl_grp|Kong:L_Brow_01_ctrl.translateY" 
-		"KongRN.placeHolderList[904]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_01_ctrl_grp|Kong:L_Brow_01_ctrl.translateX" 
-		"KongRN.placeHolderList[905]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_01_ctrl_grp|Kong:L_Brow_01_ctrl.translateZ" 
-		"KongRN.placeHolderList[906]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_01_ctrl_grp|Kong:L_Brow_01_ctrl.visibility" 
-		"KongRN.placeHolderList[907]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl.translateY" 
-		"KongRN.placeHolderList[908]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl.translateX" 
-		"KongRN.placeHolderList[909]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl.translateZ" 
-		"KongRN.placeHolderList[910]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:L_Brow_ctrls|Kong:L_Brow_02_ctrl_grp|Kong:L_Brow_02_ctrl.visibility" 
-		"KongRN.placeHolderList[911]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_01_ctrl_grp|Kong:R_Brow_01_ctrl.translateY" 
-		"KongRN.placeHolderList[912]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_01_ctrl_grp|Kong:R_Brow_01_ctrl.translateX" 
-		"KongRN.placeHolderList[913]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_01_ctrl_grp|Kong:R_Brow_01_ctrl.translateZ" 
-		"KongRN.placeHolderList[914]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_01_ctrl_grp|Kong:R_Brow_01_ctrl.visibility" 
-		"KongRN.placeHolderList[915]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl.translateY" 
-		"KongRN.placeHolderList[916]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl.translateX" 
-		"KongRN.placeHolderList[917]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl.translateZ" 
-		"KongRN.placeHolderList[918]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:Brows_ctrls|Kong:R_Brow_ctrls|Kong:R_Brow_02_ctrl_grp|Kong:R_Brow_02_ctrl.visibility" 
-		"KongRN.placeHolderList[919]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:UpperLip_Pucker_ctrl_grp|Kong:UpperLip_Pucker_ctrl.translateZ" 
-		"KongRN.placeHolderList[920]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:UpperLip_Pucker_ctrl_grp|Kong:UpperLip_Pucker_ctrl.translateX" 
-		"KongRN.placeHolderList[921]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:UpperLip_Pucker_ctrl_grp|Kong:UpperLip_Pucker_ctrl.translateY" 
-		"KongRN.placeHolderList[922]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:UpperLip_Pucker_ctrl_grp|Kong:UpperLip_Pucker_ctrl.visibility" 
-		"KongRN.placeHolderList[923]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Nose_ctrl_grp|Kong:L_Nose_ctrl.translateY" 
-		"KongRN.placeHolderList[924]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Nose_ctrl_grp|Kong:L_Nose_ctrl.translateX" 
-		"KongRN.placeHolderList[925]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Nose_ctrl_grp|Kong:L_Nose_ctrl.visibility" 
-		"KongRN.placeHolderList[926]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Nose_ctrl_grp|Kong:R_Nose_ctrl.translateY" 
-		"KongRN.placeHolderList[927]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Nose_ctrl_grp|Kong:R_Nose_ctrl.translateX" 
-		"KongRN.placeHolderList[928]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Nose_ctrl_grp|Kong:R_Nose_ctrl.visibility" 
-		"KongRN.placeHolderList[929]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.translateZ" 
-		"KongRN.placeHolderList[930]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.translateY" 
-		"KongRN.placeHolderList[931]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.translateX" 
-		"KongRN.placeHolderList[932]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.rotateX" 
-		"KongRN.placeHolderList[933]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.rotateY" 
-		"KongRN.placeHolderList[934]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.rotateZ" 
-		"KongRN.placeHolderList[935]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.visibility" 
-		"KongRN.placeHolderList[936]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.scaleX" 
-		"KongRN.placeHolderList[937]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.scaleY" 
-		"KongRN.placeHolderList[938]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:L_Mouth_Corner_ctrl_grp|Kong:L_Mouth_Corner_ctrl.scaleZ" 
-		"KongRN.placeHolderList[939]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.translateZ" 
-		"KongRN.placeHolderList[940]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.translateY" 
-		"KongRN.placeHolderList[941]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.translateX" 
-		"KongRN.placeHolderList[942]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.rotateX" 
-		"KongRN.placeHolderList[943]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.rotateY" 
-		"KongRN.placeHolderList[944]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.rotateZ" 
-		"KongRN.placeHolderList[945]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.visibility" 
-		"KongRN.placeHolderList[946]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.scaleX" 
-		"KongRN.placeHolderList[947]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.scaleY" 
-		"KongRN.placeHolderList[948]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:Head_Controls|Kong:R_Mouth_Corner_ctrl_grp|Kong:R_Mouth_Corner_ctrl.scaleZ" 
-		"KongRN.placeHolderList[949]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl.translateZ" 
-		"KongRN.placeHolderList[950]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl.translateY" 
-		"KongRN.placeHolderList[951]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl.translateX" 
-		"KongRN.placeHolderList[952]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:LowerLip_PuckerPout_ctrl_grp|Kong:LowerLip_PuckerPout_ctrl.visibility" 
-		"KongRN.placeHolderList[953]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.translateX" 
-		"KongRN.placeHolderList[954]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.translateY" 
-		"KongRN.placeHolderList[955]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.translateZ" 
-		"KongRN.placeHolderList[956]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.rotateZ" 
-		"KongRN.placeHolderList[957]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.rotateX" 
-		"KongRN.placeHolderList[958]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.rotateY" 
-		"KongRN.placeHolderList[959]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.scaleX" 
-		"KongRN.placeHolderList[960]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.scaleY" 
-		"KongRN.placeHolderList[961]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.scaleZ" 
-		"KongRN.placeHolderList[962]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl.visibility" 
-		"KongRN.placeHolderList[963]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.translateX" 
-		"KongRN.placeHolderList[964]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.translateY" 
-		"KongRN.placeHolderList[965]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.translateZ" 
-		"KongRN.placeHolderList[966]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.rotateX" 
-		"KongRN.placeHolderList[967]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.rotateY" 
-		"KongRN.placeHolderList[968]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.rotateZ" 
-		"KongRN.placeHolderList[969]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.scaleX" 
-		"KongRN.placeHolderList[970]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.scaleY" 
-		"KongRN.placeHolderList[971]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.scaleZ" 
-		"KongRN.placeHolderList[972]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl.visibility" 
-		"KongRN.placeHolderList[973]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.translateX" 
-		"KongRN.placeHolderList[974]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.translateY" 
-		"KongRN.placeHolderList[975]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.translateZ" 
-		"KongRN.placeHolderList[976]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.rotateX" 
-		"KongRN.placeHolderList[977]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.rotateY" 
-		"KongRN.placeHolderList[978]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.rotateZ" 
-		"KongRN.placeHolderList[979]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.scaleX" 
-		"KongRN.placeHolderList[980]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.scaleY" 
-		"KongRN.placeHolderList[981]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.scaleZ" 
-		"KongRN.placeHolderList[982]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl.visibility" 
-		"KongRN.placeHolderList[983]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.translateX" 
-		"KongRN.placeHolderList[984]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.translateY" 
-		"KongRN.placeHolderList[985]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.translateZ" 
-		"KongRN.placeHolderList[986]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.rotateX" 
-		"KongRN.placeHolderList[987]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.rotateY" 
-		"KongRN.placeHolderList[988]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.rotateZ" 
-		"KongRN.placeHolderList[989]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.scaleX" 
-		"KongRN.placeHolderList[990]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.scaleY" 
-		"KongRN.placeHolderList[991]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.scaleZ" 
-		"KongRN.placeHolderList[992]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:L_Ear_01_jnt_ctrl_grp|Kong:L_Ear_01_jnt_ctrl|Kong:L_Ear_02_jnt_ctrl_grp|Kong:L_Ear_02_jnt_ctrl|Kong:L_Ear_03_jnt_ctrl_grp|Kong:L_Ear_03_jnt_ctrl|Kong:L_Ear_04_jnt_ctrl_grp|Kong:L_Ear_04_jnt_ctrl.visibility" 
-		"KongRN.placeHolderList[993]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.translateX" 
-		"KongRN.placeHolderList[994]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.translateY" 
-		"KongRN.placeHolderList[995]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.translateZ" 
-		"KongRN.placeHolderList[996]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.rotateX" 
-		"KongRN.placeHolderList[997]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.rotateY" 
-		"KongRN.placeHolderList[998]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.rotateZ" 
-		"KongRN.placeHolderList[999]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.scaleX" 
-		"KongRN.placeHolderList[1000]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.scaleY" 
-		"KongRN.placeHolderList[1001]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.scaleZ" 
-		"KongRN.placeHolderList[1002]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl.visibility" 
-		"KongRN.placeHolderList[1003]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.translateX" 
-		"KongRN.placeHolderList[1004]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.translateY" 
-		"KongRN.placeHolderList[1005]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.translateZ" 
-		"KongRN.placeHolderList[1006]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.rotateX" 
-		"KongRN.placeHolderList[1007]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.rotateY" 
-		"KongRN.placeHolderList[1008]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.rotateZ" 
-		"KongRN.placeHolderList[1009]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.scaleX" 
-		"KongRN.placeHolderList[1010]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.scaleY" 
-		"KongRN.placeHolderList[1011]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.scaleZ" 
-		"KongRN.placeHolderList[1012]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl.visibility" 
-		"KongRN.placeHolderList[1013]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.translateX" 
-		"KongRN.placeHolderList[1014]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.translateY" 
-		"KongRN.placeHolderList[1015]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.translateZ" 
-		"KongRN.placeHolderList[1016]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.rotateX" 
-		"KongRN.placeHolderList[1017]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.rotateY" 
-		"KongRN.placeHolderList[1018]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.rotateZ" 
-		"KongRN.placeHolderList[1019]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.scaleX" 
-		"KongRN.placeHolderList[1020]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.scaleY" 
-		"KongRN.placeHolderList[1021]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.scaleZ" 
-		"KongRN.placeHolderList[1022]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl.visibility" 
-		"KongRN.placeHolderList[1023]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.translateX" 
-		"KongRN.placeHolderList[1024]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.translateY" 
-		"KongRN.placeHolderList[1025]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.translateZ" 
-		"KongRN.placeHolderList[1026]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.rotateX" 
-		"KongRN.placeHolderList[1027]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.rotateY" 
-		"KongRN.placeHolderList[1028]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.rotateZ" 
-		"KongRN.placeHolderList[1029]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.scaleX" 
-		"KongRN.placeHolderList[1030]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.scaleY" 
-		"KongRN.placeHolderList[1031]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.scaleZ" 
-		"KongRN.placeHolderList[1032]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Face_Controls_grp|Kong:R_Ear_01_jnt_ctrl_grp|Kong:R_Ear_01_jnt_ctrl|Kong:R_Ear_02_jnt_ctrl_grp|Kong:R_Ear_02_jnt_ctrl|Kong:R_Ear_03_jnt_ctrl_grp|Kong:R_Ear_03_jnt_ctrl|Kong:R_Ear_04_jnt_ctrl_grp|Kong:R_Ear_04_jnt_ctrl.visibility" 
-		"KongRN.placeHolderList[1033]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1034]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1035]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.Leg_IKFK" 
-		"KongRN.placeHolderList[1036]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.rotateX" 
-		"KongRN.placeHolderList[1037]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.rotateY" 
-		"KongRN.placeHolderList[1038]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.rotateZ" 
-		"KongRN.placeHolderList[1039]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.visibility" 
-		"KongRN.placeHolderList[1040]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.translateX" 
-		"KongRN.placeHolderList[1041]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.translateY" 
-		"KongRN.placeHolderList[1042]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.translateZ" 
-		"KongRN.placeHolderList[1043]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.scaleX" 
-		"KongRN.placeHolderList[1044]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.scaleY" 
-		"KongRN.placeHolderList[1045]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Leg_IKFK_switch_ctl_grp|Kong:L_Leg_IKFK_switch_ctl.scaleZ" 
-		"KongRN.placeHolderList[1046]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1047]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1048]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.Arm_IKFK" 
-		"KongRN.placeHolderList[1049]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.rotateX" 
-		"KongRN.placeHolderList[1050]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.rotateY" 
-		"KongRN.placeHolderList[1051]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.rotateZ" 
-		"KongRN.placeHolderList[1052]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.visibility" 
-		"KongRN.placeHolderList[1053]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.translateX" 
-		"KongRN.placeHolderList[1054]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.translateY" 
-		"KongRN.placeHolderList[1055]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.translateZ" 
-		"KongRN.placeHolderList[1056]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.scaleX" 
-		"KongRN.placeHolderList[1057]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.scaleY" 
-		"KongRN.placeHolderList[1058]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_Arm_IKFK_switch_ctl_grp|Kong:L_Arm_IKFK_switch_ctl.scaleZ" 
-		"KongRN.placeHolderList[1059]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1060]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1061]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.translateX" 
-		"KongRN.placeHolderList[1062]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.translateY" 
-		"KongRN.placeHolderList[1063]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.translateZ" 
-		"KongRN.placeHolderList[1064]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.rotateX" 
-		"KongRN.placeHolderList[1065]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.rotateY" 
-		"KongRN.placeHolderList[1066]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.rotateZ" 
-		"KongRN.placeHolderList[1067]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.scaleX" 
-		"KongRN.placeHolderList[1068]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.scaleY" 
-		"KongRN.placeHolderList[1069]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.scaleZ" 
-		"KongRN.placeHolderList[1070]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Arm_01_jnt_ctl_grp|Kong:L_IK_Arm_01_jnt_ctl.visibility" 
-		"KongRN.placeHolderList[1071]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1072]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1073]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.translateX" 
-		"KongRN.placeHolderList[1074]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.translateY" 
-		"KongRN.placeHolderList[1075]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.translateZ" 
-		"KongRN.placeHolderList[1076]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.rotateX" 
-		"KongRN.placeHolderList[1077]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.rotateY" 
-		"KongRN.placeHolderList[1078]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.rotateZ" 
-		"KongRN.placeHolderList[1079]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.scaleX" 
-		"KongRN.placeHolderList[1080]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.scaleY" 
-		"KongRN.placeHolderList[1081]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.scaleZ" 
-		"KongRN.placeHolderList[1082]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.Length_1" 
-		"KongRN.placeHolderList[1083]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.Length_2" 
-		"KongRN.placeHolderList[1084]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.Stretchy" 
-		"KongRN.placeHolderList[1085]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_IK_Handle_ctl_grp|Kong:L_Arm_IK_Handle_ctl.visibility" 
-		"KongRN.placeHolderList[1086]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1087]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1088]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.translateX" 
-		"KongRN.placeHolderList[1089]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.translateY" 
-		"KongRN.placeHolderList[1090]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1091]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1092]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1093]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1094]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1095]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1096]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1097]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_03_ctl_grp|Kong:L_IK_Finger3_03_ctl.visibility" 
-		"KongRN.placeHolderList[1098]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.translateX" 
-		"KongRN.placeHolderList[1099]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.translateY" 
-		"KongRN.placeHolderList[1100]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1101]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1102]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1103]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1104]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1105]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1106]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1107]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1108]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1109]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_02_ctl_grp|Kong:L_IK_Finger3_02_ctl.visibility" 
-		"KongRN.placeHolderList[1110]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.translateX" 
-		"KongRN.placeHolderList[1111]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.translateY" 
-		"KongRN.placeHolderList[1112]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1113]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1114]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1115]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1116]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1117]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1118]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1119]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1120]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1121]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger3_01_ctl_grp|Kong:L_IK_Finger3_01_ctl.visibility" 
-		"KongRN.placeHolderList[1122]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1123]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1124]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.translateX" 
-		"KongRN.placeHolderList[1125]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.translateY" 
-		"KongRN.placeHolderList[1126]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1127]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1128]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1129]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1130]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1131]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1132]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1133]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_03_ctl_grp|Kong:L_IK_Finger1_03_ctl.visibility" 
-		"KongRN.placeHolderList[1134]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.translateX" 
-		"KongRN.placeHolderList[1135]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.translateY" 
-		"KongRN.placeHolderList[1136]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1137]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1138]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1139]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1140]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1141]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1142]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1143]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1144]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1145]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_02_ctl_grp|Kong:L_IK_Finger1_02_ctl.visibility" 
-		"KongRN.placeHolderList[1146]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.translateX" 
-		"KongRN.placeHolderList[1147]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.translateY" 
-		"KongRN.placeHolderList[1148]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1149]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1150]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1151]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1152]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1153]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1154]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1155]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1156]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1157]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger1_01_ctl_grp|Kong:L_IK_Finger1_01_ctl.visibility" 
-		"KongRN.placeHolderList[1158]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1159]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1160]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.translateX" 
-		"KongRN.placeHolderList[1161]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.translateY" 
-		"KongRN.placeHolderList[1162]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1163]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1164]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1165]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1166]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1167]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1168]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1169]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_03_ctl_grp|Kong:L_IK_Finger4_03_ctl.visibility" 
-		"KongRN.placeHolderList[1170]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.translateX" 
-		"KongRN.placeHolderList[1171]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.translateY" 
-		"KongRN.placeHolderList[1172]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1173]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1174]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1175]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1176]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1177]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1178]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1179]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1180]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1181]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_02_ctl_grp|Kong:L_IK_Finger4_02_ctl.visibility" 
-		"KongRN.placeHolderList[1182]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.translateX" 
-		"KongRN.placeHolderList[1183]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.translateY" 
-		"KongRN.placeHolderList[1184]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1185]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1186]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1187]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1188]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1189]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1190]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1191]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1192]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1193]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger4_01_ctl_grp|Kong:L_IK_Finger4_01_ctl.visibility" 
-		"KongRN.placeHolderList[1194]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1195]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1196]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.translateX" 
-		"KongRN.placeHolderList[1197]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.translateY" 
-		"KongRN.placeHolderList[1198]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1199]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1200]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1201]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1202]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1203]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1204]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1205]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_03_ctl_grp|Kong:L_IK_Finger5_03_ctl.visibility" 
-		"KongRN.placeHolderList[1206]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.translateX" 
-		"KongRN.placeHolderList[1207]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.translateY" 
-		"KongRN.placeHolderList[1208]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1209]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1210]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1211]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1212]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1213]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1214]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1215]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1216]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1217]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_02_ctl_grp|Kong:L_IK_Finger5_02_ctl.visibility" 
-		"KongRN.placeHolderList[1218]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.translateX" 
-		"KongRN.placeHolderList[1219]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.translateY" 
-		"KongRN.placeHolderList[1220]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1221]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1222]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1223]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1224]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1225]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1226]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1227]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1228]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1229]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger5_01_ctl_grp|Kong:L_IK_Finger5_01_ctl.visibility" 
-		"KongRN.placeHolderList[1230]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1231]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1232]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.translateX" 
-		"KongRN.placeHolderList[1233]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.translateY" 
-		"KongRN.placeHolderList[1234]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1235]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1236]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1237]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1238]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1239]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1240]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1241]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_03_ctl_grp|Kong:L_IK_Finger2_03_ctl.visibility" 
-		"KongRN.placeHolderList[1242]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.translateX" 
-		"KongRN.placeHolderList[1243]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.translateY" 
-		"KongRN.placeHolderList[1244]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1245]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1246]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1247]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1248]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1249]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1250]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1251]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1252]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1253]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_02_ctl_grp|Kong:L_IK_Finger2_02_ctl.visibility" 
-		"KongRN.placeHolderList[1254]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.translateX" 
-		"KongRN.placeHolderList[1255]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.translateY" 
-		"KongRN.placeHolderList[1256]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1257]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1258]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1259]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1260]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1261]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1262]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1263]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1264]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1265]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_IK_Finger2_01_ctl_grp|Kong:L_IK_Finger2_01_ctl.visibility" 
-		"KongRN.placeHolderList[1266]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1267]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1268]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.translateX" 
-		"KongRN.placeHolderList[1269]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.translateY" 
-		"KongRN.placeHolderList[1270]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.translateZ" 
-		"KongRN.placeHolderList[1271]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.rotateX" 
-		"KongRN.placeHolderList[1272]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.rotateY" 
-		"KongRN.placeHolderList[1273]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.rotateZ" 
-		"KongRN.placeHolderList[1274]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.visibility" 
-		"KongRN.placeHolderList[1275]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.scaleX" 
-		"KongRN.placeHolderList[1276]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.scaleY" 
-		"KongRN.placeHolderList[1277]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls|Kong:L_Arm_IK_Controls|Kong:L_Arm_PV_ctl_grp|Kong:L_Arm_PV_ctl.scaleZ" 
-		"KongRN.placeHolderList[1278]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1279]" ""
+		"KongRN.placeHolderList[449]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1280]" ""
+		"KongRN.placeHolderList[450]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.translateX" 
-		"KongRN.placeHolderList[1281]" ""
+		"KongRN.placeHolderList[451]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.translateY" 
-		"KongRN.placeHolderList[1282]" ""
+		"KongRN.placeHolderList[452]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1283]" ""
+		"KongRN.placeHolderList[453]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1284]" ""
+		"KongRN.placeHolderList[454]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1285]" ""
+		"KongRN.placeHolderList[455]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1286]" ""
+		"KongRN.placeHolderList[456]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1287]" ""
+		"KongRN.placeHolderList[457]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1288]" ""
+		"KongRN.placeHolderList[458]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1289]" ""
+		"KongRN.placeHolderList[459]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_01_ctl_grp|Kong:R_FK_Arm_01_ctl.visibility" 
-		"KongRN.placeHolderList[1290]" ""
+		"KongRN.placeHolderList[460]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1291]" ""
+		"KongRN.placeHolderList[461]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1292]" ""
+		"KongRN.placeHolderList[462]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.translateX" 
-		"KongRN.placeHolderList[1293]" ""
+		"KongRN.placeHolderList[463]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.translateY" 
-		"KongRN.placeHolderList[1294]" ""
+		"KongRN.placeHolderList[464]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1295]" ""
+		"KongRN.placeHolderList[465]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1296]" ""
+		"KongRN.placeHolderList[466]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1297]" ""
+		"KongRN.placeHolderList[467]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1298]" ""
+		"KongRN.placeHolderList[468]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1299]" ""
+		"KongRN.placeHolderList[469]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1300]" ""
+		"KongRN.placeHolderList[470]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1301]" ""
+		"KongRN.placeHolderList[471]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_02_ctl_grp|Kong:R_FK_Arm_02_ctl.visibility" 
-		"KongRN.placeHolderList[1302]" ""
+		"KongRN.placeHolderList[472]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1303]" ""
+		"KongRN.placeHolderList[473]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1304]" ""
+		"KongRN.placeHolderList[474]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.translateX" 
-		"KongRN.placeHolderList[1305]" ""
+		"KongRN.placeHolderList[475]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.translateY" 
-		"KongRN.placeHolderList[1306]" ""
+		"KongRN.placeHolderList[476]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1307]" ""
+		"KongRN.placeHolderList[477]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1308]" ""
+		"KongRN.placeHolderList[478]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1309]" ""
+		"KongRN.placeHolderList[479]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1310]" ""
+		"KongRN.placeHolderList[480]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1311]" ""
+		"KongRN.placeHolderList[481]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1312]" ""
+		"KongRN.placeHolderList[482]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1313]" ""
+		"KongRN.placeHolderList[483]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Arm_03_ctl_grp|Kong:R_FK_Arm_03_ctl.visibility" 
-		"KongRN.placeHolderList[1314]" ""
+		"KongRN.placeHolderList[484]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1315]" ""
+		"KongRN.placeHolderList[485]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1316]" ""
+		"KongRN.placeHolderList[486]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.translateX" 
-		"KongRN.placeHolderList[1317]" ""
+		"KongRN.placeHolderList[487]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.translateY" 
-		"KongRN.placeHolderList[1318]" ""
+		"KongRN.placeHolderList[488]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1319]" ""
+		"KongRN.placeHolderList[489]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1320]" ""
+		"KongRN.placeHolderList[490]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1321]" ""
+		"KongRN.placeHolderList[491]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1322]" ""
+		"KongRN.placeHolderList[492]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1323]" ""
+		"KongRN.placeHolderList[493]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1324]" ""
+		"KongRN.placeHolderList[494]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1325]" ""
+		"KongRN.placeHolderList[495]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_01_ctl_grp|Kong:R_FK_Finger2_01_ctl.visibility" 
-		"KongRN.placeHolderList[1326]" ""
+		"KongRN.placeHolderList[496]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1327]" ""
+		"KongRN.placeHolderList[497]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1328]" ""
+		"KongRN.placeHolderList[498]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.translateX" 
-		"KongRN.placeHolderList[1329]" ""
+		"KongRN.placeHolderList[499]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.translateY" 
-		"KongRN.placeHolderList[1330]" ""
+		"KongRN.placeHolderList[500]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1331]" ""
+		"KongRN.placeHolderList[501]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1332]" ""
+		"KongRN.placeHolderList[502]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1333]" ""
+		"KongRN.placeHolderList[503]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1334]" ""
+		"KongRN.placeHolderList[504]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1335]" ""
+		"KongRN.placeHolderList[505]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1336]" ""
+		"KongRN.placeHolderList[506]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1337]" ""
+		"KongRN.placeHolderList[507]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_02_ctl_grp|Kong:R_FK_Finger2_02_ctl.visibility" 
-		"KongRN.placeHolderList[1338]" ""
+		"KongRN.placeHolderList[508]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1339]" ""
+		"KongRN.placeHolderList[509]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1340]" ""
+		"KongRN.placeHolderList[510]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.translateX" 
-		"KongRN.placeHolderList[1341]" ""
+		"KongRN.placeHolderList[511]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.translateY" 
-		"KongRN.placeHolderList[1342]" ""
+		"KongRN.placeHolderList[512]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1343]" ""
+		"KongRN.placeHolderList[513]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1344]" ""
+		"KongRN.placeHolderList[514]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1345]" ""
+		"KongRN.placeHolderList[515]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1346]" ""
+		"KongRN.placeHolderList[516]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1347]" ""
+		"KongRN.placeHolderList[517]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1348]" ""
+		"KongRN.placeHolderList[518]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1349]" ""
+		"KongRN.placeHolderList[519]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger2_03_ctl_grp|Kong:R_FK_Finger2_03_ctl.visibility" 
-		"KongRN.placeHolderList[1350]" ""
+		"KongRN.placeHolderList[520]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1351]" ""
+		"KongRN.placeHolderList[521]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1352]" ""
+		"KongRN.placeHolderList[522]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.translateX" 
-		"KongRN.placeHolderList[1353]" ""
+		"KongRN.placeHolderList[523]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.translateY" 
-		"KongRN.placeHolderList[1354]" ""
+		"KongRN.placeHolderList[524]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1355]" ""
+		"KongRN.placeHolderList[525]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1356]" ""
+		"KongRN.placeHolderList[526]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1357]" ""
+		"KongRN.placeHolderList[527]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1358]" ""
+		"KongRN.placeHolderList[528]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1359]" ""
+		"KongRN.placeHolderList[529]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1360]" ""
+		"KongRN.placeHolderList[530]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1361]" ""
+		"KongRN.placeHolderList[531]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_01_ctl_grp|Kong:R_FK_Finger5_01_ctl.visibility" 
-		"KongRN.placeHolderList[1362]" ""
+		"KongRN.placeHolderList[532]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1363]" ""
+		"KongRN.placeHolderList[533]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1364]" ""
+		"KongRN.placeHolderList[534]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.translateX" 
-		"KongRN.placeHolderList[1365]" ""
+		"KongRN.placeHolderList[535]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.translateY" 
-		"KongRN.placeHolderList[1366]" ""
+		"KongRN.placeHolderList[536]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1367]" ""
+		"KongRN.placeHolderList[537]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1368]" ""
+		"KongRN.placeHolderList[538]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1369]" ""
+		"KongRN.placeHolderList[539]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1370]" ""
+		"KongRN.placeHolderList[540]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1371]" ""
+		"KongRN.placeHolderList[541]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1372]" ""
+		"KongRN.placeHolderList[542]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1373]" ""
+		"KongRN.placeHolderList[543]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_02_ctl_grp|Kong:R_FK_Finger5_02_ctl.visibility" 
-		"KongRN.placeHolderList[1374]" ""
+		"KongRN.placeHolderList[544]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1375]" ""
+		"KongRN.placeHolderList[545]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1376]" ""
+		"KongRN.placeHolderList[546]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.translateX" 
-		"KongRN.placeHolderList[1377]" ""
+		"KongRN.placeHolderList[547]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.translateY" 
-		"KongRN.placeHolderList[1378]" ""
+		"KongRN.placeHolderList[548]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1379]" ""
+		"KongRN.placeHolderList[549]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1380]" ""
+		"KongRN.placeHolderList[550]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1381]" ""
+		"KongRN.placeHolderList[551]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1382]" ""
+		"KongRN.placeHolderList[552]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1383]" ""
+		"KongRN.placeHolderList[553]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1384]" ""
+		"KongRN.placeHolderList[554]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1385]" ""
+		"KongRN.placeHolderList[555]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger5_03_ctl_grp|Kong:R_FK_Finger5_03_ctl.visibility" 
-		"KongRN.placeHolderList[1386]" ""
+		"KongRN.placeHolderList[556]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1387]" ""
+		"KongRN.placeHolderList[557]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1388]" ""
+		"KongRN.placeHolderList[558]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.translateX" 
-		"KongRN.placeHolderList[1389]" ""
+		"KongRN.placeHolderList[559]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.translateY" 
-		"KongRN.placeHolderList[1390]" ""
+		"KongRN.placeHolderList[560]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1391]" ""
+		"KongRN.placeHolderList[561]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1392]" ""
+		"KongRN.placeHolderList[562]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1393]" ""
+		"KongRN.placeHolderList[563]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1394]" ""
+		"KongRN.placeHolderList[564]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1395]" ""
+		"KongRN.placeHolderList[565]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1396]" ""
+		"KongRN.placeHolderList[566]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1397]" ""
+		"KongRN.placeHolderList[567]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_01_ctl_grp|Kong:R_FK_Finger4_01_ctl.visibility" 
-		"KongRN.placeHolderList[1398]" ""
+		"KongRN.placeHolderList[568]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1399]" ""
+		"KongRN.placeHolderList[569]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1400]" ""
+		"KongRN.placeHolderList[570]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.translateX" 
-		"KongRN.placeHolderList[1401]" ""
+		"KongRN.placeHolderList[571]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.translateY" 
-		"KongRN.placeHolderList[1402]" ""
+		"KongRN.placeHolderList[572]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1403]" ""
+		"KongRN.placeHolderList[573]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1404]" ""
+		"KongRN.placeHolderList[574]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1405]" ""
+		"KongRN.placeHolderList[575]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1406]" ""
+		"KongRN.placeHolderList[576]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1407]" ""
+		"KongRN.placeHolderList[577]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1408]" ""
+		"KongRN.placeHolderList[578]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1409]" ""
+		"KongRN.placeHolderList[579]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_02_ctl_grp|Kong:R_FK_Finger4_02_ctl.visibility" 
-		"KongRN.placeHolderList[1410]" ""
+		"KongRN.placeHolderList[580]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1411]" ""
+		"KongRN.placeHolderList[581]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1412]" ""
+		"KongRN.placeHolderList[582]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.translateX" 
-		"KongRN.placeHolderList[1413]" ""
+		"KongRN.placeHolderList[583]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.translateY" 
-		"KongRN.placeHolderList[1414]" ""
+		"KongRN.placeHolderList[584]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1415]" ""
+		"KongRN.placeHolderList[585]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1416]" ""
+		"KongRN.placeHolderList[586]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1417]" ""
+		"KongRN.placeHolderList[587]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1418]" ""
+		"KongRN.placeHolderList[588]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1419]" ""
+		"KongRN.placeHolderList[589]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1420]" ""
+		"KongRN.placeHolderList[590]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1421]" ""
+		"KongRN.placeHolderList[591]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger4_03_ctl_grp|Kong:R_FK_Finger4_03_ctl.visibility" 
-		"KongRN.placeHolderList[1422]" ""
+		"KongRN.placeHolderList[592]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1423]" ""
+		"KongRN.placeHolderList[593]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1424]" ""
+		"KongRN.placeHolderList[594]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.translateX" 
-		"KongRN.placeHolderList[1425]" ""
+		"KongRN.placeHolderList[595]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.translateY" 
-		"KongRN.placeHolderList[1426]" ""
+		"KongRN.placeHolderList[596]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1427]" ""
+		"KongRN.placeHolderList[597]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1428]" ""
+		"KongRN.placeHolderList[598]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1429]" ""
+		"KongRN.placeHolderList[599]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1430]" ""
+		"KongRN.placeHolderList[600]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1431]" ""
+		"KongRN.placeHolderList[601]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1432]" ""
+		"KongRN.placeHolderList[602]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1433]" ""
+		"KongRN.placeHolderList[603]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_01_ctl_grp|Kong:R_FK_Finger1_01_ctl.visibility" 
-		"KongRN.placeHolderList[1434]" ""
+		"KongRN.placeHolderList[604]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1435]" ""
+		"KongRN.placeHolderList[605]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1436]" ""
+		"KongRN.placeHolderList[606]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.translateX" 
-		"KongRN.placeHolderList[1437]" ""
+		"KongRN.placeHolderList[607]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.translateY" 
-		"KongRN.placeHolderList[1438]" ""
+		"KongRN.placeHolderList[608]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1439]" ""
+		"KongRN.placeHolderList[609]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1440]" ""
+		"KongRN.placeHolderList[610]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1441]" ""
+		"KongRN.placeHolderList[611]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1442]" ""
+		"KongRN.placeHolderList[612]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1443]" ""
+		"KongRN.placeHolderList[613]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1444]" ""
+		"KongRN.placeHolderList[614]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1445]" ""
+		"KongRN.placeHolderList[615]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_02_ctl_grp|Kong:R_FK_Finger1_02_ctl.visibility" 
-		"KongRN.placeHolderList[1446]" ""
+		"KongRN.placeHolderList[616]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1447]" ""
+		"KongRN.placeHolderList[617]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1448]" ""
+		"KongRN.placeHolderList[618]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.translateX" 
-		"KongRN.placeHolderList[1449]" ""
+		"KongRN.placeHolderList[619]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.translateY" 
-		"KongRN.placeHolderList[1450]" ""
+		"KongRN.placeHolderList[620]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1451]" ""
+		"KongRN.placeHolderList[621]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1452]" ""
+		"KongRN.placeHolderList[622]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1453]" ""
+		"KongRN.placeHolderList[623]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1454]" ""
+		"KongRN.placeHolderList[624]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1455]" ""
+		"KongRN.placeHolderList[625]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1456]" ""
+		"KongRN.placeHolderList[626]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1457]" ""
+		"KongRN.placeHolderList[627]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger1_03_ctl_grp|Kong:R_FK_Finger1_03_ctl.visibility" 
-		"KongRN.placeHolderList[1458]" ""
+		"KongRN.placeHolderList[628]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1459]" ""
+		"KongRN.placeHolderList[629]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1460]" ""
+		"KongRN.placeHolderList[630]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.translateX" 
-		"KongRN.placeHolderList[1461]" ""
+		"KongRN.placeHolderList[631]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.translateY" 
-		"KongRN.placeHolderList[1462]" ""
+		"KongRN.placeHolderList[632]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1463]" ""
+		"KongRN.placeHolderList[633]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1464]" ""
+		"KongRN.placeHolderList[634]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1465]" ""
+		"KongRN.placeHolderList[635]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1466]" ""
+		"KongRN.placeHolderList[636]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1467]" ""
+		"KongRN.placeHolderList[637]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1468]" ""
+		"KongRN.placeHolderList[638]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1469]" ""
+		"KongRN.placeHolderList[639]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_01_ctl_grp|Kong:R_FK_Finger3_01_ctl.visibility" 
-		"KongRN.placeHolderList[1470]" ""
+		"KongRN.placeHolderList[640]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1471]" ""
+		"KongRN.placeHolderList[641]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1472]" ""
+		"KongRN.placeHolderList[642]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.translateX" 
-		"KongRN.placeHolderList[1473]" ""
+		"KongRN.placeHolderList[643]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.translateY" 
-		"KongRN.placeHolderList[1474]" ""
+		"KongRN.placeHolderList[644]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1475]" ""
+		"KongRN.placeHolderList[645]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1476]" ""
+		"KongRN.placeHolderList[646]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1477]" ""
+		"KongRN.placeHolderList[647]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1478]" ""
+		"KongRN.placeHolderList[648]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1479]" ""
+		"KongRN.placeHolderList[649]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1480]" ""
+		"KongRN.placeHolderList[650]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1481]" ""
+		"KongRN.placeHolderList[651]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_02_ctl_grp|Kong:R_FK_Finger3_02_ctl.visibility" 
-		"KongRN.placeHolderList[1482]" ""
+		"KongRN.placeHolderList[652]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1483]" ""
+		"KongRN.placeHolderList[653]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1484]" ""
+		"KongRN.placeHolderList[654]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.translateX" 
-		"KongRN.placeHolderList[1485]" ""
+		"KongRN.placeHolderList[655]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.translateY" 
-		"KongRN.placeHolderList[1486]" ""
+		"KongRN.placeHolderList[656]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1487]" ""
+		"KongRN.placeHolderList[657]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1488]" ""
+		"KongRN.placeHolderList[658]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1489]" ""
+		"KongRN.placeHolderList[659]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1490]" ""
+		"KongRN.placeHolderList[660]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1491]" ""
+		"KongRN.placeHolderList[661]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1492]" ""
+		"KongRN.placeHolderList[662]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1493]" ""
+		"KongRN.placeHolderList[663]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls1|Kong:R_Arm_FK_Controls|Kong:R_FK_Finger3_03_ctl_grp|Kong:R_FK_Finger3_03_ctl.visibility" 
-		"KongRN.placeHolderList[1494]" ""
+		"KongRN.placeHolderList[664]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1495]" ""
+		"KongRN.placeHolderList[665]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1496]" ""
+		"KongRN.placeHolderList[666]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.translateX" 
-		"KongRN.placeHolderList[1497]" ""
+		"KongRN.placeHolderList[667]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.translateY" 
-		"KongRN.placeHolderList[1498]" ""
+		"KongRN.placeHolderList[668]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.translateZ" 
-		"KongRN.placeHolderList[1499]" ""
+		"KongRN.placeHolderList[669]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.rotateX" 
-		"KongRN.placeHolderList[1500]" ""
+		"KongRN.placeHolderList[670]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.rotateY" 
-		"KongRN.placeHolderList[1501]" ""
+		"KongRN.placeHolderList[671]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.rotateZ" 
-		"KongRN.placeHolderList[1502]" ""
+		"KongRN.placeHolderList[672]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.scaleX" 
-		"KongRN.placeHolderList[1503]" ""
+		"KongRN.placeHolderList[673]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.scaleY" 
-		"KongRN.placeHolderList[1504]" ""
+		"KongRN.placeHolderList[674]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.scaleZ" 
-		"KongRN.placeHolderList[1505]" ""
+		"KongRN.placeHolderList[675]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:COG_ctl_grp|Kong:COG_ctl.visibility" 
-		"KongRN.placeHolderList[1506]" ""
+		"KongRN.placeHolderList[676]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1507]" ""
+		"KongRN.placeHolderList[677]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1508]" ""
+		"KongRN.placeHolderList[678]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.translateX" 
-		"KongRN.placeHolderList[1509]" ""
+		"KongRN.placeHolderList[679]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.translateY" 
-		"KongRN.placeHolderList[1510]" ""
+		"KongRN.placeHolderList[680]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.translateZ" 
-		"KongRN.placeHolderList[1511]" ""
+		"KongRN.placeHolderList[681]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.rotateX" 
-		"KongRN.placeHolderList[1512]" ""
+		"KongRN.placeHolderList[682]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.rotateY" 
-		"KongRN.placeHolderList[1513]" ""
+		"KongRN.placeHolderList[683]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.rotateZ" 
-		"KongRN.placeHolderList[1514]" ""
+		"KongRN.placeHolderList[684]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.scaleX" 
-		"KongRN.placeHolderList[1515]" ""
+		"KongRN.placeHolderList[685]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.scaleY" 
-		"KongRN.placeHolderList[1516]" ""
+		"KongRN.placeHolderList[686]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.scaleZ" 
-		"KongRN.placeHolderList[1517]" ""
+		"KongRN.placeHolderList[687]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Hips_ctl_grp|Kong:Hips_ctl.visibility" 
-		"KongRN.placeHolderList[1518]" ""
+		"KongRN.placeHolderList[688]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1519]" ""
+		"KongRN.placeHolderList[689]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1520]" ""
+		"KongRN.placeHolderList[690]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.translateX" 
-		"KongRN.placeHolderList[1521]" ""
+		"KongRN.placeHolderList[691]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.translateY" 
-		"KongRN.placeHolderList[1522]" ""
+		"KongRN.placeHolderList[692]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1523]" ""
+		"KongRN.placeHolderList[693]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1524]" ""
+		"KongRN.placeHolderList[694]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1525]" ""
+		"KongRN.placeHolderList[695]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1526]" ""
+		"KongRN.placeHolderList[696]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1527]" ""
+		"KongRN.placeHolderList[697]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1528]" ""
+		"KongRN.placeHolderList[698]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1529]" ""
+		"KongRN.placeHolderList[699]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_01_ctl_grp|Kong:Spine_01_ctl.visibility" 
-		"KongRN.placeHolderList[1530]" ""
+		"KongRN.placeHolderList[700]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1531]" ""
+		"KongRN.placeHolderList[701]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1532]" ""
+		"KongRN.placeHolderList[702]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.translateX" 
-		"KongRN.placeHolderList[1533]" ""
+		"KongRN.placeHolderList[703]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.translateY" 
-		"KongRN.placeHolderList[1534]" ""
+		"KongRN.placeHolderList[704]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1535]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1536]" ""
+		"KongRN.placeHolderList[705]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1537]" ""
+		"KongRN.placeHolderList[706]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1538]" ""
+		"KongRN.placeHolderList[707]" ""
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.rotateZ" 
+		"KongRN.placeHolderList[708]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1539]" ""
+		"KongRN.placeHolderList[709]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1540]" ""
+		"KongRN.placeHolderList[710]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1541]" ""
+		"KongRN.placeHolderList[711]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_02_ctl_grp|Kong:Spine_02_ctl.visibility" 
-		"KongRN.placeHolderList[1542]" ""
+		"KongRN.placeHolderList[712]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.translateX" 
-		"KongRN.placeHolderList[1543]" ""
+		"KongRN.placeHolderList[713]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.translateY" 
-		"KongRN.placeHolderList[1544]" ""
+		"KongRN.placeHolderList[714]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1545]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1546]" ""
+		"KongRN.placeHolderList[715]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1547]" ""
+		"KongRN.placeHolderList[716]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1548]" ""
+		"KongRN.placeHolderList[717]" ""
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.rotateZ" 
+		"KongRN.placeHolderList[718]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1549]" ""
+		"KongRN.placeHolderList[719]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1550]" ""
+		"KongRN.placeHolderList[720]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1551]" ""
+		"KongRN.placeHolderList[721]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_03_ctl_grp|Kong:Spine_03_ctl.visibility" 
-		"KongRN.placeHolderList[1552]" ""
+		"KongRN.placeHolderList[722]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.translateX" 
-		"KongRN.placeHolderList[1553]" ""
+		"KongRN.placeHolderList[723]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.translateY" 
-		"KongRN.placeHolderList[1554]" ""
+		"KongRN.placeHolderList[724]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.translateZ" 
-		"KongRN.placeHolderList[1555]" ""
+		"KongRN.placeHolderList[725]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.rotateX" 
-		"KongRN.placeHolderList[1556]" ""
+		"KongRN.placeHolderList[726]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.rotateY" 
-		"KongRN.placeHolderList[1557]" ""
+		"KongRN.placeHolderList[727]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.rotateZ" 
-		"KongRN.placeHolderList[1558]" ""
+		"KongRN.placeHolderList[728]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.scaleX" 
-		"KongRN.placeHolderList[1559]" ""
+		"KongRN.placeHolderList[729]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.scaleY" 
-		"KongRN.placeHolderList[1560]" ""
+		"KongRN.placeHolderList[730]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.scaleZ" 
-		"KongRN.placeHolderList[1561]" ""
+		"KongRN.placeHolderList[731]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1562]" ""
+		"KongRN.placeHolderList[732]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1563]" ""
+		"KongRN.placeHolderList[733]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:L_RK_Clavicle_ctl_grp|Kong:L_RK_Clavicle_ctl.visibility" 
-		"KongRN.placeHolderList[1564]" ""
+		"KongRN.placeHolderList[734]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.translateX" 
-		"KongRN.placeHolderList[1565]" ""
+		"KongRN.placeHolderList[735]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.translateY" 
-		"KongRN.placeHolderList[1566]" ""
+		"KongRN.placeHolderList[736]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.translateZ" 
-		"KongRN.placeHolderList[1567]" ""
+		"KongRN.placeHolderList[737]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.rotateZ" 
-		"KongRN.placeHolderList[1568]" ""
+		"KongRN.placeHolderList[738]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.rotateX" 
-		"KongRN.placeHolderList[1569]" ""
+		"KongRN.placeHolderList[739]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.rotateY" 
-		"KongRN.placeHolderList[1570]" ""
+		"KongRN.placeHolderList[740]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.scaleX" 
-		"KongRN.placeHolderList[1571]" ""
+		"KongRN.placeHolderList[741]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.scaleY" 
-		"KongRN.placeHolderList[1572]" ""
+		"KongRN.placeHolderList[742]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.scaleZ" 
-		"KongRN.placeHolderList[1573]" ""
+		"KongRN.placeHolderList[743]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1574]" ""
+		"KongRN.placeHolderList[744]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1575]" ""
+		"KongRN.placeHolderList[745]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:R_RK_Clavicle_ctl_grp|Kong:R_RK_Clavicle_ctl.visibility" 
-		"KongRN.placeHolderList[1576]" ""
+		"KongRN.placeHolderList[746]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1577]" ""
+		"KongRN.placeHolderList[747]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1578]" ""
+		"KongRN.placeHolderList[748]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.translateX" 
-		"KongRN.placeHolderList[1579]" ""
+		"KongRN.placeHolderList[749]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.translateY" 
-		"KongRN.placeHolderList[1580]" ""
+		"KongRN.placeHolderList[750]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.translateZ" 
-		"KongRN.placeHolderList[1581]" ""
+		"KongRN.placeHolderList[751]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.rotateX" 
-		"KongRN.placeHolderList[1582]" ""
+		"KongRN.placeHolderList[752]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.rotateY" 
-		"KongRN.placeHolderList[1583]" ""
+		"KongRN.placeHolderList[753]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.rotateZ" 
-		"KongRN.placeHolderList[1584]" ""
+		"KongRN.placeHolderList[754]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.scaleX" 
-		"KongRN.placeHolderList[1585]" ""
+		"KongRN.placeHolderList[755]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.scaleY" 
-		"KongRN.placeHolderList[1586]" ""
+		"KongRN.placeHolderList[756]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.scaleZ" 
-		"KongRN.placeHolderList[1587]" ""
+		"KongRN.placeHolderList[757]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_05_ctl_grp|Kong:Spine_05_ctl.visibility" 
-		"KongRN.placeHolderList[1588]" ""
+		"KongRN.placeHolderList[758]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1589]" ""
+		"KongRN.placeHolderList[759]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1590]" ""
+		"KongRN.placeHolderList[760]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.translateX" 
-		"KongRN.placeHolderList[1591]" ""
+		"KongRN.placeHolderList[761]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.translateY" 
-		"KongRN.placeHolderList[1592]" ""
+		"KongRN.placeHolderList[762]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.translateZ" 
-		"KongRN.placeHolderList[1593]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.rotateZ" 
-		"KongRN.placeHolderList[1594]" ""
+		"KongRN.placeHolderList[763]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.rotateX" 
-		"KongRN.placeHolderList[1595]" ""
+		"KongRN.placeHolderList[764]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.rotateY" 
-		"KongRN.placeHolderList[1596]" ""
+		"KongRN.placeHolderList[765]" ""
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.rotateZ" 
+		"KongRN.placeHolderList[766]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.scaleX" 
-		"KongRN.placeHolderList[1597]" ""
+		"KongRN.placeHolderList[767]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.scaleY" 
-		"KongRN.placeHolderList[1598]" ""
+		"KongRN.placeHolderList[768]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.scaleZ" 
-		"KongRN.placeHolderList[1599]" ""
+		"KongRN.placeHolderList[769]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_06_ctl_grp|Kong:Neck_Offset|Kong:Neck_01_Master_rotate_ctrl|Kong:Spine_06_ctl.visibility" 
-		"KongRN.placeHolderList[1600]" ""
+		"KongRN.placeHolderList[770]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.translateX" 
-		"KongRN.placeHolderList[1601]" ""
+		"KongRN.placeHolderList[771]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.translateY" 
-		"KongRN.placeHolderList[1602]" ""
+		"KongRN.placeHolderList[772]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.translateZ" 
-		"KongRN.placeHolderList[1603]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.rotateZ" 
-		"KongRN.placeHolderList[1604]" ""
+		"KongRN.placeHolderList[773]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.rotateX" 
-		"KongRN.placeHolderList[1605]" ""
+		"KongRN.placeHolderList[774]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.rotateY" 
-		"KongRN.placeHolderList[1606]" ""
+		"KongRN.placeHolderList[775]" ""
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.rotateZ" 
+		"KongRN.placeHolderList[776]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.scaleX" 
-		"KongRN.placeHolderList[1607]" ""
+		"KongRN.placeHolderList[777]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.scaleY" 
-		"KongRN.placeHolderList[1608]" ""
+		"KongRN.placeHolderList[778]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.scaleZ" 
-		"KongRN.placeHolderList[1609]" ""
+		"KongRN.placeHolderList[779]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1610]" ""
+		"KongRN.placeHolderList[780]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1611]" ""
+		"KongRN.placeHolderList[781]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Spine_04_ctl_grp|Kong:Spine_04_ctl.visibility" 
-		"KongRN.placeHolderList[1612]" ""
+		"KongRN.placeHolderList[782]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1613]" ""
+		"KongRN.placeHolderList[783]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1614]" ""
+		"KongRN.placeHolderList[784]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.translateX" 
-		"KongRN.placeHolderList[1615]" ""
+		"KongRN.placeHolderList[785]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.translateY" 
-		"KongRN.placeHolderList[1616]" ""
+		"KongRN.placeHolderList[786]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.translateZ" 
-		"KongRN.placeHolderList[1617]" ""
+		"KongRN.placeHolderList[787]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.rotateX" 
-		"KongRN.placeHolderList[1618]" ""
+		"KongRN.placeHolderList[788]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.rotateY" 
-		"KongRN.placeHolderList[1619]" ""
+		"KongRN.placeHolderList[789]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.rotateZ" 
-		"KongRN.placeHolderList[1620]" ""
+		"KongRN.placeHolderList[790]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.scaleX" 
-		"KongRN.placeHolderList[1621]" ""
+		"KongRN.placeHolderList[791]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.scaleY" 
-		"KongRN.placeHolderList[1622]" ""
+		"KongRN.placeHolderList[792]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.scaleZ" 
-		"KongRN.placeHolderList[1623]" ""
+		"KongRN.placeHolderList[793]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls4|Kong:L_Leg_IK_Controls|Kong:L_IK_Leg_01_jnt_ctl_grp|Kong:L_IK_Leg_01_jnt_ctl.visibility" 
-		"KongRN.placeHolderList[1624]" ""
+		"KongRN.placeHolderList[794]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1625]" ""
+		"KongRN.placeHolderList[795]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1626]" ""
+		"KongRN.placeHolderList[796]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.translateX" 
-		"KongRN.placeHolderList[1627]" ""
+		"KongRN.placeHolderList[797]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.translateY" 
-		"KongRN.placeHolderList[1628]" ""
+		"KongRN.placeHolderList[798]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.translateZ" 
-		"KongRN.placeHolderList[1629]" ""
+		"KongRN.placeHolderList[799]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.rotateX" 
-		"KongRN.placeHolderList[1630]" ""
+		"KongRN.placeHolderList[800]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.rotateY" 
-		"KongRN.placeHolderList[1631]" ""
+		"KongRN.placeHolderList[801]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.rotateZ" 
-		"KongRN.placeHolderList[1632]" ""
+		"KongRN.placeHolderList[802]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.scaleX" 
-		"KongRN.placeHolderList[1633]" ""
+		"KongRN.placeHolderList[803]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.scaleY" 
-		"KongRN.placeHolderList[1634]" ""
+		"KongRN.placeHolderList[804]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.scaleZ" 
-		"KongRN.placeHolderList[1635]" ""
+		"KongRN.placeHolderList[805]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Controls5|Kong:R_Leg_IK_Controls|Kong:R_IK_Leg_01_jnt_ctl_grp|Kong:R_IK_Leg_01_jnt_ctl.visibility" 
-		"KongRN.placeHolderList[1636]" ""
+		"KongRN.placeHolderList[806]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.translateX" 
-		"KongRN.placeHolderList[1637]" ""
+		"KongRN.placeHolderList[807]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.translateY" 
-		"KongRN.placeHolderList[1638]" ""
+		"KongRN.placeHolderList[808]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1639]" ""
-		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1640]" ""
+		"KongRN.placeHolderList[809]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1641]" ""
+		"KongRN.placeHolderList[810]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1642]" ""
+		"KongRN.placeHolderList[811]" ""
+		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.rotateZ" 
+		"KongRN.placeHolderList[812]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1643]" ""
+		"KongRN.placeHolderList[813]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1644]" ""
+		"KongRN.placeHolderList[814]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1645]" ""
+		"KongRN.placeHolderList[815]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.visibility" 
-		"KongRN.placeHolderList[1646]" ""
+		"KongRN.placeHolderList[816]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1647]" ""
+		"KongRN.placeHolderList[817]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Neck_02_ctl_grp|Kong:Neck_02_Master_rotate_ctrl|Kong:Neck_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1648]" ""
+		"KongRN.placeHolderList[818]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1649]" ""
+		"KongRN.placeHolderList[819]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1650]" ""
+		"KongRN.placeHolderList[820]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.translateX" 
-		"KongRN.placeHolderList[1651]" ""
+		"KongRN.placeHolderList[821]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.translateY" 
-		"KongRN.placeHolderList[1652]" ""
+		"KongRN.placeHolderList[822]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.translateZ" 
-		"KongRN.placeHolderList[1653]" ""
+		"KongRN.placeHolderList[823]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.rotateX" 
-		"KongRN.placeHolderList[1654]" ""
+		"KongRN.placeHolderList[824]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.rotateY" 
-		"KongRN.placeHolderList[1655]" ""
+		"KongRN.placeHolderList[825]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.rotateZ" 
-		"KongRN.placeHolderList[1656]" ""
+		"KongRN.placeHolderList[826]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.scaleX" 
-		"KongRN.placeHolderList[1657]" ""
+		"KongRN.placeHolderList[827]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.scaleY" 
-		"KongRN.placeHolderList[1658]" ""
+		"KongRN.placeHolderList[828]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.scaleZ" 
-		"KongRN.placeHolderList[1659]" ""
+		"KongRN.placeHolderList[829]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_01_ctl_grp|Kong:Tongue_01_ctl.visibility" 
-		"KongRN.placeHolderList[1660]" ""
+		"KongRN.placeHolderList[830]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1661]" ""
+		"KongRN.placeHolderList[831]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1662]" ""
+		"KongRN.placeHolderList[832]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.translateX" 
-		"KongRN.placeHolderList[1663]" ""
+		"KongRN.placeHolderList[833]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.translateY" 
-		"KongRN.placeHolderList[1664]" ""
+		"KongRN.placeHolderList[834]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.translateZ" 
-		"KongRN.placeHolderList[1665]" ""
+		"KongRN.placeHolderList[835]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.rotateX" 
-		"KongRN.placeHolderList[1666]" ""
+		"KongRN.placeHolderList[836]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.rotateY" 
-		"KongRN.placeHolderList[1667]" ""
+		"KongRN.placeHolderList[837]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.rotateZ" 
-		"KongRN.placeHolderList[1668]" ""
+		"KongRN.placeHolderList[838]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.scaleX" 
-		"KongRN.placeHolderList[1669]" ""
+		"KongRN.placeHolderList[839]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.scaleY" 
-		"KongRN.placeHolderList[1670]" ""
+		"KongRN.placeHolderList[840]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.scaleZ" 
-		"KongRN.placeHolderList[1671]" ""
+		"KongRN.placeHolderList[841]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_02_ctl_grp|Kong:Tongue_02_ctl.visibility" 
-		"KongRN.placeHolderList[1672]" ""
+		"KongRN.placeHolderList[842]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.Follow_Translates" 
-		"KongRN.placeHolderList[1673]" ""
+		"KongRN.placeHolderList[843]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.Follow_Rotates" 
-		"KongRN.placeHolderList[1674]" ""
+		"KongRN.placeHolderList[844]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.translateX" 
-		"KongRN.placeHolderList[1675]" ""
+		"KongRN.placeHolderList[845]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.translateY" 
-		"KongRN.placeHolderList[1676]" ""
+		"KongRN.placeHolderList[846]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.translateZ" 
-		"KongRN.placeHolderList[1677]" ""
+		"KongRN.placeHolderList[847]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.rotateX" 
-		"KongRN.placeHolderList[1678]" ""
+		"KongRN.placeHolderList[848]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.rotateY" 
-		"KongRN.placeHolderList[1679]" ""
+		"KongRN.placeHolderList[849]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.rotateZ" 
-		"KongRN.placeHolderList[1680]" ""
+		"KongRN.placeHolderList[850]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.scaleX" 
-		"KongRN.placeHolderList[1681]" ""
+		"KongRN.placeHolderList[851]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.scaleY" 
-		"KongRN.placeHolderList[1682]" ""
+		"KongRN.placeHolderList[852]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.scaleZ" 
-		"KongRN.placeHolderList[1683]" ""
+		"KongRN.placeHolderList[853]" ""
 		5 4 "KongRN" "|Kong:Kong|Kong:Controls|Kong:Tongue_03_ctl_grp|Kong:Tongue_03_ctl.visibility" 
-		"KongRN.placeHolderList[1684]" "";
+		"KongRN.placeHolderList[854]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
@@ -5502,39 +2928,7 @@ createNode reference -n "ZillaRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ZillaRN"
 		"ZillaRN" 0
-		"ZillaRN" 28
-		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
-		"translate" " -type \"double3\" -0.24728177818367669 0.011724950135869605 1.26040560616507946"
-		
-		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
-		"translateX" " -av"
-		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
-		"translateY" " -av"
-		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
-		"translateZ" " -av"
-		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
-		"rotate" " -type \"double3\" -9.81508409593384279 -36.71744301640889319 1.24160422873335663"
-		
-		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
-		"rotateX" " -av"
-		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
-		"rotateY" " -av"
-		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
-		"rotateZ" " -av"
-		2 "|Zilla:Zilla|Zilla:Controls|Zilla:COG_ctl_grp|Zilla:COG_ctl" "translate" 
-		" -type \"double3\" 2.12791391302395594 2.41912793814803218 0"
-		2 "|Zilla:Zilla|Zilla:Controls|Zilla:Master_ctl_grp|Zilla:Master_ctl" "translate" 
-		" -type \"double3\" -13.80224303741196579 0 262.65871854174883993"
-		2 "|Zilla:Zilla|Zilla:Controls|Zilla:Master_ctl_grp|Zilla:Master_ctl" "rotate" 
-		" -type \"double3\" 0 95.92095479453388407 0"
-		2 "|Zilla:Zilla|Zilla:Controls|Zilla:Legs_Controls|Zilla:L_Leg_Controls|Zilla:L_Leg_IK_Controls|Zilla:L_Leg_PV_Ctl_grp|Zilla:L_Leg_PV_Ctl" 
-		"translate" " -type \"double3\" 12.00684353380163927 10.00682935581914634 2.89891043289119121"
-		
-		2 "|Zilla:Zilla|Zilla:Controls|Zilla:Legs_Controls|Zilla:R_Leg_Controls|Zilla:R_Leg_IK_Controls|Zilla:R_Leg_PV_ctl_grp|Zilla:R_Leg_PV_ctl" 
-		"translate" " -type \"double3\" -14.12151467992399567 -18.31589958443854016 13.81039219518859262"
-		
-		2 "|Zilla:Zilla|Zilla:Controls|Zilla:Legs_Controls|Zilla:R_Leg_Controls|Zilla:R_Leg_IK_Controls|Zilla:R_IK_Foot_controls|Zilla:R_Foot_IK_Master_ctl_grp|Zilla:R_Foot_IK_Master_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"ZillaRN" 14
 		2 "|Zilla:Zilla|Zilla:Joints|Zilla:L_IK_FR_01_jnt|Zilla:L_IK_FR_02_jnt|Zilla:L_RK_Toe1_01_jnt1" 
 		"translate" " -type \"double3\" -0.24728177818367669 0.011724950135869605 1.26040560616507946"
 		
@@ -5593,17 +2987,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1145\n            -height 1108\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1344\n            -height 1101\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
 		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1344\n            -height 0\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1345\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1344\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1544\n            -height 1108\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1344\n            -height 1101\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"<function selCom at 0x7f29c5c04aa0>\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n"
 		+ "            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n"
@@ -5630,34 +3024,30 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
 		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
-		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"quad\\\" -ps 1 43 100 -ps 2 57 100 -ps 3 50 0 -ps 4 50 0 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1145\\n    -height 1108\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1145\\n    -height 1108\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"quad\\\" -ps 1 50 100 -ps 2 50 100 -ps 3 50 0 -ps 4 50 0 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1344\\n    -height 1101\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1344\\n    -height 1101\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1544\\n    -height 1108\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1544\\n    -height 1108\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1344\\n    -height 1101\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1344\\n    -height 1101\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera side` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1344\\n    -height 0\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera side` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1344\\n    -height 0\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1345\\n    -height 0\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1345\\n    -height 0\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1344\\n    -height 0\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1344\\n    -height 0\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "84F38A60-44BB-2AE1-3DA9-B1B00B862154";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 30 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode reference -n "PrincessRN";
 	rename -uid "9AD7C2DD-464D-CAAC-A11B-A992E9F5D6E1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PrincessRN"
 		"PrincessRN" 0
-		"PrincessRN" 4
-		2 "|Princess:Princess|Princess:Controls" "translate" " -type \"double3\" 0 5.21637657027632606 7.12738253288155121"
-		
-		2 "|Princess:Princess|Princess:Controls|Princess:Master_ctl_grp|Princess:Master_ctl" 
-		"translate" " -type \"double3\" 0 1.73254898092904064 2.70356947053369812"
+		"PrincessRN" 2
 		2 "|Princess:Princess|Princess:Controls" "translate" " -type \"double3\" 0 5.21637657027632606 7.12738253288155121"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:Master_ctl_grp|Princess:Master_ctl" 
@@ -5683,17 +3073,17 @@ createNode animCurveTA -n "R_FK_Arm_01_ctl_rotateX";
 	rename -uid "3CA26144-4947-473D-C4A3-D9AD92BCC104";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 37.04457044360656;
+	setAttr -s 2 ".ktv[0:1]"  1 45.45357011756289 20 32.421432182461906;
 createNode animCurveTA -n "R_FK_Arm_01_ctl_rotateY";
 	rename -uid "2DFC9D2E-482A-A31E-E549-77AB458F781D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 21.681898150727701;
+	setAttr -s 2 ".ktv[0:1]"  1 14.718942395687222 20 36.510353569984758;
 createNode animCurveTA -n "R_FK_Arm_01_ctl_rotateZ";
 	rename -uid "F4D9BFD0-4185-8786-A2B2-BD9732130311";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -7.1874614936953263;
+	setAttr -s 2 ".ktv[0:1]"  1 -5.3136065565323891 20 -34.402052725212137;
 createNode animCurveTA -n "R_FK_Arm_02_ctl_rotateX";
 	rename -uid "DCE6EA22-4632-E74D-B3BF-73827C4991DB";
 	setAttr ".tan" 18;
@@ -6420,7 +3810,7 @@ createNode animCurveTA -n "Head_ctl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -0.76586323488370311 4 0.86522814182355334
-		 9 -4.8827734447184463 17 1.2909291081928504 22 0.51752376404894129;
+		 9 -4.8827734447184472 17 1.2909291081928504 22 0.51752376404894129;
 	setAttr -s 5 ".kit[0:4]"  1 18 18 18 18;
 	setAttr -s 5 ".kot[0:4]"  1 18 18 18 18;
 	setAttr -s 5 ".kix[0:4]"  0.93991981019522741 1 1 1 1;
@@ -6498,17 +3888,17 @@ createNode animCurveTA -n "L_RK_Clavicle_ctl_rotateX";
 	rename -uid "B6A15DC1-4D53-03CB-28AB-228B9872D0BF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr ".ktv[0]"  1 2.0770079255286928;
 createNode animCurveTA -n "L_RK_Clavicle_ctl_rotateY";
 	rename -uid "A123B82B-43E8-78EB-3BD4-54ABAD7C2D83";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr ".ktv[0]"  1 21.251818140906781;
 createNode animCurveTA -n "L_RK_Clavicle_ctl_rotateZ";
 	rename -uid "867D2BCE-444D-A538-F295-14B3C134C91C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr ".ktv[0]"  1 5.7136845933070441;
 createNode animCurveTA -n "Master_eyes_ctrl_rotateX";
 	rename -uid "902F0654-4A7B-AD5C-5766-BA9B9DC0EA03";
 	setAttr ".tan" 18;
@@ -6559,7 +3949,7 @@ createNode animCurveTA -n "Neck_02_ctl_rotateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -0.19983707918370469 4 0.67163750172896719
-		 9 -5.0993705092041539 12 -4.6804692784954094 17 1.0174263482440407 22 0.20361704767833111;
+		 9 -5.0993705092041539 12 -4.6804692784954094 17 -8.907288434338879 22 -5.5241515443432556;
 	setAttr -s 6 ".kit[1:5]"  18 1 1 18 18;
 	setAttr -s 6 ".kot[1:5]"  18 1 1 18 18;
 	setAttr -s 6 ".kix[0:5]"  0.98673069389525869 1 0.94832139792503478 
@@ -6575,38 +3965,38 @@ createNode animCurveTA -n "Neck_02_ctl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -3.7823169504753391 4 -1.4641184290435998
-		 9 1.8648505539920921 12 2.2615637135199713 17 -5.7411722146362303 22 -3.615581411619591;
+		 9 1.8648505539920921 12 2.2615637135199713 17 1.4749222443487866 22 10.024279787622932;
 createNode animCurveTA -n "Neck_02_ctl_rotateZ";
 	rename -uid "A763E573-457E-9FA9-108F-9AAB7223EE1A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 7.5523759807475921 4 10.747071859931085
-		 9 10.043831814314483 12 6.1476710500288672 17 8.3983240847777285 22 7.1439967641934468;
+	setAttr -s 6 ".ktv[0:5]"  1 7.5523759807475921 4 10.747071859931086
+		 9 10.043831814314483 12 6.1476710500288672 17 2.9701637126974432 22 2.3885351312460523;
 	setAttr -s 6 ".kit[1:5]"  1 1 18 18 18;
 	setAttr -s 6 ".kot[1:5]"  1 1 18 18 18;
 	setAttr -s 6 ".kix[1:5]"  0.90960709853064237 0.85890928457438032 
-		1 1 1;
+		0.93774692046549035 0.98948405427360631 1;
 	setAttr -s 6 ".kiy[1:5]"  0.41546952511907059 -0.51212775834934621 
-		0 0 0;
+		-0.34731932448035385 -0.1446419936887868 0;
 	setAttr -s 6 ".kox[1:5]"  0.90960711624628421 0.85890931084030653 
-		1 1 1;
+		0.93774692046549035 0.9894840542736062 1;
 	setAttr -s 6 ".koy[1:5]"  0.41546948633337544 -0.51212771429774206 
-		0 0 0;
+		-0.34731932448035385 -0.1446419936887868 0;
 createNode animCurveTA -n "R_RK_Clavicle_ctl_rotateX";
 	rename -uid "741EDABB-49D2-E825-70A1-DA845168F2F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr ".ktv[0]"  1 -0.38831966655640532;
 createNode animCurveTA -n "R_RK_Clavicle_ctl_rotateY";
 	rename -uid "DC10E0A8-4E7D-931A-7DED-869DF486E262";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr ".ktv[0]"  1 -12.798734100534366;
 createNode animCurveTA -n "R_RK_Clavicle_ctl_rotateZ";
 	rename -uid "81CED983-435F-460E-CFA3-3BBC9088F9C2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -6.9803022015535916;
+	setAttr ".ktv[0]"  1 16.682661003538279;
 createNode animCurveTA -n "Spine_01_ctl_rotateX";
 	rename -uid "B8AE3108-4428-9DC3-0071-AFBF5ACFC8D2";
 	setAttr ".tan" 18;
@@ -6621,127 +4011,127 @@ createNode animCurveTA -n "Spine_01_ctl_rotateZ";
 	rename -uid "362F376F-46D5-4303-FA79-B691F19E15B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 12.713373568393704;
+	setAttr ".ktv[0]"  1 1.011528308494354;
 createNode animCurveTA -n "Spine_02_ctl_rotateX";
 	rename -uid "652DD962-4FFD-0C6C-5BF3-C3A8C82D4A8C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 9 1.8034786048702045 14 1.3992668998865037
-		 20 0.59489845000234387;
+	setAttr -s 5 ".ktv[0:4]"  1 0.84838658336648298 9 1.8034786048702045
+		 14 1.3992668998865037 20 0.59489845000234398 27 0.92905457214242293;
 createNode animCurveTA -n "Spine_02_ctl_rotateY";
 	rename -uid "9DCFF3E2-4D6A-F55B-26BF-6B83EE07C111";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -4.1758734236803399 9 -3.4941678696402803
-		 14 -4.9719149079861555 20 -2.6533433696139284;
+	setAttr -s 5 ".ktv[0:4]"  1 -4.0889340181102085 9 -3.4941678696402803
+		 14 -4.9719149079861555 20 -2.6533433696139284 27 -3.9570763926175876;
 createNode animCurveTA -n "Spine_02_ctl_rotateZ";
 	rename -uid "2874A698-4905-AEFC-A7CC-B1952E4BD347";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 12.713373568393704 9 10.338272917423849
-		 14 12.443711386577139 20 11.618815945484211;
+	setAttr -s 5 ".ktv[0:4]"  1 0.98124219340311891 9 10.338272917423849
+		 14 12.443711386577139 20 11.618815945484213 27 13.348136960468322;
 createNode animCurveTA -n "Spine_03_ctl_rotateX";
 	rename -uid "48A9E0E4-4855-B766-0DCC-DD8F93F1EB73";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -5.5154201642647882 9 -2.0005831976630266
-		 14 -3.0781847873280319 20 0.15918154183608163;
+	setAttr -s 5 ".ktv[0:4]"  1 -6.2693374389551808 9 -2.0005831976630266
+		 14 -3.0781847873280319 20 0.15918154183608163 27 0.62014154003260824;
 createNode animCurveTA -n "Spine_03_ctl_rotateY";
 	rename -uid "89B6AD08-42CC-EDC9-4BA7-BB8DCCEACDB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 4.2957014083046561 9 3.2558135184685524
-		 14 0.57945810163464695 20 1.5405890931446764;
+	setAttr -s 5 ".ktv[0:4]"  1 3.0902124330288152 9 3.2558135184685524
+		 14 0.57945810163464695 20 1.5405890931446764 27 0.24810275216193375;
 createNode animCurveTA -n "Spine_03_ctl_rotateZ";
 	rename -uid "C1AEF279-4662-B8E0-2F94-3FB892C3A180";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 14.520464159051276 9 13.257800774666915
-		 14 17.543296628590554 20 15.374663929903754;
+	setAttr -s 5 ".ktv[0:4]"  1 2.8563561649529858 9 13.257800774666915
+		 14 17.543296628590554 20 15.374663929903754 27 17.109754648520219;
 createNode animCurveTA -n "Spine_04_ctl_rotateX";
 	rename -uid "23994E2E-4EC4-3567-C8E5-CB85B0639EC9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -1.8729797905567442 9 -0.30222809391520417
-		 14 -5.7644937618764898 20 -2.9731486433442802;
+	setAttr -s 5 ".ktv[0:4]"  1 -2.1308197008042296 9 -0.30222809391520417
+		 14 -5.7644937618764898 20 -2.9731486433442802 27 -2.5254454722778417;
 createNode animCurveTA -n "Spine_04_ctl_rotateY";
 	rename -uid "275FD265-4A73-E573-4AFC-0F99DFC2CB34";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1.4637368774154649 9 1.9163455166807872
-		 14 0.9051076969557097 20 1.0371633907436881;
+	setAttr -s 5 ".ktv[0:4]"  1 1.0535344554245405 9 1.9163455166807872
+		 14 0.9051076969557097 20 1.0371633907436881 27 -0.15838370339786198;
 createNode animCurveTA -n "Spine_04_ctl_rotateZ";
 	rename -uid "1476D10D-4109-5198-EF9D-7B80C143FD4A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 13.129661479956953 9 12.192462747651994
-		 14 16.788200137766299 20 14.507993125210112;
+	setAttr -s 5 ".ktv[0:4]"  1 1.4321509970813273 9 12.192462747651994
+		 14 16.788200137766299 20 14.507993125210112 27 16.311094853179476;
 createNode animCurveTA -n "Spine_05_ctl_rotateX";
 	rename -uid "8B5E484B-4B69-05E3-7F4E-A39E5C464746";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 9 1.5597667544815719 14 6.4906017704522068
-		 20 2.1618466948271013;
+	setAttr -s 5 ".ktv[0:4]"  1 3.2449830451158035 9 1.5597667544815719
+		 14 6.4906017704522068 20 2.1618466948271013 27 3.5392377980105416;
 createNode animCurveTA -n "Spine_05_ctl_rotateY";
 	rename -uid "F3CA78CC-4F9B-CE09-4922-90834412F3BC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 9 -1.7337690062120077 14 3.4127019543702817
-		 20 5.0451416425049675;
+	setAttr -s 5 ".ktv[0:4]"  1 -2.6465043892416205 9 -1.7337690062120077
+		 14 3.4127019543702817 20 5.0451416425049675 27 5.6303189622722725;
 createNode animCurveTA -n "Spine_05_ctl_rotateZ";
 	rename -uid "55D48918-416D-55CA-EA69-91AE241F1E1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 9 -1.8247462440220532 14 -11.035963900214105
-		 20 -6.1877858264937098;
+	setAttr -s 5 ".ktv[0:4]"  1 3.7122591927869015 9 -1.8247462440220532
+		 14 -11.035963900214105 20 -6.1877858264937098 27 -9.660356091839299;
 createNode animCurveTA -n "Spine_06_ctl_rotateX";
 	rename -uid "22F7F7C1-4866-B1DB-DA72-AB89928B1961";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 3.3158076643682111 4 4.2309203953889076
-		 9 -1.4862040887085906 12 -6.2206412422353408 17 4.8758263935448705 22 4.1668387490288383;
+		 9 -1.4862040887085906 12 -6.2206412422353408 17 -4.5658381670981578 22 -1.1241079860321066;
 	setAttr -s 6 ".kit[1:5]"  18 1 1 18 18;
 	setAttr -s 6 ".kot[1:5]"  18 1 1 18 18;
 	setAttr -s 6 ".kix[0:5]"  0.9854169485287696 1 0.98676629310692321 
-		0.91688181150743819 1 1;
+		0.91688181150743819 0.97796294323362931 1;
 	setAttr -s 6 ".kiy[0:5]"  0.17015709668494053 0 -0.16214895247278607 
-		0.39915879512649927 0 0;
+		0.39915879512649927 0.20877854693865722 0;
 	setAttr -s 6 ".kox[0:5]"  0.98541696656428779 1 0.98676628791894327 
-		0.91688182483076752 1 1;
+		0.91688182483076752 0.97796294323362931 1;
 	setAttr -s 6 ".koy[0:5]"  0.17015699223727904 0 -0.16214898404451786 
-		0.399158764522341 0 0;
+		0.399158764522341 0.20877854693865722 0;
 createNode animCurveTA -n "Spine_06_ctl_rotateY";
 	rename -uid "B620E345-4571-423F-9221-F39B503B3E45";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -9.7325645834420946 4 -6.9884231434497233
-		 9 -4.0186814164689304 12 -6.6951882555693585 17 -11.744098580916775 22 -9.538201300949293;
+		 9 -4.0186814164689304 12 -6.6951882555693585 17 -4.1590301654046504 22 4.4095354672568767;
 	setAttr -s 6 ".kit[1:5]"  18 1 18 1 18;
 	setAttr -s 6 ".kot[1:5]"  18 1 18 1 18;
 	setAttr -s 6 ".kix[0:5]"  0.90905570284238346 0.95804270025287641 
-		0.99304519741180619 0.92703061824783628 0.84643127558830011 1;
+		0.99304519741180619 1 0.84643127558830011 1;
 	setAttr -s 6 ".kiy[0:5]"  0.41667460821333985 0.2866255126330825 
-		0.11773375003518348 -0.37498564349990055 -0.53249797718485581 0;
+		0.11773375003518348 0 -0.53249797718485581 0;
 	setAttr -s 6 ".kox[0:5]"  0.90905559037438821 0.9580427002528763 
-		0.99304519903069099 0.92703061824783628 0.84643128199565376 1;
+		0.99304519903069099 1 0.84643128199565376 1;
 	setAttr -s 6 ".koy[0:5]"  0.41667485358378969 0.28662551263308245 
-		0.1177337363804252 -0.3749856434999006 -0.53249796700005725 0;
+		0.1177337363804252 0 -0.53249796700005725 0;
 createNode animCurveTA -n "Spine_06_ctl_rotateZ";
 	rename -uid "7935BF49-4C22-61A7-C68B-34A12E07F274";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 17.282539773539959 4 20 9 19.083503857171586
-		 12 2.6047900798911936 17 17.346361515210518 22 16.224799982181271;
+		 12 2.6047900798911936 17 12.403832998410413 22 12.477749649458454;
 	setAttr -s 6 ".kit[4:5]"  18 18;
 	setAttr -s 6 ".kot[4:5]"  18 18;
 	setAttr -s 6 ".kix[0:5]"  0.88468229962915268 0.98753806506055464 
-		0.84893079889420331 0.94657944792603821 1 1;
+		0.84893079889420331 0.94657944792603821 0.99982748697353119 1;
 	setAttr -s 6 ".kiy[0:5]"  0.46619441086619012 0.15738033567271262 
-		-0.52850401955789272 -0.32247069442669768 0 0;
+		-0.52850401955789272 -0.32247069442669768 0.018574075809933244 0;
 	setAttr -s 6 ".kox[0:5]"  0.88468229725188541 0.98753809276784132 
-		0.848930749933969 0.94657943925677557 1 1;
+		0.848930749933969 0.94657943925677557 0.99982748697353119 1;
 	setAttr -s 6 ".koy[0:5]"  0.46619441537745465 0.15738016181353495 
-		-0.52850409820222688 -0.32247071987442294 0 0;
+		-0.52850409820222688 -0.32247071987442294 0.018574075809933241 0;
 createNode animCurveTA -n "Tongue_01_ctl_rotateX";
 	rename -uid "F363019E-49F9-2B56-202B-5E99D1DE502E";
 	setAttr ".tan" 18;
@@ -7343,44 +4733,45 @@ createNode animCurveTU -n "R_Brow_02_ctrl_visibility";
 	rename -uid "0B26FF52-4646-9272-C17C-E8840029C54C";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 23 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "R_Brow_02_ctrl_translateX";
 	rename -uid "F382D604-47AB-953D-39F5-BFA0D41824C0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.49967401178980886;
+	setAttr -s 3 ".ktv[0:2]"  1 -0.49967401178980886 23 -0.49967401178980886
+		 27 -0.5;
 createNode animCurveTL -n "R_Brow_02_ctrl_translateY";
 	rename -uid "468B0D55-4F0D-5A6F-53F0-1F96A12C8364";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.5;
+	setAttr -s 3 ".ktv[0:2]"  1 -0.5 23 -0.5 27 -0.097063062755588153;
 createNode animCurveTL -n "R_Brow_02_ctrl_translateZ";
 	rename -uid "FAF6F340-4AB8-7403-171A-F78E2CE23569";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 23 0;
 createNode animCurveTU -n "L_Brow_02_ctrl_visibility";
 	rename -uid "FFC8864C-4181-B095-A4FB-C4A0457409B8";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 22 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "L_Brow_02_ctrl_translateX";
 	rename -uid "9205EB74-40AC-4FE5-A2B0-45A64C97D8C7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -0.5 16 -0.5;
+	setAttr -s 3 ".ktv[0:2]"  1 -0.5 16 -0.5 22 -0.5;
 createNode animCurveTL -n "L_Brow_02_ctrl_translateY";
 	rename -uid "21EB72B8-468F-7710-1BE0-AFBF4DDC4865";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -0.5 16 -0.5;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.5 16 -0.5 22 -0.5 27 -0.045068211105132726;
 createNode animCurveTL -n "L_Brow_02_ctrl_translateZ";
 	rename -uid "B07A54F4-49D0-1E93-EA04-9D8A516448FF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 22 0;
 createNode animCurveTU -n "UpperLip_Pucker_ctrl_visibility";
 	rename -uid "B02B1357-4C7C-FF86-2133-61948B1C28A2";
 	setAttr ".tan" 9;
@@ -7427,18 +4818,18 @@ createNode animCurveTU -n "L_Nose_ctrl_visibility";
 	rename -uid "2D2EC6B1-41D2-47FB-3F5E-EAAB3F2C6465";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 23 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "L_Nose_ctrl_translateX";
 	rename -uid "78694BF9-4B68-5F62-0596-C6B3AC921AF8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 27 0.50385795288098778;
 createNode animCurveTL -n "L_Nose_ctrl_translateY";
 	rename -uid "D2656D37-4CAF-2FC7-204E-69B68032D70E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 23 0.15074749098594889 27 0.62075265927953349;
 createNode animCurveTU -n "L_Brow_01_ctrl_visibility";
 	rename -uid "6871B645-48AC-0111-D134-9ABC261C5F82";
 	setAttr ".tan" 9;
@@ -7856,12 +5247,12 @@ createNode animCurveTL -n "LowerLip_PuckerPout_ctrl_translateY";
 	rename -uid "B007F6AF-4B9B-16F1-9719-FABC6C3BB59D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.52487745387638807;
+	setAttr -s 2 ".ktv[0:1]"  1 0.52487745387638807 30 0;
 createNode animCurveTL -n "LowerLip_PuckerPout_ctrl_translateZ";
 	rename -uid "0A82E0A5-414D-A2A7-D5C7-788B2D01CDD1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 2.6081166245626982e-14;
+	setAttr -s 2 ".ktv[0:1]"  1 2.6081166245626982e-14 30 0.26919481124264122;
 createNode animCurveTU -n "R_Mouth_Corner_ctrl_visibility";
 	rename -uid "9EC797E6-46D6-C8C0-F4C1-659F13E9C368";
 	setAttr ".tan" 9;
@@ -7882,7 +5273,7 @@ createNode animCurveTL -n "R_Mouth_Corner_ctrl_translateZ";
 	rename -uid "97C420F1-424A-5569-5C38-8D9C4D568267";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 7.7913690378476376e-17;
+	setAttr -s 2 ".ktv[0:1]"  1 7.7913690378476376e-17 30 1;
 createNode animCurveTU -n "R_Mouth_Corner_ctrl_scaleX";
 	rename -uid "1E58C9B1-47A3-20CC-222D-70BAAAB87185";
 	setAttr ".tan" 18;
@@ -7913,12 +5304,13 @@ createNode animCurveTL -n "L_Mouth_Corner_ctrl_translateY";
 	rename -uid "29192C3E-41AC-2B0B-5C26-08BD4E909BD2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -1 15 1 21 -1;
+	setAttr -s 4 ".ktv[0:3]"  1 -1 15 1 21 -1 30 -1;
 createNode animCurveTL -n "L_Mouth_Corner_ctrl_translateZ";
 	rename -uid "C7C8A7DD-4065-020B-2C45-359D2EA520F2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 7.4599390216306596e-15 21 7.4599390216306596e-15;
+	setAttr -s 3 ".ktv[0:2]"  1 7.4599390216306596e-15 21 7.4599390216306596e-15
+		 30 1;
 createNode animCurveTU -n "L_Mouth_Corner_ctrl_scaleX";
 	rename -uid "E314D1A9-4063-966A-E54C-64A00051F155";
 	setAttr ".tan" 18;
@@ -7949,7 +5341,7 @@ createNode animCurveTL -n "R_Nose_ctrl_translateY";
 	rename -uid "E13FA081-49C2-2032-7F5F-6A982673C5D3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 24 0 27 0.47465415872197086;
 createNode animCurveTU -n "L_IK_Finger2_01_ctl_visibility";
 	rename -uid "4EAB12DE-4B81-9FC2-4EDF-08AAEAA13281";
 	setAttr ".tan" 9;
@@ -9401,17 +6793,17 @@ createNode animCurveTL -n "Spine_06_ctl_translateX";
 	rename -uid "EBA1F29A-4790-5715-5D82-F6B26D874F83";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 22 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 22 0 27 0.13909082565450404;
 createNode animCurveTL -n "Spine_06_ctl_translateY";
 	rename -uid "17B3AD9D-421C-6790-94D6-FCA55CAF5BA9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 22 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 22 0 27 0.10900472111771038;
 createNode animCurveTL -n "Spine_06_ctl_translateZ";
 	rename -uid "3564BD84-491D-AACB-13D5-79B8D65E9B64";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 22 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 22 0 27 -0.022485348222122684;
 createNode animCurveTU -n "Spine_06_ctl_scaleX";
 	rename -uid "94486D16-469A-4FA0-CFE5-C1AF32521565";
 	setAttr ".tan" 18;
@@ -9743,7 +7135,7 @@ createNode animCurveTU -n "L_Arm_IKFK_switch_ctl_Arm_IKFK";
 	rename -uid "208F30B4-4D3C-58D8-A564-8BA5A33F5866";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr ".ktv[0]"  1 1;
 createNode animCurveTU -n "L_Arm_IKFK_switch_ctl_Follow_Translates";
 	rename -uid "67F25311-41D5-E808-8A95-588EE366E7E5";
 	setAttr ".tan" 18;
@@ -10045,56 +7437,117 @@ createNode animCurveTL -n "camera1_translateX";
 	rename -uid "D3A4D4F0-4F2E-ECCE-FD23-D581D0223188";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 120.76560575595381 21 120.76560575595381;
+	setAttr -s 2 ".ktv[0:1]"  10 120.76560575595381 21 123.02114442641523;
 createNode animCurveTL -n "camera1_translateY";
 	rename -uid "3786CF3D-473E-47B6-7214-9291F287113F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 23.755247262832015;
+	setAttr -s 2 ".ktv[0:1]"  10 23.755247262832015 21 27.865538572852277;
 createNode animCurveTL -n "camera1_translateZ";
 	rename -uid "3BFB0469-4C0C-09C6-2159-10ACDB0F06AE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 260.85289649796459 21 260.85289649796459;
+	setAttr -s 2 ".ktv[0:1]"  10 260.85289649796459 21 260.73909829147567;
 createNode animCurveTU -n "camera1_visibility";
 	rename -uid "A67916CC-4B9D-7DD4-D66D-6B930AE3199F";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  10 1 21 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "camera1_rotateX";
 	rename -uid "9F876234-4EF9-89C5-874B-57A94B17D282";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 16.199999999998877;
+	setAttr -s 2 ".ktv[0:1]"  10 16.199999999998877 21 0.32536443148774091;
 createNode animCurveTA -n "camera1_rotateY";
 	rename -uid "C42BDEA7-436C-9BE1-9640-07A862AB79C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 -85.999999999982535;
+	setAttr -s 2 ".ktv[0:1]"  10 -85.999999999982535 21 -89.880466472286002;
 createNode animCurveTA -n "camera1_rotateZ";
 	rename -uid "49E5148F-4280-E897-45C1-7589C927481F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 0;
+	setAttr -s 2 ".ktv[0:1]"  10 0 21 0;
 createNode animCurveTU -n "camera1_scaleX";
 	rename -uid "F25315FA-4DE7-8015-E488-788C584A81BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 1;
+	setAttr -s 2 ".ktv[0:1]"  10 1 21 1;
 createNode animCurveTU -n "camera1_scaleY";
 	rename -uid "E04320BF-4119-55B4-991C-9299AC3A3281";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 1;
+	setAttr -s 2 ".ktv[0:1]"  10 1 21 1;
 createNode animCurveTU -n "camera1_scaleZ";
 	rename -uid "71712FB8-4AD7-03A7-61DC-13985ADAC4F2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 1;
+	setAttr -s 2 ".ktv[0:1]"  10 1 21 1;
+createNode animCurveTA -n "L_FK_Arm_01_ctl_rotateX";
+	rename -uid "2D034AD2-45A8-7E77-C061-85BD36DC26C8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 -15.035176021415447;
+createNode animCurveTA -n "L_FK_Arm_01_ctl_rotateY";
+	rename -uid "6A8FB463-402B-BBE7-DF74-988D474C4963";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 -7.6041654752458205;
+createNode animCurveTA -n "L_FK_Arm_01_ctl_rotateZ";
+	rename -uid "76BAE4E5-46C0-BE81-2A6A-8F98E7AE20A5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 -31.520296935613484;
+createNode animCurveTU -n "L_FK_Arm_01_ctl_visibility";
+	rename -uid "F36B0E7D-4BBA-5E53-C597-788140A9664A";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "L_FK_Arm_01_ctl_translateX";
+	rename -uid "20DFA13F-4228-9E76-E904-4E9E669CAC09";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 0;
+createNode animCurveTL -n "L_FK_Arm_01_ctl_translateY";
+	rename -uid "82A0FFC0-4F28-636B-D474-4593DA63A1C1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 0;
+createNode animCurveTL -n "L_FK_Arm_01_ctl_translateZ";
+	rename -uid "FFCB9193-4ADC-C718-2C4F-1B91DC3E7C49";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 0;
+createNode animCurveTU -n "L_FK_Arm_01_ctl_scaleX";
+	rename -uid "5086FE5B-4FF2-55F4-2FAD-12A35D6CF633";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 1;
+createNode animCurveTU -n "L_FK_Arm_01_ctl_scaleY";
+	rename -uid "6608F3FF-4201-757B-0B15-76BC1E7EF4DD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 1;
+createNode animCurveTU -n "L_FK_Arm_01_ctl_scaleZ";
+	rename -uid "C103182C-4110-2765-D061-E998991848D4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 1;
+createNode animCurveTU -n "L_FK_Arm_01_ctl_Follow_Translates";
+	rename -uid "6616B9AF-4DA5-A525-5713-57BD37CD4D11";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 1;
+createNode animCurveTU -n "L_FK_Arm_01_ctl_Follow_Rotates";
+	rename -uid "218C0D37-4990-9F3A-41A4-D687C206F699";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 1;
 select -ne :time1;
-	setAttr ".o" 24;
-	setAttr ".unw" 24;
+	setAttr ".o" 27;
+	setAttr ".unw" 27;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -10181,9 +7634,9 @@ connectAttr "L_eye_ctrl_scaleZ.o" "KongRN.phl[49]";
 connectAttr "Jaw_ctl_translateX.o" "KongRN.phl[50]";
 connectAttr "Jaw_ctl_translateY.o" "KongRN.phl[51]";
 connectAttr "Jaw_ctl_translateZ.o" "KongRN.phl[52]";
-connectAttr "Jaw_ctl_rotateZ.o" "KongRN.phl[53]";
-connectAttr "Jaw_ctl_rotateX.o" "KongRN.phl[54]";
-connectAttr "Jaw_ctl_rotateY.o" "KongRN.phl[55]";
+connectAttr "Jaw_ctl_rotateX.o" "KongRN.phl[53]";
+connectAttr "Jaw_ctl_rotateY.o" "KongRN.phl[54]";
+connectAttr "Jaw_ctl_rotateZ.o" "KongRN.phl[55]";
 connectAttr "Jaw_ctl_scaleX.o" "KongRN.phl[56]";
 connectAttr "Jaw_ctl_scaleY.o" "KongRN.phl[57]";
 connectAttr "Jaw_ctl_scaleZ.o" "KongRN.phl[58]";
@@ -10565,1254 +8018,424 @@ connectAttr "L_Arm_PV_ctl_visibility.o" "KongRN.phl[433]";
 connectAttr "L_Arm_PV_ctl_scaleX.o" "KongRN.phl[434]";
 connectAttr "L_Arm_PV_ctl_scaleY.o" "KongRN.phl[435]";
 connectAttr "L_Arm_PV_ctl_scaleZ.o" "KongRN.phl[436]";
-connectAttr "R_FK_Arm_01_ctl_Follow_Translates.o" "KongRN.phl[437]";
-connectAttr "R_FK_Arm_01_ctl_Follow_Rotates.o" "KongRN.phl[438]";
-connectAttr "R_FK_Arm_01_ctl_translateX.o" "KongRN.phl[439]";
-connectAttr "R_FK_Arm_01_ctl_translateY.o" "KongRN.phl[440]";
-connectAttr "R_FK_Arm_01_ctl_translateZ.o" "KongRN.phl[441]";
-connectAttr "R_FK_Arm_01_ctl_rotateZ.o" "KongRN.phl[442]";
-connectAttr "R_FK_Arm_01_ctl_rotateX.o" "KongRN.phl[443]";
-connectAttr "R_FK_Arm_01_ctl_rotateY.o" "KongRN.phl[444]";
-connectAttr "R_FK_Arm_01_ctl_scaleX.o" "KongRN.phl[445]";
-connectAttr "R_FK_Arm_01_ctl_scaleY.o" "KongRN.phl[446]";
-connectAttr "R_FK_Arm_01_ctl_scaleZ.o" "KongRN.phl[447]";
-connectAttr "R_FK_Arm_01_ctl_visibility.o" "KongRN.phl[448]";
-connectAttr "R_FK_Arm_02_ctl_Follow_Translates.o" "KongRN.phl[449]";
-connectAttr "R_FK_Arm_02_ctl_Follow_Rotates.o" "KongRN.phl[450]";
-connectAttr "R_FK_Arm_02_ctl_translateX.o" "KongRN.phl[451]";
-connectAttr "R_FK_Arm_02_ctl_translateY.o" "KongRN.phl[452]";
-connectAttr "R_FK_Arm_02_ctl_translateZ.o" "KongRN.phl[453]";
-connectAttr "R_FK_Arm_02_ctl_rotateY.o" "KongRN.phl[454]";
-connectAttr "R_FK_Arm_02_ctl_rotateX.o" "KongRN.phl[455]";
-connectAttr "R_FK_Arm_02_ctl_rotateZ.o" "KongRN.phl[456]";
-connectAttr "R_FK_Arm_02_ctl_scaleX.o" "KongRN.phl[457]";
-connectAttr "R_FK_Arm_02_ctl_scaleY.o" "KongRN.phl[458]";
-connectAttr "R_FK_Arm_02_ctl_scaleZ.o" "KongRN.phl[459]";
-connectAttr "R_FK_Arm_02_ctl_visibility.o" "KongRN.phl[460]";
-connectAttr "R_FK_Arm_03_ctl_Follow_Translates.o" "KongRN.phl[461]";
-connectAttr "R_FK_Arm_03_ctl_Follow_Rotates.o" "KongRN.phl[462]";
-connectAttr "R_FK_Arm_03_ctl_translateX.o" "KongRN.phl[463]";
-connectAttr "R_FK_Arm_03_ctl_translateY.o" "KongRN.phl[464]";
-connectAttr "R_FK_Arm_03_ctl_translateZ.o" "KongRN.phl[465]";
-connectAttr "R_FK_Arm_03_ctl_rotateX.o" "KongRN.phl[466]";
-connectAttr "R_FK_Arm_03_ctl_rotateY.o" "KongRN.phl[467]";
-connectAttr "R_FK_Arm_03_ctl_rotateZ.o" "KongRN.phl[468]";
-connectAttr "R_FK_Arm_03_ctl_scaleX.o" "KongRN.phl[469]";
-connectAttr "R_FK_Arm_03_ctl_scaleY.o" "KongRN.phl[470]";
-connectAttr "R_FK_Arm_03_ctl_scaleZ.o" "KongRN.phl[471]";
-connectAttr "R_FK_Arm_03_ctl_visibility.o" "KongRN.phl[472]";
-connectAttr "R_FK_Finger2_01_ctl_Follow_Translates.o" "KongRN.phl[473]";
-connectAttr "R_FK_Finger2_01_ctl_Follow_Rotates.o" "KongRN.phl[474]";
-connectAttr "R_FK_Finger2_01_ctl_translateX.o" "KongRN.phl[475]";
-connectAttr "R_FK_Finger2_01_ctl_translateY.o" "KongRN.phl[476]";
-connectAttr "R_FK_Finger2_01_ctl_translateZ.o" "KongRN.phl[477]";
-connectAttr "R_FK_Finger2_01_ctl_rotateX.o" "KongRN.phl[478]";
-connectAttr "R_FK_Finger2_01_ctl_rotateY.o" "KongRN.phl[479]";
-connectAttr "R_FK_Finger2_01_ctl_rotateZ.o" "KongRN.phl[480]";
-connectAttr "R_FK_Finger2_01_ctl_scaleX.o" "KongRN.phl[481]";
-connectAttr "R_FK_Finger2_01_ctl_scaleY.o" "KongRN.phl[482]";
-connectAttr "R_FK_Finger2_01_ctl_scaleZ.o" "KongRN.phl[483]";
-connectAttr "R_FK_Finger2_01_ctl_visibility.o" "KongRN.phl[484]";
-connectAttr "R_FK_Finger2_02_ctl_Follow_Translates.o" "KongRN.phl[485]";
-connectAttr "R_FK_Finger2_02_ctl_Follow_Rotates.o" "KongRN.phl[486]";
-connectAttr "R_FK_Finger2_02_ctl_translateX.o" "KongRN.phl[487]";
-connectAttr "R_FK_Finger2_02_ctl_translateY.o" "KongRN.phl[488]";
-connectAttr "R_FK_Finger2_02_ctl_translateZ.o" "KongRN.phl[489]";
-connectAttr "R_FK_Finger2_02_ctl_rotateX.o" "KongRN.phl[490]";
-connectAttr "R_FK_Finger2_02_ctl_rotateY.o" "KongRN.phl[491]";
-connectAttr "R_FK_Finger2_02_ctl_rotateZ.o" "KongRN.phl[492]";
-connectAttr "R_FK_Finger2_02_ctl_scaleX.o" "KongRN.phl[493]";
-connectAttr "R_FK_Finger2_02_ctl_scaleY.o" "KongRN.phl[494]";
-connectAttr "R_FK_Finger2_02_ctl_scaleZ.o" "KongRN.phl[495]";
-connectAttr "R_FK_Finger2_02_ctl_visibility.o" "KongRN.phl[496]";
-connectAttr "R_FK_Finger2_03_ctl_Follow_Translates.o" "KongRN.phl[497]";
-connectAttr "R_FK_Finger2_03_ctl_Follow_Rotates.o" "KongRN.phl[498]";
-connectAttr "R_FK_Finger2_03_ctl_translateX.o" "KongRN.phl[499]";
-connectAttr "R_FK_Finger2_03_ctl_translateY.o" "KongRN.phl[500]";
-connectAttr "R_FK_Finger2_03_ctl_translateZ.o" "KongRN.phl[501]";
-connectAttr "R_FK_Finger2_03_ctl_rotateX.o" "KongRN.phl[502]";
-connectAttr "R_FK_Finger2_03_ctl_rotateY.o" "KongRN.phl[503]";
-connectAttr "R_FK_Finger2_03_ctl_rotateZ.o" "KongRN.phl[504]";
-connectAttr "R_FK_Finger2_03_ctl_scaleX.o" "KongRN.phl[505]";
-connectAttr "R_FK_Finger2_03_ctl_scaleY.o" "KongRN.phl[506]";
-connectAttr "R_FK_Finger2_03_ctl_scaleZ.o" "KongRN.phl[507]";
-connectAttr "R_FK_Finger2_03_ctl_visibility.o" "KongRN.phl[508]";
-connectAttr "R_FK_Finger5_01_ctl_Follow_Translates.o" "KongRN.phl[509]";
-connectAttr "R_FK_Finger5_01_ctl_Follow_Rotates.o" "KongRN.phl[510]";
-connectAttr "R_FK_Finger5_01_ctl_translateX.o" "KongRN.phl[511]";
-connectAttr "R_FK_Finger5_01_ctl_translateY.o" "KongRN.phl[512]";
-connectAttr "R_FK_Finger5_01_ctl_translateZ.o" "KongRN.phl[513]";
-connectAttr "R_FK_Finger5_01_ctl_rotateX.o" "KongRN.phl[514]";
-connectAttr "R_FK_Finger5_01_ctl_rotateY.o" "KongRN.phl[515]";
-connectAttr "R_FK_Finger5_01_ctl_rotateZ.o" "KongRN.phl[516]";
-connectAttr "R_FK_Finger5_01_ctl_scaleX.o" "KongRN.phl[517]";
-connectAttr "R_FK_Finger5_01_ctl_scaleY.o" "KongRN.phl[518]";
-connectAttr "R_FK_Finger5_01_ctl_scaleZ.o" "KongRN.phl[519]";
-connectAttr "R_FK_Finger5_01_ctl_visibility.o" "KongRN.phl[520]";
-connectAttr "R_FK_Finger5_02_ctl_Follow_Translates.o" "KongRN.phl[521]";
-connectAttr "R_FK_Finger5_02_ctl_Follow_Rotates.o" "KongRN.phl[522]";
-connectAttr "R_FK_Finger5_02_ctl_translateX.o" "KongRN.phl[523]";
-connectAttr "R_FK_Finger5_02_ctl_translateY.o" "KongRN.phl[524]";
-connectAttr "R_FK_Finger5_02_ctl_translateZ.o" "KongRN.phl[525]";
-connectAttr "R_FK_Finger5_02_ctl_rotateX.o" "KongRN.phl[526]";
-connectAttr "R_FK_Finger5_02_ctl_rotateY.o" "KongRN.phl[527]";
-connectAttr "R_FK_Finger5_02_ctl_rotateZ.o" "KongRN.phl[528]";
-connectAttr "R_FK_Finger5_02_ctl_scaleX.o" "KongRN.phl[529]";
-connectAttr "R_FK_Finger5_02_ctl_scaleY.o" "KongRN.phl[530]";
-connectAttr "R_FK_Finger5_02_ctl_scaleZ.o" "KongRN.phl[531]";
-connectAttr "R_FK_Finger5_02_ctl_visibility.o" "KongRN.phl[532]";
-connectAttr "R_FK_Finger5_03_ctl_Follow_Translates.o" "KongRN.phl[533]";
-connectAttr "R_FK_Finger5_03_ctl_Follow_Rotates.o" "KongRN.phl[534]";
-connectAttr "R_FK_Finger5_03_ctl_translateX.o" "KongRN.phl[535]";
-connectAttr "R_FK_Finger5_03_ctl_translateY.o" "KongRN.phl[536]";
-connectAttr "R_FK_Finger5_03_ctl_translateZ.o" "KongRN.phl[537]";
-connectAttr "R_FK_Finger5_03_ctl_rotateX.o" "KongRN.phl[538]";
-connectAttr "R_FK_Finger5_03_ctl_rotateY.o" "KongRN.phl[539]";
-connectAttr "R_FK_Finger5_03_ctl_rotateZ.o" "KongRN.phl[540]";
-connectAttr "R_FK_Finger5_03_ctl_scaleX.o" "KongRN.phl[541]";
-connectAttr "R_FK_Finger5_03_ctl_scaleY.o" "KongRN.phl[542]";
-connectAttr "R_FK_Finger5_03_ctl_scaleZ.o" "KongRN.phl[543]";
-connectAttr "R_FK_Finger5_03_ctl_visibility.o" "KongRN.phl[544]";
-connectAttr "R_FK_Finger4_01_ctl_Follow_Translates.o" "KongRN.phl[545]";
-connectAttr "R_FK_Finger4_01_ctl_Follow_Rotates.o" "KongRN.phl[546]";
-connectAttr "R_FK_Finger4_01_ctl_translateX.o" "KongRN.phl[547]";
-connectAttr "R_FK_Finger4_01_ctl_translateY.o" "KongRN.phl[548]";
-connectAttr "R_FK_Finger4_01_ctl_translateZ.o" "KongRN.phl[549]";
-connectAttr "R_FK_Finger4_01_ctl_rotateX.o" "KongRN.phl[550]";
-connectAttr "R_FK_Finger4_01_ctl_rotateY.o" "KongRN.phl[551]";
-connectAttr "R_FK_Finger4_01_ctl_rotateZ.o" "KongRN.phl[552]";
-connectAttr "R_FK_Finger4_01_ctl_scaleX.o" "KongRN.phl[553]";
-connectAttr "R_FK_Finger4_01_ctl_scaleY.o" "KongRN.phl[554]";
-connectAttr "R_FK_Finger4_01_ctl_scaleZ.o" "KongRN.phl[555]";
-connectAttr "R_FK_Finger4_01_ctl_visibility.o" "KongRN.phl[556]";
-connectAttr "R_FK_Finger4_02_ctl_Follow_Translates.o" "KongRN.phl[557]";
-connectAttr "R_FK_Finger4_02_ctl_Follow_Rotates.o" "KongRN.phl[558]";
-connectAttr "R_FK_Finger4_02_ctl_translateX.o" "KongRN.phl[559]";
-connectAttr "R_FK_Finger4_02_ctl_translateY.o" "KongRN.phl[560]";
-connectAttr "R_FK_Finger4_02_ctl_translateZ.o" "KongRN.phl[561]";
-connectAttr "R_FK_Finger4_02_ctl_rotateX.o" "KongRN.phl[562]";
-connectAttr "R_FK_Finger4_02_ctl_rotateY.o" "KongRN.phl[563]";
-connectAttr "R_FK_Finger4_02_ctl_rotateZ.o" "KongRN.phl[564]";
-connectAttr "R_FK_Finger4_02_ctl_scaleX.o" "KongRN.phl[565]";
-connectAttr "R_FK_Finger4_02_ctl_scaleY.o" "KongRN.phl[566]";
-connectAttr "R_FK_Finger4_02_ctl_scaleZ.o" "KongRN.phl[567]";
-connectAttr "R_FK_Finger4_02_ctl_visibility.o" "KongRN.phl[568]";
-connectAttr "R_FK_Finger4_03_ctl_Follow_Translates.o" "KongRN.phl[569]";
-connectAttr "R_FK_Finger4_03_ctl_Follow_Rotates.o" "KongRN.phl[570]";
-connectAttr "R_FK_Finger4_03_ctl_translateX.o" "KongRN.phl[571]";
-connectAttr "R_FK_Finger4_03_ctl_translateY.o" "KongRN.phl[572]";
-connectAttr "R_FK_Finger4_03_ctl_translateZ.o" "KongRN.phl[573]";
-connectAttr "R_FK_Finger4_03_ctl_rotateX.o" "KongRN.phl[574]";
-connectAttr "R_FK_Finger4_03_ctl_rotateY.o" "KongRN.phl[575]";
-connectAttr "R_FK_Finger4_03_ctl_rotateZ.o" "KongRN.phl[576]";
-connectAttr "R_FK_Finger4_03_ctl_scaleX.o" "KongRN.phl[577]";
-connectAttr "R_FK_Finger4_03_ctl_scaleY.o" "KongRN.phl[578]";
-connectAttr "R_FK_Finger4_03_ctl_scaleZ.o" "KongRN.phl[579]";
-connectAttr "R_FK_Finger4_03_ctl_visibility.o" "KongRN.phl[580]";
-connectAttr "R_FK_Finger1_01_ctl_Follow_Translates.o" "KongRN.phl[581]";
-connectAttr "R_FK_Finger1_01_ctl_Follow_Rotates.o" "KongRN.phl[582]";
-connectAttr "R_FK_Finger1_01_ctl_translateX.o" "KongRN.phl[583]";
-connectAttr "R_FK_Finger1_01_ctl_translateY.o" "KongRN.phl[584]";
-connectAttr "R_FK_Finger1_01_ctl_translateZ.o" "KongRN.phl[585]";
-connectAttr "R_FK_Finger1_01_ctl_rotateX.o" "KongRN.phl[586]";
-connectAttr "R_FK_Finger1_01_ctl_rotateY.o" "KongRN.phl[587]";
-connectAttr "R_FK_Finger1_01_ctl_rotateZ.o" "KongRN.phl[588]";
-connectAttr "R_FK_Finger1_01_ctl_scaleX.o" "KongRN.phl[589]";
-connectAttr "R_FK_Finger1_01_ctl_scaleY.o" "KongRN.phl[590]";
-connectAttr "R_FK_Finger1_01_ctl_scaleZ.o" "KongRN.phl[591]";
-connectAttr "R_FK_Finger1_01_ctl_visibility.o" "KongRN.phl[592]";
-connectAttr "R_FK_Finger1_02_ctl_Follow_Translates.o" "KongRN.phl[593]";
-connectAttr "R_FK_Finger1_02_ctl_Follow_Rotates.o" "KongRN.phl[594]";
-connectAttr "R_FK_Finger1_02_ctl_translateX.o" "KongRN.phl[595]";
-connectAttr "R_FK_Finger1_02_ctl_translateY.o" "KongRN.phl[596]";
-connectAttr "R_FK_Finger1_02_ctl_translateZ.o" "KongRN.phl[597]";
-connectAttr "R_FK_Finger1_02_ctl_rotateX.o" "KongRN.phl[598]";
-connectAttr "R_FK_Finger1_02_ctl_rotateY.o" "KongRN.phl[599]";
-connectAttr "R_FK_Finger1_02_ctl_rotateZ.o" "KongRN.phl[600]";
-connectAttr "R_FK_Finger1_02_ctl_scaleX.o" "KongRN.phl[601]";
-connectAttr "R_FK_Finger1_02_ctl_scaleY.o" "KongRN.phl[602]";
-connectAttr "R_FK_Finger1_02_ctl_scaleZ.o" "KongRN.phl[603]";
-connectAttr "R_FK_Finger1_02_ctl_visibility.o" "KongRN.phl[604]";
-connectAttr "R_FK_Finger1_03_ctl_Follow_Translates.o" "KongRN.phl[605]";
-connectAttr "R_FK_Finger1_03_ctl_Follow_Rotates.o" "KongRN.phl[606]";
-connectAttr "R_FK_Finger1_03_ctl_translateX.o" "KongRN.phl[607]";
-connectAttr "R_FK_Finger1_03_ctl_translateY.o" "KongRN.phl[608]";
-connectAttr "R_FK_Finger1_03_ctl_translateZ.o" "KongRN.phl[609]";
-connectAttr "R_FK_Finger1_03_ctl_rotateX.o" "KongRN.phl[610]";
-connectAttr "R_FK_Finger1_03_ctl_rotateY.o" "KongRN.phl[611]";
-connectAttr "R_FK_Finger1_03_ctl_rotateZ.o" "KongRN.phl[612]";
-connectAttr "R_FK_Finger1_03_ctl_scaleX.o" "KongRN.phl[613]";
-connectAttr "R_FK_Finger1_03_ctl_scaleY.o" "KongRN.phl[614]";
-connectAttr "R_FK_Finger1_03_ctl_scaleZ.o" "KongRN.phl[615]";
-connectAttr "R_FK_Finger1_03_ctl_visibility.o" "KongRN.phl[616]";
-connectAttr "R_FK_Finger3_01_ctl_Follow_Translates.o" "KongRN.phl[617]";
-connectAttr "R_FK_Finger3_01_ctl_Follow_Rotates.o" "KongRN.phl[618]";
-connectAttr "R_FK_Finger3_01_ctl_translateX.o" "KongRN.phl[619]";
-connectAttr "R_FK_Finger3_01_ctl_translateY.o" "KongRN.phl[620]";
-connectAttr "R_FK_Finger3_01_ctl_translateZ.o" "KongRN.phl[621]";
-connectAttr "R_FK_Finger3_01_ctl_rotateX.o" "KongRN.phl[622]";
-connectAttr "R_FK_Finger3_01_ctl_rotateY.o" "KongRN.phl[623]";
-connectAttr "R_FK_Finger3_01_ctl_rotateZ.o" "KongRN.phl[624]";
-connectAttr "R_FK_Finger3_01_ctl_scaleX.o" "KongRN.phl[625]";
-connectAttr "R_FK_Finger3_01_ctl_scaleY.o" "KongRN.phl[626]";
-connectAttr "R_FK_Finger3_01_ctl_scaleZ.o" "KongRN.phl[627]";
-connectAttr "R_FK_Finger3_01_ctl_visibility.o" "KongRN.phl[628]";
-connectAttr "R_FK_Finger3_02_ctl_Follow_Translates.o" "KongRN.phl[629]";
-connectAttr "R_FK_Finger3_02_ctl_Follow_Rotates.o" "KongRN.phl[630]";
-connectAttr "R_FK_Finger3_02_ctl_translateX.o" "KongRN.phl[631]";
-connectAttr "R_FK_Finger3_02_ctl_translateY.o" "KongRN.phl[632]";
-connectAttr "R_FK_Finger3_02_ctl_translateZ.o" "KongRN.phl[633]";
-connectAttr "R_FK_Finger3_02_ctl_rotateX.o" "KongRN.phl[634]";
-connectAttr "R_FK_Finger3_02_ctl_rotateY.o" "KongRN.phl[635]";
-connectAttr "R_FK_Finger3_02_ctl_rotateZ.o" "KongRN.phl[636]";
-connectAttr "R_FK_Finger3_02_ctl_scaleX.o" "KongRN.phl[637]";
-connectAttr "R_FK_Finger3_02_ctl_scaleY.o" "KongRN.phl[638]";
-connectAttr "R_FK_Finger3_02_ctl_scaleZ.o" "KongRN.phl[639]";
-connectAttr "R_FK_Finger3_02_ctl_visibility.o" "KongRN.phl[640]";
-connectAttr "R_FK_Finger3_03_ctl_Follow_Translates.o" "KongRN.phl[641]";
-connectAttr "R_FK_Finger3_03_ctl_Follow_Rotates.o" "KongRN.phl[642]";
-connectAttr "R_FK_Finger3_03_ctl_translateX.o" "KongRN.phl[643]";
-connectAttr "R_FK_Finger3_03_ctl_translateY.o" "KongRN.phl[644]";
-connectAttr "R_FK_Finger3_03_ctl_translateZ.o" "KongRN.phl[645]";
-connectAttr "R_FK_Finger3_03_ctl_rotateX.o" "KongRN.phl[646]";
-connectAttr "R_FK_Finger3_03_ctl_rotateY.o" "KongRN.phl[647]";
-connectAttr "R_FK_Finger3_03_ctl_rotateZ.o" "KongRN.phl[648]";
-connectAttr "R_FK_Finger3_03_ctl_scaleX.o" "KongRN.phl[649]";
-connectAttr "R_FK_Finger3_03_ctl_scaleY.o" "KongRN.phl[650]";
-connectAttr "R_FK_Finger3_03_ctl_scaleZ.o" "KongRN.phl[651]";
-connectAttr "R_FK_Finger3_03_ctl_visibility.o" "KongRN.phl[652]";
-connectAttr "COG_ctl_Follow_Translates.o" "KongRN.phl[653]";
-connectAttr "COG_ctl_Follow_Rotates.o" "KongRN.phl[654]";
-connectAttr "COG_ctl_translateX.o" "KongRN.phl[655]";
-connectAttr "COG_ctl_translateY.o" "KongRN.phl[656]";
-connectAttr "COG_ctl_translateZ.o" "KongRN.phl[657]";
-connectAttr "COG_ctl_rotateX.o" "KongRN.phl[658]";
-connectAttr "COG_ctl_rotateY.o" "KongRN.phl[659]";
-connectAttr "COG_ctl_rotateZ.o" "KongRN.phl[660]";
-connectAttr "COG_ctl_scaleX.o" "KongRN.phl[661]";
-connectAttr "COG_ctl_scaleY.o" "KongRN.phl[662]";
-connectAttr "COG_ctl_scaleZ.o" "KongRN.phl[663]";
-connectAttr "COG_ctl_visibility.o" "KongRN.phl[664]";
-connectAttr "Hips_ctl_Follow_Translates.o" "KongRN.phl[665]";
-connectAttr "Hips_ctl_Follow_Rotates.o" "KongRN.phl[666]";
-connectAttr "Hips_ctl_translateX.o" "KongRN.phl[667]";
-connectAttr "Hips_ctl_translateY.o" "KongRN.phl[668]";
-connectAttr "Hips_ctl_translateZ.o" "KongRN.phl[669]";
-connectAttr "Hips_ctl_rotateX.o" "KongRN.phl[670]";
-connectAttr "Hips_ctl_rotateY.o" "KongRN.phl[671]";
-connectAttr "Hips_ctl_rotateZ.o" "KongRN.phl[672]";
-connectAttr "Hips_ctl_scaleX.o" "KongRN.phl[673]";
-connectAttr "Hips_ctl_scaleY.o" "KongRN.phl[674]";
-connectAttr "Hips_ctl_scaleZ.o" "KongRN.phl[675]";
-connectAttr "Hips_ctl_visibility.o" "KongRN.phl[676]";
-connectAttr "Spine_01_ctl_Follow_Translates.o" "KongRN.phl[677]";
-connectAttr "Spine_01_ctl_Follow_Rotates.o" "KongRN.phl[678]";
-connectAttr "Spine_01_ctl_translateX.o" "KongRN.phl[679]";
-connectAttr "Spine_01_ctl_translateY.o" "KongRN.phl[680]";
-connectAttr "Spine_01_ctl_translateZ.o" "KongRN.phl[681]";
-connectAttr "Spine_01_ctl_rotateZ.o" "KongRN.phl[682]";
-connectAttr "Spine_01_ctl_rotateX.o" "KongRN.phl[683]";
-connectAttr "Spine_01_ctl_rotateY.o" "KongRN.phl[684]";
-connectAttr "Spine_01_ctl_scaleX.o" "KongRN.phl[685]";
-connectAttr "Spine_01_ctl_scaleY.o" "KongRN.phl[686]";
-connectAttr "Spine_01_ctl_scaleZ.o" "KongRN.phl[687]";
-connectAttr "Spine_01_ctl_visibility.o" "KongRN.phl[688]";
-connectAttr "Spine_02_ctl_Follow_Translates.o" "KongRN.phl[689]";
-connectAttr "Spine_02_ctl_Follow_Rotates.o" "KongRN.phl[690]";
-connectAttr "Spine_02_ctl_translateX.o" "KongRN.phl[691]";
-connectAttr "Spine_02_ctl_translateY.o" "KongRN.phl[692]";
-connectAttr "Spine_02_ctl_translateZ.o" "KongRN.phl[693]";
-connectAttr "Spine_02_ctl_rotateZ.o" "KongRN.phl[694]";
-connectAttr "Spine_02_ctl_rotateX.o" "KongRN.phl[695]";
-connectAttr "Spine_02_ctl_rotateY.o" "KongRN.phl[696]";
-connectAttr "Spine_02_ctl_scaleX.o" "KongRN.phl[697]";
-connectAttr "Spine_02_ctl_scaleY.o" "KongRN.phl[698]";
-connectAttr "Spine_02_ctl_scaleZ.o" "KongRN.phl[699]";
-connectAttr "Spine_02_ctl_visibility.o" "KongRN.phl[700]";
-connectAttr "Spine_03_ctl_translateX.o" "KongRN.phl[701]";
-connectAttr "Spine_03_ctl_translateY.o" "KongRN.phl[702]";
-connectAttr "Spine_03_ctl_translateZ.o" "KongRN.phl[703]";
-connectAttr "Spine_03_ctl_rotateZ.o" "KongRN.phl[704]";
-connectAttr "Spine_03_ctl_rotateX.o" "KongRN.phl[705]";
-connectAttr "Spine_03_ctl_rotateY.o" "KongRN.phl[706]";
-connectAttr "Spine_03_ctl_scaleX.o" "KongRN.phl[707]";
-connectAttr "Spine_03_ctl_scaleY.o" "KongRN.phl[708]";
-connectAttr "Spine_03_ctl_scaleZ.o" "KongRN.phl[709]";
-connectAttr "Spine_03_ctl_visibility.o" "KongRN.phl[710]";
-connectAttr "L_RK_Clavicle_ctl_translateX.o" "KongRN.phl[711]";
-connectAttr "L_RK_Clavicle_ctl_translateY.o" "KongRN.phl[712]";
-connectAttr "L_RK_Clavicle_ctl_translateZ.o" "KongRN.phl[713]";
-connectAttr "L_RK_Clavicle_ctl_rotateX.o" "KongRN.phl[714]";
-connectAttr "L_RK_Clavicle_ctl_rotateY.o" "KongRN.phl[715]";
-connectAttr "L_RK_Clavicle_ctl_rotateZ.o" "KongRN.phl[716]";
-connectAttr "L_RK_Clavicle_ctl_scaleX.o" "KongRN.phl[717]";
-connectAttr "L_RK_Clavicle_ctl_scaleY.o" "KongRN.phl[718]";
-connectAttr "L_RK_Clavicle_ctl_scaleZ.o" "KongRN.phl[719]";
-connectAttr "L_RK_Clavicle_ctl_Follow_Translates.o" "KongRN.phl[720]";
-connectAttr "L_RK_Clavicle_ctl_Follow_Rotates.o" "KongRN.phl[721]";
-connectAttr "L_RK_Clavicle_ctl_visibility.o" "KongRN.phl[722]";
-connectAttr "R_RK_Clavicle_ctl_translateX.o" "KongRN.phl[723]";
-connectAttr "R_RK_Clavicle_ctl_translateY.o" "KongRN.phl[724]";
-connectAttr "R_RK_Clavicle_ctl_translateZ.o" "KongRN.phl[725]";
-connectAttr "R_RK_Clavicle_ctl_rotateZ.o" "KongRN.phl[726]";
-connectAttr "R_RK_Clavicle_ctl_rotateX.o" "KongRN.phl[727]";
-connectAttr "R_RK_Clavicle_ctl_rotateY.o" "KongRN.phl[728]";
-connectAttr "R_RK_Clavicle_ctl_scaleX.o" "KongRN.phl[729]";
-connectAttr "R_RK_Clavicle_ctl_scaleY.o" "KongRN.phl[730]";
-connectAttr "R_RK_Clavicle_ctl_scaleZ.o" "KongRN.phl[731]";
-connectAttr "R_RK_Clavicle_ctl_Follow_Translates.o" "KongRN.phl[732]";
-connectAttr "R_RK_Clavicle_ctl_Follow_Rotates.o" "KongRN.phl[733]";
-connectAttr "R_RK_Clavicle_ctl_visibility.o" "KongRN.phl[734]";
-connectAttr "Spine_05_ctl_Follow_Translates.o" "KongRN.phl[735]";
-connectAttr "Spine_05_ctl_Follow_Rotates.o" "KongRN.phl[736]";
-connectAttr "Spine_05_ctl_translateX.o" "KongRN.phl[737]";
-connectAttr "Spine_05_ctl_translateY.o" "KongRN.phl[738]";
-connectAttr "Spine_05_ctl_translateZ.o" "KongRN.phl[739]";
-connectAttr "Spine_05_ctl_rotateX.o" "KongRN.phl[740]";
-connectAttr "Spine_05_ctl_rotateY.o" "KongRN.phl[741]";
-connectAttr "Spine_05_ctl_rotateZ.o" "KongRN.phl[742]";
-connectAttr "Spine_05_ctl_scaleX.o" "KongRN.phl[743]";
-connectAttr "Spine_05_ctl_scaleY.o" "KongRN.phl[744]";
-connectAttr "Spine_05_ctl_scaleZ.o" "KongRN.phl[745]";
-connectAttr "Spine_05_ctl_visibility.o" "KongRN.phl[746]";
-connectAttr "Spine_06_ctl_Follow_Translates.o" "KongRN.phl[747]";
-connectAttr "Spine_06_ctl_Follow_Rotates.o" "KongRN.phl[748]";
-connectAttr "Spine_06_ctl_translateX.o" "KongRN.phl[749]";
-connectAttr "Spine_06_ctl_translateY.o" "KongRN.phl[750]";
-connectAttr "Spine_06_ctl_translateZ.o" "KongRN.phl[751]";
-connectAttr "Spine_06_ctl_rotateZ.o" "KongRN.phl[752]";
-connectAttr "Spine_06_ctl_rotateX.o" "KongRN.phl[753]";
-connectAttr "Spine_06_ctl_rotateY.o" "KongRN.phl[754]";
-connectAttr "Spine_06_ctl_scaleX.o" "KongRN.phl[755]";
-connectAttr "Spine_06_ctl_scaleY.o" "KongRN.phl[756]";
-connectAttr "Spine_06_ctl_scaleZ.o" "KongRN.phl[757]";
-connectAttr "Spine_06_ctl_visibility.o" "KongRN.phl[758]";
-connectAttr "Spine_04_ctl_translateX.o" "KongRN.phl[759]";
-connectAttr "Spine_04_ctl_translateY.o" "KongRN.phl[760]";
-connectAttr "Spine_04_ctl_translateZ.o" "KongRN.phl[761]";
-connectAttr "Spine_04_ctl_rotateZ.o" "KongRN.phl[762]";
-connectAttr "Spine_04_ctl_rotateX.o" "KongRN.phl[763]";
-connectAttr "Spine_04_ctl_rotateY.o" "KongRN.phl[764]";
-connectAttr "Spine_04_ctl_scaleX.o" "KongRN.phl[765]";
-connectAttr "Spine_04_ctl_scaleY.o" "KongRN.phl[766]";
-connectAttr "Spine_04_ctl_scaleZ.o" "KongRN.phl[767]";
-connectAttr "Spine_04_ctl_Follow_Translates.o" "KongRN.phl[768]";
-connectAttr "Spine_04_ctl_Follow_Rotates.o" "KongRN.phl[769]";
-connectAttr "Spine_04_ctl_visibility.o" "KongRN.phl[770]";
-connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Translates.o" "KongRN.phl[771]";
-connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "KongRN.phl[772]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateX.o" "KongRN.phl[773]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateY.o" "KongRN.phl[774]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateZ.o" "KongRN.phl[775]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateX.o" "KongRN.phl[776]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateY.o" "KongRN.phl[777]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateZ.o" "KongRN.phl[778]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleX.o" "KongRN.phl[779]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleY.o" "KongRN.phl[780]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleZ.o" "KongRN.phl[781]";
-connectAttr "L_IK_Leg_01_jnt_ctl_visibility.o" "KongRN.phl[782]";
-connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Translates.o" "KongRN.phl[783]";
-connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "KongRN.phl[784]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateX.o" "KongRN.phl[785]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateY.o" "KongRN.phl[786]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateZ.o" "KongRN.phl[787]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateX.o" "KongRN.phl[788]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateY.o" "KongRN.phl[789]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateZ.o" "KongRN.phl[790]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleX.o" "KongRN.phl[791]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleY.o" "KongRN.phl[792]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleZ.o" "KongRN.phl[793]";
-connectAttr "R_IK_Leg_01_jnt_ctl_visibility.o" "KongRN.phl[794]";
-connectAttr "Neck_02_ctl_translateX.o" "KongRN.phl[795]";
-connectAttr "Neck_02_ctl_translateY.o" "KongRN.phl[796]";
-connectAttr "Neck_02_ctl_translateZ.o" "KongRN.phl[797]";
-connectAttr "Neck_02_ctl_rotateZ.o" "KongRN.phl[798]";
-connectAttr "Neck_02_ctl_rotateX.o" "KongRN.phl[799]";
-connectAttr "Neck_02_ctl_rotateY.o" "KongRN.phl[800]";
-connectAttr "Neck_02_ctl_scaleX.o" "KongRN.phl[801]";
-connectAttr "Neck_02_ctl_scaleY.o" "KongRN.phl[802]";
-connectAttr "Neck_02_ctl_scaleZ.o" "KongRN.phl[803]";
-connectAttr "Neck_02_ctl_visibility.o" "KongRN.phl[804]";
-connectAttr "Neck_02_ctl_Follow_Translates.o" "KongRN.phl[805]";
-connectAttr "Neck_02_ctl_Follow_Rotates.o" "KongRN.phl[806]";
-connectAttr "Tongue_01_ctl_Follow_Translates.o" "KongRN.phl[807]";
-connectAttr "Tongue_01_ctl_Follow_Rotates.o" "KongRN.phl[808]";
-connectAttr "Tongue_01_ctl_translateX.o" "KongRN.phl[809]";
-connectAttr "Tongue_01_ctl_translateY.o" "KongRN.phl[810]";
-connectAttr "Tongue_01_ctl_translateZ.o" "KongRN.phl[811]";
-connectAttr "Tongue_01_ctl_rotateX.o" "KongRN.phl[812]";
-connectAttr "Tongue_01_ctl_rotateY.o" "KongRN.phl[813]";
-connectAttr "Tongue_01_ctl_rotateZ.o" "KongRN.phl[814]";
-connectAttr "Tongue_01_ctl_scaleX.o" "KongRN.phl[815]";
-connectAttr "Tongue_01_ctl_scaleY.o" "KongRN.phl[816]";
-connectAttr "Tongue_01_ctl_scaleZ.o" "KongRN.phl[817]";
-connectAttr "Tongue_01_ctl_visibility.o" "KongRN.phl[818]";
-connectAttr "Tongue_02_ctl_Follow_Translates.o" "KongRN.phl[819]";
-connectAttr "Tongue_02_ctl_Follow_Rotates.o" "KongRN.phl[820]";
-connectAttr "Tongue_02_ctl_translateX.o" "KongRN.phl[821]";
-connectAttr "Tongue_02_ctl_translateY.o" "KongRN.phl[822]";
-connectAttr "Tongue_02_ctl_translateZ.o" "KongRN.phl[823]";
-connectAttr "Tongue_02_ctl_rotateX.o" "KongRN.phl[824]";
-connectAttr "Tongue_02_ctl_rotateY.o" "KongRN.phl[825]";
-connectAttr "Tongue_02_ctl_rotateZ.o" "KongRN.phl[826]";
-connectAttr "Tongue_02_ctl_scaleX.o" "KongRN.phl[827]";
-connectAttr "Tongue_02_ctl_scaleY.o" "KongRN.phl[828]";
-connectAttr "Tongue_02_ctl_scaleZ.o" "KongRN.phl[829]";
-connectAttr "Tongue_02_ctl_visibility.o" "KongRN.phl[830]";
-connectAttr "Tongue_03_ctl_Follow_Translates.o" "KongRN.phl[831]";
-connectAttr "Tongue_03_ctl_Follow_Rotates.o" "KongRN.phl[832]";
-connectAttr "Tongue_03_ctl_translateX.o" "KongRN.phl[833]";
-connectAttr "Tongue_03_ctl_translateY.o" "KongRN.phl[834]";
-connectAttr "Tongue_03_ctl_translateZ.o" "KongRN.phl[835]";
-connectAttr "Tongue_03_ctl_rotateX.o" "KongRN.phl[836]";
-connectAttr "Tongue_03_ctl_rotateY.o" "KongRN.phl[837]";
-connectAttr "Tongue_03_ctl_rotateZ.o" "KongRN.phl[838]";
-connectAttr "Tongue_03_ctl_scaleX.o" "KongRN.phl[839]";
-connectAttr "Tongue_03_ctl_scaleY.o" "KongRN.phl[840]";
-connectAttr "Tongue_03_ctl_scaleZ.o" "KongRN.phl[841]";
-connectAttr "Tongue_03_ctl_visibility.o" "KongRN.phl[842]";
-connectAttr "Head_ctl_FaceControlsVis.o" "KongRN.phl[843]";
-connectAttr "Head_ctl_translateX.o" "KongRN.phl[844]";
-connectAttr "Head_ctl_translateY.o" "KongRN.phl[845]";
-connectAttr "Head_ctl_translateZ.o" "KongRN.phl[846]";
-connectAttr "Head_ctl_rotateZ.o" "KongRN.phl[847]";
-connectAttr "Head_ctl_rotateY.o" "KongRN.phl[848]";
-connectAttr "Head_ctl_rotateX.o" "KongRN.phl[849]";
-connectAttr "Head_ctl_scaleX.o" "KongRN.phl[850]";
-connectAttr "Head_ctl_scaleY.o" "KongRN.phl[851]";
-connectAttr "Head_ctl_scaleZ.o" "KongRN.phl[852]";
-connectAttr "Head_ctl_visibility.o" "KongRN.phl[853]";
-connectAttr "Head_ctl_Follow_Translates.o" "KongRN.phl[854]";
-connectAttr "Head_ctl_Follow_Rotates.o" "KongRN.phl[855]";
-connectAttr "Master_eyes_ctrl_Blink.o" "KongRN.phl[856]";
-connectAttr "Master_eyes_ctrl_Follow.o" "KongRN.phl[857]";
-connectAttr "Master_eyes_ctrl_L_Up_Lid.o" "KongRN.phl[858]";
-connectAttr "Master_eyes_ctrl_R_Up_Lid.o" "KongRN.phl[859]";
-connectAttr "Master_eyes_ctrl_L_Low_Lid.o" "KongRN.phl[860]";
-connectAttr "Master_eyes_ctrl_R_Low_Lid.o" "KongRN.phl[861]";
-connectAttr "Master_eyes_ctrl_rotateX.o" "KongRN.phl[862]";
-connectAttr "Master_eyes_ctrl_rotateY.o" "KongRN.phl[863]";
-connectAttr "Master_eyes_ctrl_rotateZ.o" "KongRN.phl[864]";
-connectAttr "Master_eyes_ctrl_visibility.o" "KongRN.phl[865]";
-connectAttr "Master_eyes_ctrl_translateX.o" "KongRN.phl[866]";
-connectAttr "Master_eyes_ctrl_translateY.o" "KongRN.phl[867]";
-connectAttr "Master_eyes_ctrl_translateZ.o" "KongRN.phl[868]";
-connectAttr "Master_eyes_ctrl_scaleX.o" "KongRN.phl[869]";
-connectAttr "Master_eyes_ctrl_scaleY.o" "KongRN.phl[870]";
-connectAttr "Master_eyes_ctrl_scaleZ.o" "KongRN.phl[871]";
-connectAttr "R_eye_ctrl_translateX.o" "KongRN.phl[872]";
-connectAttr "R_eye_ctrl_translateY.o" "KongRN.phl[873]";
-connectAttr "R_eye_ctrl_translateZ.o" "KongRN.phl[874]";
-connectAttr "R_eye_ctrl_rotateX.o" "KongRN.phl[875]";
-connectAttr "R_eye_ctrl_rotateY.o" "KongRN.phl[876]";
-connectAttr "R_eye_ctrl_rotateZ.o" "KongRN.phl[877]";
-connectAttr "R_eye_ctrl_visibility.o" "KongRN.phl[878]";
-connectAttr "R_eye_ctrl_scaleX.o" "KongRN.phl[879]";
-connectAttr "R_eye_ctrl_scaleY.o" "KongRN.phl[880]";
-connectAttr "R_eye_ctrl_scaleZ.o" "KongRN.phl[881]";
-connectAttr "L_eye_ctrl_translateX.o" "KongRN.phl[882]";
-connectAttr "L_eye_ctrl_translateY.o" "KongRN.phl[883]";
-connectAttr "L_eye_ctrl_translateZ.o" "KongRN.phl[884]";
-connectAttr "L_eye_ctrl_rotateX.o" "KongRN.phl[885]";
-connectAttr "L_eye_ctrl_rotateY.o" "KongRN.phl[886]";
-connectAttr "L_eye_ctrl_rotateZ.o" "KongRN.phl[887]";
-connectAttr "L_eye_ctrl_visibility.o" "KongRN.phl[888]";
-connectAttr "L_eye_ctrl_scaleX.o" "KongRN.phl[889]";
-connectAttr "L_eye_ctrl_scaleY.o" "KongRN.phl[890]";
-connectAttr "L_eye_ctrl_scaleZ.o" "KongRN.phl[891]";
-connectAttr "Jaw_ctl_translateX.o" "KongRN.phl[892]";
-connectAttr "Jaw_ctl_translateY.o" "KongRN.phl[893]";
-connectAttr "Jaw_ctl_translateZ.o" "KongRN.phl[894]";
-connectAttr "Jaw_ctl_rotateZ.o" "KongRN.phl[895]";
-connectAttr "Jaw_ctl_rotateX.o" "KongRN.phl[896]";
-connectAttr "Jaw_ctl_rotateY.o" "KongRN.phl[897]";
-connectAttr "Jaw_ctl_scaleX.o" "KongRN.phl[898]";
-connectAttr "Jaw_ctl_scaleY.o" "KongRN.phl[899]";
-connectAttr "Jaw_ctl_scaleZ.o" "KongRN.phl[900]";
-connectAttr "Jaw_ctl_visibility.o" "KongRN.phl[901]";
-connectAttr "Jaw_ctl_Follow_Translates.o" "KongRN.phl[902]";
-connectAttr "Jaw_ctl_Follow_Rotates.o" "KongRN.phl[903]";
-connectAttr "L_Brow_01_ctrl_translateY.o" "KongRN.phl[904]";
-connectAttr "L_Brow_01_ctrl_translateX.o" "KongRN.phl[905]";
-connectAttr "L_Brow_01_ctrl_translateZ.o" "KongRN.phl[906]";
-connectAttr "L_Brow_01_ctrl_visibility.o" "KongRN.phl[907]";
-connectAttr "L_Brow_02_ctrl_translateY.o" "KongRN.phl[908]";
-connectAttr "L_Brow_02_ctrl_translateX.o" "KongRN.phl[909]";
-connectAttr "L_Brow_02_ctrl_translateZ.o" "KongRN.phl[910]";
-connectAttr "L_Brow_02_ctrl_visibility.o" "KongRN.phl[911]";
-connectAttr "R_Brow_01_ctrl_translateY.o" "KongRN.phl[912]";
-connectAttr "R_Brow_01_ctrl_translateX.o" "KongRN.phl[913]";
-connectAttr "R_Brow_01_ctrl_translateZ.o" "KongRN.phl[914]";
-connectAttr "R_Brow_01_ctrl_visibility.o" "KongRN.phl[915]";
-connectAttr "R_Brow_02_ctrl_translateY.o" "KongRN.phl[916]";
-connectAttr "R_Brow_02_ctrl_translateX.o" "KongRN.phl[917]";
-connectAttr "R_Brow_02_ctrl_translateZ.o" "KongRN.phl[918]";
-connectAttr "R_Brow_02_ctrl_visibility.o" "KongRN.phl[919]";
-connectAttr "UpperLip_Pucker_ctrl_translateZ.o" "KongRN.phl[920]";
-connectAttr "UpperLip_Pucker_ctrl_translateX.o" "KongRN.phl[921]";
-connectAttr "UpperLip_Pucker_ctrl_translateY.o" "KongRN.phl[922]";
-connectAttr "UpperLip_Pucker_ctrl_visibility.o" "KongRN.phl[923]";
-connectAttr "L_Nose_ctrl_translateY.o" "KongRN.phl[924]";
-connectAttr "L_Nose_ctrl_translateX.o" "KongRN.phl[925]";
-connectAttr "L_Nose_ctrl_visibility.o" "KongRN.phl[926]";
-connectAttr "R_Nose_ctrl_translateY.o" "KongRN.phl[927]";
-connectAttr "R_Nose_ctrl_translateX.o" "KongRN.phl[928]";
-connectAttr "R_Nose_ctrl_visibility.o" "KongRN.phl[929]";
-connectAttr "L_Mouth_Corner_ctrl_translateZ.o" "KongRN.phl[930]";
-connectAttr "L_Mouth_Corner_ctrl_translateY.o" "KongRN.phl[931]";
-connectAttr "L_Mouth_Corner_ctrl_translateX.o" "KongRN.phl[932]";
-connectAttr "L_Mouth_Corner_ctrl_rotateX.o" "KongRN.phl[933]";
-connectAttr "L_Mouth_Corner_ctrl_rotateY.o" "KongRN.phl[934]";
-connectAttr "L_Mouth_Corner_ctrl_rotateZ.o" "KongRN.phl[935]";
-connectAttr "L_Mouth_Corner_ctrl_visibility.o" "KongRN.phl[936]";
-connectAttr "L_Mouth_Corner_ctrl_scaleX.o" "KongRN.phl[937]";
-connectAttr "L_Mouth_Corner_ctrl_scaleY.o" "KongRN.phl[938]";
-connectAttr "L_Mouth_Corner_ctrl_scaleZ.o" "KongRN.phl[939]";
-connectAttr "R_Mouth_Corner_ctrl_translateZ.o" "KongRN.phl[940]";
-connectAttr "R_Mouth_Corner_ctrl_translateY.o" "KongRN.phl[941]";
-connectAttr "R_Mouth_Corner_ctrl_translateX.o" "KongRN.phl[942]";
-connectAttr "R_Mouth_Corner_ctrl_rotateX.o" "KongRN.phl[943]";
-connectAttr "R_Mouth_Corner_ctrl_rotateY.o" "KongRN.phl[944]";
-connectAttr "R_Mouth_Corner_ctrl_rotateZ.o" "KongRN.phl[945]";
-connectAttr "R_Mouth_Corner_ctrl_visibility.o" "KongRN.phl[946]";
-connectAttr "R_Mouth_Corner_ctrl_scaleX.o" "KongRN.phl[947]";
-connectAttr "R_Mouth_Corner_ctrl_scaleY.o" "KongRN.phl[948]";
-connectAttr "R_Mouth_Corner_ctrl_scaleZ.o" "KongRN.phl[949]";
-connectAttr "LowerLip_PuckerPout_ctrl_translateZ.o" "KongRN.phl[950]";
-connectAttr "LowerLip_PuckerPout_ctrl_translateY.o" "KongRN.phl[951]";
-connectAttr "LowerLip_PuckerPout_ctrl_translateX.o" "KongRN.phl[952]";
-connectAttr "LowerLip_PuckerPout_ctrl_visibility.o" "KongRN.phl[953]";
-connectAttr "L_Ear_01_jnt_ctrl_translateX.o" "KongRN.phl[954]";
-connectAttr "L_Ear_01_jnt_ctrl_translateY.o" "KongRN.phl[955]";
-connectAttr "L_Ear_01_jnt_ctrl_translateZ.o" "KongRN.phl[956]";
-connectAttr "L_Ear_01_jnt_ctrl_rotateZ.o" "KongRN.phl[957]";
-connectAttr "L_Ear_01_jnt_ctrl_rotateX.o" "KongRN.phl[958]";
-connectAttr "L_Ear_01_jnt_ctrl_rotateY.o" "KongRN.phl[959]";
-connectAttr "L_Ear_01_jnt_ctrl_scaleX.o" "KongRN.phl[960]";
-connectAttr "L_Ear_01_jnt_ctrl_scaleY.o" "KongRN.phl[961]";
-connectAttr "L_Ear_01_jnt_ctrl_scaleZ.o" "KongRN.phl[962]";
-connectAttr "L_Ear_01_jnt_ctrl_visibility.o" "KongRN.phl[963]";
-connectAttr "L_Ear_02_jnt_ctrl_translateX.o" "KongRN.phl[964]";
-connectAttr "L_Ear_02_jnt_ctrl_translateY.o" "KongRN.phl[965]";
-connectAttr "L_Ear_02_jnt_ctrl_translateZ.o" "KongRN.phl[966]";
-connectAttr "L_Ear_02_jnt_ctrl_rotateX.o" "KongRN.phl[967]";
-connectAttr "L_Ear_02_jnt_ctrl_rotateY.o" "KongRN.phl[968]";
-connectAttr "L_Ear_02_jnt_ctrl_rotateZ.o" "KongRN.phl[969]";
-connectAttr "L_Ear_02_jnt_ctrl_scaleX.o" "KongRN.phl[970]";
-connectAttr "L_Ear_02_jnt_ctrl_scaleY.o" "KongRN.phl[971]";
-connectAttr "L_Ear_02_jnt_ctrl_scaleZ.o" "KongRN.phl[972]";
-connectAttr "L_Ear_02_jnt_ctrl_visibility.o" "KongRN.phl[973]";
-connectAttr "L_Ear_03_jnt_ctrl_translateX.o" "KongRN.phl[974]";
-connectAttr "L_Ear_03_jnt_ctrl_translateY.o" "KongRN.phl[975]";
-connectAttr "L_Ear_03_jnt_ctrl_translateZ.o" "KongRN.phl[976]";
-connectAttr "L_Ear_03_jnt_ctrl_rotateX.o" "KongRN.phl[977]";
-connectAttr "L_Ear_03_jnt_ctrl_rotateY.o" "KongRN.phl[978]";
-connectAttr "L_Ear_03_jnt_ctrl_rotateZ.o" "KongRN.phl[979]";
-connectAttr "L_Ear_03_jnt_ctrl_scaleX.o" "KongRN.phl[980]";
-connectAttr "L_Ear_03_jnt_ctrl_scaleY.o" "KongRN.phl[981]";
-connectAttr "L_Ear_03_jnt_ctrl_scaleZ.o" "KongRN.phl[982]";
-connectAttr "L_Ear_03_jnt_ctrl_visibility.o" "KongRN.phl[983]";
-connectAttr "L_Ear_04_jnt_ctrl_translateX.o" "KongRN.phl[984]";
-connectAttr "L_Ear_04_jnt_ctrl_translateY.o" "KongRN.phl[985]";
-connectAttr "L_Ear_04_jnt_ctrl_translateZ.o" "KongRN.phl[986]";
-connectAttr "L_Ear_04_jnt_ctrl_rotateX.o" "KongRN.phl[987]";
-connectAttr "L_Ear_04_jnt_ctrl_rotateY.o" "KongRN.phl[988]";
-connectAttr "L_Ear_04_jnt_ctrl_rotateZ.o" "KongRN.phl[989]";
-connectAttr "L_Ear_04_jnt_ctrl_scaleX.o" "KongRN.phl[990]";
-connectAttr "L_Ear_04_jnt_ctrl_scaleY.o" "KongRN.phl[991]";
-connectAttr "L_Ear_04_jnt_ctrl_scaleZ.o" "KongRN.phl[992]";
-connectAttr "L_Ear_04_jnt_ctrl_visibility.o" "KongRN.phl[993]";
-connectAttr "R_Ear_01_jnt_ctrl_translateX.o" "KongRN.phl[994]";
-connectAttr "R_Ear_01_jnt_ctrl_translateY.o" "KongRN.phl[995]";
-connectAttr "R_Ear_01_jnt_ctrl_translateZ.o" "KongRN.phl[996]";
-connectAttr "R_Ear_01_jnt_ctrl_rotateX.o" "KongRN.phl[997]";
-connectAttr "R_Ear_01_jnt_ctrl_rotateY.o" "KongRN.phl[998]";
-connectAttr "R_Ear_01_jnt_ctrl_rotateZ.o" "KongRN.phl[999]";
-connectAttr "R_Ear_01_jnt_ctrl_scaleX.o" "KongRN.phl[1000]";
-connectAttr "R_Ear_01_jnt_ctrl_scaleY.o" "KongRN.phl[1001]";
-connectAttr "R_Ear_01_jnt_ctrl_scaleZ.o" "KongRN.phl[1002]";
-connectAttr "R_Ear_01_jnt_ctrl_visibility.o" "KongRN.phl[1003]";
-connectAttr "R_Ear_02_jnt_ctrl_translateX.o" "KongRN.phl[1004]";
-connectAttr "R_Ear_02_jnt_ctrl_translateY.o" "KongRN.phl[1005]";
-connectAttr "R_Ear_02_jnt_ctrl_translateZ.o" "KongRN.phl[1006]";
-connectAttr "R_Ear_02_jnt_ctrl_rotateX.o" "KongRN.phl[1007]";
-connectAttr "R_Ear_02_jnt_ctrl_rotateY.o" "KongRN.phl[1008]";
-connectAttr "R_Ear_02_jnt_ctrl_rotateZ.o" "KongRN.phl[1009]";
-connectAttr "R_Ear_02_jnt_ctrl_scaleX.o" "KongRN.phl[1010]";
-connectAttr "R_Ear_02_jnt_ctrl_scaleY.o" "KongRN.phl[1011]";
-connectAttr "R_Ear_02_jnt_ctrl_scaleZ.o" "KongRN.phl[1012]";
-connectAttr "R_Ear_02_jnt_ctrl_visibility.o" "KongRN.phl[1013]";
-connectAttr "R_Ear_03_jnt_ctrl_translateX.o" "KongRN.phl[1014]";
-connectAttr "R_Ear_03_jnt_ctrl_translateY.o" "KongRN.phl[1015]";
-connectAttr "R_Ear_03_jnt_ctrl_translateZ.o" "KongRN.phl[1016]";
-connectAttr "R_Ear_03_jnt_ctrl_rotateX.o" "KongRN.phl[1017]";
-connectAttr "R_Ear_03_jnt_ctrl_rotateY.o" "KongRN.phl[1018]";
-connectAttr "R_Ear_03_jnt_ctrl_rotateZ.o" "KongRN.phl[1019]";
-connectAttr "R_Ear_03_jnt_ctrl_scaleX.o" "KongRN.phl[1020]";
-connectAttr "R_Ear_03_jnt_ctrl_scaleY.o" "KongRN.phl[1021]";
-connectAttr "R_Ear_03_jnt_ctrl_scaleZ.o" "KongRN.phl[1022]";
-connectAttr "R_Ear_03_jnt_ctrl_visibility.o" "KongRN.phl[1023]";
-connectAttr "R_Ear_04_jnt_ctrl_translateX.o" "KongRN.phl[1024]";
-connectAttr "R_Ear_04_jnt_ctrl_translateY.o" "KongRN.phl[1025]";
-connectAttr "R_Ear_04_jnt_ctrl_translateZ.o" "KongRN.phl[1026]";
-connectAttr "R_Ear_04_jnt_ctrl_rotateX.o" "KongRN.phl[1027]";
-connectAttr "R_Ear_04_jnt_ctrl_rotateY.o" "KongRN.phl[1028]";
-connectAttr "R_Ear_04_jnt_ctrl_rotateZ.o" "KongRN.phl[1029]";
-connectAttr "R_Ear_04_jnt_ctrl_scaleX.o" "KongRN.phl[1030]";
-connectAttr "R_Ear_04_jnt_ctrl_scaleY.o" "KongRN.phl[1031]";
-connectAttr "R_Ear_04_jnt_ctrl_scaleZ.o" "KongRN.phl[1032]";
-connectAttr "R_Ear_04_jnt_ctrl_visibility.o" "KongRN.phl[1033]";
-connectAttr "L_Leg_IKFK_switch_ctl_Follow_Translates.o" "KongRN.phl[1034]";
-connectAttr "L_Leg_IKFK_switch_ctl_Follow_Rotates.o" "KongRN.phl[1035]";
-connectAttr "L_Leg_IKFK_switch_ctl_Leg_IKFK.o" "KongRN.phl[1036]";
-connectAttr "L_Leg_IKFK_switch_ctl_rotateX.o" "KongRN.phl[1037]";
-connectAttr "L_Leg_IKFK_switch_ctl_rotateY.o" "KongRN.phl[1038]";
-connectAttr "L_Leg_IKFK_switch_ctl_rotateZ.o" "KongRN.phl[1039]";
-connectAttr "L_Leg_IKFK_switch_ctl_visibility.o" "KongRN.phl[1040]";
-connectAttr "L_Leg_IKFK_switch_ctl_translateX.o" "KongRN.phl[1041]";
-connectAttr "L_Leg_IKFK_switch_ctl_translateY.o" "KongRN.phl[1042]";
-connectAttr "L_Leg_IKFK_switch_ctl_translateZ.o" "KongRN.phl[1043]";
-connectAttr "L_Leg_IKFK_switch_ctl_scaleX.o" "KongRN.phl[1044]";
-connectAttr "L_Leg_IKFK_switch_ctl_scaleY.o" "KongRN.phl[1045]";
-connectAttr "L_Leg_IKFK_switch_ctl_scaleZ.o" "KongRN.phl[1046]";
-connectAttr "L_Arm_IKFK_switch_ctl_Follow_Translates.o" "KongRN.phl[1047]";
-connectAttr "L_Arm_IKFK_switch_ctl_Follow_Rotates.o" "KongRN.phl[1048]";
-connectAttr "L_Arm_IKFK_switch_ctl_Arm_IKFK.o" "KongRN.phl[1049]";
-connectAttr "L_Arm_IKFK_switch_ctl_rotateX.o" "KongRN.phl[1050]";
-connectAttr "L_Arm_IKFK_switch_ctl_rotateY.o" "KongRN.phl[1051]";
-connectAttr "L_Arm_IKFK_switch_ctl_rotateZ.o" "KongRN.phl[1052]";
-connectAttr "L_Arm_IKFK_switch_ctl_visibility.o" "KongRN.phl[1053]";
-connectAttr "L_Arm_IKFK_switch_ctl_translateX.o" "KongRN.phl[1054]";
-connectAttr "L_Arm_IKFK_switch_ctl_translateY.o" "KongRN.phl[1055]";
-connectAttr "L_Arm_IKFK_switch_ctl_translateZ.o" "KongRN.phl[1056]";
-connectAttr "L_Arm_IKFK_switch_ctl_scaleX.o" "KongRN.phl[1057]";
-connectAttr "L_Arm_IKFK_switch_ctl_scaleY.o" "KongRN.phl[1058]";
-connectAttr "L_Arm_IKFK_switch_ctl_scaleZ.o" "KongRN.phl[1059]";
-connectAttr "L_IK_Arm_01_jnt_ctl_Follow_Translates.o" "KongRN.phl[1060]";
-connectAttr "L_IK_Arm_01_jnt_ctl_Follow_Rotates.o" "KongRN.phl[1061]";
-connectAttr "L_IK_Arm_01_jnt_ctl_translateX.o" "KongRN.phl[1062]";
-connectAttr "L_IK_Arm_01_jnt_ctl_translateY.o" "KongRN.phl[1063]";
-connectAttr "L_IK_Arm_01_jnt_ctl_translateZ.o" "KongRN.phl[1064]";
-connectAttr "L_IK_Arm_01_jnt_ctl_rotateX.o" "KongRN.phl[1065]";
-connectAttr "L_IK_Arm_01_jnt_ctl_rotateY.o" "KongRN.phl[1066]";
-connectAttr "L_IK_Arm_01_jnt_ctl_rotateZ.o" "KongRN.phl[1067]";
-connectAttr "L_IK_Arm_01_jnt_ctl_scaleX.o" "KongRN.phl[1068]";
-connectAttr "L_IK_Arm_01_jnt_ctl_scaleY.o" "KongRN.phl[1069]";
-connectAttr "L_IK_Arm_01_jnt_ctl_scaleZ.o" "KongRN.phl[1070]";
-connectAttr "L_IK_Arm_01_jnt_ctl_visibility.o" "KongRN.phl[1071]";
-connectAttr "L_Arm_IK_Handle_ctl_Follow_Translates.o" "KongRN.phl[1072]";
-connectAttr "L_Arm_IK_Handle_ctl_Follow_Rotates.o" "KongRN.phl[1073]";
-connectAttr "L_Arm_IK_Handle_ctl_translateX.o" "KongRN.phl[1074]";
-connectAttr "L_Arm_IK_Handle_ctl_translateY.o" "KongRN.phl[1075]";
-connectAttr "L_Arm_IK_Handle_ctl_translateZ.o" "KongRN.phl[1076]";
-connectAttr "L_Arm_IK_Handle_ctl_rotateX.o" "KongRN.phl[1077]";
-connectAttr "L_Arm_IK_Handle_ctl_rotateY.o" "KongRN.phl[1078]";
-connectAttr "L_Arm_IK_Handle_ctl_rotateZ.o" "KongRN.phl[1079]";
-connectAttr "L_Arm_IK_Handle_ctl_scaleX.o" "KongRN.phl[1080]";
-connectAttr "L_Arm_IK_Handle_ctl_scaleY.o" "KongRN.phl[1081]";
-connectAttr "L_Arm_IK_Handle_ctl_scaleZ.o" "KongRN.phl[1082]";
-connectAttr "L_Arm_IK_Handle_ctl_Length_1.o" "KongRN.phl[1083]";
-connectAttr "L_Arm_IK_Handle_ctl_Length_2.o" "KongRN.phl[1084]";
-connectAttr "L_Arm_IK_Handle_ctl_Stretchy.o" "KongRN.phl[1085]";
-connectAttr "L_Arm_IK_Handle_ctl_visibility.o" "KongRN.phl[1086]";
-connectAttr "L_IK_Finger3_03_ctl_Follow_Translates.o" "KongRN.phl[1087]";
-connectAttr "L_IK_Finger3_03_ctl_Follow_Rotates.o" "KongRN.phl[1088]";
-connectAttr "L_IK_Finger3_03_ctl_translateX.o" "KongRN.phl[1089]";
-connectAttr "L_IK_Finger3_03_ctl_translateY.o" "KongRN.phl[1090]";
-connectAttr "L_IK_Finger3_03_ctl_translateZ.o" "KongRN.phl[1091]";
-connectAttr "L_IK_Finger3_03_ctl_rotateX.o" "KongRN.phl[1092]";
-connectAttr "L_IK_Finger3_03_ctl_rotateY.o" "KongRN.phl[1093]";
-connectAttr "L_IK_Finger3_03_ctl_rotateZ.o" "KongRN.phl[1094]";
-connectAttr "L_IK_Finger3_03_ctl_scaleX.o" "KongRN.phl[1095]";
-connectAttr "L_IK_Finger3_03_ctl_scaleY.o" "KongRN.phl[1096]";
-connectAttr "L_IK_Finger3_03_ctl_scaleZ.o" "KongRN.phl[1097]";
-connectAttr "L_IK_Finger3_03_ctl_visibility.o" "KongRN.phl[1098]";
-connectAttr "L_IK_Finger3_02_ctl_translateX.o" "KongRN.phl[1099]";
-connectAttr "L_IK_Finger3_02_ctl_translateY.o" "KongRN.phl[1100]";
-connectAttr "L_IK_Finger3_02_ctl_translateZ.o" "KongRN.phl[1101]";
-connectAttr "L_IK_Finger3_02_ctl_rotateX.o" "KongRN.phl[1102]";
-connectAttr "L_IK_Finger3_02_ctl_rotateY.o" "KongRN.phl[1103]";
-connectAttr "L_IK_Finger3_02_ctl_rotateZ.o" "KongRN.phl[1104]";
-connectAttr "L_IK_Finger3_02_ctl_scaleX.o" "KongRN.phl[1105]";
-connectAttr "L_IK_Finger3_02_ctl_scaleY.o" "KongRN.phl[1106]";
-connectAttr "L_IK_Finger3_02_ctl_scaleZ.o" "KongRN.phl[1107]";
-connectAttr "L_IK_Finger3_02_ctl_Follow_Translates.o" "KongRN.phl[1108]";
-connectAttr "L_IK_Finger3_02_ctl_Follow_Rotates.o" "KongRN.phl[1109]";
-connectAttr "L_IK_Finger3_02_ctl_visibility.o" "KongRN.phl[1110]";
-connectAttr "L_IK_Finger3_01_ctl_translateX.o" "KongRN.phl[1111]";
-connectAttr "L_IK_Finger3_01_ctl_translateY.o" "KongRN.phl[1112]";
-connectAttr "L_IK_Finger3_01_ctl_translateZ.o" "KongRN.phl[1113]";
-connectAttr "L_IK_Finger3_01_ctl_rotateX.o" "KongRN.phl[1114]";
-connectAttr "L_IK_Finger3_01_ctl_rotateY.o" "KongRN.phl[1115]";
-connectAttr "L_IK_Finger3_01_ctl_rotateZ.o" "KongRN.phl[1116]";
-connectAttr "L_IK_Finger3_01_ctl_scaleX.o" "KongRN.phl[1117]";
-connectAttr "L_IK_Finger3_01_ctl_scaleY.o" "KongRN.phl[1118]";
-connectAttr "L_IK_Finger3_01_ctl_scaleZ.o" "KongRN.phl[1119]";
-connectAttr "L_IK_Finger3_01_ctl_Follow_Translates.o" "KongRN.phl[1120]";
-connectAttr "L_IK_Finger3_01_ctl_Follow_Rotates.o" "KongRN.phl[1121]";
-connectAttr "L_IK_Finger3_01_ctl_visibility.o" "KongRN.phl[1122]";
-connectAttr "L_IK_Finger1_03_ctl_Follow_Translates.o" "KongRN.phl[1123]";
-connectAttr "L_IK_Finger1_03_ctl_Follow_Rotates.o" "KongRN.phl[1124]";
-connectAttr "L_IK_Finger1_03_ctl_translateX.o" "KongRN.phl[1125]";
-connectAttr "L_IK_Finger1_03_ctl_translateY.o" "KongRN.phl[1126]";
-connectAttr "L_IK_Finger1_03_ctl_translateZ.o" "KongRN.phl[1127]";
-connectAttr "L_IK_Finger1_03_ctl_rotateX.o" "KongRN.phl[1128]";
-connectAttr "L_IK_Finger1_03_ctl_rotateY.o" "KongRN.phl[1129]";
-connectAttr "L_IK_Finger1_03_ctl_rotateZ.o" "KongRN.phl[1130]";
-connectAttr "L_IK_Finger1_03_ctl_scaleX.o" "KongRN.phl[1131]";
-connectAttr "L_IK_Finger1_03_ctl_scaleY.o" "KongRN.phl[1132]";
-connectAttr "L_IK_Finger1_03_ctl_scaleZ.o" "KongRN.phl[1133]";
-connectAttr "L_IK_Finger1_03_ctl_visibility.o" "KongRN.phl[1134]";
-connectAttr "L_IK_Finger1_02_ctl_translateX.o" "KongRN.phl[1135]";
-connectAttr "L_IK_Finger1_02_ctl_translateY.o" "KongRN.phl[1136]";
-connectAttr "L_IK_Finger1_02_ctl_translateZ.o" "KongRN.phl[1137]";
-connectAttr "L_IK_Finger1_02_ctl_rotateX.o" "KongRN.phl[1138]";
-connectAttr "L_IK_Finger1_02_ctl_rotateY.o" "KongRN.phl[1139]";
-connectAttr "L_IK_Finger1_02_ctl_rotateZ.o" "KongRN.phl[1140]";
-connectAttr "L_IK_Finger1_02_ctl_scaleX.o" "KongRN.phl[1141]";
-connectAttr "L_IK_Finger1_02_ctl_scaleY.o" "KongRN.phl[1142]";
-connectAttr "L_IK_Finger1_02_ctl_scaleZ.o" "KongRN.phl[1143]";
-connectAttr "L_IK_Finger1_02_ctl_Follow_Translates.o" "KongRN.phl[1144]";
-connectAttr "L_IK_Finger1_02_ctl_Follow_Rotates.o" "KongRN.phl[1145]";
-connectAttr "L_IK_Finger1_02_ctl_visibility.o" "KongRN.phl[1146]";
-connectAttr "L_IK_Finger1_01_ctl_translateX.o" "KongRN.phl[1147]";
-connectAttr "L_IK_Finger1_01_ctl_translateY.o" "KongRN.phl[1148]";
-connectAttr "L_IK_Finger1_01_ctl_translateZ.o" "KongRN.phl[1149]";
-connectAttr "L_IK_Finger1_01_ctl_rotateX.o" "KongRN.phl[1150]";
-connectAttr "L_IK_Finger1_01_ctl_rotateY.o" "KongRN.phl[1151]";
-connectAttr "L_IK_Finger1_01_ctl_rotateZ.o" "KongRN.phl[1152]";
-connectAttr "L_IK_Finger1_01_ctl_scaleX.o" "KongRN.phl[1153]";
-connectAttr "L_IK_Finger1_01_ctl_scaleY.o" "KongRN.phl[1154]";
-connectAttr "L_IK_Finger1_01_ctl_scaleZ.o" "KongRN.phl[1155]";
-connectAttr "L_IK_Finger1_01_ctl_Follow_Translates.o" "KongRN.phl[1156]";
-connectAttr "L_IK_Finger1_01_ctl_Follow_Rotates.o" "KongRN.phl[1157]";
-connectAttr "L_IK_Finger1_01_ctl_visibility.o" "KongRN.phl[1158]";
-connectAttr "L_IK_Finger4_03_ctl_Follow_Translates.o" "KongRN.phl[1159]";
-connectAttr "L_IK_Finger4_03_ctl_Follow_Rotates.o" "KongRN.phl[1160]";
-connectAttr "L_IK_Finger4_03_ctl_translateX.o" "KongRN.phl[1161]";
-connectAttr "L_IK_Finger4_03_ctl_translateY.o" "KongRN.phl[1162]";
-connectAttr "L_IK_Finger4_03_ctl_translateZ.o" "KongRN.phl[1163]";
-connectAttr "L_IK_Finger4_03_ctl_rotateX.o" "KongRN.phl[1164]";
-connectAttr "L_IK_Finger4_03_ctl_rotateY.o" "KongRN.phl[1165]";
-connectAttr "L_IK_Finger4_03_ctl_rotateZ.o" "KongRN.phl[1166]";
-connectAttr "L_IK_Finger4_03_ctl_scaleX.o" "KongRN.phl[1167]";
-connectAttr "L_IK_Finger4_03_ctl_scaleY.o" "KongRN.phl[1168]";
-connectAttr "L_IK_Finger4_03_ctl_scaleZ.o" "KongRN.phl[1169]";
-connectAttr "L_IK_Finger4_03_ctl_visibility.o" "KongRN.phl[1170]";
-connectAttr "L_IK_Finger4_02_ctl_translateX.o" "KongRN.phl[1171]";
-connectAttr "L_IK_Finger4_02_ctl_translateY.o" "KongRN.phl[1172]";
-connectAttr "L_IK_Finger4_02_ctl_translateZ.o" "KongRN.phl[1173]";
-connectAttr "L_IK_Finger4_02_ctl_rotateX.o" "KongRN.phl[1174]";
-connectAttr "L_IK_Finger4_02_ctl_rotateY.o" "KongRN.phl[1175]";
-connectAttr "L_IK_Finger4_02_ctl_rotateZ.o" "KongRN.phl[1176]";
-connectAttr "L_IK_Finger4_02_ctl_scaleX.o" "KongRN.phl[1177]";
-connectAttr "L_IK_Finger4_02_ctl_scaleY.o" "KongRN.phl[1178]";
-connectAttr "L_IK_Finger4_02_ctl_scaleZ.o" "KongRN.phl[1179]";
-connectAttr "L_IK_Finger4_02_ctl_Follow_Translates.o" "KongRN.phl[1180]";
-connectAttr "L_IK_Finger4_02_ctl_Follow_Rotates.o" "KongRN.phl[1181]";
-connectAttr "L_IK_Finger4_02_ctl_visibility.o" "KongRN.phl[1182]";
-connectAttr "L_IK_Finger4_01_ctl_translateX.o" "KongRN.phl[1183]";
-connectAttr "L_IK_Finger4_01_ctl_translateY.o" "KongRN.phl[1184]";
-connectAttr "L_IK_Finger4_01_ctl_translateZ.o" "KongRN.phl[1185]";
-connectAttr "L_IK_Finger4_01_ctl_rotateX.o" "KongRN.phl[1186]";
-connectAttr "L_IK_Finger4_01_ctl_rotateY.o" "KongRN.phl[1187]";
-connectAttr "L_IK_Finger4_01_ctl_rotateZ.o" "KongRN.phl[1188]";
-connectAttr "L_IK_Finger4_01_ctl_scaleX.o" "KongRN.phl[1189]";
-connectAttr "L_IK_Finger4_01_ctl_scaleY.o" "KongRN.phl[1190]";
-connectAttr "L_IK_Finger4_01_ctl_scaleZ.o" "KongRN.phl[1191]";
-connectAttr "L_IK_Finger4_01_ctl_Follow_Translates.o" "KongRN.phl[1192]";
-connectAttr "L_IK_Finger4_01_ctl_Follow_Rotates.o" "KongRN.phl[1193]";
-connectAttr "L_IK_Finger4_01_ctl_visibility.o" "KongRN.phl[1194]";
-connectAttr "L_IK_Finger5_03_ctl_Follow_Translates.o" "KongRN.phl[1195]";
-connectAttr "L_IK_Finger5_03_ctl_Follow_Rotates.o" "KongRN.phl[1196]";
-connectAttr "L_IK_Finger5_03_ctl_translateX.o" "KongRN.phl[1197]";
-connectAttr "L_IK_Finger5_03_ctl_translateY.o" "KongRN.phl[1198]";
-connectAttr "L_IK_Finger5_03_ctl_translateZ.o" "KongRN.phl[1199]";
-connectAttr "L_IK_Finger5_03_ctl_rotateX.o" "KongRN.phl[1200]";
-connectAttr "L_IK_Finger5_03_ctl_rotateY.o" "KongRN.phl[1201]";
-connectAttr "L_IK_Finger5_03_ctl_rotateZ.o" "KongRN.phl[1202]";
-connectAttr "L_IK_Finger5_03_ctl_scaleX.o" "KongRN.phl[1203]";
-connectAttr "L_IK_Finger5_03_ctl_scaleY.o" "KongRN.phl[1204]";
-connectAttr "L_IK_Finger5_03_ctl_scaleZ.o" "KongRN.phl[1205]";
-connectAttr "L_IK_Finger5_03_ctl_visibility.o" "KongRN.phl[1206]";
-connectAttr "L_IK_Finger5_02_ctl_translateX.o" "KongRN.phl[1207]";
-connectAttr "L_IK_Finger5_02_ctl_translateY.o" "KongRN.phl[1208]";
-connectAttr "L_IK_Finger5_02_ctl_translateZ.o" "KongRN.phl[1209]";
-connectAttr "L_IK_Finger5_02_ctl_rotateX.o" "KongRN.phl[1210]";
-connectAttr "L_IK_Finger5_02_ctl_rotateY.o" "KongRN.phl[1211]";
-connectAttr "L_IK_Finger5_02_ctl_rotateZ.o" "KongRN.phl[1212]";
-connectAttr "L_IK_Finger5_02_ctl_scaleX.o" "KongRN.phl[1213]";
-connectAttr "L_IK_Finger5_02_ctl_scaleY.o" "KongRN.phl[1214]";
-connectAttr "L_IK_Finger5_02_ctl_scaleZ.o" "KongRN.phl[1215]";
-connectAttr "L_IK_Finger5_02_ctl_Follow_Translates.o" "KongRN.phl[1216]";
-connectAttr "L_IK_Finger5_02_ctl_Follow_Rotates.o" "KongRN.phl[1217]";
-connectAttr "L_IK_Finger5_02_ctl_visibility.o" "KongRN.phl[1218]";
-connectAttr "L_IK_Finger5_01_ctl_translateX.o" "KongRN.phl[1219]";
-connectAttr "L_IK_Finger5_01_ctl_translateY.o" "KongRN.phl[1220]";
-connectAttr "L_IK_Finger5_01_ctl_translateZ.o" "KongRN.phl[1221]";
-connectAttr "L_IK_Finger5_01_ctl_rotateX.o" "KongRN.phl[1222]";
-connectAttr "L_IK_Finger5_01_ctl_rotateY.o" "KongRN.phl[1223]";
-connectAttr "L_IK_Finger5_01_ctl_rotateZ.o" "KongRN.phl[1224]";
-connectAttr "L_IK_Finger5_01_ctl_scaleX.o" "KongRN.phl[1225]";
-connectAttr "L_IK_Finger5_01_ctl_scaleY.o" "KongRN.phl[1226]";
-connectAttr "L_IK_Finger5_01_ctl_scaleZ.o" "KongRN.phl[1227]";
-connectAttr "L_IK_Finger5_01_ctl_Follow_Translates.o" "KongRN.phl[1228]";
-connectAttr "L_IK_Finger5_01_ctl_Follow_Rotates.o" "KongRN.phl[1229]";
-connectAttr "L_IK_Finger5_01_ctl_visibility.o" "KongRN.phl[1230]";
-connectAttr "L_IK_Finger2_03_ctl_Follow_Translates.o" "KongRN.phl[1231]";
-connectAttr "L_IK_Finger2_03_ctl_Follow_Rotates.o" "KongRN.phl[1232]";
-connectAttr "L_IK_Finger2_03_ctl_translateX.o" "KongRN.phl[1233]";
-connectAttr "L_IK_Finger2_03_ctl_translateY.o" "KongRN.phl[1234]";
-connectAttr "L_IK_Finger2_03_ctl_translateZ.o" "KongRN.phl[1235]";
-connectAttr "L_IK_Finger2_03_ctl_rotateX.o" "KongRN.phl[1236]";
-connectAttr "L_IK_Finger2_03_ctl_rotateY.o" "KongRN.phl[1237]";
-connectAttr "L_IK_Finger2_03_ctl_rotateZ.o" "KongRN.phl[1238]";
-connectAttr "L_IK_Finger2_03_ctl_scaleX.o" "KongRN.phl[1239]";
-connectAttr "L_IK_Finger2_03_ctl_scaleY.o" "KongRN.phl[1240]";
-connectAttr "L_IK_Finger2_03_ctl_scaleZ.o" "KongRN.phl[1241]";
-connectAttr "L_IK_Finger2_03_ctl_visibility.o" "KongRN.phl[1242]";
-connectAttr "L_IK_Finger2_02_ctl_translateX.o" "KongRN.phl[1243]";
-connectAttr "L_IK_Finger2_02_ctl_translateY.o" "KongRN.phl[1244]";
-connectAttr "L_IK_Finger2_02_ctl_translateZ.o" "KongRN.phl[1245]";
-connectAttr "L_IK_Finger2_02_ctl_rotateX.o" "KongRN.phl[1246]";
-connectAttr "L_IK_Finger2_02_ctl_rotateY.o" "KongRN.phl[1247]";
-connectAttr "L_IK_Finger2_02_ctl_rotateZ.o" "KongRN.phl[1248]";
-connectAttr "L_IK_Finger2_02_ctl_scaleX.o" "KongRN.phl[1249]";
-connectAttr "L_IK_Finger2_02_ctl_scaleY.o" "KongRN.phl[1250]";
-connectAttr "L_IK_Finger2_02_ctl_scaleZ.o" "KongRN.phl[1251]";
-connectAttr "L_IK_Finger2_02_ctl_Follow_Translates.o" "KongRN.phl[1252]";
-connectAttr "L_IK_Finger2_02_ctl_Follow_Rotates.o" "KongRN.phl[1253]";
-connectAttr "L_IK_Finger2_02_ctl_visibility.o" "KongRN.phl[1254]";
-connectAttr "L_IK_Finger2_01_ctl_translateX.o" "KongRN.phl[1255]";
-connectAttr "L_IK_Finger2_01_ctl_translateY.o" "KongRN.phl[1256]";
-connectAttr "L_IK_Finger2_01_ctl_translateZ.o" "KongRN.phl[1257]";
-connectAttr "L_IK_Finger2_01_ctl_rotateX.o" "KongRN.phl[1258]";
-connectAttr "L_IK_Finger2_01_ctl_rotateY.o" "KongRN.phl[1259]";
-connectAttr "L_IK_Finger2_01_ctl_rotateZ.o" "KongRN.phl[1260]";
-connectAttr "L_IK_Finger2_01_ctl_scaleX.o" "KongRN.phl[1261]";
-connectAttr "L_IK_Finger2_01_ctl_scaleY.o" "KongRN.phl[1262]";
-connectAttr "L_IK_Finger2_01_ctl_scaleZ.o" "KongRN.phl[1263]";
-connectAttr "L_IK_Finger2_01_ctl_Follow_Translates.o" "KongRN.phl[1264]";
-connectAttr "L_IK_Finger2_01_ctl_Follow_Rotates.o" "KongRN.phl[1265]";
-connectAttr "L_IK_Finger2_01_ctl_visibility.o" "KongRN.phl[1266]";
-connectAttr "L_Arm_PV_ctl_Follow_Translates.o" "KongRN.phl[1267]";
-connectAttr "L_Arm_PV_ctl_Follow_Rotates.o" "KongRN.phl[1268]";
-connectAttr "L_Arm_PV_ctl_translateX.o" "KongRN.phl[1269]";
-connectAttr "L_Arm_PV_ctl_translateY.o" "KongRN.phl[1270]";
-connectAttr "L_Arm_PV_ctl_translateZ.o" "KongRN.phl[1271]";
-connectAttr "L_Arm_PV_ctl_rotateX.o" "KongRN.phl[1272]";
-connectAttr "L_Arm_PV_ctl_rotateY.o" "KongRN.phl[1273]";
-connectAttr "L_Arm_PV_ctl_rotateZ.o" "KongRN.phl[1274]";
-connectAttr "L_Arm_PV_ctl_visibility.o" "KongRN.phl[1275]";
-connectAttr "L_Arm_PV_ctl_scaleX.o" "KongRN.phl[1276]";
-connectAttr "L_Arm_PV_ctl_scaleY.o" "KongRN.phl[1277]";
-connectAttr "L_Arm_PV_ctl_scaleZ.o" "KongRN.phl[1278]";
-connectAttr "R_FK_Arm_01_ctl_Follow_Translates.o" "KongRN.phl[1279]";
-connectAttr "R_FK_Arm_01_ctl_Follow_Rotates.o" "KongRN.phl[1280]";
-connectAttr "R_FK_Arm_01_ctl_translateX.o" "KongRN.phl[1281]";
-connectAttr "R_FK_Arm_01_ctl_translateY.o" "KongRN.phl[1282]";
-connectAttr "R_FK_Arm_01_ctl_translateZ.o" "KongRN.phl[1283]";
-connectAttr "R_FK_Arm_01_ctl_rotateZ.o" "KongRN.phl[1284]";
-connectAttr "R_FK_Arm_01_ctl_rotateX.o" "KongRN.phl[1285]";
-connectAttr "R_FK_Arm_01_ctl_rotateY.o" "KongRN.phl[1286]";
-connectAttr "R_FK_Arm_01_ctl_scaleX.o" "KongRN.phl[1287]";
-connectAttr "R_FK_Arm_01_ctl_scaleY.o" "KongRN.phl[1288]";
-connectAttr "R_FK_Arm_01_ctl_scaleZ.o" "KongRN.phl[1289]";
-connectAttr "R_FK_Arm_01_ctl_visibility.o" "KongRN.phl[1290]";
-connectAttr "R_FK_Arm_02_ctl_Follow_Translates.o" "KongRN.phl[1291]";
-connectAttr "R_FK_Arm_02_ctl_Follow_Rotates.o" "KongRN.phl[1292]";
-connectAttr "R_FK_Arm_02_ctl_translateX.o" "KongRN.phl[1293]";
-connectAttr "R_FK_Arm_02_ctl_translateY.o" "KongRN.phl[1294]";
-connectAttr "R_FK_Arm_02_ctl_translateZ.o" "KongRN.phl[1295]";
-connectAttr "R_FK_Arm_02_ctl_rotateY.o" "KongRN.phl[1296]";
-connectAttr "R_FK_Arm_02_ctl_rotateX.o" "KongRN.phl[1297]";
-connectAttr "R_FK_Arm_02_ctl_rotateZ.o" "KongRN.phl[1298]";
-connectAttr "R_FK_Arm_02_ctl_scaleX.o" "KongRN.phl[1299]";
-connectAttr "R_FK_Arm_02_ctl_scaleY.o" "KongRN.phl[1300]";
-connectAttr "R_FK_Arm_02_ctl_scaleZ.o" "KongRN.phl[1301]";
-connectAttr "R_FK_Arm_02_ctl_visibility.o" "KongRN.phl[1302]";
-connectAttr "R_FK_Arm_03_ctl_Follow_Translates.o" "KongRN.phl[1303]";
-connectAttr "R_FK_Arm_03_ctl_Follow_Rotates.o" "KongRN.phl[1304]";
-connectAttr "R_FK_Arm_03_ctl_translateX.o" "KongRN.phl[1305]";
-connectAttr "R_FK_Arm_03_ctl_translateY.o" "KongRN.phl[1306]";
-connectAttr "R_FK_Arm_03_ctl_translateZ.o" "KongRN.phl[1307]";
-connectAttr "R_FK_Arm_03_ctl_rotateX.o" "KongRN.phl[1308]";
-connectAttr "R_FK_Arm_03_ctl_rotateY.o" "KongRN.phl[1309]";
-connectAttr "R_FK_Arm_03_ctl_rotateZ.o" "KongRN.phl[1310]";
-connectAttr "R_FK_Arm_03_ctl_scaleX.o" "KongRN.phl[1311]";
-connectAttr "R_FK_Arm_03_ctl_scaleY.o" "KongRN.phl[1312]";
-connectAttr "R_FK_Arm_03_ctl_scaleZ.o" "KongRN.phl[1313]";
-connectAttr "R_FK_Arm_03_ctl_visibility.o" "KongRN.phl[1314]";
-connectAttr "R_FK_Finger2_01_ctl_Follow_Translates.o" "KongRN.phl[1315]";
-connectAttr "R_FK_Finger2_01_ctl_Follow_Rotates.o" "KongRN.phl[1316]";
-connectAttr "R_FK_Finger2_01_ctl_translateX.o" "KongRN.phl[1317]";
-connectAttr "R_FK_Finger2_01_ctl_translateY.o" "KongRN.phl[1318]";
-connectAttr "R_FK_Finger2_01_ctl_translateZ.o" "KongRN.phl[1319]";
-connectAttr "R_FK_Finger2_01_ctl_rotateX.o" "KongRN.phl[1320]";
-connectAttr "R_FK_Finger2_01_ctl_rotateY.o" "KongRN.phl[1321]";
-connectAttr "R_FK_Finger2_01_ctl_rotateZ.o" "KongRN.phl[1322]";
-connectAttr "R_FK_Finger2_01_ctl_scaleX.o" "KongRN.phl[1323]";
-connectAttr "R_FK_Finger2_01_ctl_scaleY.o" "KongRN.phl[1324]";
-connectAttr "R_FK_Finger2_01_ctl_scaleZ.o" "KongRN.phl[1325]";
-connectAttr "R_FK_Finger2_01_ctl_visibility.o" "KongRN.phl[1326]";
-connectAttr "R_FK_Finger2_02_ctl_Follow_Translates.o" "KongRN.phl[1327]";
-connectAttr "R_FK_Finger2_02_ctl_Follow_Rotates.o" "KongRN.phl[1328]";
-connectAttr "R_FK_Finger2_02_ctl_translateX.o" "KongRN.phl[1329]";
-connectAttr "R_FK_Finger2_02_ctl_translateY.o" "KongRN.phl[1330]";
-connectAttr "R_FK_Finger2_02_ctl_translateZ.o" "KongRN.phl[1331]";
-connectAttr "R_FK_Finger2_02_ctl_rotateX.o" "KongRN.phl[1332]";
-connectAttr "R_FK_Finger2_02_ctl_rotateY.o" "KongRN.phl[1333]";
-connectAttr "R_FK_Finger2_02_ctl_rotateZ.o" "KongRN.phl[1334]";
-connectAttr "R_FK_Finger2_02_ctl_scaleX.o" "KongRN.phl[1335]";
-connectAttr "R_FK_Finger2_02_ctl_scaleY.o" "KongRN.phl[1336]";
-connectAttr "R_FK_Finger2_02_ctl_scaleZ.o" "KongRN.phl[1337]";
-connectAttr "R_FK_Finger2_02_ctl_visibility.o" "KongRN.phl[1338]";
-connectAttr "R_FK_Finger2_03_ctl_Follow_Translates.o" "KongRN.phl[1339]";
-connectAttr "R_FK_Finger2_03_ctl_Follow_Rotates.o" "KongRN.phl[1340]";
-connectAttr "R_FK_Finger2_03_ctl_translateX.o" "KongRN.phl[1341]";
-connectAttr "R_FK_Finger2_03_ctl_translateY.o" "KongRN.phl[1342]";
-connectAttr "R_FK_Finger2_03_ctl_translateZ.o" "KongRN.phl[1343]";
-connectAttr "R_FK_Finger2_03_ctl_rotateX.o" "KongRN.phl[1344]";
-connectAttr "R_FK_Finger2_03_ctl_rotateY.o" "KongRN.phl[1345]";
-connectAttr "R_FK_Finger2_03_ctl_rotateZ.o" "KongRN.phl[1346]";
-connectAttr "R_FK_Finger2_03_ctl_scaleX.o" "KongRN.phl[1347]";
-connectAttr "R_FK_Finger2_03_ctl_scaleY.o" "KongRN.phl[1348]";
-connectAttr "R_FK_Finger2_03_ctl_scaleZ.o" "KongRN.phl[1349]";
-connectAttr "R_FK_Finger2_03_ctl_visibility.o" "KongRN.phl[1350]";
-connectAttr "R_FK_Finger5_01_ctl_Follow_Translates.o" "KongRN.phl[1351]";
-connectAttr "R_FK_Finger5_01_ctl_Follow_Rotates.o" "KongRN.phl[1352]";
-connectAttr "R_FK_Finger5_01_ctl_translateX.o" "KongRN.phl[1353]";
-connectAttr "R_FK_Finger5_01_ctl_translateY.o" "KongRN.phl[1354]";
-connectAttr "R_FK_Finger5_01_ctl_translateZ.o" "KongRN.phl[1355]";
-connectAttr "R_FK_Finger5_01_ctl_rotateX.o" "KongRN.phl[1356]";
-connectAttr "R_FK_Finger5_01_ctl_rotateY.o" "KongRN.phl[1357]";
-connectAttr "R_FK_Finger5_01_ctl_rotateZ.o" "KongRN.phl[1358]";
-connectAttr "R_FK_Finger5_01_ctl_scaleX.o" "KongRN.phl[1359]";
-connectAttr "R_FK_Finger5_01_ctl_scaleY.o" "KongRN.phl[1360]";
-connectAttr "R_FK_Finger5_01_ctl_scaleZ.o" "KongRN.phl[1361]";
-connectAttr "R_FK_Finger5_01_ctl_visibility.o" "KongRN.phl[1362]";
-connectAttr "R_FK_Finger5_02_ctl_Follow_Translates.o" "KongRN.phl[1363]";
-connectAttr "R_FK_Finger5_02_ctl_Follow_Rotates.o" "KongRN.phl[1364]";
-connectAttr "R_FK_Finger5_02_ctl_translateX.o" "KongRN.phl[1365]";
-connectAttr "R_FK_Finger5_02_ctl_translateY.o" "KongRN.phl[1366]";
-connectAttr "R_FK_Finger5_02_ctl_translateZ.o" "KongRN.phl[1367]";
-connectAttr "R_FK_Finger5_02_ctl_rotateX.o" "KongRN.phl[1368]";
-connectAttr "R_FK_Finger5_02_ctl_rotateY.o" "KongRN.phl[1369]";
-connectAttr "R_FK_Finger5_02_ctl_rotateZ.o" "KongRN.phl[1370]";
-connectAttr "R_FK_Finger5_02_ctl_scaleX.o" "KongRN.phl[1371]";
-connectAttr "R_FK_Finger5_02_ctl_scaleY.o" "KongRN.phl[1372]";
-connectAttr "R_FK_Finger5_02_ctl_scaleZ.o" "KongRN.phl[1373]";
-connectAttr "R_FK_Finger5_02_ctl_visibility.o" "KongRN.phl[1374]";
-connectAttr "R_FK_Finger5_03_ctl_Follow_Translates.o" "KongRN.phl[1375]";
-connectAttr "R_FK_Finger5_03_ctl_Follow_Rotates.o" "KongRN.phl[1376]";
-connectAttr "R_FK_Finger5_03_ctl_translateX.o" "KongRN.phl[1377]";
-connectAttr "R_FK_Finger5_03_ctl_translateY.o" "KongRN.phl[1378]";
-connectAttr "R_FK_Finger5_03_ctl_translateZ.o" "KongRN.phl[1379]";
-connectAttr "R_FK_Finger5_03_ctl_rotateX.o" "KongRN.phl[1380]";
-connectAttr "R_FK_Finger5_03_ctl_rotateY.o" "KongRN.phl[1381]";
-connectAttr "R_FK_Finger5_03_ctl_rotateZ.o" "KongRN.phl[1382]";
-connectAttr "R_FK_Finger5_03_ctl_scaleX.o" "KongRN.phl[1383]";
-connectAttr "R_FK_Finger5_03_ctl_scaleY.o" "KongRN.phl[1384]";
-connectAttr "R_FK_Finger5_03_ctl_scaleZ.o" "KongRN.phl[1385]";
-connectAttr "R_FK_Finger5_03_ctl_visibility.o" "KongRN.phl[1386]";
-connectAttr "R_FK_Finger4_01_ctl_Follow_Translates.o" "KongRN.phl[1387]";
-connectAttr "R_FK_Finger4_01_ctl_Follow_Rotates.o" "KongRN.phl[1388]";
-connectAttr "R_FK_Finger4_01_ctl_translateX.o" "KongRN.phl[1389]";
-connectAttr "R_FK_Finger4_01_ctl_translateY.o" "KongRN.phl[1390]";
-connectAttr "R_FK_Finger4_01_ctl_translateZ.o" "KongRN.phl[1391]";
-connectAttr "R_FK_Finger4_01_ctl_rotateX.o" "KongRN.phl[1392]";
-connectAttr "R_FK_Finger4_01_ctl_rotateY.o" "KongRN.phl[1393]";
-connectAttr "R_FK_Finger4_01_ctl_rotateZ.o" "KongRN.phl[1394]";
-connectAttr "R_FK_Finger4_01_ctl_scaleX.o" "KongRN.phl[1395]";
-connectAttr "R_FK_Finger4_01_ctl_scaleY.o" "KongRN.phl[1396]";
-connectAttr "R_FK_Finger4_01_ctl_scaleZ.o" "KongRN.phl[1397]";
-connectAttr "R_FK_Finger4_01_ctl_visibility.o" "KongRN.phl[1398]";
-connectAttr "R_FK_Finger4_02_ctl_Follow_Translates.o" "KongRN.phl[1399]";
-connectAttr "R_FK_Finger4_02_ctl_Follow_Rotates.o" "KongRN.phl[1400]";
-connectAttr "R_FK_Finger4_02_ctl_translateX.o" "KongRN.phl[1401]";
-connectAttr "R_FK_Finger4_02_ctl_translateY.o" "KongRN.phl[1402]";
-connectAttr "R_FK_Finger4_02_ctl_translateZ.o" "KongRN.phl[1403]";
-connectAttr "R_FK_Finger4_02_ctl_rotateX.o" "KongRN.phl[1404]";
-connectAttr "R_FK_Finger4_02_ctl_rotateY.o" "KongRN.phl[1405]";
-connectAttr "R_FK_Finger4_02_ctl_rotateZ.o" "KongRN.phl[1406]";
-connectAttr "R_FK_Finger4_02_ctl_scaleX.o" "KongRN.phl[1407]";
-connectAttr "R_FK_Finger4_02_ctl_scaleY.o" "KongRN.phl[1408]";
-connectAttr "R_FK_Finger4_02_ctl_scaleZ.o" "KongRN.phl[1409]";
-connectAttr "R_FK_Finger4_02_ctl_visibility.o" "KongRN.phl[1410]";
-connectAttr "R_FK_Finger4_03_ctl_Follow_Translates.o" "KongRN.phl[1411]";
-connectAttr "R_FK_Finger4_03_ctl_Follow_Rotates.o" "KongRN.phl[1412]";
-connectAttr "R_FK_Finger4_03_ctl_translateX.o" "KongRN.phl[1413]";
-connectAttr "R_FK_Finger4_03_ctl_translateY.o" "KongRN.phl[1414]";
-connectAttr "R_FK_Finger4_03_ctl_translateZ.o" "KongRN.phl[1415]";
-connectAttr "R_FK_Finger4_03_ctl_rotateX.o" "KongRN.phl[1416]";
-connectAttr "R_FK_Finger4_03_ctl_rotateY.o" "KongRN.phl[1417]";
-connectAttr "R_FK_Finger4_03_ctl_rotateZ.o" "KongRN.phl[1418]";
-connectAttr "R_FK_Finger4_03_ctl_scaleX.o" "KongRN.phl[1419]";
-connectAttr "R_FK_Finger4_03_ctl_scaleY.o" "KongRN.phl[1420]";
-connectAttr "R_FK_Finger4_03_ctl_scaleZ.o" "KongRN.phl[1421]";
-connectAttr "R_FK_Finger4_03_ctl_visibility.o" "KongRN.phl[1422]";
-connectAttr "R_FK_Finger1_01_ctl_Follow_Translates.o" "KongRN.phl[1423]";
-connectAttr "R_FK_Finger1_01_ctl_Follow_Rotates.o" "KongRN.phl[1424]";
-connectAttr "R_FK_Finger1_01_ctl_translateX.o" "KongRN.phl[1425]";
-connectAttr "R_FK_Finger1_01_ctl_translateY.o" "KongRN.phl[1426]";
-connectAttr "R_FK_Finger1_01_ctl_translateZ.o" "KongRN.phl[1427]";
-connectAttr "R_FK_Finger1_01_ctl_rotateX.o" "KongRN.phl[1428]";
-connectAttr "R_FK_Finger1_01_ctl_rotateY.o" "KongRN.phl[1429]";
-connectAttr "R_FK_Finger1_01_ctl_rotateZ.o" "KongRN.phl[1430]";
-connectAttr "R_FK_Finger1_01_ctl_scaleX.o" "KongRN.phl[1431]";
-connectAttr "R_FK_Finger1_01_ctl_scaleY.o" "KongRN.phl[1432]";
-connectAttr "R_FK_Finger1_01_ctl_scaleZ.o" "KongRN.phl[1433]";
-connectAttr "R_FK_Finger1_01_ctl_visibility.o" "KongRN.phl[1434]";
-connectAttr "R_FK_Finger1_02_ctl_Follow_Translates.o" "KongRN.phl[1435]";
-connectAttr "R_FK_Finger1_02_ctl_Follow_Rotates.o" "KongRN.phl[1436]";
-connectAttr "R_FK_Finger1_02_ctl_translateX.o" "KongRN.phl[1437]";
-connectAttr "R_FK_Finger1_02_ctl_translateY.o" "KongRN.phl[1438]";
-connectAttr "R_FK_Finger1_02_ctl_translateZ.o" "KongRN.phl[1439]";
-connectAttr "R_FK_Finger1_02_ctl_rotateX.o" "KongRN.phl[1440]";
-connectAttr "R_FK_Finger1_02_ctl_rotateY.o" "KongRN.phl[1441]";
-connectAttr "R_FK_Finger1_02_ctl_rotateZ.o" "KongRN.phl[1442]";
-connectAttr "R_FK_Finger1_02_ctl_scaleX.o" "KongRN.phl[1443]";
-connectAttr "R_FK_Finger1_02_ctl_scaleY.o" "KongRN.phl[1444]";
-connectAttr "R_FK_Finger1_02_ctl_scaleZ.o" "KongRN.phl[1445]";
-connectAttr "R_FK_Finger1_02_ctl_visibility.o" "KongRN.phl[1446]";
-connectAttr "R_FK_Finger1_03_ctl_Follow_Translates.o" "KongRN.phl[1447]";
-connectAttr "R_FK_Finger1_03_ctl_Follow_Rotates.o" "KongRN.phl[1448]";
-connectAttr "R_FK_Finger1_03_ctl_translateX.o" "KongRN.phl[1449]";
-connectAttr "R_FK_Finger1_03_ctl_translateY.o" "KongRN.phl[1450]";
-connectAttr "R_FK_Finger1_03_ctl_translateZ.o" "KongRN.phl[1451]";
-connectAttr "R_FK_Finger1_03_ctl_rotateX.o" "KongRN.phl[1452]";
-connectAttr "R_FK_Finger1_03_ctl_rotateY.o" "KongRN.phl[1453]";
-connectAttr "R_FK_Finger1_03_ctl_rotateZ.o" "KongRN.phl[1454]";
-connectAttr "R_FK_Finger1_03_ctl_scaleX.o" "KongRN.phl[1455]";
-connectAttr "R_FK_Finger1_03_ctl_scaleY.o" "KongRN.phl[1456]";
-connectAttr "R_FK_Finger1_03_ctl_scaleZ.o" "KongRN.phl[1457]";
-connectAttr "R_FK_Finger1_03_ctl_visibility.o" "KongRN.phl[1458]";
-connectAttr "R_FK_Finger3_01_ctl_Follow_Translates.o" "KongRN.phl[1459]";
-connectAttr "R_FK_Finger3_01_ctl_Follow_Rotates.o" "KongRN.phl[1460]";
-connectAttr "R_FK_Finger3_01_ctl_translateX.o" "KongRN.phl[1461]";
-connectAttr "R_FK_Finger3_01_ctl_translateY.o" "KongRN.phl[1462]";
-connectAttr "R_FK_Finger3_01_ctl_translateZ.o" "KongRN.phl[1463]";
-connectAttr "R_FK_Finger3_01_ctl_rotateX.o" "KongRN.phl[1464]";
-connectAttr "R_FK_Finger3_01_ctl_rotateY.o" "KongRN.phl[1465]";
-connectAttr "R_FK_Finger3_01_ctl_rotateZ.o" "KongRN.phl[1466]";
-connectAttr "R_FK_Finger3_01_ctl_scaleX.o" "KongRN.phl[1467]";
-connectAttr "R_FK_Finger3_01_ctl_scaleY.o" "KongRN.phl[1468]";
-connectAttr "R_FK_Finger3_01_ctl_scaleZ.o" "KongRN.phl[1469]";
-connectAttr "R_FK_Finger3_01_ctl_visibility.o" "KongRN.phl[1470]";
-connectAttr "R_FK_Finger3_02_ctl_Follow_Translates.o" "KongRN.phl[1471]";
-connectAttr "R_FK_Finger3_02_ctl_Follow_Rotates.o" "KongRN.phl[1472]";
-connectAttr "R_FK_Finger3_02_ctl_translateX.o" "KongRN.phl[1473]";
-connectAttr "R_FK_Finger3_02_ctl_translateY.o" "KongRN.phl[1474]";
-connectAttr "R_FK_Finger3_02_ctl_translateZ.o" "KongRN.phl[1475]";
-connectAttr "R_FK_Finger3_02_ctl_rotateX.o" "KongRN.phl[1476]";
-connectAttr "R_FK_Finger3_02_ctl_rotateY.o" "KongRN.phl[1477]";
-connectAttr "R_FK_Finger3_02_ctl_rotateZ.o" "KongRN.phl[1478]";
-connectAttr "R_FK_Finger3_02_ctl_scaleX.o" "KongRN.phl[1479]";
-connectAttr "R_FK_Finger3_02_ctl_scaleY.o" "KongRN.phl[1480]";
-connectAttr "R_FK_Finger3_02_ctl_scaleZ.o" "KongRN.phl[1481]";
-connectAttr "R_FK_Finger3_02_ctl_visibility.o" "KongRN.phl[1482]";
-connectAttr "R_FK_Finger3_03_ctl_Follow_Translates.o" "KongRN.phl[1483]";
-connectAttr "R_FK_Finger3_03_ctl_Follow_Rotates.o" "KongRN.phl[1484]";
-connectAttr "R_FK_Finger3_03_ctl_translateX.o" "KongRN.phl[1485]";
-connectAttr "R_FK_Finger3_03_ctl_translateY.o" "KongRN.phl[1486]";
-connectAttr "R_FK_Finger3_03_ctl_translateZ.o" "KongRN.phl[1487]";
-connectAttr "R_FK_Finger3_03_ctl_rotateX.o" "KongRN.phl[1488]";
-connectAttr "R_FK_Finger3_03_ctl_rotateY.o" "KongRN.phl[1489]";
-connectAttr "R_FK_Finger3_03_ctl_rotateZ.o" "KongRN.phl[1490]";
-connectAttr "R_FK_Finger3_03_ctl_scaleX.o" "KongRN.phl[1491]";
-connectAttr "R_FK_Finger3_03_ctl_scaleY.o" "KongRN.phl[1492]";
-connectAttr "R_FK_Finger3_03_ctl_scaleZ.o" "KongRN.phl[1493]";
-connectAttr "R_FK_Finger3_03_ctl_visibility.o" "KongRN.phl[1494]";
-connectAttr "COG_ctl_Follow_Translates.o" "KongRN.phl[1495]";
-connectAttr "COG_ctl_Follow_Rotates.o" "KongRN.phl[1496]";
-connectAttr "COG_ctl_translateX.o" "KongRN.phl[1497]";
-connectAttr "COG_ctl_translateY.o" "KongRN.phl[1498]";
-connectAttr "COG_ctl_translateZ.o" "KongRN.phl[1499]";
-connectAttr "COG_ctl_rotateX.o" "KongRN.phl[1500]";
-connectAttr "COG_ctl_rotateY.o" "KongRN.phl[1501]";
-connectAttr "COG_ctl_rotateZ.o" "KongRN.phl[1502]";
-connectAttr "COG_ctl_scaleX.o" "KongRN.phl[1503]";
-connectAttr "COG_ctl_scaleY.o" "KongRN.phl[1504]";
-connectAttr "COG_ctl_scaleZ.o" "KongRN.phl[1505]";
-connectAttr "COG_ctl_visibility.o" "KongRN.phl[1506]";
-connectAttr "Hips_ctl_Follow_Translates.o" "KongRN.phl[1507]";
-connectAttr "Hips_ctl_Follow_Rotates.o" "KongRN.phl[1508]";
-connectAttr "Hips_ctl_translateX.o" "KongRN.phl[1509]";
-connectAttr "Hips_ctl_translateY.o" "KongRN.phl[1510]";
-connectAttr "Hips_ctl_translateZ.o" "KongRN.phl[1511]";
-connectAttr "Hips_ctl_rotateX.o" "KongRN.phl[1512]";
-connectAttr "Hips_ctl_rotateY.o" "KongRN.phl[1513]";
-connectAttr "Hips_ctl_rotateZ.o" "KongRN.phl[1514]";
-connectAttr "Hips_ctl_scaleX.o" "KongRN.phl[1515]";
-connectAttr "Hips_ctl_scaleY.o" "KongRN.phl[1516]";
-connectAttr "Hips_ctl_scaleZ.o" "KongRN.phl[1517]";
-connectAttr "Hips_ctl_visibility.o" "KongRN.phl[1518]";
-connectAttr "Spine_01_ctl_Follow_Translates.o" "KongRN.phl[1519]";
-connectAttr "Spine_01_ctl_Follow_Rotates.o" "KongRN.phl[1520]";
-connectAttr "Spine_01_ctl_translateX.o" "KongRN.phl[1521]";
-connectAttr "Spine_01_ctl_translateY.o" "KongRN.phl[1522]";
-connectAttr "Spine_01_ctl_translateZ.o" "KongRN.phl[1523]";
-connectAttr "Spine_01_ctl_rotateZ.o" "KongRN.phl[1524]";
-connectAttr "Spine_01_ctl_rotateX.o" "KongRN.phl[1525]";
-connectAttr "Spine_01_ctl_rotateY.o" "KongRN.phl[1526]";
-connectAttr "Spine_01_ctl_scaleX.o" "KongRN.phl[1527]";
-connectAttr "Spine_01_ctl_scaleY.o" "KongRN.phl[1528]";
-connectAttr "Spine_01_ctl_scaleZ.o" "KongRN.phl[1529]";
-connectAttr "Spine_01_ctl_visibility.o" "KongRN.phl[1530]";
-connectAttr "Spine_02_ctl_Follow_Translates.o" "KongRN.phl[1531]";
-connectAttr "Spine_02_ctl_Follow_Rotates.o" "KongRN.phl[1532]";
-connectAttr "Spine_02_ctl_translateX.o" "KongRN.phl[1533]";
-connectAttr "Spine_02_ctl_translateY.o" "KongRN.phl[1534]";
-connectAttr "Spine_02_ctl_translateZ.o" "KongRN.phl[1535]";
-connectAttr "Spine_02_ctl_rotateZ.o" "KongRN.phl[1536]";
-connectAttr "Spine_02_ctl_rotateX.o" "KongRN.phl[1537]";
-connectAttr "Spine_02_ctl_rotateY.o" "KongRN.phl[1538]";
-connectAttr "Spine_02_ctl_scaleX.o" "KongRN.phl[1539]";
-connectAttr "Spine_02_ctl_scaleY.o" "KongRN.phl[1540]";
-connectAttr "Spine_02_ctl_scaleZ.o" "KongRN.phl[1541]";
-connectAttr "Spine_02_ctl_visibility.o" "KongRN.phl[1542]";
-connectAttr "Spine_03_ctl_translateX.o" "KongRN.phl[1543]";
-connectAttr "Spine_03_ctl_translateY.o" "KongRN.phl[1544]";
-connectAttr "Spine_03_ctl_translateZ.o" "KongRN.phl[1545]";
-connectAttr "Spine_03_ctl_rotateZ.o" "KongRN.phl[1546]";
-connectAttr "Spine_03_ctl_rotateX.o" "KongRN.phl[1547]";
-connectAttr "Spine_03_ctl_rotateY.o" "KongRN.phl[1548]";
-connectAttr "Spine_03_ctl_scaleX.o" "KongRN.phl[1549]";
-connectAttr "Spine_03_ctl_scaleY.o" "KongRN.phl[1550]";
-connectAttr "Spine_03_ctl_scaleZ.o" "KongRN.phl[1551]";
-connectAttr "Spine_03_ctl_visibility.o" "KongRN.phl[1552]";
-connectAttr "L_RK_Clavicle_ctl_translateX.o" "KongRN.phl[1553]";
-connectAttr "L_RK_Clavicle_ctl_translateY.o" "KongRN.phl[1554]";
-connectAttr "L_RK_Clavicle_ctl_translateZ.o" "KongRN.phl[1555]";
-connectAttr "L_RK_Clavicle_ctl_rotateX.o" "KongRN.phl[1556]";
-connectAttr "L_RK_Clavicle_ctl_rotateY.o" "KongRN.phl[1557]";
-connectAttr "L_RK_Clavicle_ctl_rotateZ.o" "KongRN.phl[1558]";
-connectAttr "L_RK_Clavicle_ctl_scaleX.o" "KongRN.phl[1559]";
-connectAttr "L_RK_Clavicle_ctl_scaleY.o" "KongRN.phl[1560]";
-connectAttr "L_RK_Clavicle_ctl_scaleZ.o" "KongRN.phl[1561]";
-connectAttr "L_RK_Clavicle_ctl_Follow_Translates.o" "KongRN.phl[1562]";
-connectAttr "L_RK_Clavicle_ctl_Follow_Rotates.o" "KongRN.phl[1563]";
-connectAttr "L_RK_Clavicle_ctl_visibility.o" "KongRN.phl[1564]";
-connectAttr "R_RK_Clavicle_ctl_translateX.o" "KongRN.phl[1565]";
-connectAttr "R_RK_Clavicle_ctl_translateY.o" "KongRN.phl[1566]";
-connectAttr "R_RK_Clavicle_ctl_translateZ.o" "KongRN.phl[1567]";
-connectAttr "R_RK_Clavicle_ctl_rotateZ.o" "KongRN.phl[1568]";
-connectAttr "R_RK_Clavicle_ctl_rotateX.o" "KongRN.phl[1569]";
-connectAttr "R_RK_Clavicle_ctl_rotateY.o" "KongRN.phl[1570]";
-connectAttr "R_RK_Clavicle_ctl_scaleX.o" "KongRN.phl[1571]";
-connectAttr "R_RK_Clavicle_ctl_scaleY.o" "KongRN.phl[1572]";
-connectAttr "R_RK_Clavicle_ctl_scaleZ.o" "KongRN.phl[1573]";
-connectAttr "R_RK_Clavicle_ctl_Follow_Translates.o" "KongRN.phl[1574]";
-connectAttr "R_RK_Clavicle_ctl_Follow_Rotates.o" "KongRN.phl[1575]";
-connectAttr "R_RK_Clavicle_ctl_visibility.o" "KongRN.phl[1576]";
-connectAttr "Spine_05_ctl_Follow_Translates.o" "KongRN.phl[1577]";
-connectAttr "Spine_05_ctl_Follow_Rotates.o" "KongRN.phl[1578]";
-connectAttr "Spine_05_ctl_translateX.o" "KongRN.phl[1579]";
-connectAttr "Spine_05_ctl_translateY.o" "KongRN.phl[1580]";
-connectAttr "Spine_05_ctl_translateZ.o" "KongRN.phl[1581]";
-connectAttr "Spine_05_ctl_rotateX.o" "KongRN.phl[1582]";
-connectAttr "Spine_05_ctl_rotateY.o" "KongRN.phl[1583]";
-connectAttr "Spine_05_ctl_rotateZ.o" "KongRN.phl[1584]";
-connectAttr "Spine_05_ctl_scaleX.o" "KongRN.phl[1585]";
-connectAttr "Spine_05_ctl_scaleY.o" "KongRN.phl[1586]";
-connectAttr "Spine_05_ctl_scaleZ.o" "KongRN.phl[1587]";
-connectAttr "Spine_05_ctl_visibility.o" "KongRN.phl[1588]";
-connectAttr "Spine_06_ctl_Follow_Translates.o" "KongRN.phl[1589]";
-connectAttr "Spine_06_ctl_Follow_Rotates.o" "KongRN.phl[1590]";
-connectAttr "Spine_06_ctl_translateX.o" "KongRN.phl[1591]";
-connectAttr "Spine_06_ctl_translateY.o" "KongRN.phl[1592]";
-connectAttr "Spine_06_ctl_translateZ.o" "KongRN.phl[1593]";
-connectAttr "Spine_06_ctl_rotateZ.o" "KongRN.phl[1594]";
-connectAttr "Spine_06_ctl_rotateX.o" "KongRN.phl[1595]";
-connectAttr "Spine_06_ctl_rotateY.o" "KongRN.phl[1596]";
-connectAttr "Spine_06_ctl_scaleX.o" "KongRN.phl[1597]";
-connectAttr "Spine_06_ctl_scaleY.o" "KongRN.phl[1598]";
-connectAttr "Spine_06_ctl_scaleZ.o" "KongRN.phl[1599]";
-connectAttr "Spine_06_ctl_visibility.o" "KongRN.phl[1600]";
-connectAttr "Spine_04_ctl_translateX.o" "KongRN.phl[1601]";
-connectAttr "Spine_04_ctl_translateY.o" "KongRN.phl[1602]";
-connectAttr "Spine_04_ctl_translateZ.o" "KongRN.phl[1603]";
-connectAttr "Spine_04_ctl_rotateZ.o" "KongRN.phl[1604]";
-connectAttr "Spine_04_ctl_rotateX.o" "KongRN.phl[1605]";
-connectAttr "Spine_04_ctl_rotateY.o" "KongRN.phl[1606]";
-connectAttr "Spine_04_ctl_scaleX.o" "KongRN.phl[1607]";
-connectAttr "Spine_04_ctl_scaleY.o" "KongRN.phl[1608]";
-connectAttr "Spine_04_ctl_scaleZ.o" "KongRN.phl[1609]";
-connectAttr "Spine_04_ctl_Follow_Translates.o" "KongRN.phl[1610]";
-connectAttr "Spine_04_ctl_Follow_Rotates.o" "KongRN.phl[1611]";
-connectAttr "Spine_04_ctl_visibility.o" "KongRN.phl[1612]";
-connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Translates.o" "KongRN.phl[1613]";
-connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "KongRN.phl[1614]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateX.o" "KongRN.phl[1615]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateY.o" "KongRN.phl[1616]";
-connectAttr "L_IK_Leg_01_jnt_ctl_translateZ.o" "KongRN.phl[1617]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateX.o" "KongRN.phl[1618]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateY.o" "KongRN.phl[1619]";
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateZ.o" "KongRN.phl[1620]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleX.o" "KongRN.phl[1621]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleY.o" "KongRN.phl[1622]";
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleZ.o" "KongRN.phl[1623]";
-connectAttr "L_IK_Leg_01_jnt_ctl_visibility.o" "KongRN.phl[1624]";
-connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Translates.o" "KongRN.phl[1625]";
-connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "KongRN.phl[1626]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateX.o" "KongRN.phl[1627]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateY.o" "KongRN.phl[1628]";
-connectAttr "R_IK_Leg_01_jnt_ctl_translateZ.o" "KongRN.phl[1629]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateX.o" "KongRN.phl[1630]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateY.o" "KongRN.phl[1631]";
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateZ.o" "KongRN.phl[1632]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleX.o" "KongRN.phl[1633]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleY.o" "KongRN.phl[1634]";
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleZ.o" "KongRN.phl[1635]";
-connectAttr "R_IK_Leg_01_jnt_ctl_visibility.o" "KongRN.phl[1636]";
-connectAttr "Neck_02_ctl_translateX.o" "KongRN.phl[1637]";
-connectAttr "Neck_02_ctl_translateY.o" "KongRN.phl[1638]";
-connectAttr "Neck_02_ctl_translateZ.o" "KongRN.phl[1639]";
-connectAttr "Neck_02_ctl_rotateZ.o" "KongRN.phl[1640]";
-connectAttr "Neck_02_ctl_rotateX.o" "KongRN.phl[1641]";
-connectAttr "Neck_02_ctl_rotateY.o" "KongRN.phl[1642]";
-connectAttr "Neck_02_ctl_scaleX.o" "KongRN.phl[1643]";
-connectAttr "Neck_02_ctl_scaleY.o" "KongRN.phl[1644]";
-connectAttr "Neck_02_ctl_scaleZ.o" "KongRN.phl[1645]";
-connectAttr "Neck_02_ctl_visibility.o" "KongRN.phl[1646]";
-connectAttr "Neck_02_ctl_Follow_Translates.o" "KongRN.phl[1647]";
-connectAttr "Neck_02_ctl_Follow_Rotates.o" "KongRN.phl[1648]";
-connectAttr "Tongue_01_ctl_Follow_Translates.o" "KongRN.phl[1649]";
-connectAttr "Tongue_01_ctl_Follow_Rotates.o" "KongRN.phl[1650]";
-connectAttr "Tongue_01_ctl_translateX.o" "KongRN.phl[1651]";
-connectAttr "Tongue_01_ctl_translateY.o" "KongRN.phl[1652]";
-connectAttr "Tongue_01_ctl_translateZ.o" "KongRN.phl[1653]";
-connectAttr "Tongue_01_ctl_rotateX.o" "KongRN.phl[1654]";
-connectAttr "Tongue_01_ctl_rotateY.o" "KongRN.phl[1655]";
-connectAttr "Tongue_01_ctl_rotateZ.o" "KongRN.phl[1656]";
-connectAttr "Tongue_01_ctl_scaleX.o" "KongRN.phl[1657]";
-connectAttr "Tongue_01_ctl_scaleY.o" "KongRN.phl[1658]";
-connectAttr "Tongue_01_ctl_scaleZ.o" "KongRN.phl[1659]";
-connectAttr "Tongue_01_ctl_visibility.o" "KongRN.phl[1660]";
-connectAttr "Tongue_02_ctl_Follow_Translates.o" "KongRN.phl[1661]";
-connectAttr "Tongue_02_ctl_Follow_Rotates.o" "KongRN.phl[1662]";
-connectAttr "Tongue_02_ctl_translateX.o" "KongRN.phl[1663]";
-connectAttr "Tongue_02_ctl_translateY.o" "KongRN.phl[1664]";
-connectAttr "Tongue_02_ctl_translateZ.o" "KongRN.phl[1665]";
-connectAttr "Tongue_02_ctl_rotateX.o" "KongRN.phl[1666]";
-connectAttr "Tongue_02_ctl_rotateY.o" "KongRN.phl[1667]";
-connectAttr "Tongue_02_ctl_rotateZ.o" "KongRN.phl[1668]";
-connectAttr "Tongue_02_ctl_scaleX.o" "KongRN.phl[1669]";
-connectAttr "Tongue_02_ctl_scaleY.o" "KongRN.phl[1670]";
-connectAttr "Tongue_02_ctl_scaleZ.o" "KongRN.phl[1671]";
-connectAttr "Tongue_02_ctl_visibility.o" "KongRN.phl[1672]";
-connectAttr "Tongue_03_ctl_Follow_Translates.o" "KongRN.phl[1673]";
-connectAttr "Tongue_03_ctl_Follow_Rotates.o" "KongRN.phl[1674]";
-connectAttr "Tongue_03_ctl_translateX.o" "KongRN.phl[1675]";
-connectAttr "Tongue_03_ctl_translateY.o" "KongRN.phl[1676]";
-connectAttr "Tongue_03_ctl_translateZ.o" "KongRN.phl[1677]";
-connectAttr "Tongue_03_ctl_rotateX.o" "KongRN.phl[1678]";
-connectAttr "Tongue_03_ctl_rotateY.o" "KongRN.phl[1679]";
-connectAttr "Tongue_03_ctl_rotateZ.o" "KongRN.phl[1680]";
-connectAttr "Tongue_03_ctl_scaleX.o" "KongRN.phl[1681]";
-connectAttr "Tongue_03_ctl_scaleY.o" "KongRN.phl[1682]";
-connectAttr "Tongue_03_ctl_scaleZ.o" "KongRN.phl[1683]";
-connectAttr "Tongue_03_ctl_visibility.o" "KongRN.phl[1684]";
+connectAttr "L_FK_Arm_01_ctl_Follow_Translates.o" "KongRN.phl[437]";
+connectAttr "L_FK_Arm_01_ctl_Follow_Rotates.o" "KongRN.phl[438]";
+connectAttr "L_FK_Arm_01_ctl_translateX.o" "KongRN.phl[439]";
+connectAttr "L_FK_Arm_01_ctl_translateY.o" "KongRN.phl[440]";
+connectAttr "L_FK_Arm_01_ctl_translateZ.o" "KongRN.phl[441]";
+connectAttr "L_FK_Arm_01_ctl_rotateX.o" "KongRN.phl[442]";
+connectAttr "L_FK_Arm_01_ctl_rotateY.o" "KongRN.phl[443]";
+connectAttr "L_FK_Arm_01_ctl_rotateZ.o" "KongRN.phl[444]";
+connectAttr "L_FK_Arm_01_ctl_scaleX.o" "KongRN.phl[445]";
+connectAttr "L_FK_Arm_01_ctl_scaleY.o" "KongRN.phl[446]";
+connectAttr "L_FK_Arm_01_ctl_scaleZ.o" "KongRN.phl[447]";
+connectAttr "L_FK_Arm_01_ctl_visibility.o" "KongRN.phl[448]";
+connectAttr "R_FK_Arm_01_ctl_Follow_Translates.o" "KongRN.phl[449]";
+connectAttr "R_FK_Arm_01_ctl_Follow_Rotates.o" "KongRN.phl[450]";
+connectAttr "R_FK_Arm_01_ctl_translateX.o" "KongRN.phl[451]";
+connectAttr "R_FK_Arm_01_ctl_translateY.o" "KongRN.phl[452]";
+connectAttr "R_FK_Arm_01_ctl_translateZ.o" "KongRN.phl[453]";
+connectAttr "R_FK_Arm_01_ctl_rotateZ.o" "KongRN.phl[454]";
+connectAttr "R_FK_Arm_01_ctl_rotateX.o" "KongRN.phl[455]";
+connectAttr "R_FK_Arm_01_ctl_rotateY.o" "KongRN.phl[456]";
+connectAttr "R_FK_Arm_01_ctl_scaleX.o" "KongRN.phl[457]";
+connectAttr "R_FK_Arm_01_ctl_scaleY.o" "KongRN.phl[458]";
+connectAttr "R_FK_Arm_01_ctl_scaleZ.o" "KongRN.phl[459]";
+connectAttr "R_FK_Arm_01_ctl_visibility.o" "KongRN.phl[460]";
+connectAttr "R_FK_Arm_02_ctl_Follow_Translates.o" "KongRN.phl[461]";
+connectAttr "R_FK_Arm_02_ctl_Follow_Rotates.o" "KongRN.phl[462]";
+connectAttr "R_FK_Arm_02_ctl_translateX.o" "KongRN.phl[463]";
+connectAttr "R_FK_Arm_02_ctl_translateY.o" "KongRN.phl[464]";
+connectAttr "R_FK_Arm_02_ctl_translateZ.o" "KongRN.phl[465]";
+connectAttr "R_FK_Arm_02_ctl_rotateY.o" "KongRN.phl[466]";
+connectAttr "R_FK_Arm_02_ctl_rotateX.o" "KongRN.phl[467]";
+connectAttr "R_FK_Arm_02_ctl_rotateZ.o" "KongRN.phl[468]";
+connectAttr "R_FK_Arm_02_ctl_scaleX.o" "KongRN.phl[469]";
+connectAttr "R_FK_Arm_02_ctl_scaleY.o" "KongRN.phl[470]";
+connectAttr "R_FK_Arm_02_ctl_scaleZ.o" "KongRN.phl[471]";
+connectAttr "R_FK_Arm_02_ctl_visibility.o" "KongRN.phl[472]";
+connectAttr "R_FK_Arm_03_ctl_Follow_Translates.o" "KongRN.phl[473]";
+connectAttr "R_FK_Arm_03_ctl_Follow_Rotates.o" "KongRN.phl[474]";
+connectAttr "R_FK_Arm_03_ctl_translateX.o" "KongRN.phl[475]";
+connectAttr "R_FK_Arm_03_ctl_translateY.o" "KongRN.phl[476]";
+connectAttr "R_FK_Arm_03_ctl_translateZ.o" "KongRN.phl[477]";
+connectAttr "R_FK_Arm_03_ctl_rotateX.o" "KongRN.phl[478]";
+connectAttr "R_FK_Arm_03_ctl_rotateY.o" "KongRN.phl[479]";
+connectAttr "R_FK_Arm_03_ctl_rotateZ.o" "KongRN.phl[480]";
+connectAttr "R_FK_Arm_03_ctl_scaleX.o" "KongRN.phl[481]";
+connectAttr "R_FK_Arm_03_ctl_scaleY.o" "KongRN.phl[482]";
+connectAttr "R_FK_Arm_03_ctl_scaleZ.o" "KongRN.phl[483]";
+connectAttr "R_FK_Arm_03_ctl_visibility.o" "KongRN.phl[484]";
+connectAttr "R_FK_Finger2_01_ctl_Follow_Translates.o" "KongRN.phl[485]";
+connectAttr "R_FK_Finger2_01_ctl_Follow_Rotates.o" "KongRN.phl[486]";
+connectAttr "R_FK_Finger2_01_ctl_translateX.o" "KongRN.phl[487]";
+connectAttr "R_FK_Finger2_01_ctl_translateY.o" "KongRN.phl[488]";
+connectAttr "R_FK_Finger2_01_ctl_translateZ.o" "KongRN.phl[489]";
+connectAttr "R_FK_Finger2_01_ctl_rotateX.o" "KongRN.phl[490]";
+connectAttr "R_FK_Finger2_01_ctl_rotateY.o" "KongRN.phl[491]";
+connectAttr "R_FK_Finger2_01_ctl_rotateZ.o" "KongRN.phl[492]";
+connectAttr "R_FK_Finger2_01_ctl_scaleX.o" "KongRN.phl[493]";
+connectAttr "R_FK_Finger2_01_ctl_scaleY.o" "KongRN.phl[494]";
+connectAttr "R_FK_Finger2_01_ctl_scaleZ.o" "KongRN.phl[495]";
+connectAttr "R_FK_Finger2_01_ctl_visibility.o" "KongRN.phl[496]";
+connectAttr "R_FK_Finger2_02_ctl_Follow_Translates.o" "KongRN.phl[497]";
+connectAttr "R_FK_Finger2_02_ctl_Follow_Rotates.o" "KongRN.phl[498]";
+connectAttr "R_FK_Finger2_02_ctl_translateX.o" "KongRN.phl[499]";
+connectAttr "R_FK_Finger2_02_ctl_translateY.o" "KongRN.phl[500]";
+connectAttr "R_FK_Finger2_02_ctl_translateZ.o" "KongRN.phl[501]";
+connectAttr "R_FK_Finger2_02_ctl_rotateX.o" "KongRN.phl[502]";
+connectAttr "R_FK_Finger2_02_ctl_rotateY.o" "KongRN.phl[503]";
+connectAttr "R_FK_Finger2_02_ctl_rotateZ.o" "KongRN.phl[504]";
+connectAttr "R_FK_Finger2_02_ctl_scaleX.o" "KongRN.phl[505]";
+connectAttr "R_FK_Finger2_02_ctl_scaleY.o" "KongRN.phl[506]";
+connectAttr "R_FK_Finger2_02_ctl_scaleZ.o" "KongRN.phl[507]";
+connectAttr "R_FK_Finger2_02_ctl_visibility.o" "KongRN.phl[508]";
+connectAttr "R_FK_Finger2_03_ctl_Follow_Translates.o" "KongRN.phl[509]";
+connectAttr "R_FK_Finger2_03_ctl_Follow_Rotates.o" "KongRN.phl[510]";
+connectAttr "R_FK_Finger2_03_ctl_translateX.o" "KongRN.phl[511]";
+connectAttr "R_FK_Finger2_03_ctl_translateY.o" "KongRN.phl[512]";
+connectAttr "R_FK_Finger2_03_ctl_translateZ.o" "KongRN.phl[513]";
+connectAttr "R_FK_Finger2_03_ctl_rotateX.o" "KongRN.phl[514]";
+connectAttr "R_FK_Finger2_03_ctl_rotateY.o" "KongRN.phl[515]";
+connectAttr "R_FK_Finger2_03_ctl_rotateZ.o" "KongRN.phl[516]";
+connectAttr "R_FK_Finger2_03_ctl_scaleX.o" "KongRN.phl[517]";
+connectAttr "R_FK_Finger2_03_ctl_scaleY.o" "KongRN.phl[518]";
+connectAttr "R_FK_Finger2_03_ctl_scaleZ.o" "KongRN.phl[519]";
+connectAttr "R_FK_Finger2_03_ctl_visibility.o" "KongRN.phl[520]";
+connectAttr "R_FK_Finger5_01_ctl_Follow_Translates.o" "KongRN.phl[521]";
+connectAttr "R_FK_Finger5_01_ctl_Follow_Rotates.o" "KongRN.phl[522]";
+connectAttr "R_FK_Finger5_01_ctl_translateX.o" "KongRN.phl[523]";
+connectAttr "R_FK_Finger5_01_ctl_translateY.o" "KongRN.phl[524]";
+connectAttr "R_FK_Finger5_01_ctl_translateZ.o" "KongRN.phl[525]";
+connectAttr "R_FK_Finger5_01_ctl_rotateX.o" "KongRN.phl[526]";
+connectAttr "R_FK_Finger5_01_ctl_rotateY.o" "KongRN.phl[527]";
+connectAttr "R_FK_Finger5_01_ctl_rotateZ.o" "KongRN.phl[528]";
+connectAttr "R_FK_Finger5_01_ctl_scaleX.o" "KongRN.phl[529]";
+connectAttr "R_FK_Finger5_01_ctl_scaleY.o" "KongRN.phl[530]";
+connectAttr "R_FK_Finger5_01_ctl_scaleZ.o" "KongRN.phl[531]";
+connectAttr "R_FK_Finger5_01_ctl_visibility.o" "KongRN.phl[532]";
+connectAttr "R_FK_Finger5_02_ctl_Follow_Translates.o" "KongRN.phl[533]";
+connectAttr "R_FK_Finger5_02_ctl_Follow_Rotates.o" "KongRN.phl[534]";
+connectAttr "R_FK_Finger5_02_ctl_translateX.o" "KongRN.phl[535]";
+connectAttr "R_FK_Finger5_02_ctl_translateY.o" "KongRN.phl[536]";
+connectAttr "R_FK_Finger5_02_ctl_translateZ.o" "KongRN.phl[537]";
+connectAttr "R_FK_Finger5_02_ctl_rotateX.o" "KongRN.phl[538]";
+connectAttr "R_FK_Finger5_02_ctl_rotateY.o" "KongRN.phl[539]";
+connectAttr "R_FK_Finger5_02_ctl_rotateZ.o" "KongRN.phl[540]";
+connectAttr "R_FK_Finger5_02_ctl_scaleX.o" "KongRN.phl[541]";
+connectAttr "R_FK_Finger5_02_ctl_scaleY.o" "KongRN.phl[542]";
+connectAttr "R_FK_Finger5_02_ctl_scaleZ.o" "KongRN.phl[543]";
+connectAttr "R_FK_Finger5_02_ctl_visibility.o" "KongRN.phl[544]";
+connectAttr "R_FK_Finger5_03_ctl_Follow_Translates.o" "KongRN.phl[545]";
+connectAttr "R_FK_Finger5_03_ctl_Follow_Rotates.o" "KongRN.phl[546]";
+connectAttr "R_FK_Finger5_03_ctl_translateX.o" "KongRN.phl[547]";
+connectAttr "R_FK_Finger5_03_ctl_translateY.o" "KongRN.phl[548]";
+connectAttr "R_FK_Finger5_03_ctl_translateZ.o" "KongRN.phl[549]";
+connectAttr "R_FK_Finger5_03_ctl_rotateX.o" "KongRN.phl[550]";
+connectAttr "R_FK_Finger5_03_ctl_rotateY.o" "KongRN.phl[551]";
+connectAttr "R_FK_Finger5_03_ctl_rotateZ.o" "KongRN.phl[552]";
+connectAttr "R_FK_Finger5_03_ctl_scaleX.o" "KongRN.phl[553]";
+connectAttr "R_FK_Finger5_03_ctl_scaleY.o" "KongRN.phl[554]";
+connectAttr "R_FK_Finger5_03_ctl_scaleZ.o" "KongRN.phl[555]";
+connectAttr "R_FK_Finger5_03_ctl_visibility.o" "KongRN.phl[556]";
+connectAttr "R_FK_Finger4_01_ctl_Follow_Translates.o" "KongRN.phl[557]";
+connectAttr "R_FK_Finger4_01_ctl_Follow_Rotates.o" "KongRN.phl[558]";
+connectAttr "R_FK_Finger4_01_ctl_translateX.o" "KongRN.phl[559]";
+connectAttr "R_FK_Finger4_01_ctl_translateY.o" "KongRN.phl[560]";
+connectAttr "R_FK_Finger4_01_ctl_translateZ.o" "KongRN.phl[561]";
+connectAttr "R_FK_Finger4_01_ctl_rotateX.o" "KongRN.phl[562]";
+connectAttr "R_FK_Finger4_01_ctl_rotateY.o" "KongRN.phl[563]";
+connectAttr "R_FK_Finger4_01_ctl_rotateZ.o" "KongRN.phl[564]";
+connectAttr "R_FK_Finger4_01_ctl_scaleX.o" "KongRN.phl[565]";
+connectAttr "R_FK_Finger4_01_ctl_scaleY.o" "KongRN.phl[566]";
+connectAttr "R_FK_Finger4_01_ctl_scaleZ.o" "KongRN.phl[567]";
+connectAttr "R_FK_Finger4_01_ctl_visibility.o" "KongRN.phl[568]";
+connectAttr "R_FK_Finger4_02_ctl_Follow_Translates.o" "KongRN.phl[569]";
+connectAttr "R_FK_Finger4_02_ctl_Follow_Rotates.o" "KongRN.phl[570]";
+connectAttr "R_FK_Finger4_02_ctl_translateX.o" "KongRN.phl[571]";
+connectAttr "R_FK_Finger4_02_ctl_translateY.o" "KongRN.phl[572]";
+connectAttr "R_FK_Finger4_02_ctl_translateZ.o" "KongRN.phl[573]";
+connectAttr "R_FK_Finger4_02_ctl_rotateX.o" "KongRN.phl[574]";
+connectAttr "R_FK_Finger4_02_ctl_rotateY.o" "KongRN.phl[575]";
+connectAttr "R_FK_Finger4_02_ctl_rotateZ.o" "KongRN.phl[576]";
+connectAttr "R_FK_Finger4_02_ctl_scaleX.o" "KongRN.phl[577]";
+connectAttr "R_FK_Finger4_02_ctl_scaleY.o" "KongRN.phl[578]";
+connectAttr "R_FK_Finger4_02_ctl_scaleZ.o" "KongRN.phl[579]";
+connectAttr "R_FK_Finger4_02_ctl_visibility.o" "KongRN.phl[580]";
+connectAttr "R_FK_Finger4_03_ctl_Follow_Translates.o" "KongRN.phl[581]";
+connectAttr "R_FK_Finger4_03_ctl_Follow_Rotates.o" "KongRN.phl[582]";
+connectAttr "R_FK_Finger4_03_ctl_translateX.o" "KongRN.phl[583]";
+connectAttr "R_FK_Finger4_03_ctl_translateY.o" "KongRN.phl[584]";
+connectAttr "R_FK_Finger4_03_ctl_translateZ.o" "KongRN.phl[585]";
+connectAttr "R_FK_Finger4_03_ctl_rotateX.o" "KongRN.phl[586]";
+connectAttr "R_FK_Finger4_03_ctl_rotateY.o" "KongRN.phl[587]";
+connectAttr "R_FK_Finger4_03_ctl_rotateZ.o" "KongRN.phl[588]";
+connectAttr "R_FK_Finger4_03_ctl_scaleX.o" "KongRN.phl[589]";
+connectAttr "R_FK_Finger4_03_ctl_scaleY.o" "KongRN.phl[590]";
+connectAttr "R_FK_Finger4_03_ctl_scaleZ.o" "KongRN.phl[591]";
+connectAttr "R_FK_Finger4_03_ctl_visibility.o" "KongRN.phl[592]";
+connectAttr "R_FK_Finger1_01_ctl_Follow_Translates.o" "KongRN.phl[593]";
+connectAttr "R_FK_Finger1_01_ctl_Follow_Rotates.o" "KongRN.phl[594]";
+connectAttr "R_FK_Finger1_01_ctl_translateX.o" "KongRN.phl[595]";
+connectAttr "R_FK_Finger1_01_ctl_translateY.o" "KongRN.phl[596]";
+connectAttr "R_FK_Finger1_01_ctl_translateZ.o" "KongRN.phl[597]";
+connectAttr "R_FK_Finger1_01_ctl_rotateX.o" "KongRN.phl[598]";
+connectAttr "R_FK_Finger1_01_ctl_rotateY.o" "KongRN.phl[599]";
+connectAttr "R_FK_Finger1_01_ctl_rotateZ.o" "KongRN.phl[600]";
+connectAttr "R_FK_Finger1_01_ctl_scaleX.o" "KongRN.phl[601]";
+connectAttr "R_FK_Finger1_01_ctl_scaleY.o" "KongRN.phl[602]";
+connectAttr "R_FK_Finger1_01_ctl_scaleZ.o" "KongRN.phl[603]";
+connectAttr "R_FK_Finger1_01_ctl_visibility.o" "KongRN.phl[604]";
+connectAttr "R_FK_Finger1_02_ctl_Follow_Translates.o" "KongRN.phl[605]";
+connectAttr "R_FK_Finger1_02_ctl_Follow_Rotates.o" "KongRN.phl[606]";
+connectAttr "R_FK_Finger1_02_ctl_translateX.o" "KongRN.phl[607]";
+connectAttr "R_FK_Finger1_02_ctl_translateY.o" "KongRN.phl[608]";
+connectAttr "R_FK_Finger1_02_ctl_translateZ.o" "KongRN.phl[609]";
+connectAttr "R_FK_Finger1_02_ctl_rotateX.o" "KongRN.phl[610]";
+connectAttr "R_FK_Finger1_02_ctl_rotateY.o" "KongRN.phl[611]";
+connectAttr "R_FK_Finger1_02_ctl_rotateZ.o" "KongRN.phl[612]";
+connectAttr "R_FK_Finger1_02_ctl_scaleX.o" "KongRN.phl[613]";
+connectAttr "R_FK_Finger1_02_ctl_scaleY.o" "KongRN.phl[614]";
+connectAttr "R_FK_Finger1_02_ctl_scaleZ.o" "KongRN.phl[615]";
+connectAttr "R_FK_Finger1_02_ctl_visibility.o" "KongRN.phl[616]";
+connectAttr "R_FK_Finger1_03_ctl_Follow_Translates.o" "KongRN.phl[617]";
+connectAttr "R_FK_Finger1_03_ctl_Follow_Rotates.o" "KongRN.phl[618]";
+connectAttr "R_FK_Finger1_03_ctl_translateX.o" "KongRN.phl[619]";
+connectAttr "R_FK_Finger1_03_ctl_translateY.o" "KongRN.phl[620]";
+connectAttr "R_FK_Finger1_03_ctl_translateZ.o" "KongRN.phl[621]";
+connectAttr "R_FK_Finger1_03_ctl_rotateX.o" "KongRN.phl[622]";
+connectAttr "R_FK_Finger1_03_ctl_rotateY.o" "KongRN.phl[623]";
+connectAttr "R_FK_Finger1_03_ctl_rotateZ.o" "KongRN.phl[624]";
+connectAttr "R_FK_Finger1_03_ctl_scaleX.o" "KongRN.phl[625]";
+connectAttr "R_FK_Finger1_03_ctl_scaleY.o" "KongRN.phl[626]";
+connectAttr "R_FK_Finger1_03_ctl_scaleZ.o" "KongRN.phl[627]";
+connectAttr "R_FK_Finger1_03_ctl_visibility.o" "KongRN.phl[628]";
+connectAttr "R_FK_Finger3_01_ctl_Follow_Translates.o" "KongRN.phl[629]";
+connectAttr "R_FK_Finger3_01_ctl_Follow_Rotates.o" "KongRN.phl[630]";
+connectAttr "R_FK_Finger3_01_ctl_translateX.o" "KongRN.phl[631]";
+connectAttr "R_FK_Finger3_01_ctl_translateY.o" "KongRN.phl[632]";
+connectAttr "R_FK_Finger3_01_ctl_translateZ.o" "KongRN.phl[633]";
+connectAttr "R_FK_Finger3_01_ctl_rotateX.o" "KongRN.phl[634]";
+connectAttr "R_FK_Finger3_01_ctl_rotateY.o" "KongRN.phl[635]";
+connectAttr "R_FK_Finger3_01_ctl_rotateZ.o" "KongRN.phl[636]";
+connectAttr "R_FK_Finger3_01_ctl_scaleX.o" "KongRN.phl[637]";
+connectAttr "R_FK_Finger3_01_ctl_scaleY.o" "KongRN.phl[638]";
+connectAttr "R_FK_Finger3_01_ctl_scaleZ.o" "KongRN.phl[639]";
+connectAttr "R_FK_Finger3_01_ctl_visibility.o" "KongRN.phl[640]";
+connectAttr "R_FK_Finger3_02_ctl_Follow_Translates.o" "KongRN.phl[641]";
+connectAttr "R_FK_Finger3_02_ctl_Follow_Rotates.o" "KongRN.phl[642]";
+connectAttr "R_FK_Finger3_02_ctl_translateX.o" "KongRN.phl[643]";
+connectAttr "R_FK_Finger3_02_ctl_translateY.o" "KongRN.phl[644]";
+connectAttr "R_FK_Finger3_02_ctl_translateZ.o" "KongRN.phl[645]";
+connectAttr "R_FK_Finger3_02_ctl_rotateX.o" "KongRN.phl[646]";
+connectAttr "R_FK_Finger3_02_ctl_rotateY.o" "KongRN.phl[647]";
+connectAttr "R_FK_Finger3_02_ctl_rotateZ.o" "KongRN.phl[648]";
+connectAttr "R_FK_Finger3_02_ctl_scaleX.o" "KongRN.phl[649]";
+connectAttr "R_FK_Finger3_02_ctl_scaleY.o" "KongRN.phl[650]";
+connectAttr "R_FK_Finger3_02_ctl_scaleZ.o" "KongRN.phl[651]";
+connectAttr "R_FK_Finger3_02_ctl_visibility.o" "KongRN.phl[652]";
+connectAttr "R_FK_Finger3_03_ctl_Follow_Translates.o" "KongRN.phl[653]";
+connectAttr "R_FK_Finger3_03_ctl_Follow_Rotates.o" "KongRN.phl[654]";
+connectAttr "R_FK_Finger3_03_ctl_translateX.o" "KongRN.phl[655]";
+connectAttr "R_FK_Finger3_03_ctl_translateY.o" "KongRN.phl[656]";
+connectAttr "R_FK_Finger3_03_ctl_translateZ.o" "KongRN.phl[657]";
+connectAttr "R_FK_Finger3_03_ctl_rotateX.o" "KongRN.phl[658]";
+connectAttr "R_FK_Finger3_03_ctl_rotateY.o" "KongRN.phl[659]";
+connectAttr "R_FK_Finger3_03_ctl_rotateZ.o" "KongRN.phl[660]";
+connectAttr "R_FK_Finger3_03_ctl_scaleX.o" "KongRN.phl[661]";
+connectAttr "R_FK_Finger3_03_ctl_scaleY.o" "KongRN.phl[662]";
+connectAttr "R_FK_Finger3_03_ctl_scaleZ.o" "KongRN.phl[663]";
+connectAttr "R_FK_Finger3_03_ctl_visibility.o" "KongRN.phl[664]";
+connectAttr "COG_ctl_Follow_Translates.o" "KongRN.phl[665]";
+connectAttr "COG_ctl_Follow_Rotates.o" "KongRN.phl[666]";
+connectAttr "COG_ctl_translateX.o" "KongRN.phl[667]";
+connectAttr "COG_ctl_translateY.o" "KongRN.phl[668]";
+connectAttr "COG_ctl_translateZ.o" "KongRN.phl[669]";
+connectAttr "COG_ctl_rotateX.o" "KongRN.phl[670]";
+connectAttr "COG_ctl_rotateY.o" "KongRN.phl[671]";
+connectAttr "COG_ctl_rotateZ.o" "KongRN.phl[672]";
+connectAttr "COG_ctl_scaleX.o" "KongRN.phl[673]";
+connectAttr "COG_ctl_scaleY.o" "KongRN.phl[674]";
+connectAttr "COG_ctl_scaleZ.o" "KongRN.phl[675]";
+connectAttr "COG_ctl_visibility.o" "KongRN.phl[676]";
+connectAttr "Hips_ctl_Follow_Translates.o" "KongRN.phl[677]";
+connectAttr "Hips_ctl_Follow_Rotates.o" "KongRN.phl[678]";
+connectAttr "Hips_ctl_translateX.o" "KongRN.phl[679]";
+connectAttr "Hips_ctl_translateY.o" "KongRN.phl[680]";
+connectAttr "Hips_ctl_translateZ.o" "KongRN.phl[681]";
+connectAttr "Hips_ctl_rotateX.o" "KongRN.phl[682]";
+connectAttr "Hips_ctl_rotateY.o" "KongRN.phl[683]";
+connectAttr "Hips_ctl_rotateZ.o" "KongRN.phl[684]";
+connectAttr "Hips_ctl_scaleX.o" "KongRN.phl[685]";
+connectAttr "Hips_ctl_scaleY.o" "KongRN.phl[686]";
+connectAttr "Hips_ctl_scaleZ.o" "KongRN.phl[687]";
+connectAttr "Hips_ctl_visibility.o" "KongRN.phl[688]";
+connectAttr "Spine_01_ctl_Follow_Translates.o" "KongRN.phl[689]";
+connectAttr "Spine_01_ctl_Follow_Rotates.o" "KongRN.phl[690]";
+connectAttr "Spine_01_ctl_translateX.o" "KongRN.phl[691]";
+connectAttr "Spine_01_ctl_translateY.o" "KongRN.phl[692]";
+connectAttr "Spine_01_ctl_translateZ.o" "KongRN.phl[693]";
+connectAttr "Spine_01_ctl_rotateZ.o" "KongRN.phl[694]";
+connectAttr "Spine_01_ctl_rotateX.o" "KongRN.phl[695]";
+connectAttr "Spine_01_ctl_rotateY.o" "KongRN.phl[696]";
+connectAttr "Spine_01_ctl_scaleX.o" "KongRN.phl[697]";
+connectAttr "Spine_01_ctl_scaleY.o" "KongRN.phl[698]";
+connectAttr "Spine_01_ctl_scaleZ.o" "KongRN.phl[699]";
+connectAttr "Spine_01_ctl_visibility.o" "KongRN.phl[700]";
+connectAttr "Spine_02_ctl_Follow_Translates.o" "KongRN.phl[701]";
+connectAttr "Spine_02_ctl_Follow_Rotates.o" "KongRN.phl[702]";
+connectAttr "Spine_02_ctl_translateX.o" "KongRN.phl[703]";
+connectAttr "Spine_02_ctl_translateY.o" "KongRN.phl[704]";
+connectAttr "Spine_02_ctl_translateZ.o" "KongRN.phl[705]";
+connectAttr "Spine_02_ctl_rotateX.o" "KongRN.phl[706]";
+connectAttr "Spine_02_ctl_rotateY.o" "KongRN.phl[707]";
+connectAttr "Spine_02_ctl_rotateZ.o" "KongRN.phl[708]";
+connectAttr "Spine_02_ctl_scaleX.o" "KongRN.phl[709]";
+connectAttr "Spine_02_ctl_scaleY.o" "KongRN.phl[710]";
+connectAttr "Spine_02_ctl_scaleZ.o" "KongRN.phl[711]";
+connectAttr "Spine_02_ctl_visibility.o" "KongRN.phl[712]";
+connectAttr "Spine_03_ctl_translateX.o" "KongRN.phl[713]";
+connectAttr "Spine_03_ctl_translateY.o" "KongRN.phl[714]";
+connectAttr "Spine_03_ctl_translateZ.o" "KongRN.phl[715]";
+connectAttr "Spine_03_ctl_rotateX.o" "KongRN.phl[716]";
+connectAttr "Spine_03_ctl_rotateY.o" "KongRN.phl[717]";
+connectAttr "Spine_03_ctl_rotateZ.o" "KongRN.phl[718]";
+connectAttr "Spine_03_ctl_scaleX.o" "KongRN.phl[719]";
+connectAttr "Spine_03_ctl_scaleY.o" "KongRN.phl[720]";
+connectAttr "Spine_03_ctl_scaleZ.o" "KongRN.phl[721]";
+connectAttr "Spine_03_ctl_visibility.o" "KongRN.phl[722]";
+connectAttr "L_RK_Clavicle_ctl_translateX.o" "KongRN.phl[723]";
+connectAttr "L_RK_Clavicle_ctl_translateY.o" "KongRN.phl[724]";
+connectAttr "L_RK_Clavicle_ctl_translateZ.o" "KongRN.phl[725]";
+connectAttr "L_RK_Clavicle_ctl_rotateX.o" "KongRN.phl[726]";
+connectAttr "L_RK_Clavicle_ctl_rotateY.o" "KongRN.phl[727]";
+connectAttr "L_RK_Clavicle_ctl_rotateZ.o" "KongRN.phl[728]";
+connectAttr "L_RK_Clavicle_ctl_scaleX.o" "KongRN.phl[729]";
+connectAttr "L_RK_Clavicle_ctl_scaleY.o" "KongRN.phl[730]";
+connectAttr "L_RK_Clavicle_ctl_scaleZ.o" "KongRN.phl[731]";
+connectAttr "L_RK_Clavicle_ctl_Follow_Translates.o" "KongRN.phl[732]";
+connectAttr "L_RK_Clavicle_ctl_Follow_Rotates.o" "KongRN.phl[733]";
+connectAttr "L_RK_Clavicle_ctl_visibility.o" "KongRN.phl[734]";
+connectAttr "R_RK_Clavicle_ctl_translateX.o" "KongRN.phl[735]";
+connectAttr "R_RK_Clavicle_ctl_translateY.o" "KongRN.phl[736]";
+connectAttr "R_RK_Clavicle_ctl_translateZ.o" "KongRN.phl[737]";
+connectAttr "R_RK_Clavicle_ctl_rotateZ.o" "KongRN.phl[738]";
+connectAttr "R_RK_Clavicle_ctl_rotateX.o" "KongRN.phl[739]";
+connectAttr "R_RK_Clavicle_ctl_rotateY.o" "KongRN.phl[740]";
+connectAttr "R_RK_Clavicle_ctl_scaleX.o" "KongRN.phl[741]";
+connectAttr "R_RK_Clavicle_ctl_scaleY.o" "KongRN.phl[742]";
+connectAttr "R_RK_Clavicle_ctl_scaleZ.o" "KongRN.phl[743]";
+connectAttr "R_RK_Clavicle_ctl_Follow_Translates.o" "KongRN.phl[744]";
+connectAttr "R_RK_Clavicle_ctl_Follow_Rotates.o" "KongRN.phl[745]";
+connectAttr "R_RK_Clavicle_ctl_visibility.o" "KongRN.phl[746]";
+connectAttr "Spine_05_ctl_Follow_Translates.o" "KongRN.phl[747]";
+connectAttr "Spine_05_ctl_Follow_Rotates.o" "KongRN.phl[748]";
+connectAttr "Spine_05_ctl_translateX.o" "KongRN.phl[749]";
+connectAttr "Spine_05_ctl_translateY.o" "KongRN.phl[750]";
+connectAttr "Spine_05_ctl_translateZ.o" "KongRN.phl[751]";
+connectAttr "Spine_05_ctl_rotateX.o" "KongRN.phl[752]";
+connectAttr "Spine_05_ctl_rotateY.o" "KongRN.phl[753]";
+connectAttr "Spine_05_ctl_rotateZ.o" "KongRN.phl[754]";
+connectAttr "Spine_05_ctl_scaleX.o" "KongRN.phl[755]";
+connectAttr "Spine_05_ctl_scaleY.o" "KongRN.phl[756]";
+connectAttr "Spine_05_ctl_scaleZ.o" "KongRN.phl[757]";
+connectAttr "Spine_05_ctl_visibility.o" "KongRN.phl[758]";
+connectAttr "Spine_06_ctl_Follow_Translates.o" "KongRN.phl[759]";
+connectAttr "Spine_06_ctl_Follow_Rotates.o" "KongRN.phl[760]";
+connectAttr "Spine_06_ctl_translateX.o" "KongRN.phl[761]";
+connectAttr "Spine_06_ctl_translateY.o" "KongRN.phl[762]";
+connectAttr "Spine_06_ctl_translateZ.o" "KongRN.phl[763]";
+connectAttr "Spine_06_ctl_rotateX.o" "KongRN.phl[764]";
+connectAttr "Spine_06_ctl_rotateY.o" "KongRN.phl[765]";
+connectAttr "Spine_06_ctl_rotateZ.o" "KongRN.phl[766]";
+connectAttr "Spine_06_ctl_scaleX.o" "KongRN.phl[767]";
+connectAttr "Spine_06_ctl_scaleY.o" "KongRN.phl[768]";
+connectAttr "Spine_06_ctl_scaleZ.o" "KongRN.phl[769]";
+connectAttr "Spine_06_ctl_visibility.o" "KongRN.phl[770]";
+connectAttr "Spine_04_ctl_translateX.o" "KongRN.phl[771]";
+connectAttr "Spine_04_ctl_translateY.o" "KongRN.phl[772]";
+connectAttr "Spine_04_ctl_translateZ.o" "KongRN.phl[773]";
+connectAttr "Spine_04_ctl_rotateX.o" "KongRN.phl[774]";
+connectAttr "Spine_04_ctl_rotateY.o" "KongRN.phl[775]";
+connectAttr "Spine_04_ctl_rotateZ.o" "KongRN.phl[776]";
+connectAttr "Spine_04_ctl_scaleX.o" "KongRN.phl[777]";
+connectAttr "Spine_04_ctl_scaleY.o" "KongRN.phl[778]";
+connectAttr "Spine_04_ctl_scaleZ.o" "KongRN.phl[779]";
+connectAttr "Spine_04_ctl_Follow_Translates.o" "KongRN.phl[780]";
+connectAttr "Spine_04_ctl_Follow_Rotates.o" "KongRN.phl[781]";
+connectAttr "Spine_04_ctl_visibility.o" "KongRN.phl[782]";
+connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Translates.o" "KongRN.phl[783]";
+connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "KongRN.phl[784]";
+connectAttr "L_IK_Leg_01_jnt_ctl_translateX.o" "KongRN.phl[785]";
+connectAttr "L_IK_Leg_01_jnt_ctl_translateY.o" "KongRN.phl[786]";
+connectAttr "L_IK_Leg_01_jnt_ctl_translateZ.o" "KongRN.phl[787]";
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateX.o" "KongRN.phl[788]";
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateY.o" "KongRN.phl[789]";
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateZ.o" "KongRN.phl[790]";
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleX.o" "KongRN.phl[791]";
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleY.o" "KongRN.phl[792]";
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleZ.o" "KongRN.phl[793]";
+connectAttr "L_IK_Leg_01_jnt_ctl_visibility.o" "KongRN.phl[794]";
+connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Translates.o" "KongRN.phl[795]";
+connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "KongRN.phl[796]";
+connectAttr "R_IK_Leg_01_jnt_ctl_translateX.o" "KongRN.phl[797]";
+connectAttr "R_IK_Leg_01_jnt_ctl_translateY.o" "KongRN.phl[798]";
+connectAttr "R_IK_Leg_01_jnt_ctl_translateZ.o" "KongRN.phl[799]";
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateX.o" "KongRN.phl[800]";
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateY.o" "KongRN.phl[801]";
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateZ.o" "KongRN.phl[802]";
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleX.o" "KongRN.phl[803]";
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleY.o" "KongRN.phl[804]";
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleZ.o" "KongRN.phl[805]";
+connectAttr "R_IK_Leg_01_jnt_ctl_visibility.o" "KongRN.phl[806]";
+connectAttr "Neck_02_ctl_translateX.o" "KongRN.phl[807]";
+connectAttr "Neck_02_ctl_translateY.o" "KongRN.phl[808]";
+connectAttr "Neck_02_ctl_translateZ.o" "KongRN.phl[809]";
+connectAttr "Neck_02_ctl_rotateX.o" "KongRN.phl[810]";
+connectAttr "Neck_02_ctl_rotateY.o" "KongRN.phl[811]";
+connectAttr "Neck_02_ctl_rotateZ.o" "KongRN.phl[812]";
+connectAttr "Neck_02_ctl_scaleX.o" "KongRN.phl[813]";
+connectAttr "Neck_02_ctl_scaleY.o" "KongRN.phl[814]";
+connectAttr "Neck_02_ctl_scaleZ.o" "KongRN.phl[815]";
+connectAttr "Neck_02_ctl_visibility.o" "KongRN.phl[816]";
+connectAttr "Neck_02_ctl_Follow_Translates.o" "KongRN.phl[817]";
+connectAttr "Neck_02_ctl_Follow_Rotates.o" "KongRN.phl[818]";
+connectAttr "Tongue_01_ctl_Follow_Translates.o" "KongRN.phl[819]";
+connectAttr "Tongue_01_ctl_Follow_Rotates.o" "KongRN.phl[820]";
+connectAttr "Tongue_01_ctl_translateX.o" "KongRN.phl[821]";
+connectAttr "Tongue_01_ctl_translateY.o" "KongRN.phl[822]";
+connectAttr "Tongue_01_ctl_translateZ.o" "KongRN.phl[823]";
+connectAttr "Tongue_01_ctl_rotateX.o" "KongRN.phl[824]";
+connectAttr "Tongue_01_ctl_rotateY.o" "KongRN.phl[825]";
+connectAttr "Tongue_01_ctl_rotateZ.o" "KongRN.phl[826]";
+connectAttr "Tongue_01_ctl_scaleX.o" "KongRN.phl[827]";
+connectAttr "Tongue_01_ctl_scaleY.o" "KongRN.phl[828]";
+connectAttr "Tongue_01_ctl_scaleZ.o" "KongRN.phl[829]";
+connectAttr "Tongue_01_ctl_visibility.o" "KongRN.phl[830]";
+connectAttr "Tongue_02_ctl_Follow_Translates.o" "KongRN.phl[831]";
+connectAttr "Tongue_02_ctl_Follow_Rotates.o" "KongRN.phl[832]";
+connectAttr "Tongue_02_ctl_translateX.o" "KongRN.phl[833]";
+connectAttr "Tongue_02_ctl_translateY.o" "KongRN.phl[834]";
+connectAttr "Tongue_02_ctl_translateZ.o" "KongRN.phl[835]";
+connectAttr "Tongue_02_ctl_rotateX.o" "KongRN.phl[836]";
+connectAttr "Tongue_02_ctl_rotateY.o" "KongRN.phl[837]";
+connectAttr "Tongue_02_ctl_rotateZ.o" "KongRN.phl[838]";
+connectAttr "Tongue_02_ctl_scaleX.o" "KongRN.phl[839]";
+connectAttr "Tongue_02_ctl_scaleY.o" "KongRN.phl[840]";
+connectAttr "Tongue_02_ctl_scaleZ.o" "KongRN.phl[841]";
+connectAttr "Tongue_02_ctl_visibility.o" "KongRN.phl[842]";
+connectAttr "Tongue_03_ctl_Follow_Translates.o" "KongRN.phl[843]";
+connectAttr "Tongue_03_ctl_Follow_Rotates.o" "KongRN.phl[844]";
+connectAttr "Tongue_03_ctl_translateX.o" "KongRN.phl[845]";
+connectAttr "Tongue_03_ctl_translateY.o" "KongRN.phl[846]";
+connectAttr "Tongue_03_ctl_translateZ.o" "KongRN.phl[847]";
+connectAttr "Tongue_03_ctl_rotateX.o" "KongRN.phl[848]";
+connectAttr "Tongue_03_ctl_rotateY.o" "KongRN.phl[849]";
+connectAttr "Tongue_03_ctl_rotateZ.o" "KongRN.phl[850]";
+connectAttr "Tongue_03_ctl_scaleX.o" "KongRN.phl[851]";
+connectAttr "Tongue_03_ctl_scaleY.o" "KongRN.phl[852]";
+connectAttr "Tongue_03_ctl_scaleZ.o" "KongRN.phl[853]";
+connectAttr "Tongue_03_ctl_visibility.o" "KongRN.phl[854]";
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";
 connectAttr "camera1_translateZ.o" "camera1.tz";
