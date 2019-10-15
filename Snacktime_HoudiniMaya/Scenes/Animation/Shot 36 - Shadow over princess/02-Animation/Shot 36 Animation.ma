@@ -1,13 +1,17 @@
 //Maya ASCII 2018 scene
 //Name: Shot 36 Animation.ma
-//Last modified: Tue, Oct 15, 2019 02:18:45 PM
+//Last modified: Tue, Oct 15, 2019 02:22:40 PM
 //Codeset: 1252
 file -rdi 1 -ns "Kong" -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -rdi 1 -ns "Zilla" -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
 file -rdi 1 -ns "Princess" -rfn "PrincessRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Princess/Princess.ma";
+file -rdi 1 -ns "PrincessTower" -rfn "PrincessTowerRN3" -op "mo=1" -typ "OBJexport"
+		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/City Generator/PrincessTower.obj";
 file -r -ns "Kong" -dr 1 -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -r -ns "Zilla" -dr 1 -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
 file -r -ns "Princess" -dr 1 -rfn "PrincessRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Princess/Princess.ma";
+file -r -ns "PrincessTower" -dr 1 -rfn "PrincessTowerRN3" -op "mo=1" -typ "OBJexport"
+		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/City Generator/PrincessTower.obj";
 requires maya "2018";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "2.0.1";
@@ -23,13 +27,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "6BEC6232-4C0D-3732-F1DC-19981CC59556";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -24.678167316280359 24.776843899875161 10.218941409308528 ;
-	setAttr ".r" -type "double3" -10.538352729405807 -35.399999999989156 0 ;
+	setAttr ".t" -type "double3" -43.738171341898109 29.894935941396199 6.6484351309998111 ;
+	setAttr ".r" -type "double3" -18.938352729411903 -442.19999999995554 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DAC345C1-4D9A-30C4-724C-1BBDDF63290B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 8.5411673112599686;
+	setAttr ".coi" 35.795583333709928;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3894,6 +3898,18 @@ createNode animCurveTA -n "R_FK_Arm_01_ctl_rotateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  75 0 85 -17.408008005186446;
+createNode reference -n "PrincessTowerRN3";
+	rename -uid "49A895D8-4E92-C9F9-9A1A-91AE971CA17F";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PrincessTowerRN3"
+		"PrincessTowerRN3" 0
+		"PrincessTowerRN3" 3
+		2 "|PrincessTower:polySurface1" "translate" " -type \"double3\" 0 -1.57068851240097285 0"
+		
+		2 "|PrincessTower:polySurface1" "rotate" " -type \"double3\" 0 0 0"
+		2 "|PrincessTower:polySurface1" "scale" " -type \"double3\" 30 30 30";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3917,7 +3933,7 @@ select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 2 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 156 ".dsm";
+	setAttr -s 157 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 16 ".gn";
 select -ne :initialParticleSE;
