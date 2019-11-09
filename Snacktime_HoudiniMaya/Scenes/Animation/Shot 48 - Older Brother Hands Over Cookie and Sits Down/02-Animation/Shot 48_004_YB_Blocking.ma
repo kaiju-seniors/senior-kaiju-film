@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 48_003_Blocking.ma
-//Last modified: Sat, Nov 09, 2019 03:37:21 PM
+//Name: Shot 48_004_YB_Blocking.ma
+//Last modified: Sat, Nov 09, 2019 03:40:55 PM
 //Codeset: 1252
 file -rdi 1 -ns "bedroom" -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
@@ -37,14 +37,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C13149B4-405E-DE7F-F490-1EA4CEE240A6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 55.042861230907775 33.062397062001551 53.597860806441744 ;
-	setAttr ".r" -type "double3" -22.538352729076248 -1441.7999999998867 -1.491621031872365e-16 ;
+	setAttr ".t" -type "double3" 22.683758094519455 16.155574687595248 76.391908824175559 ;
+	setAttr ".r" -type "double3" -2.7383527290479002 -1464.9999999997785 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "421955A1-4B13-35B5-97E3-ED9FD7C431CF";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 54.126471251342331;
+	setAttr ".coi" 80.375589615951469;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -126,7 +126,7 @@ createNode camera -n "Main_CameraShape" -p "Main_Camera";
 	setAttr ".tp" -type "double3" 57.012733459472656 22.928516436368227 34.811786651611328 ;
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode fosterParent -n "CookiePrincessRNfosterParent1";
-	rename -uid "29A2E6D3-49ED-D576-E8EC-4E988FDD6DA1";
+	rename -uid "125AD4EA-4845-AF68-7701-D5A647701320";
 createNode parentConstraint -n "BottomCookie_ctl_grp_parentConstraint1" -p "CookiePrincessRNfosterParent1";
 	rename -uid "B0C51E86-4374-1F1E-9B80-1E85BEF29D4D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_FK_Arm_03_ctlW0" -dv 1 -min 0 -at "double";
@@ -148,7 +148,7 @@ createNode parentConstraint -n "BottomCookie_ctl_grp_parentConstraint1" -p "Cook
 	setAttr ".tg[0].tor" -type "double3" 125.67690095579745 7.4617464749008713 -19.092255774789166 ;
 	setAttr ".tg[1].tot" -type "double3" 23.896146975033442 1.6026851533106974 -2.1218834578081665 ;
 	setAttr ".tg[1].tor" -type "double3" -6.6437866653789674 -30.221893569288063 -128.17686754639536 ;
-	setAttr ".lr" -type "double3" 101.6465847225945 48.735716730015184 -89.957801175373973 ;
+	setAttr ".lr" -type "double3" 137.66959318436733 11.870352442706203 -107.82322961061342 ;
 	setAttr ".rst" -type "double3" -2.4992138771139096 2.6860872600252499 7.6008396248297814 ;
 	setAttr ".rsrr" -type "double3" 110.79280513870643 59.052720885561214 -137.26622091750377 ;
 	setAttr -k on ".w0";
@@ -2854,7 +2854,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_Geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_GeoShapeOrig" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		"YoungerBrother_Rig_03___ready_for_skinningRN" 1915
+		"YoungerBrother_Rig_03___ready_for_skinningRN" 1921
 		2 "|YoungerBrother:YoungerBrother" "visibility" " 1"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Master_ctl_grp|YoungerBrother:Master_ctl" 
 		"visibility" " -av 1"
@@ -3033,8 +3033,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl" 
 		"Arm_IKFK" " -av -k 1 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl" 
-		"rotate" " -type \"double3\" -5.48885745797370905 0.074470817971788006 -40.71839955701361191"
-		
+		"rotate" " -type \"double3\" 0 2.93295953054662117 -42.16770895832219423"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl" 
@@ -3043,6 +3042,10 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"rotateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl" 
 		"rotate" " -type \"double3\" 0 0 -59.44554835279831906"
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl" 
+		"rotateX" " -av"
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl" 
+		"rotateY" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl" 
 		"rotateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl" 
@@ -3652,6 +3655,15 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"Follow_Translates" " -av -k 1 1"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl" 
 		"Follow_Rotates" " -av -k 1 1"
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_PV_ctl_grp|YoungerBrother:R_Arm_PV_ctl" 
+		"translate" " -type \"double3\" -9.96269322953455472 1.02091003120936819 -0.41583907616444538"
+		
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_PV_ctl_grp|YoungerBrother:R_Arm_PV_ctl" 
+		"translateX" " -av"
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_PV_ctl_grp|YoungerBrother:R_Arm_PV_ctl" 
+		"translateY" " -av"
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_PV_ctl_grp|YoungerBrother:R_Arm_PV_ctl" 
+		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl" 
 		"rotate" " -type \"double3\" 23.98807738992639571 -28.9495464619361762 -9.59343099241545971"
 		
@@ -7722,7 +7734,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
-		"translate" " -type \"double3\" 11.13741091578044262 -25.17884168694692093 1.61463857469733463"
+		"translate" " -type \"double3\" -9.07067904094869704 -17.64087861943128033 5.25855938265896317"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"translateX" " -av"
@@ -7822,7 +7834,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
-		"rotate" " -type \"double3\" -43.51974367965510027 21.16642706268489604 5.90737587552747545"
+		"rotate" " -type \"double3\" -11.80811944673848046 2.24412437444140345 -3.03208132198468761"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
 		"rotateX" " -av"
@@ -7849,7 +7861,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Jaw_ctrl_grp|OlderBrother1:Jaw_ctrl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Jaw_ctrl_grp|OlderBrother1:Jaw_ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 19.41520605199630012"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Jaw_ctrl_grp|OlderBrother1:Jaw_ctrl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Jaw_ctrl_grp|OlderBrother1:Jaw_ctrl" 
@@ -7978,7 +7990,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_01_ctl_grp|OlderBrother1:Spine_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_01_ctl_grp|OlderBrother1:Spine_01_ctl" 
-		"rotate" " -type \"double3\" 13.61764535782966767 6.41235153235324518 -24.68314640777015612"
+		"rotate" " -type \"double3\" 14.8159579718118426 2.45199836378538683 -9.12534718264197231"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_01_ctl_grp|OlderBrother1:Spine_01_ctl" 
 		"rotateX" " -av"
@@ -8009,7 +8021,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_02_ctl_grp|OlderBrother1:Spine_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_02_ctl_grp|OlderBrother1:Spine_02_ctl" 
-		"rotate" " -type \"double3\" 10.17644699495127547 -3.01534382449296867 21.4396734650720191"
+		"rotate" " -type \"double3\" 10.59453068782382701 0.25429627240006253 3.7539492444926541"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_02_ctl_grp|OlderBrother1:Spine_02_ctl" 
 		"rotateX" " -av"
@@ -8040,7 +8052,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_03_ctl_grp|OlderBrother1:Spine_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_03_ctl_grp|OlderBrother1:Spine_03_ctl" 
-		"rotate" " -type \"double3\" 10.17644699495127547 -3.01534382449296867 21.4396734650720191"
+		"rotate" " -type \"double3\" 10.59453068782382701 0.25429627240006253 3.7539492444926541"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_03_ctl_grp|OlderBrother1:Spine_03_ctl" 
 		"rotateX" " -av"
@@ -8103,7 +8115,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:L_Clavicle_ctl_grp|OlderBrother1:L_Clavicle_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:L_Clavicle_ctl_grp|OlderBrother1:L_Clavicle_ctl" 
-		"rotate" " -type \"double3\" 28.46297431615755258 -44.86461708779226143 -33.69931436751933518"
+		"rotate" " -type \"double3\" -22.02056138225872317 -39.15232005509074042 8.86942779134875536"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:L_Clavicle_ctl_grp|OlderBrother1:L_Clavicle_ctl" 
 		"rotateX" " -av"
@@ -8134,7 +8146,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_04_ctl_grp|OlderBrother1:Spine_04_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_04_ctl_grp|OlderBrother1:Spine_04_ctl" 
-		"rotate" " -type \"double3\" 1.77901822029299472 -0.066730062695657358 0.37361575650558698"
+		"rotate" " -type \"double3\" 2.55121971595917296 -3.56220345969424335 -4.03331305442666466"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_04_ctl_grp|OlderBrother1:Spine_04_ctl" 
 		"rotateX" " -av"
@@ -8165,7 +8177,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_05_ctl_grp|OlderBrother1:Spine_05_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_05_ctl_grp|OlderBrother1:Spine_05_ctl" 
-		"rotate" " -type \"double3\" 1.77901822029299472 -0.066730062695657358 0.37361575650558698"
+		"rotate" " -type \"double3\" 2.55121971595917296 -3.56220345969424335 -4.03331305442666466"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_05_ctl_grp|OlderBrother1:Spine_05_ctl" 
 		"rotateX" " -av"
@@ -8531,7 +8543,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_IK_Controls|OlderBrother1:R_Arm_PV_ctl_grp|OlderBrother1:R_Arm_PV_ctl" 
 		"Follow_Rotates" " -k 1 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_01_ctl_grp|OlderBrother1:R_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" 12.11469330003896161 14.49131011841310368 -28.22578986401605761"
+		"rotate" " -type \"double3\" 5.1687723420506213 -4.54437202743973145 -40.66618368986604537"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_01_ctl_grp|OlderBrother1:R_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -8577,7 +8589,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" -24.8823448508566436 -37.20340398262012371 -5.48438288785782824"
+		"rotate" " -type \"double3\" -44.27321244119315224 -35.07950066203517281 -15.56804733741979696"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -8608,7 +8620,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" 0 -67.60633029455046028 0"
+		"rotate" " -type \"double3\" 0 -87.7055694293123338 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
@@ -8638,7 +8650,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" 58.85898511072922901 32.1380746517412561 -36.31352027933439786"
+		"rotate" " -type \"double3\" 14.3421214920848179 7.2797723157639318 -23.31378899018767115"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
 		"rotateX" " -av"
@@ -20432,20 +20444,18 @@ createNode animCurveTA -n "Hips_ctl_rotateX1";
 	rename -uid "DEF394E0-4523-908C-D0E3-AC9B0D589E3C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 18 0 33 0 46 0 90 0 136 0 200 -5.4888574579737091;
+	setAttr -s 6 ".ktv[0:5]"  1 0 18 0 33 0 46 0 90 0 136 0;
 createNode animCurveTA -n "Hips_ctl_rotateY1";
 	rename -uid "532677F6-429E-89F4-E8D9-DC8CAF0D6066";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 18 0 33 0 46 0 90 0 136 2.9329595305466212
-		 200 0.074470817971788006;
+	setAttr -s 6 ".ktv[0:5]"  1 0 18 0 33 0 46 0 90 0 136 2.9329595305466212;
 createNode animCurveTA -n "Hips_ctl_rotateZ1";
 	rename -uid "382E58A2-41E8-BB59-6CBE-4095369CD6A4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -42.167708958322194 18 -42.167708958322194
-		 33 -42.167708958322194 46 -42.167708958322194 90 -42.167708958322194 136 -42.167708958322194
-		 200 -40.718399557013612;
+	setAttr -s 6 ".ktv[0:5]"  1 -42.167708958322194 18 -42.167708958322194
+		 33 -42.167708958322194 46 -42.167708958322194 90 -42.167708958322194 136 -42.167708958322194;
 createNode animCurveTU -n "Hips_ctl_scaleX1";
 	rename -uid "DB0A7BFA-40EA-2886-7D44-D191D4A511F4";
 	setAttr ".tan" 18;
@@ -21787,7 +21797,7 @@ createNode reference -n "CookiePrincessRN";
 		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie_ctl_grp|CookiePrincess:TopCookie_ctl" 
 		"rotateX" " -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp" "translate" 
-		" -type \"double3\" -2.18020762772694354 -6.48564800885869275 9.22833185159533542"
+		" -type \"double3\" -2.05801902614270915 22.36319334925640234 -5.9399234277338735"
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp" "translateZ" 
 		" -av"
@@ -21795,7 +21805,7 @@ createNode reference -n "CookiePrincessRN";
 		" -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp" "translateX" 
 		" -av"
-		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp" "rotate" " -type \"double3\" 101.64658472259449695 48.73571673001518434 -89.95780117537397302"
+		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp" "rotate" " -type \"double3\" 137.66959318436732929 11.87035244270620282 -107.82322961061342426"
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp" "rotateX" 
 		" -av"
@@ -22210,7 +22220,6 @@ createNode animCurveTU -n "BottomCookie_ctl_scaleZ";
 	setAttr ".ktv[0]"  162 0.3500840573105416;
 createNode displayLayer -n "OlderBoy";
 	rename -uid "A1C640ED-449E-6B8D-A293-BA90E4CE48EB";
-	setAttr ".dt" 2;
 	setAttr ".c" 23;
 	setAttr ".do" 2;
 createNode animCurveTL -n "R_Arm_PV_ctl_translateX";
@@ -23254,8 +23263,8 @@ createNode animCurveTU -n "R_IK_Finger1_03_ctl_Follow_Rotates";
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 1 18 1 33 1 46 1 90 1 136 1;
 select -ne :time1;
-	setAttr ".o" 200;
-	setAttr ".unw" 200;
+	setAttr ".o" 242;
+	setAttr ".unw" 242;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -26507,4 +26516,4 @@ connectAttr "pairBlend1_inRotateY1.o" "pairBlend1.iry1";
 connectAttr "pairBlend1_inRotateZ1.o" "pairBlend1.irz1";
 connectAttr "layerManager.dli[2]" "OlderBoy.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Shot 48_003_Blocking.ma
+// End of Shot 48_004_YB_Blocking.ma
