@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Shot 44 Blocking 03.ma
-//Last modified: Sun, Nov 03, 2019 03:00:43 AM
+//Last modified: Sat, Nov 09, 2019 10:29:57 PM
 //Codeset: 1252
 file -rdi 1 -ns "bedroom" -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
@@ -36,6 +36,7 @@ createNode transform -s -n "persp";
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "421955A1-4B13-35B5-97E3-ED9FD7C431CF";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".coi" 45.493061025416438;
 	setAttr ".imn" -type "string" "persp";
@@ -105,18 +106,15 @@ createNode transform -n "Main_Camera";
 createNode camera -n "Main_CameraShape" -p "Main_Camera";
 	rename -uid "75AAB17A-4A3D-85B6-FBA1-6587F77AF565";
 	setAttr -k off ".v";
-	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
-	setAttr ".ovr" 1.3;
 	setAttr -l on ".coi" 154.12181755520191;
 	setAttr -l on ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
-	setAttr ".dfg" yes;
 createNode fosterParent -n "CookiePrincessRNfosterParent1";
-	rename -uid "3FC331AD-4258-623A-94A7-BF99E5974F70";
+	rename -uid "9FF673BD-46F0-B4F2-5A8B-E3BDEE78FD8E";
 createNode parentConstraint -n "BottomCookie_ctl_grp_parentConstraint1" -p "CookiePrincessRNfosterParent1";
 	rename -uid "83466660-49D5-2050-D48F-529C1244120C";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_FK_Arm_03_ctlW0" -dv 1 -min 0 -at "double";
@@ -134,7 +132,7 @@ createNode parentConstraint -n "BottomCookie_ctl_grp_parentConstraint1" -p "Cook
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.0815983454120639 -1.2107118596732611 -0.6625583754117792 ;
 	setAttr ".tg[0].tor" -type "double3" 52.159004064776127 36.418470671550828 113.65298392617088 ;
-	setAttr ".lr" -type "double3" 122.7944599200634 69.569985775385973 3.9300151398443428 ;
+	setAttr ".lr" -type "double3" 117.67289977384569 20.582885487827692 -17.92560494315234 ;
 	setAttr ".rst" -type "double3" 5.1585840075274945 -0.28774737775109216 -4.3442116483446043 ;
 	setAttr ".rsrr" -type "double3" 89.153945421360888 43.961827351965219 -27.842260276517393 ;
 	setAttr -k on ".w0";
@@ -155,29 +153,29 @@ createNode parentConstraint -n "TopCookie_ctl_grp_parentConstraint1" -p "CookieP
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 2.9186223771751698 -0.81839984361933504 0.4737713896866026 ;
 	setAttr ".tg[0].tor" -type "double3" 151.70871847534622 30.149055635785817 -173.40549438579163 ;
-	setAttr ".lr" -type "double3" 81.613971576900582 -8.3762647505618517 -12.17721005453653 ;
+	setAttr ".lr" -type "double3" 131.58348593628261 -47.547594486050592 -12.977986424559786 ;
 	setAttr ".rst" -type "double3" 1.5001725983249088 -0.55698149425832 3.9385120871444599 ;
 	setAttr ".rsrr" -type "double3" 80.365780375998071 -8.4733736077790649 -10.710818785183656 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "CAC14361-45C9-6E81-616D-A9804D08292A";
+	rename -uid "F2D89D38-4E60-89EC-8A16-C09637B08373";
 	setAttr -s 65 ".lnk";
 	setAttr -s 65 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F2E0F721-4788-DAE7-B39D-D6A09E15F06E";
+	rename -uid "81034EDA-4146-162A-70BE-37A47E3D21C5";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "835D967D-451D-E3CB-DEB0-908B6A8A89F5";
+	rename -uid "51833202-4CB9-9B0D-FB72-6FA1AAC971F0";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AE5D295A-4818-4C61-0239-EC89FC4B301A";
+	rename -uid "F3DAFAA2-4DB2-0AA1-62B6-FBB95EF6F293";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "22E57F6B-4334-A0D4-5174-ABBBF08985D4";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2C5F35C0-44FB-63ED-2DA3-6693272436D4";
+	rename -uid "2B9DE4D2-4DB3-82BD-3E42-02B6D7B951D2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "998E275D-47F4-0442-3A0B-D7AF6B148BD5";
 	setAttr ".g" yes;
@@ -186,7 +184,7 @@ createNode reference -n "bedroomRN";
 	setAttr -s 2 ".fn";
 	setAttr ".fn[0]" -type "string" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
 	setAttr ".fn[1]" -type "string" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/WIP/bedroom.ma";
-	setAttr -s 21 ".phl";
+	setAttr -s 383 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -208,6 +206,368 @@ createNode reference -n "bedroomRN";
 	setAttr ".phl[19]" 0;
 	setAttr ".phl[20]" 0;
 	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
+	setAttr ".phl[89]" 0;
+	setAttr ".phl[90]" 0;
+	setAttr ".phl[91]" 0;
+	setAttr ".phl[92]" 0;
+	setAttr ".phl[93]" 0;
+	setAttr ".phl[94]" 0;
+	setAttr ".phl[95]" 0;
+	setAttr ".phl[96]" 0;
+	setAttr ".phl[97]" 0;
+	setAttr ".phl[98]" 0;
+	setAttr ".phl[99]" 0;
+	setAttr ".phl[100]" 0;
+	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
+	setAttr ".phl[108]" 0;
+	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
+	setAttr ".phl[118]" 0;
+	setAttr ".phl[119]" 0;
+	setAttr ".phl[120]" 0;
+	setAttr ".phl[121]" 0;
+	setAttr ".phl[122]" 0;
+	setAttr ".phl[123]" 0;
+	setAttr ".phl[124]" 0;
+	setAttr ".phl[125]" 0;
+	setAttr ".phl[126]" 0;
+	setAttr ".phl[127]" 0;
+	setAttr ".phl[128]" 0;
+	setAttr ".phl[129]" 0;
+	setAttr ".phl[130]" 0;
+	setAttr ".phl[131]" 0;
+	setAttr ".phl[132]" 0;
+	setAttr ".phl[133]" 0;
+	setAttr ".phl[134]" 0;
+	setAttr ".phl[135]" 0;
+	setAttr ".phl[136]" 0;
+	setAttr ".phl[137]" 0;
+	setAttr ".phl[138]" 0;
+	setAttr ".phl[139]" 0;
+	setAttr ".phl[140]" 0;
+	setAttr ".phl[141]" 0;
+	setAttr ".phl[142]" 0;
+	setAttr ".phl[143]" 0;
+	setAttr ".phl[144]" 0;
+	setAttr ".phl[145]" 0;
+	setAttr ".phl[146]" 0;
+	setAttr ".phl[147]" 0;
+	setAttr ".phl[148]" 0;
+	setAttr ".phl[149]" 0;
+	setAttr ".phl[150]" 0;
+	setAttr ".phl[151]" 0;
+	setAttr ".phl[152]" 0;
+	setAttr ".phl[153]" 0;
+	setAttr ".phl[154]" 0;
+	setAttr ".phl[155]" 0;
+	setAttr ".phl[156]" 0;
+	setAttr ".phl[157]" 0;
+	setAttr ".phl[158]" 0;
+	setAttr ".phl[159]" 0;
+	setAttr ".phl[160]" 0;
+	setAttr ".phl[161]" 0;
+	setAttr ".phl[162]" 0;
+	setAttr ".phl[163]" 0;
+	setAttr ".phl[164]" 0;
+	setAttr ".phl[165]" 0;
+	setAttr ".phl[166]" 0;
+	setAttr ".phl[167]" 0;
+	setAttr ".phl[168]" 0;
+	setAttr ".phl[169]" 0;
+	setAttr ".phl[170]" 0;
+	setAttr ".phl[171]" 0;
+	setAttr ".phl[172]" 0;
+	setAttr ".phl[173]" 0;
+	setAttr ".phl[174]" 0;
+	setAttr ".phl[175]" 0;
+	setAttr ".phl[176]" 0;
+	setAttr ".phl[177]" 0;
+	setAttr ".phl[178]" 0;
+	setAttr ".phl[179]" 0;
+	setAttr ".phl[180]" 0;
+	setAttr ".phl[181]" 0;
+	setAttr ".phl[182]" 0;
+	setAttr ".phl[183]" 0;
+	setAttr ".phl[184]" 0;
+	setAttr ".phl[185]" 0;
+	setAttr ".phl[186]" 0;
+	setAttr ".phl[187]" 0;
+	setAttr ".phl[188]" 0;
+	setAttr ".phl[189]" 0;
+	setAttr ".phl[190]" 0;
+	setAttr ".phl[191]" 0;
+	setAttr ".phl[192]" 0;
+	setAttr ".phl[193]" 0;
+	setAttr ".phl[194]" 0;
+	setAttr ".phl[195]" 0;
+	setAttr ".phl[196]" 0;
+	setAttr ".phl[197]" 0;
+	setAttr ".phl[198]" 0;
+	setAttr ".phl[199]" 0;
+	setAttr ".phl[200]" 0;
+	setAttr ".phl[201]" 0;
+	setAttr ".phl[202]" 0;
+	setAttr ".phl[203]" 0;
+	setAttr ".phl[204]" 0;
+	setAttr ".phl[205]" 0;
+	setAttr ".phl[206]" 0;
+	setAttr ".phl[207]" 0;
+	setAttr ".phl[208]" 0;
+	setAttr ".phl[209]" 0;
+	setAttr ".phl[210]" 0;
+	setAttr ".phl[211]" 0;
+	setAttr ".phl[212]" 0;
+	setAttr ".phl[213]" 0;
+	setAttr ".phl[214]" 0;
+	setAttr ".phl[215]" 0;
+	setAttr ".phl[216]" 0;
+	setAttr ".phl[217]" 0;
+	setAttr ".phl[218]" 0;
+	setAttr ".phl[219]" 0;
+	setAttr ".phl[220]" 0;
+	setAttr ".phl[221]" 0;
+	setAttr ".phl[222]" 0;
+	setAttr ".phl[223]" 0;
+	setAttr ".phl[224]" 0;
+	setAttr ".phl[225]" 0;
+	setAttr ".phl[226]" 0;
+	setAttr ".phl[227]" 0;
+	setAttr ".phl[228]" 0;
+	setAttr ".phl[229]" 0;
+	setAttr ".phl[230]" 0;
+	setAttr ".phl[231]" 0;
+	setAttr ".phl[232]" 0;
+	setAttr ".phl[233]" 0;
+	setAttr ".phl[234]" 0;
+	setAttr ".phl[235]" 0;
+	setAttr ".phl[236]" 0;
+	setAttr ".phl[237]" 0;
+	setAttr ".phl[238]" 0;
+	setAttr ".phl[239]" 0;
+	setAttr ".phl[240]" 0;
+	setAttr ".phl[241]" 0;
+	setAttr ".phl[242]" 0;
+	setAttr ".phl[243]" 0;
+	setAttr ".phl[244]" 0;
+	setAttr ".phl[245]" 0;
+	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
+	setAttr ".phl[288]" 0;
+	setAttr ".phl[289]" 0;
+	setAttr ".phl[290]" 0;
+	setAttr ".phl[291]" 0;
+	setAttr ".phl[292]" 0;
+	setAttr ".phl[293]" 0;
+	setAttr ".phl[294]" 0;
+	setAttr ".phl[295]" 0;
+	setAttr ".phl[296]" 0;
+	setAttr ".phl[297]" 0;
+	setAttr ".phl[298]" 0;
+	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
+	setAttr ".phl[355]" 0;
+	setAttr ".phl[356]" 0;
+	setAttr ".phl[357]" 0;
+	setAttr ".phl[358]" 0;
+	setAttr ".phl[359]" 0;
+	setAttr ".phl[360]" 0;
+	setAttr ".phl[361]" 0;
+	setAttr ".phl[362]" 0;
+	setAttr ".phl[363]" 0;
+	setAttr ".phl[364]" 0;
+	setAttr ".phl[365]" 0;
+	setAttr ".phl[366]" 0;
+	setAttr ".phl[367]" 0;
+	setAttr ".phl[368]" 0;
+	setAttr ".phl[369]" 0;
+	setAttr ".phl[370]" 0;
+	setAttr ".phl[371]" 0;
+	setAttr ".phl[372]" 0;
+	setAttr ".phl[373]" 0;
+	setAttr ".phl[374]" 0;
+	setAttr ".phl[375]" 0;
+	setAttr ".phl[376]" 0;
+	setAttr ".phl[377]" 0;
+	setAttr ".phl[378]" 0;
+	setAttr ".phl[379]" 0;
+	setAttr ".phl[380]" 0;
+	setAttr ".phl[381]" 0;
+	setAttr ".phl[382]" 0;
+	setAttr ".phl[383]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroomRN"
 		"bedroomRN" 579
@@ -1368,7 +1728,370 @@ createNode reference -n "bedroomRN";
 		" -type \"string\" \"polymesh\""
 		2 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Lid|bedroom:LidShape" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
-		"bedroomRN" 21
+		"bedroomRN" 384
+		2 "|bedroom:camera1|bedroom:cameraShape1" "renderable" " 0"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster9|bedroom:Poster9Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster8|bedroom:Poster8Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster7|bedroom:Poster7Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Tape5|bedroom:Tape5Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Tape4|bedroom:Tape4Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster6|bedroom:Poster6Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster5|bedroom:Poster5Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Tape3|bedroom:Tape3Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Tape2|bedroom:Tape2Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster4|bedroom:Poster4Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster3|bedroom:Poster3Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster2|bedroom:Poster2Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Tape1|bedroom:Tape1Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster1|bedroom:Poster1Shape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster|bedroom:PosterShape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Posters|bedroom:Tape|bedroom:TapeShape.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Paper|bedroom:pPlane4|bedroom:pPlaneShape4.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Paper|bedroom:pPlane3|bedroom:pPlaneShape3.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Paper|bedroom:pPlane2|bedroom:pPlaneShape2.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Paper|bedroom:pPlane1|bedroom:pPlaneShape1.instObjGroups" 
+		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame|bedroom:Window_FrameShape.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame1|bedroom:Window_FrameShape1.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame11|bedroom:Window_FrameShape11.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame10|bedroom:Window_FrameShape10.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame9|bedroom:Window_FrameShape9.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame8|bedroom:Window_FrameShape8.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame7|bedroom:Window_FrameShape7.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame6|bedroom:Window_FrameShape6.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame5|bedroom:Window_FrameShape5.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame4|bedroom:Window_FrameShape4.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame3|bedroom:Window_FrameShape3.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame2|bedroom:Window_FrameShape2.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Walls|bedroom:Wall_3|bedroom:Wall_3Shape.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Walls|bedroom:Wall_2|bedroom:Wall_2Shape.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Walls|bedroom:Wall_1|bedroom:Wall_1Shape.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Walls|bedroom:Floor_board_1|bedroom:Floor_board_Shape1.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Walls|bedroom:Floor_board_2|bedroom:Floor_board_Shape2.instObjGroups" 
+		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Ceiling|bedroom:CeilingShape.instObjGroups" "bedroom:rsMaterial10SG.dagSetMembers" 
+		"-na"
+		3 "|bedroom:Room|bedroom:Floor|bedroom:FloorShape.instObjGroups" "bedroom:rsMaterial10SG.dagSetMembers" 
+		"-na"
+		3 "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_1|bedroom:Curtain_Shape1.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_2|bedroom:Curtain_Shape2.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_2|bedroom:Rod_Back_Shape2.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_1|bedroom:Rod_Back_Shape1.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring5|bedroom:RingShape5.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring4|bedroom:RingShape4.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring3|bedroom:RingShape3.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring2|bedroom:RingShape2.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring1|bedroom:RingShape1.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring|bedroom:RingShape.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod|bedroom:RodShape.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_2|bedroom:Rod_End_Shape2.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_1|bedroom:Rod_End_1Shape.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Back|bedroom:Shelf_BackShape.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Left_board|bedroom:Shelf_Left_boardShape.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Right_board|bedroom:Shelf_Right_boardShape.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Top_board|bedroom:Shelf_Top_boardShape.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_1|bedroom:Shelf_board_Shape1.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_2|bedroom:Shelf_board_Shape2.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_3|bedroom:Shelf_board_Shape3.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_4|bedroom:Shelf_board_Shape4.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_5|bedroom:Shelf_board_Shape5.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Lid|bedroom:LidShape.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Box|bedroom:BoxShape.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_4|bedroom:Leg_Shape4.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_3|bedroom:Leg_Shape3.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_1|bedroom:Leg_Shape1.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_2|bedroom:Leg_Shape2.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Lid|bedroom:LidShape.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Box|bedroom:BoxShape.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_4|bedroom:Leg_Shape4.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_3|bedroom:Leg_Shape3.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_1|bedroom:Leg_Shape1.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_2|bedroom:Leg_Shape2.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page4|bedroom:PageShape4.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page3|bedroom:PageShape3.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page2|bedroom:PageShape2.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Book_Cover|bedroom:Book_CoverShape.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page1|bedroom:PageShape1.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page|bedroom:PageShape.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page5|bedroom:PageShape5.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page6|bedroom:PageShape6.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book50|bedroom:BookShape50.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book51|bedroom:BookShape51.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book52|bedroom:BookShape52.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book53|bedroom:BookShape53.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book54|bedroom:BookShape54.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book49|bedroom:BookShape49.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book48|bedroom:BookShape48.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book47|bedroom:BookShape47.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book46|bedroom:BookShape46.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book45|bedroom:BookShape45.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book44|bedroom:BookShape44.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book43|bedroom:BookShape43.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book42|bedroom:BookShape42.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book41|bedroom:BookShape41.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book40|bedroom:BookShape40.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book39|bedroom:BookShape39.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book38|bedroom:BookShape38.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book37|bedroom:BookShape37.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book36|bedroom:BookShape36.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book35|bedroom:BookShape35.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book34|bedroom:BookShape34.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book33|bedroom:BookShape33.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book32|bedroom:BookShape32.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book31|bedroom:BookShape31.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book30|bedroom:BookShape30.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book29|bedroom:BookShape29.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book28|bedroom:BookShape28.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book27|bedroom:BookShape27.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book26|bedroom:BookShape26.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book25|bedroom:BookShape25.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book24|bedroom:BookShape24.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book23|bedroom:BookShape23.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book22|bedroom:BookShape22.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book21|bedroom:BookShape21.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book20|bedroom:BookShape20.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book19|bedroom:BookShape19.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book18|bedroom:BookShape18.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book17|bedroom:BookShape17.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book16|bedroom:BookShape16.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:BookShape15.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book14|bedroom:BookShape14.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book13|bedroom:BookShape13.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book12|bedroom:BookShape12.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book11|bedroom:BookShape11.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book10|bedroom:BookShape10.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book9|bedroom:BookShape9.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book8|bedroom:BookShape8.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book7|bedroom:BookShape7.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book6|bedroom:BookShape6.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book5|bedroom:BookShape5.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book4|bedroom:BookShape4.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book3|bedroom:BookShape3.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book2|bedroom:BookShape2.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book1|bedroom:BookShape1.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Books|bedroom:Book|bedroom:BookShape.instObjGroups" 
+		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block|bedroom:BlockShape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block1|bedroom:BlockShape1.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block2|bedroom:BlockShape2.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block3|bedroom:BlockShape3.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block4|bedroom:BlockShape4.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block5|bedroom:BlockShape5.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block6|bedroom:BlockShape6.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block7|bedroom:BlockShape7.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block8|bedroom:BlockShape8.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block9|bedroom:BlockShape9.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block10|bedroom:BlockShape10.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block11|bedroom:BlockShape11.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block12|bedroom:BlockShape12.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block13|bedroom:BlockShape13.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block14|bedroom:BlockShape14.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block15|bedroom:BlockShape15.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block16|bedroom:BlockShape16.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block17|bedroom:BlockShape17.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon4|bedroom:Crayon4Shape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon3|bedroom:Crayon3Shape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon2|bedroom:Crayon2Shape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon|bedroom:CrayonShape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon1|bedroom:Crayon1Shape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Lamp|bedroom:LampBase|bedroom:LampBaseShape.instObjGroups" 
+		"bedroom:rsMaterial1SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Lamp|bedroom:Lightbulb|bedroom:LightbulbShape.instObjGroups" 
+		"bedroom:rsMaterial1SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Lamp|bedroom:LampShade|bedroom:LampShadeShape.instObjGroups" 
+		"bedroom:rsMaterial1SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Ball|bedroom:BallShape.instObjGroups" "bedroom:rsMaterial1SG.dagSetMembers" 
+		"-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:Pillow|bedroom:PillowShape.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube16|bedroom:pCubeShape16.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube8|bedroom:pCubeShape27.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube9|bedroom:pCubeShape9.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube10|bedroom:pCubeShape10.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube11|bedroom:pCubeShape11.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube12|bedroom:pCubeShape12.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube13|bedroom:pCubeShape13.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube14|bedroom:pCubeShape14.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube15|bedroom:pCubeShape15.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube7|bedroom:pCubeShape26.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube6|bedroom:pCubeShape25.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube5|bedroom:pCubeShape5.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube4|bedroom:pCubeShape4.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube3|bedroom:pCubeShape3.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube2|bedroom:pCubeShape24.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube1|bedroom:pCubeShape23.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Rug|bedroom:outputCloth1.instObjGroups" "bedroom:rsMaterial8SG.dagSetMembers" 
+		"-na"
 		5 4 "bedroomRN" "|bedroom:Room.drawOverride" "bedroomRN.placeHolderList[1]" 
 		""
 		5 4 "bedroomRN" "|bedroom:camera1.translateX" "bedroomRN.placeHolderList[2]" 
@@ -1410,7 +2133,550 @@ createNode reference -n "bedroomRN";
 		5 4 "bedroomRN" "|bedroom:place3dTexture1.scaleY" "bedroomRN.placeHolderList[20]" 
 		""
 		5 4 "bedroomRN" "|bedroom:place3dTexture1.scaleZ" "bedroomRN.placeHolderList[21]" 
-		"";
+		""
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Lid|bedroom:LidShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[22]" 
+		"bedroomRN.placeHolderList[23]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Box|bedroom:BoxShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[24]" 
+		"bedroomRN.placeHolderList[25]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_4|bedroom:Leg_Shape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[26]" 
+		"bedroomRN.placeHolderList[27]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_3|bedroom:Leg_Shape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[28]" 
+		"bedroomRN.placeHolderList[29]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_1|bedroom:Leg_Shape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[30]" 
+		"bedroomRN.placeHolderList[31]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_2|bedroom:Leg_Shape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[32]" 
+		"bedroomRN.placeHolderList[33]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest|bedroom:Lid|bedroom:LidShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[34]" 
+		"bedroomRN.placeHolderList[35]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest|bedroom:Box|bedroom:BoxShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[36]" 
+		"bedroomRN.placeHolderList[37]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_4|bedroom:Leg_Shape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[38]" 
+		"bedroomRN.placeHolderList[39]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_3|bedroom:Leg_Shape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[40]" 
+		"bedroomRN.placeHolderList[41]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_1|bedroom:Leg_Shape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[42]" 
+		"bedroomRN.placeHolderList[43]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_2|bedroom:Leg_Shape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[44]" 
+		"bedroomRN.placeHolderList[45]" "bedroom:rsMaterial9SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame|bedroom:Window_FrameShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[46]" 
+		"bedroomRN.placeHolderList[47]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame1|bedroom:Window_FrameShape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[48]" 
+		"bedroomRN.placeHolderList[49]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame11|bedroom:Window_FrameShape11.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[50]" 
+		"bedroomRN.placeHolderList[51]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame10|bedroom:Window_FrameShape10.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[52]" 
+		"bedroomRN.placeHolderList[53]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame9|bedroom:Window_FrameShape9.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[54]" 
+		"bedroomRN.placeHolderList[55]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame8|bedroom:Window_FrameShape8.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[56]" 
+		"bedroomRN.placeHolderList[57]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame7|bedroom:Window_FrameShape7.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[58]" 
+		"bedroomRN.placeHolderList[59]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame6|bedroom:Window_FrameShape6.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[60]" 
+		"bedroomRN.placeHolderList[61]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame5|bedroom:Window_FrameShape5.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[62]" 
+		"bedroomRN.placeHolderList[63]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame4|bedroom:Window_FrameShape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[64]" 
+		"bedroomRN.placeHolderList[65]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame3|bedroom:Window_FrameShape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[66]" 
+		"bedroomRN.placeHolderList[67]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame2|bedroom:Window_FrameShape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[68]" 
+		"bedroomRN.placeHolderList[69]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_1|bedroom:Curtain_Shape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[70]" 
+		"bedroomRN.placeHolderList[71]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_2|bedroom:Curtain_Shape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[72]" 
+		"bedroomRN.placeHolderList[73]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_2|bedroom:Rod_Back_Shape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[74]" 
+		"bedroomRN.placeHolderList[75]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_1|bedroom:Rod_Back_Shape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[76]" 
+		"bedroomRN.placeHolderList[77]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring5|bedroom:RingShape5.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[78]" 
+		"bedroomRN.placeHolderList[79]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring4|bedroom:RingShape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[80]" 
+		"bedroomRN.placeHolderList[81]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring3|bedroom:RingShape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[82]" 
+		"bedroomRN.placeHolderList[83]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring2|bedroom:RingShape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[84]" 
+		"bedroomRN.placeHolderList[85]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring1|bedroom:RingShape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[86]" 
+		"bedroomRN.placeHolderList[87]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring|bedroom:RingShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[88]" 
+		"bedroomRN.placeHolderList[89]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod|bedroom:RodShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[90]" 
+		"bedroomRN.placeHolderList[91]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_2|bedroom:Rod_End_Shape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[92]" 
+		"bedroomRN.placeHolderList[93]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_1|bedroom:Rod_End_1Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[94]" 
+		"bedroomRN.placeHolderList[95]" "bedroom:rsMaterial6SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block|bedroom:BlockShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[96]" 
+		"bedroomRN.placeHolderList[97]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block1|bedroom:BlockShape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[98]" 
+		"bedroomRN.placeHolderList[99]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block2|bedroom:BlockShape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[100]" 
+		"bedroomRN.placeHolderList[101]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block3|bedroom:BlockShape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[102]" 
+		"bedroomRN.placeHolderList[103]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block4|bedroom:BlockShape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[104]" 
+		"bedroomRN.placeHolderList[105]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block5|bedroom:BlockShape5.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[106]" 
+		"bedroomRN.placeHolderList[107]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block6|bedroom:BlockShape6.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[108]" 
+		"bedroomRN.placeHolderList[109]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block7|bedroom:BlockShape7.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[110]" 
+		"bedroomRN.placeHolderList[111]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block8|bedroom:BlockShape8.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[112]" 
+		"bedroomRN.placeHolderList[113]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block9|bedroom:BlockShape9.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[114]" 
+		"bedroomRN.placeHolderList[115]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block10|bedroom:BlockShape10.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[116]" 
+		"bedroomRN.placeHolderList[117]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block11|bedroom:BlockShape11.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[118]" 
+		"bedroomRN.placeHolderList[119]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block12|bedroom:BlockShape12.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[120]" 
+		"bedroomRN.placeHolderList[121]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block13|bedroom:BlockShape13.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[122]" 
+		"bedroomRN.placeHolderList[123]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block14|bedroom:BlockShape14.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[124]" 
+		"bedroomRN.placeHolderList[125]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block15|bedroom:BlockShape15.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[126]" 
+		"bedroomRN.placeHolderList[127]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block16|bedroom:BlockShape16.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[128]" 
+		"bedroomRN.placeHolderList[129]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Blocks|bedroom:Block17|bedroom:BlockShape17.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[130]" 
+		"bedroomRN.placeHolderList[131]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Walls|bedroom:Wall_3|bedroom:Wall_3Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[132]" 
+		"bedroomRN.placeHolderList[133]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Walls|bedroom:Wall_2|bedroom:Wall_2Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[134]" 
+		"bedroomRN.placeHolderList[135]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Walls|bedroom:Wall_1|bedroom:Wall_1Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[136]" 
+		"bedroomRN.placeHolderList[137]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Walls|bedroom:Floor_board_1|bedroom:Floor_board_Shape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[138]" 
+		"bedroomRN.placeHolderList[139]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Walls|bedroom:Floor_board_2|bedroom:Floor_board_Shape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[140]" 
+		"bedroomRN.placeHolderList[141]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page4|bedroom:PageShape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[142]" 
+		"bedroomRN.placeHolderList[143]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page3|bedroom:PageShape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[144]" 
+		"bedroomRN.placeHolderList[145]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page2|bedroom:PageShape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[146]" 
+		"bedroomRN.placeHolderList[147]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Book_Cover|bedroom:Book_CoverShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[148]" 
+		"bedroomRN.placeHolderList[149]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page1|bedroom:PageShape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[150]" 
+		"bedroomRN.placeHolderList[151]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page|bedroom:PageShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[152]" 
+		"bedroomRN.placeHolderList[153]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page5|bedroom:PageShape5.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[154]" 
+		"bedroomRN.placeHolderList[155]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page6|bedroom:PageShape6.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[156]" 
+		"bedroomRN.placeHolderList[157]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book50|bedroom:BookShape50.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[158]" 
+		"bedroomRN.placeHolderList[159]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book51|bedroom:BookShape51.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[160]" 
+		"bedroomRN.placeHolderList[161]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book52|bedroom:BookShape52.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[162]" 
+		"bedroomRN.placeHolderList[163]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book53|bedroom:BookShape53.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[164]" 
+		"bedroomRN.placeHolderList[165]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book54|bedroom:BookShape54.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[166]" 
+		"bedroomRN.placeHolderList[167]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book49|bedroom:BookShape49.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[168]" 
+		"bedroomRN.placeHolderList[169]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book48|bedroom:BookShape48.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[170]" 
+		"bedroomRN.placeHolderList[171]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book47|bedroom:BookShape47.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[172]" 
+		"bedroomRN.placeHolderList[173]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book46|bedroom:BookShape46.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[174]" 
+		"bedroomRN.placeHolderList[175]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book45|bedroom:BookShape45.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[176]" 
+		"bedroomRN.placeHolderList[177]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book44|bedroom:BookShape44.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[178]" 
+		"bedroomRN.placeHolderList[179]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book43|bedroom:BookShape43.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[180]" 
+		"bedroomRN.placeHolderList[181]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book42|bedroom:BookShape42.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[182]" 
+		"bedroomRN.placeHolderList[183]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book41|bedroom:BookShape41.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[184]" 
+		"bedroomRN.placeHolderList[185]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book40|bedroom:BookShape40.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[186]" 
+		"bedroomRN.placeHolderList[187]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book39|bedroom:BookShape39.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[188]" 
+		"bedroomRN.placeHolderList[189]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book38|bedroom:BookShape38.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[190]" 
+		"bedroomRN.placeHolderList[191]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book37|bedroom:BookShape37.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[192]" 
+		"bedroomRN.placeHolderList[193]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book36|bedroom:BookShape36.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[194]" 
+		"bedroomRN.placeHolderList[195]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book35|bedroom:BookShape35.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[196]" 
+		"bedroomRN.placeHolderList[197]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book34|bedroom:BookShape34.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[198]" 
+		"bedroomRN.placeHolderList[199]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book33|bedroom:BookShape33.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[200]" 
+		"bedroomRN.placeHolderList[201]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book32|bedroom:BookShape32.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[202]" 
+		"bedroomRN.placeHolderList[203]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book31|bedroom:BookShape31.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[204]" 
+		"bedroomRN.placeHolderList[205]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book30|bedroom:BookShape30.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[206]" 
+		"bedroomRN.placeHolderList[207]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book29|bedroom:BookShape29.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[208]" 
+		"bedroomRN.placeHolderList[209]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book28|bedroom:BookShape28.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[210]" 
+		"bedroomRN.placeHolderList[211]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book27|bedroom:BookShape27.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[212]" 
+		"bedroomRN.placeHolderList[213]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book26|bedroom:BookShape26.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[214]" 
+		"bedroomRN.placeHolderList[215]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book25|bedroom:BookShape25.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[216]" 
+		"bedroomRN.placeHolderList[217]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book24|bedroom:BookShape24.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[218]" 
+		"bedroomRN.placeHolderList[219]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book23|bedroom:BookShape23.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[220]" 
+		"bedroomRN.placeHolderList[221]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book22|bedroom:BookShape22.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[222]" 
+		"bedroomRN.placeHolderList[223]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book21|bedroom:BookShape21.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[224]" 
+		"bedroomRN.placeHolderList[225]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book20|bedroom:BookShape20.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[226]" 
+		"bedroomRN.placeHolderList[227]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book19|bedroom:BookShape19.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[228]" 
+		"bedroomRN.placeHolderList[229]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book18|bedroom:BookShape18.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[230]" 
+		"bedroomRN.placeHolderList[231]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book17|bedroom:BookShape17.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[232]" 
+		"bedroomRN.placeHolderList[233]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book16|bedroom:BookShape16.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[234]" 
+		"bedroomRN.placeHolderList[235]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:BookShape15.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[236]" 
+		"bedroomRN.placeHolderList[237]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book14|bedroom:BookShape14.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[238]" 
+		"bedroomRN.placeHolderList[239]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book13|bedroom:BookShape13.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[240]" 
+		"bedroomRN.placeHolderList[241]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book12|bedroom:BookShape12.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[242]" 
+		"bedroomRN.placeHolderList[243]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book11|bedroom:BookShape11.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[244]" 
+		"bedroomRN.placeHolderList[245]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book10|bedroom:BookShape10.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[246]" 
+		"bedroomRN.placeHolderList[247]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book9|bedroom:BookShape9.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[248]" 
+		"bedroomRN.placeHolderList[249]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book8|bedroom:BookShape8.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[250]" 
+		"bedroomRN.placeHolderList[251]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book7|bedroom:BookShape7.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[252]" 
+		"bedroomRN.placeHolderList[253]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book6|bedroom:BookShape6.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[254]" 
+		"bedroomRN.placeHolderList[255]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book5|bedroom:BookShape5.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[256]" 
+		"bedroomRN.placeHolderList[257]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book4|bedroom:BookShape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[258]" 
+		"bedroomRN.placeHolderList[259]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book3|bedroom:BookShape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[260]" 
+		"bedroomRN.placeHolderList[261]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book2|bedroom:BookShape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[262]" 
+		"bedroomRN.placeHolderList[263]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book1|bedroom:BookShape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[264]" 
+		"bedroomRN.placeHolderList[265]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Books|bedroom:Book|bedroom:BookShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[266]" 
+		"bedroomRN.placeHolderList[267]" "bedroom:rsMaterial3SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Lamp|bedroom:LampBase|bedroom:LampBaseShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[268]" 
+		"bedroomRN.placeHolderList[269]" "bedroom:rsMaterial1SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Lamp|bedroom:Lightbulb|bedroom:LightbulbShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[270]" 
+		"bedroomRN.placeHolderList[271]" "bedroom:rsMaterial1SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Lamp|bedroom:LampShade|bedroom:LampShadeShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[272]" 
+		"bedroomRN.placeHolderList[273]" "bedroom:rsMaterial1SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Back|bedroom:Shelf_BackShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[274]" 
+		"bedroomRN.placeHolderList[275]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Left_board|bedroom:Shelf_Left_boardShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[276]" 
+		"bedroomRN.placeHolderList[277]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Right_board|bedroom:Shelf_Right_boardShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[278]" 
+		"bedroomRN.placeHolderList[279]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Top_board|bedroom:Shelf_Top_boardShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[280]" 
+		"bedroomRN.placeHolderList[281]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_1|bedroom:Shelf_board_Shape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[282]" 
+		"bedroomRN.placeHolderList[283]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_2|bedroom:Shelf_board_Shape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[284]" 
+		"bedroomRN.placeHolderList[285]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_3|bedroom:Shelf_board_Shape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[286]" 
+		"bedroomRN.placeHolderList[287]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_4|bedroom:Shelf_board_Shape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[288]" 
+		"bedroomRN.placeHolderList[289]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_5|bedroom:Shelf_board_Shape5.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[290]" 
+		"bedroomRN.placeHolderList[291]" "bedroom:rsMaterial4SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster9|bedroom:Poster9Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[292]" 
+		"bedroomRN.placeHolderList[293]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster8|bedroom:Poster8Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[294]" 
+		"bedroomRN.placeHolderList[295]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster7|bedroom:Poster7Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[296]" 
+		"bedroomRN.placeHolderList[297]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Tape5|bedroom:Tape5Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[298]" 
+		"bedroomRN.placeHolderList[299]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Tape4|bedroom:Tape4Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[300]" 
+		"bedroomRN.placeHolderList[301]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster6|bedroom:Poster6Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[302]" 
+		"bedroomRN.placeHolderList[303]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster5|bedroom:Poster5Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[304]" 
+		"bedroomRN.placeHolderList[305]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Tape3|bedroom:Tape3Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[306]" 
+		"bedroomRN.placeHolderList[307]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Tape2|bedroom:Tape2Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[308]" 
+		"bedroomRN.placeHolderList[309]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster4|bedroom:Poster4Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[310]" 
+		"bedroomRN.placeHolderList[311]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster3|bedroom:Poster3Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[312]" 
+		"bedroomRN.placeHolderList[313]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster2|bedroom:Poster2Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[314]" 
+		"bedroomRN.placeHolderList[315]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Tape1|bedroom:Tape1Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[316]" 
+		"bedroomRN.placeHolderList[317]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster1|bedroom:Poster1Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[318]" 
+		"bedroomRN.placeHolderList[319]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Poster|bedroom:PosterShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[320]" 
+		"bedroomRN.placeHolderList[321]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Posters|bedroom:Tape|bedroom:TapeShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[322]" 
+		"bedroomRN.placeHolderList[323]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Crayons|bedroom:Crayon4|bedroom:Crayon4Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[324]" 
+		"bedroomRN.placeHolderList[325]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Crayons|bedroom:Crayon3|bedroom:Crayon3Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[326]" 
+		"bedroomRN.placeHolderList[327]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Crayons|bedroom:Crayon2|bedroom:Crayon2Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[328]" 
+		"bedroomRN.placeHolderList[329]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Crayons|bedroom:Crayon|bedroom:CrayonShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[330]" 
+		"bedroomRN.placeHolderList[331]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Crayons|bedroom:Crayon1|bedroom:Crayon1Shape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[332]" 
+		"bedroomRN.placeHolderList[333]" "bedroom:rsMaterial5SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Paper|bedroom:pPlane4|bedroom:pPlaneShape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[334]" 
+		"bedroomRN.placeHolderList[335]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Paper|bedroom:pPlane3|bedroom:pPlaneShape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[336]" 
+		"bedroomRN.placeHolderList[337]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Paper|bedroom:pPlane2|bedroom:pPlaneShape2.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[338]" 
+		"bedroomRN.placeHolderList[339]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Paper|bedroom:pPlane1|bedroom:pPlaneShape1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[340]" 
+		"bedroomRN.placeHolderList[341]" "bedroom:rsMaterial7SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:Pillow|bedroom:PillowShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[342]" 
+		"bedroomRN.placeHolderList[343]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube16|bedroom:pCubeShape16.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[344]" 
+		"bedroomRN.placeHolderList[345]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube8|bedroom:pCubeShape27.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[346]" 
+		"bedroomRN.placeHolderList[347]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube9|bedroom:pCubeShape9.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[348]" 
+		"bedroomRN.placeHolderList[349]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube10|bedroom:pCubeShape10.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[350]" 
+		"bedroomRN.placeHolderList[351]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube11|bedroom:pCubeShape11.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[352]" 
+		"bedroomRN.placeHolderList[353]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube12|bedroom:pCubeShape12.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[354]" 
+		"bedroomRN.placeHolderList[355]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube13|bedroom:pCubeShape13.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[356]" 
+		"bedroomRN.placeHolderList[357]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube14|bedroom:pCubeShape14.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[358]" 
+		"bedroomRN.placeHolderList[359]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube15|bedroom:pCubeShape15.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[360]" 
+		"bedroomRN.placeHolderList[361]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube7|bedroom:pCubeShape26.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[362]" 
+		"bedroomRN.placeHolderList[363]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube6|bedroom:pCubeShape25.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[364]" 
+		"bedroomRN.placeHolderList[365]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube5|bedroom:pCubeShape5.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[366]" 
+		"bedroomRN.placeHolderList[367]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube4|bedroom:pCubeShape4.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[368]" 
+		"bedroomRN.placeHolderList[369]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube3|bedroom:pCubeShape3.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[370]" 
+		"bedroomRN.placeHolderList[371]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube2|bedroom:pCubeShape24.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[372]" 
+		"bedroomRN.placeHolderList[373]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:BunkBed|bedroom:pCube1|bedroom:pCubeShape23.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[374]" 
+		"bedroomRN.placeHolderList[375]" "bedroom:rsMaterial2SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Rug|bedroom:outputCloth1.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[376]" 
+		"bedroomRN.placeHolderList[377]" "bedroom:rsMaterial8SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Ceiling|bedroom:CeilingShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[378]" 
+		"bedroomRN.placeHolderList[379]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Floor|bedroom:FloorShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[380]" 
+		"bedroomRN.placeHolderList[381]" "bedroom:rsMaterial10SG.dsm"
+		5 0 "bedroomRN" "|bedroom:Room|bedroom:Ball|bedroom:BallShape.instObjGroups" 
+		"bedroom:SmallKid_baseGeo_001_initialShadingGroup.dagSetMembers" "bedroomRN.placeHolderList[382]" 
+		"bedroomRN.placeHolderList[383]" "bedroom:rsMaterial1SG.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
@@ -2885,7 +4151,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl" 
 		"rotateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_IK_Controls|YoungerBrother:L_Arm_IK_Handle_ctl_grp|YoungerBrother:L_Arm_IK_Handle_ctl" 
-		"translate" " -type \"double3\" -6.86777618675746204 11.26454362207744531 10.07038647291608235"
+		"translate" " -type \"double3\" -6.9048044964741484 11.25016513462074563 10.00058746611046878"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_IK_Controls|YoungerBrother:L_Arm_IK_Handle_ctl_grp|YoungerBrother:L_Arm_IK_Handle_ctl" 
 		"translateX" " -av"
@@ -2894,7 +4160,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_IK_Controls|YoungerBrother:L_Arm_IK_Handle_ctl_grp|YoungerBrother:L_Arm_IK_Handle_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_IK_Controls|YoungerBrother:L_Arm_IK_Handle_ctl_grp|YoungerBrother:L_Arm_IK_Handle_ctl" 
-		"rotate" " -type \"double3\" -27.75062778244564043 20.21245987851686721 150.88065901057910878"
+		"rotate" " -type \"double3\" -27.7889125507852377 19.63301618768054624 150.87757242529210089"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_IK_Controls|YoungerBrother:L_Arm_IK_Handle_ctl_grp|YoungerBrother:L_Arm_IK_Handle_ctl" 
 		"rotateX" " -av"
@@ -2915,7 +4181,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl" 
 		"rotateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_IK_Handle_ctl_grp|YoungerBrother:R_Arm_IK_Handle_ctl" 
-		"translate" " -type \"double3\" -9.41989568507973729 12.55978953545280241 -15.72894145673005362"
+		"translate" " -type \"double3\" -11.38377553253326369 10.62167263312496424 -17.85616902286753316"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_IK_Handle_ctl_grp|YoungerBrother:R_Arm_IK_Handle_ctl" 
 		"translateX" " -av"
@@ -2924,7 +4190,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_IK_Handle_ctl_grp|YoungerBrother:R_Arm_IK_Handle_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_IK_Handle_ctl_grp|YoungerBrother:R_Arm_IK_Handle_ctl" 
-		"rotate" " -type \"double3\" 102.60963057700645606 -28.71276284723330008 134.71294143253402353"
+		"rotate" " -type \"double3\" 147.34309263342819918 -19.21824060276905399 128.8965996483910601"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_IK_Controls|YoungerBrother:R_Arm_IK_Handle_ctl_grp|YoungerBrother:R_Arm_IK_Handle_ctl" 
 		"rotateX" " -av"
@@ -2938,7 +4204,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl" 
 		"rotateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl" 
-		"rotate" " -type \"double3\" -4.57357710885828794 0 13.91906575053871364"
+		"rotate" " -type \"double3\" -4.07916449019705318 0 13.91906575053871364"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl" 
@@ -5543,17 +6809,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
 		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 575\n            -height 337\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1159\n            -height 717\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 574\n            -height 336\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 576\n            -height 336\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 575\n            -height 336\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 576\n            -height 336\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Main_Camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n"
 		+ "            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
 		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n"
-		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1156\n            -height 717\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
+		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1159\n            -height 717\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
 		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
 		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"<function selCom at 0x7f29c5c04aa0>\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
@@ -5579,8 +6845,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
 		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Main_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1156\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Main_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1156\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Main_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1159\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Main_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1159\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -6479,7 +7745,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
-		"translate" " -type \"double3\" -16.58140115177828733 -16.13795482682286675 5.01948365025953969"
+		"translate" " -type \"double3\" -23.26775342464772933 -21.14293238752130577 4.34898314244120066"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"translateX" " -av"
@@ -6504,7 +7770,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"scaleZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
-		"Blink" " -av -k 1 7.772"
+		"Blink" " -av -k 1 1.5"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"L_Up_Lid" " -av -k 1 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
@@ -6578,7 +7844,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
-		"rotate" " -type \"double3\" -10.19644478354091888 5.46201879858449768 1.03635873338529549"
+		"rotate" " -type \"double3\" 0.95861881739384802 8.38063934299091784 18.03858844987718513"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Head_ctrl_grp|OlderBrother1:Head_ctrl" 
 		"rotateX" " -av"
@@ -6643,7 +7909,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:L_Brow_ctrl_grp|OlderBrother1:L_Brow_ctrl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:L_Brow_ctrl_grp|OlderBrother1:L_Brow_ctrl" 
-		"translate" " -type \"double3\" -0.077845042088869679 0.089620502520730713 0"
+		"translate" " -type \"double3\" -0.4263858066678417 0.49088431627610118 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:L_Brow_ctrl_grp|OlderBrother1:L_Brow_ctrl" 
 		"translateY" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:L_Brow_ctrl_grp|OlderBrother1:L_Brow_ctrl" 
@@ -6653,7 +7919,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:R_Brow_ctrl_grp|OlderBrother1:R_Brow_ctrl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:R_Brow_ctrl_grp|OlderBrother1:R_Brow_ctrl" 
-		"translate" " -type \"double3\" -0.077845042088869679 0.089620502520730713 0"
+		"translate" " -type \"double3\" -0.4263858066678417 0.49088431627610118 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:R_Brow_ctrl_grp|OlderBrother1:R_Brow_ctrl" 
 		"translateY" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:R_Brow_ctrl_grp|OlderBrother1:R_Brow_ctrl" 
@@ -6663,7 +7929,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:COG_ctl_grp|OlderBrother1:COG_ctl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:COG_ctl_grp|OlderBrother1:COG_ctl" 
-		"translate" " -type \"double3\" 1.39824897095422473 -0.0001072541815398127 0.0010074582859376769"
+		"translate" " -type \"double3\" -0.21096379119493758 -0.46736755467866792 0.8365702877772061"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:COG_ctl_grp|OlderBrother1:COG_ctl" 
 		"translateX" " -av"
@@ -6672,7 +7938,8 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:COG_ctl_grp|OlderBrother1:COG_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:COG_ctl_grp|OlderBrother1:COG_ctl" 
-		"rotate" " -type \"double3\" 0 -0.005908197037344771 0"
+		"rotate" " -type \"double3\" 3.53082216418136152 -23.08858329477913074 -0.056900540123479781"
+		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:COG_ctl_grp|OlderBrother1:COG_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:COG_ctl_grp|OlderBrother1:COG_ctl" 
@@ -6694,7 +7961,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Hips_ctl_grp|OlderBrother1:Hips_ctl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Hips_ctl_grp|OlderBrother1:Hips_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0.1778241446514634 0 0.034675390813196177"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Hips_ctl_grp|OlderBrother1:Hips_ctl" 
 		"translateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Hips_ctl_grp|OlderBrother1:Hips_ctl" 
@@ -6702,7 +7969,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Hips_ctl_grp|OlderBrother1:Hips_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Hips_ctl_grp|OlderBrother1:Hips_ctl" 
-		"rotate" " -type \"double3\" 0 0.02950058221107945 0"
+		"rotate" " -type \"double3\" 0 1.47331569498074089 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Hips_ctl_grp|OlderBrother1:Hips_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Hips_ctl_grp|OlderBrother1:Hips_ctl" 
@@ -6732,7 +7999,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_01_ctl_grp|OlderBrother1:Spine_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_01_ctl_grp|OlderBrother1:Spine_01_ctl" 
-		"rotate" " -type \"double3\" -0.42648444344975595 0.038774824619848131 3.62297862863352904"
+		"rotate" " -type \"double3\" -7.77461471815820904 -1.5550357923414706 1.32071137064459654"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_01_ctl_grp|OlderBrother1:Spine_01_ctl" 
 		"rotateX" " -av"
@@ -6763,7 +8030,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_02_ctl_grp|OlderBrother1:Spine_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_02_ctl_grp|OlderBrother1:Spine_02_ctl" 
-		"rotate" " -type \"double3\" -0.33921156295507499 0.040639432090637882 0.25139559671335482"
+		"rotate" " -type \"double3\" -7.39341450749839257 -3.5365037831077375 0.83740204941801888"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_02_ctl_grp|OlderBrother1:Spine_02_ctl" 
 		"rotateX" " -av"
@@ -6794,7 +8061,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_03_ctl_grp|OlderBrother1:Spine_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_03_ctl_grp|OlderBrother1:Spine_03_ctl" 
-		"rotate" " -type \"double3\" -0.33921156295507582 0.040638865995422033 13.17709812410734393"
+		"rotate" " -type \"double3\" -7.3934145074983908 -3.53401405412442404 13.76310457681203658"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_03_ctl_grp|OlderBrother1:Spine_03_ctl" 
 		"rotateX" " -av"
@@ -6917,7 +8184,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_05_ctl_grp|OlderBrother1:Spine_05_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_05_ctl_grp|OlderBrother1:Spine_05_ctl" 
-		"rotate" " -type \"double3\" -9.08211967453084945 7.58541810690899343 5.44866215518494812"
+		"rotate" " -type \"double3\" -0.023205957695842123 0.01938169700492207 0.013922016886296516"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Spine_05_ctl_grp|OlderBrother1:Spine_05_ctl" 
 		"rotateX" " -av"
@@ -6948,7 +8215,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_01_ctl_grp|OlderBrother1:R_FK_Arm_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_01_ctl_grp|OlderBrother1:R_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" -4.69923218396832265 -4.90779647976681055 -51.51392770412070377"
+		"rotate" " -type \"double3\" -4.25653553495578763 0.79867649116916706 -60.13771942192546049"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_01_ctl_grp|OlderBrother1:R_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -6979,7 +8246,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_02_ctl_grp|OlderBrother1:R_FK_Arm_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_02_ctl_grp|OlderBrother1:R_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" 11.55699488701109168 80.41148806643712987 -9.1687237490785467"
+		"rotate" " -type \"double3\" 9.630459546328618 79.61419310277555894 -11.10777206588523924"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_02_ctl_grp|OlderBrother1:R_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -7010,7 +8277,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_03_ctl_grp|OlderBrother1:R_FK_Arm_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_03_ctl_grp|OlderBrother1:R_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" 31.45017717413556113 5.5981369063664026 -0.59753850916496987"
+		"rotate" " -type \"double3\" 52.38873556208334747 19.44351006755455558 -11.0261256311468312"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Arm_03_ctl_grp|OlderBrother1:R_FK_Arm_03_ctl" 
 		"rotateX" " -av"
@@ -7255,7 +8522,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Finger2_02_ctl_grp|OlderBrother1:R_FK_Finger2_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Finger2_02_ctl_grp|OlderBrother1:R_FK_Finger2_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -45.58845404903890852"
+		"rotate" " -type \"double3\" 0 0 -24.73358352780929792"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Finger2_02_ctl_grp|OlderBrother1:R_FK_Finger2_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls1|OlderBrother1:R_Arm_FK_Controls|OlderBrother1:R_FK_Finger2_02_ctl_grp|OlderBrother1:R_FK_Finger2_02_ctl" 
@@ -7498,7 +8765,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" -9.88911519667507299 4.29827834056402747 -58.82941562907133459"
+		"rotate" " -type \"double3\" -21.85704792887921144 0.9128214855262885 -57.46814846862130111"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_01_ctl_grp|OlderBrother1:L_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -7529,7 +8796,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" 63.67847503424287936 -94.25639406526198627 -113.20506791251210643"
+		"rotate" " -type \"double3\" -106.3328482361436329 -94.0606961281744276 57.90209925484526821"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_02_ctl_grp|OlderBrother1:L_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -7560,7 +8827,8 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" 18.20467579471348429 0 0"
+		"rotate" " -type \"double3\" -14.31628771137233791 -3.24466155832033909 -12.5050033955753559"
+		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls|OlderBrother1:L_Arm_FK_Controls|OlderBrother1:L_FK_Arm_03_ctl_grp|OlderBrother1:L_FK_Arm_03_ctl" 
@@ -8258,7 +9526,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls3|OlderBrother1:L_Leg_IK_Controls|OlderBrother1:L_Leg_PV_ctl_grp|OlderBrother1:L_Leg_PV_ctl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls3|OlderBrother1:L_Leg_IK_Controls|OlderBrother1:L_Leg_PV_ctl_grp|OlderBrother1:L_Leg_PV_ctl" 
-		"translate" " -type \"double3\" -0.001164723173570218 0.00014426289764563378 0.087334352087374292"
+		"translate" " -type \"double3\" -0.001164723173570218 0.00014426289764563378 -3.31666095617826873"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls3|OlderBrother1:L_Leg_IK_Controls|OlderBrother1:L_Leg_PV_ctl_grp|OlderBrother1:L_Leg_PV_ctl" 
 		"translateX" " -av"
@@ -8489,7 +9757,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Leg_PV_ctl_grp|OlderBrother1:R_Leg_PV_ctl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Leg_PV_ctl_grp|OlderBrother1:R_Leg_PV_ctl" 
-		"translate" " -type \"double3\" 0 0 0.9277851472562777"
+		"translate" " -type \"double3\" 0 0 -2.91377558028265371"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Leg_PV_ctl_grp|OlderBrother1:R_Leg_PV_ctl" 
 		"translateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Leg_PV_ctl_grp|OlderBrother1:R_Leg_PV_ctl" 
@@ -8527,104 +9795,104 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
-		"rotate" " -type \"double3\" 0.016588163549496333 0.0032557091339554412 -6.6472722776874548e-05"
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
+		"rotateX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
+		"rotateY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
+		"rotateZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
+		"scaleX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
+		"scaleY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
+		"scaleZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"visibility" " -av 1"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"translateX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"translateY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"translateZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"rotateX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"rotateY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"rotateZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"scaleX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"scaleY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
+		"scaleZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"visibility" " -av 1"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"translateX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"translateY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"translateZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"rotateX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"rotateY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"rotateZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"scaleX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"scaleY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
+		"scaleZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"visibility" " -av 1"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"translateX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"translateY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"translateZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"rotateX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"rotateY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"rotateZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"scaleX" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"scaleY" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
+		"scaleZ" " -av"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
+		"visibility" " -av 1"
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
+		"translate" " -type \"double3\" 0.21947280683688172 0.25998183165507882 1.50345171893369334"
 		
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
-		"rotateX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
-		"rotateY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
-		"rotateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
-		"scaleX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
-		"scaleY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Heel_loc_ctl_grp|OlderBrother1:R_Heel_loc_ctl" 
-		"scaleZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"visibility" " -av 1"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"translateX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"translateY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"translateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"rotateX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"rotateY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"rotateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"scaleX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"scaleY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Tiptoe_loc_ctl_grp|OlderBrother1:R_Tiptoe_loc_ctl" 
-		"scaleZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"visibility" " -av 1"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"translateX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"translateY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"translateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"rotateX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"rotateY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"rotateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"scaleX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"scaleY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Ball_loc_ctl_grp|OlderBrother1:R_Ball_loc_ctl" 
-		"scaleZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"visibility" " -av 1"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"translateX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"translateY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"translateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"rotateX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"rotateY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"rotateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"scale" " -type \"double3\" 1 1 1"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"scaleX" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"scaleY" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_ToeLifter_loc_ctl_grp|OlderBrother1:R_ToeLifter_loc_ctl" 
-		"scaleZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
-		"visibility" " -av 1"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
-		"translate" " -type \"double3\" 2.52698007487495957 0 0.015839160234195165"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
 		"translateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
@@ -8632,7 +9900,7 @@ createNode reference -n "OlderBrotherRN";
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
-		"rotate" " -type \"double3\" 0 -0.2508340217910025 0"
+		"rotate" " -type \"double3\" 0 -43.25288452798996985 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
@@ -10408,7 +11676,6 @@ createNode RedshiftOptions -s -n "redshiftOptions";
 		"AAAA/wAAAAo/8AAAAAAAAAAAAAAAAAAAAAAAAf///////////////wAAAAAAAAAAAAAAAAAAAAgAegBpAHAAcwAAAAAAAAAGAGwAegB3AAAAXwAAAAAAAAACQFkAAAAAAAAAAAACAAAABgAAALwAQwA6AFwAVQBzAGUAcgBzAFwAYwBsAGEAdQBkAFwARABvAGMAdQBtAGUAbgB0AHMAXABDAG8AbABsAGUAZwBlAFMAdAB1AGYAZgBcAEwAaQBnAGgAdABpAG4AZwBQAHIAYQBjAHQAaQBjAGUAXABMAGkAZwBoAHQAaQBuAGcAUAByAGEAYwB0AGkAYwBlAFwARABlAHMAZQBjAHIAYQB0AGUAZABGAGwAZQBzAGgAXABpAG0AYQBnAGUAcwAAAAAAAABAAEMAOgAvAFAAcgBvAGcAcgBhAG0ARABhAHQAYQAvAFIAZQBkAHMAaABpAGYAdAAvAEQAYQB0AGEALwBMAFUAVAAAAO4AQwA6AC8AVQBzAGUAcgBzAC8AYwBsAGEAdQBkAC8ARABvAGMAdQBtAGUAbgB0AHMALwBDAG8AbABsAGUAZwBlAFMAdAB1AGYAZgAvAHMAZQBuAGkAbwByAC0AawBhAGkAagB1AC0AZgBpAGwAbQAvAFMAbgBhAGMAawB0AGkAbQBlAF8ASABvAHUAZABpAG4AaQBNAGEAeQBhAC8AUwBjAGUAbgBlAHMALwBTAGUAdABzAC0ARQBuAHYAaQByAG8AbgBtAGUAbgB0AHMALwBiAGUAZAByAG8AbwBtAC8AMAAxAF8ATQBvAGQAZQBsAAAASABDADoALwBQAHIAbwBnAHIAYQBtAEQAYQB0AGEALwBSAGUAZABzAGgAaQBmAHQALwBEAGEAdABhAC8AUAByAGUAcwBlAHQAcwAAAEIAQwA6AC8AUAByAG8AZwByAGEAbQBEAGEAdABhAC8AUgBlAGQAcwBoAGkAZgB0AC8ARABhAHQAYQAvAFQAZQBtAHAAAAABAAAAAQAAAFQARgByAGEAbQBlACAAPABmAHIAYQBtAGUAPgA6ACAAPABkAGEAdABlAD4AIAA8AHQAaQBtAGUAPgAgACgAPABmAHIAYQBtAGUAdABpAG0AZQA+ACkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAAA/8AAAAAAAAD/wAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA/8AAAAAAAAD/wAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA/8AAAAAAAAD/wAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA/8AAAAAAAAD/wAAAAAAAAAAAAP/AAAAAAAAAAAAE=");
 createNode displayLayer -n "layer1";
 	rename -uid "7DBA72CE-4391-6979-E83D-DB9561B94E78";
-	setAttr ".dt" 1;
 	setAttr ".do" 1;
 createNode animCurveTL -n "COG_ctl_translateX";
 	rename -uid "5EA1941B-4D10-0081-D0C3-ED8B1DA4B44E";
@@ -22505,8 +23772,8 @@ createNode animCurveTU -n "TopCookie_ctl_scaleZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 0.3500840573105416;
 select -ne :time1;
-	setAttr ".o" 3;
-	setAttr ".unw" 3;
+	setAttr ".o" 60;
+	setAttr ".unw" 60;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -22533,7 +23800,10 @@ select -ne :initialShadingGroup;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultResolution;
+	setAttr ".w" 1920;
+	setAttr ".h" 1080;
 	setAttr ".pa" 1;
+	setAttr ".dar" 1.7777777910232544;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
@@ -22562,6 +23832,187 @@ connectAttr "place3dTexture1_translateZ.o" "bedroomRN.phl[18]";
 connectAttr "place3dTexture1_scaleX.o" "bedroomRN.phl[19]";
 connectAttr "place3dTexture1_scaleY.o" "bedroomRN.phl[20]";
 connectAttr "place3dTexture1_scaleZ.o" "bedroomRN.phl[21]";
+connectAttr "bedroomRN.phl[22]" "bedroomRN.phl[23]";
+connectAttr "bedroomRN.phl[24]" "bedroomRN.phl[25]";
+connectAttr "bedroomRN.phl[26]" "bedroomRN.phl[27]";
+connectAttr "bedroomRN.phl[28]" "bedroomRN.phl[29]";
+connectAttr "bedroomRN.phl[30]" "bedroomRN.phl[31]";
+connectAttr "bedroomRN.phl[32]" "bedroomRN.phl[33]";
+connectAttr "bedroomRN.phl[34]" "bedroomRN.phl[35]";
+connectAttr "bedroomRN.phl[36]" "bedroomRN.phl[37]";
+connectAttr "bedroomRN.phl[38]" "bedroomRN.phl[39]";
+connectAttr "bedroomRN.phl[40]" "bedroomRN.phl[41]";
+connectAttr "bedroomRN.phl[42]" "bedroomRN.phl[43]";
+connectAttr "bedroomRN.phl[44]" "bedroomRN.phl[45]";
+connectAttr "bedroomRN.phl[46]" "bedroomRN.phl[47]";
+connectAttr "bedroomRN.phl[48]" "bedroomRN.phl[49]";
+connectAttr "bedroomRN.phl[50]" "bedroomRN.phl[51]";
+connectAttr "bedroomRN.phl[52]" "bedroomRN.phl[53]";
+connectAttr "bedroomRN.phl[54]" "bedroomRN.phl[55]";
+connectAttr "bedroomRN.phl[56]" "bedroomRN.phl[57]";
+connectAttr "bedroomRN.phl[58]" "bedroomRN.phl[59]";
+connectAttr "bedroomRN.phl[60]" "bedroomRN.phl[61]";
+connectAttr "bedroomRN.phl[62]" "bedroomRN.phl[63]";
+connectAttr "bedroomRN.phl[64]" "bedroomRN.phl[65]";
+connectAttr "bedroomRN.phl[66]" "bedroomRN.phl[67]";
+connectAttr "bedroomRN.phl[68]" "bedroomRN.phl[69]";
+connectAttr "bedroomRN.phl[70]" "bedroomRN.phl[71]";
+connectAttr "bedroomRN.phl[72]" "bedroomRN.phl[73]";
+connectAttr "bedroomRN.phl[74]" "bedroomRN.phl[75]";
+connectAttr "bedroomRN.phl[76]" "bedroomRN.phl[77]";
+connectAttr "bedroomRN.phl[78]" "bedroomRN.phl[79]";
+connectAttr "bedroomRN.phl[80]" "bedroomRN.phl[81]";
+connectAttr "bedroomRN.phl[82]" "bedroomRN.phl[83]";
+connectAttr "bedroomRN.phl[84]" "bedroomRN.phl[85]";
+connectAttr "bedroomRN.phl[86]" "bedroomRN.phl[87]";
+connectAttr "bedroomRN.phl[88]" "bedroomRN.phl[89]";
+connectAttr "bedroomRN.phl[90]" "bedroomRN.phl[91]";
+connectAttr "bedroomRN.phl[92]" "bedroomRN.phl[93]";
+connectAttr "bedroomRN.phl[94]" "bedroomRN.phl[95]";
+connectAttr "bedroomRN.phl[96]" "bedroomRN.phl[97]";
+connectAttr "bedroomRN.phl[98]" "bedroomRN.phl[99]";
+connectAttr "bedroomRN.phl[100]" "bedroomRN.phl[101]";
+connectAttr "bedroomRN.phl[102]" "bedroomRN.phl[103]";
+connectAttr "bedroomRN.phl[104]" "bedroomRN.phl[105]";
+connectAttr "bedroomRN.phl[106]" "bedroomRN.phl[107]";
+connectAttr "bedroomRN.phl[108]" "bedroomRN.phl[109]";
+connectAttr "bedroomRN.phl[110]" "bedroomRN.phl[111]";
+connectAttr "bedroomRN.phl[112]" "bedroomRN.phl[113]";
+connectAttr "bedroomRN.phl[114]" "bedroomRN.phl[115]";
+connectAttr "bedroomRN.phl[116]" "bedroomRN.phl[117]";
+connectAttr "bedroomRN.phl[118]" "bedroomRN.phl[119]";
+connectAttr "bedroomRN.phl[120]" "bedroomRN.phl[121]";
+connectAttr "bedroomRN.phl[122]" "bedroomRN.phl[123]";
+connectAttr "bedroomRN.phl[124]" "bedroomRN.phl[125]";
+connectAttr "bedroomRN.phl[126]" "bedroomRN.phl[127]";
+connectAttr "bedroomRN.phl[128]" "bedroomRN.phl[129]";
+connectAttr "bedroomRN.phl[130]" "bedroomRN.phl[131]";
+connectAttr "bedroomRN.phl[132]" "bedroomRN.phl[133]";
+connectAttr "bedroomRN.phl[134]" "bedroomRN.phl[135]";
+connectAttr "bedroomRN.phl[136]" "bedroomRN.phl[137]";
+connectAttr "bedroomRN.phl[138]" "bedroomRN.phl[139]";
+connectAttr "bedroomRN.phl[140]" "bedroomRN.phl[141]";
+connectAttr "bedroomRN.phl[142]" "bedroomRN.phl[143]";
+connectAttr "bedroomRN.phl[144]" "bedroomRN.phl[145]";
+connectAttr "bedroomRN.phl[146]" "bedroomRN.phl[147]";
+connectAttr "bedroomRN.phl[148]" "bedroomRN.phl[149]";
+connectAttr "bedroomRN.phl[150]" "bedroomRN.phl[151]";
+connectAttr "bedroomRN.phl[152]" "bedroomRN.phl[153]";
+connectAttr "bedroomRN.phl[154]" "bedroomRN.phl[155]";
+connectAttr "bedroomRN.phl[156]" "bedroomRN.phl[157]";
+connectAttr "bedroomRN.phl[158]" "bedroomRN.phl[159]";
+connectAttr "bedroomRN.phl[160]" "bedroomRN.phl[161]";
+connectAttr "bedroomRN.phl[162]" "bedroomRN.phl[163]";
+connectAttr "bedroomRN.phl[164]" "bedroomRN.phl[165]";
+connectAttr "bedroomRN.phl[166]" "bedroomRN.phl[167]";
+connectAttr "bedroomRN.phl[168]" "bedroomRN.phl[169]";
+connectAttr "bedroomRN.phl[170]" "bedroomRN.phl[171]";
+connectAttr "bedroomRN.phl[172]" "bedroomRN.phl[173]";
+connectAttr "bedroomRN.phl[174]" "bedroomRN.phl[175]";
+connectAttr "bedroomRN.phl[176]" "bedroomRN.phl[177]";
+connectAttr "bedroomRN.phl[178]" "bedroomRN.phl[179]";
+connectAttr "bedroomRN.phl[180]" "bedroomRN.phl[181]";
+connectAttr "bedroomRN.phl[182]" "bedroomRN.phl[183]";
+connectAttr "bedroomRN.phl[184]" "bedroomRN.phl[185]";
+connectAttr "bedroomRN.phl[186]" "bedroomRN.phl[187]";
+connectAttr "bedroomRN.phl[188]" "bedroomRN.phl[189]";
+connectAttr "bedroomRN.phl[190]" "bedroomRN.phl[191]";
+connectAttr "bedroomRN.phl[192]" "bedroomRN.phl[193]";
+connectAttr "bedroomRN.phl[194]" "bedroomRN.phl[195]";
+connectAttr "bedroomRN.phl[196]" "bedroomRN.phl[197]";
+connectAttr "bedroomRN.phl[198]" "bedroomRN.phl[199]";
+connectAttr "bedroomRN.phl[200]" "bedroomRN.phl[201]";
+connectAttr "bedroomRN.phl[202]" "bedroomRN.phl[203]";
+connectAttr "bedroomRN.phl[204]" "bedroomRN.phl[205]";
+connectAttr "bedroomRN.phl[206]" "bedroomRN.phl[207]";
+connectAttr "bedroomRN.phl[208]" "bedroomRN.phl[209]";
+connectAttr "bedroomRN.phl[210]" "bedroomRN.phl[211]";
+connectAttr "bedroomRN.phl[212]" "bedroomRN.phl[213]";
+connectAttr "bedroomRN.phl[214]" "bedroomRN.phl[215]";
+connectAttr "bedroomRN.phl[216]" "bedroomRN.phl[217]";
+connectAttr "bedroomRN.phl[218]" "bedroomRN.phl[219]";
+connectAttr "bedroomRN.phl[220]" "bedroomRN.phl[221]";
+connectAttr "bedroomRN.phl[222]" "bedroomRN.phl[223]";
+connectAttr "bedroomRN.phl[224]" "bedroomRN.phl[225]";
+connectAttr "bedroomRN.phl[226]" "bedroomRN.phl[227]";
+connectAttr "bedroomRN.phl[228]" "bedroomRN.phl[229]";
+connectAttr "bedroomRN.phl[230]" "bedroomRN.phl[231]";
+connectAttr "bedroomRN.phl[232]" "bedroomRN.phl[233]";
+connectAttr "bedroomRN.phl[234]" "bedroomRN.phl[235]";
+connectAttr "bedroomRN.phl[236]" "bedroomRN.phl[237]";
+connectAttr "bedroomRN.phl[238]" "bedroomRN.phl[239]";
+connectAttr "bedroomRN.phl[240]" "bedroomRN.phl[241]";
+connectAttr "bedroomRN.phl[242]" "bedroomRN.phl[243]";
+connectAttr "bedroomRN.phl[244]" "bedroomRN.phl[245]";
+connectAttr "bedroomRN.phl[246]" "bedroomRN.phl[247]";
+connectAttr "bedroomRN.phl[248]" "bedroomRN.phl[249]";
+connectAttr "bedroomRN.phl[250]" "bedroomRN.phl[251]";
+connectAttr "bedroomRN.phl[252]" "bedroomRN.phl[253]";
+connectAttr "bedroomRN.phl[254]" "bedroomRN.phl[255]";
+connectAttr "bedroomRN.phl[256]" "bedroomRN.phl[257]";
+connectAttr "bedroomRN.phl[258]" "bedroomRN.phl[259]";
+connectAttr "bedroomRN.phl[260]" "bedroomRN.phl[261]";
+connectAttr "bedroomRN.phl[262]" "bedroomRN.phl[263]";
+connectAttr "bedroomRN.phl[264]" "bedroomRN.phl[265]";
+connectAttr "bedroomRN.phl[266]" "bedroomRN.phl[267]";
+connectAttr "bedroomRN.phl[268]" "bedroomRN.phl[269]";
+connectAttr "bedroomRN.phl[270]" "bedroomRN.phl[271]";
+connectAttr "bedroomRN.phl[272]" "bedroomRN.phl[273]";
+connectAttr "bedroomRN.phl[274]" "bedroomRN.phl[275]";
+connectAttr "bedroomRN.phl[276]" "bedroomRN.phl[277]";
+connectAttr "bedroomRN.phl[278]" "bedroomRN.phl[279]";
+connectAttr "bedroomRN.phl[280]" "bedroomRN.phl[281]";
+connectAttr "bedroomRN.phl[282]" "bedroomRN.phl[283]";
+connectAttr "bedroomRN.phl[284]" "bedroomRN.phl[285]";
+connectAttr "bedroomRN.phl[286]" "bedroomRN.phl[287]";
+connectAttr "bedroomRN.phl[288]" "bedroomRN.phl[289]";
+connectAttr "bedroomRN.phl[290]" "bedroomRN.phl[291]";
+connectAttr "bedroomRN.phl[292]" "bedroomRN.phl[293]";
+connectAttr "bedroomRN.phl[294]" "bedroomRN.phl[295]";
+connectAttr "bedroomRN.phl[296]" "bedroomRN.phl[297]";
+connectAttr "bedroomRN.phl[298]" "bedroomRN.phl[299]";
+connectAttr "bedroomRN.phl[300]" "bedroomRN.phl[301]";
+connectAttr "bedroomRN.phl[302]" "bedroomRN.phl[303]";
+connectAttr "bedroomRN.phl[304]" "bedroomRN.phl[305]";
+connectAttr "bedroomRN.phl[306]" "bedroomRN.phl[307]";
+connectAttr "bedroomRN.phl[308]" "bedroomRN.phl[309]";
+connectAttr "bedroomRN.phl[310]" "bedroomRN.phl[311]";
+connectAttr "bedroomRN.phl[312]" "bedroomRN.phl[313]";
+connectAttr "bedroomRN.phl[314]" "bedroomRN.phl[315]";
+connectAttr "bedroomRN.phl[316]" "bedroomRN.phl[317]";
+connectAttr "bedroomRN.phl[318]" "bedroomRN.phl[319]";
+connectAttr "bedroomRN.phl[320]" "bedroomRN.phl[321]";
+connectAttr "bedroomRN.phl[322]" "bedroomRN.phl[323]";
+connectAttr "bedroomRN.phl[324]" "bedroomRN.phl[325]";
+connectAttr "bedroomRN.phl[326]" "bedroomRN.phl[327]";
+connectAttr "bedroomRN.phl[328]" "bedroomRN.phl[329]";
+connectAttr "bedroomRN.phl[330]" "bedroomRN.phl[331]";
+connectAttr "bedroomRN.phl[332]" "bedroomRN.phl[333]";
+connectAttr "bedroomRN.phl[334]" "bedroomRN.phl[335]";
+connectAttr "bedroomRN.phl[336]" "bedroomRN.phl[337]";
+connectAttr "bedroomRN.phl[338]" "bedroomRN.phl[339]";
+connectAttr "bedroomRN.phl[340]" "bedroomRN.phl[341]";
+connectAttr "bedroomRN.phl[342]" "bedroomRN.phl[343]";
+connectAttr "bedroomRN.phl[344]" "bedroomRN.phl[345]";
+connectAttr "bedroomRN.phl[346]" "bedroomRN.phl[347]";
+connectAttr "bedroomRN.phl[348]" "bedroomRN.phl[349]";
+connectAttr "bedroomRN.phl[350]" "bedroomRN.phl[351]";
+connectAttr "bedroomRN.phl[352]" "bedroomRN.phl[353]";
+connectAttr "bedroomRN.phl[354]" "bedroomRN.phl[355]";
+connectAttr "bedroomRN.phl[356]" "bedroomRN.phl[357]";
+connectAttr "bedroomRN.phl[358]" "bedroomRN.phl[359]";
+connectAttr "bedroomRN.phl[360]" "bedroomRN.phl[361]";
+connectAttr "bedroomRN.phl[362]" "bedroomRN.phl[363]";
+connectAttr "bedroomRN.phl[364]" "bedroomRN.phl[365]";
+connectAttr "bedroomRN.phl[366]" "bedroomRN.phl[367]";
+connectAttr "bedroomRN.phl[368]" "bedroomRN.phl[369]";
+connectAttr "bedroomRN.phl[370]" "bedroomRN.phl[371]";
+connectAttr "bedroomRN.phl[372]" "bedroomRN.phl[373]";
+connectAttr "bedroomRN.phl[374]" "bedroomRN.phl[375]";
+connectAttr "bedroomRN.phl[376]" "bedroomRN.phl[377]";
+connectAttr "bedroomRN.phl[378]" "bedroomRN.phl[379]";
+connectAttr "bedroomRN.phl[380]" "bedroomRN.phl[381]";
+connectAttr "bedroomRN.phl[382]" "bedroomRN.phl[383]";
 connectAttr "Master_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1]"
 		;
 connectAttr "Master_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[2]"
