@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Shot 14 Blocked Animation.ma
-//Last modified: Mon, Dec 02, 2019 01:56:36 PM
+//Last modified: Mon, Dec 02, 2019 02:12:51 PM
 //Codeset: 1252
 file -rdi 1 -ns "Kong" -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -rdi 1 -ns "Zilla" -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
@@ -23,13 +23,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "6BEC6232-4C0D-3732-F1DC-19981CC59556";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.1105339497021138 12.882057433232266 12.379447548149376 ;
-	setAttr ".r" -type "double3" -0.9383527294737023 26.600000000000602 -8.3368447271802405e-17 ;
+	setAttr ".t" -type "double3" 0.12418436785578611 12.779229398841778 12.836357280134701 ;
+	setAttr ".r" -type "double3" -21.338352729474138 13.400000000000626 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DAC345C1-4D9A-30C4-724C-1BBDDF63290B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1.023366930518558;
+	setAttr ".coi" 1.2654396602643807;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1078,7 +1078,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "84F38A60-44BB-2AE1-3DA9-B1B00B862154";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 70 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode reference -n "PrincessRN";
 	rename -uid "9AD7C2DD-464D-CAAC-A11B-A992E9F5D6E1";
@@ -1335,7 +1335,7 @@ createNode reference -n "PrincessRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PrincessRN"
 		"PrincessRN" 0
-		"PrincessRN" 463
+		"PrincessRN" 465
 		2 "|Princess:Princess|Princess:Controls" "translate" " -type \"double3\" 0 5.21637657027632606 7.12738253288155121"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls3|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
@@ -1390,9 +1390,13 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls3|Princess:R_Arm_FK_Controls|Princess:R_FK_Arm_02_ctl_grp|Princess:R_FK_Arm_02_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls3|Princess:R_Arm_FK_Controls|Princess:R_FK_Arm_03_ctl_grp|Princess:R_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 46.58320924997946122"
+		"rotate" " -type \"double3\" 0 0 67.15401984984308115"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls3|Princess:R_Arm_FK_Controls|Princess:R_FK_Arm_03_ctl_grp|Princess:R_FK_Arm_03_ctl" 
 		"rotateZ" " -av"
+		2 "|Princess:Princess|Princess:Controls|Princess:Controls3|Princess:R_Arm_FK_Controls|Princess:R_FK_Arm_03_ctl_grp|Princess:R_FK_Arm_03_ctl" 
+		"rotateX" " -av"
+		2 "|Princess:Princess|Princess:Controls|Princess:Controls3|Princess:R_Arm_FK_Controls|Princess:R_FK_Arm_03_ctl_grp|Princess:R_FK_Arm_03_ctl" 
+		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls3|Princess:R_Arm_FK_Controls|Princess:R_FK_Finger4_01_ctl_grp|Princess:R_FK_Finger4_01_ctl" 
 		"rotate" " -type \"double3\" 0 0 -97.05735422225399134"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls3|Princess:R_Arm_FK_Controls|Princess:R_FK_Finger4_01_ctl_grp|Princess:R_FK_Finger4_01_ctl" 
@@ -1502,7 +1506,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
-		"translate" " -type \"double3\" -5.17093111861141175 -0.52339921750096696 3.79550036760358322"
+		"translate" " -type \"double3\" -5.1342720741982486 -0.47594837356949626 3.79649405209419388"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
 		"translateX" " -av"
@@ -1538,7 +1542,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_01_ctl_grp|Princess:L_IK_Finger2_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_01_ctl_grp|Princess:L_IK_Finger2_01_ctl" 
-		"rotate" " -type \"double3\" 0 -24.46904713842879886 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_01_ctl_grp|Princess:L_IK_Finger2_01_ctl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
@@ -1552,7 +1556,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
-		"rotate" " -type \"double3\" 0 1.7746581285502121 -3.95773894686546956"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
@@ -1568,7 +1572,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_01_ctl_grp|Princess:L_IK_Finger1_01_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_01_ctl_grp|Princess:L_IK_Finger3_01_ctl" 
-		"rotate" " -type \"double3\" 0 8.95141414095256494 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_01_ctl_grp|Princess:L_IK_Finger3_01_ctl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_IK_Controls|Princess:L_Arm_PV_ctl_grp|Princess:L_Arm_PV_ctl" 
@@ -1577,7 +1581,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_01_ctl_grp|Princess:L_FK_Arm_01_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_01_ctl_grp|Princess:L_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" -165.24826493689215567 -48.14691164305673965 161.51145028281104032"
+		"rotate" " -type \"double3\" -108.47561372774050881 -68.53727714455695263 118.70426807853232276"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_01_ctl_grp|Princess:L_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -1586,7 +1590,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_01_ctl_grp|Princess:L_FK_Arm_01_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_02_ctl_grp|Princess:L_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" -145.29281534933789999 -3.27555348096010457 124.60760562023727971"
+		"rotate" " -type \"double3\" -159.17390788202490626 -3.02351332156689967 123.94338347079610685"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_02_ctl_grp|Princess:L_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -1595,7 +1599,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_02_ctl_grp|Princess:L_FK_Arm_02_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_03_ctl_grp|Princess:L_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" 25.18754454851050539 9.59826887910702453 15.27960192345984858"
+		"rotate" " -type \"double3\" 15.18733159096107954 -2.37021103063519245 61.91756029461685529"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_03_ctl_grp|Princess:L_FK_Arm_03_ctl" 
 		"rotateX" " -av"
@@ -1604,8 +1608,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Arm_03_ctl_grp|Princess:L_FK_Arm_03_ctl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger3_01_ctl_grp|Princess:L_FK_Finger3_01_ctl" 
-		"rotate" " -type \"double3\" -1.31844648486520577 7.98572885590209047 -29.02685515996930121"
-		
+		"rotate" " -type \"double3\" 0 0 -79.8199994159167403"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger3_01_ctl_grp|Princess:L_FK_Finger3_01_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger3_01_ctl_grp|Princess:L_FK_Finger3_01_ctl" 
@@ -1613,15 +1616,15 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger3_01_ctl_grp|Princess:L_FK_Finger3_01_ctl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger3_02_ctl_grp|Princess:L_FK_Finger3_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger3_02_ctl_grp|Princess:L_FK_Finger3_02_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger3_03_ctl_grp|Princess:L_FK_Finger3_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger3_03_ctl_grp|Princess:L_FK_Finger3_03_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger1_01_ctl_grp|Princess:L_FK_Finger1_01_ctl" 
-		"rotate" " -type \"double3\" -1.57667476984920318 -13.47467883761601293 -13.33673986478004814"
+		"rotate" " -type \"double3\" -0.6620680609495635 3.72044256841675081 -5.41819155822760834"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger1_01_ctl_grp|Princess:L_FK_Finger1_01_ctl" 
 		"rotateZ" " -av"
@@ -1630,8 +1633,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger1_01_ctl_grp|Princess:L_FK_Finger1_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger1_02_ctl_grp|Princess:L_FK_Finger1_02_ctl" 
-		"rotate" " -type \"double3\" -12.05826133766497854 -19.66021101268309579 32.41303663913796385"
-		
+		"rotate" " -type \"double3\" 0 61.1831150038133984 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger1_02_ctl_grp|Princess:L_FK_Finger1_02_ctl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger1_02_ctl_grp|Princess:L_FK_Finger1_02_ctl" 
@@ -1643,20 +1645,19 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger1_03_ctl_grp|Princess:L_FK_Finger1_03_ctl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger4_01_ctl_grp|Princess:L_FK_Finger4_01_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger4_01_ctl_grp|Princess:L_FK_Finger4_01_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger4_02_ctl_grp|Princess:L_FK_Finger4_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger4_02_ctl_grp|Princess:L_FK_Finger4_02_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger4_03_ctl_grp|Princess:L_FK_Finger4_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger4_03_ctl_grp|Princess:L_FK_Finger4_03_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger5_01_ctl_grp|Princess:L_FK_Finger5_01_ctl" 
-		"rotate" " -type \"double3\" -2.45461288693851687 -2.20497112115232063 -18.54655033276519305"
-		
+		"rotate" " -type \"double3\" 0 0 -91.49713551210021478"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger5_01_ctl_grp|Princess:L_FK_Finger5_01_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger5_01_ctl_grp|Princess:L_FK_Finger5_01_ctl" 
@@ -1664,16 +1665,15 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger5_01_ctl_grp|Princess:L_FK_Finger5_01_ctl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger5_02_ctl_grp|Princess:L_FK_Finger5_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger5_02_ctl_grp|Princess:L_FK_Finger5_02_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger5_03_ctl_grp|Princess:L_FK_Finger5_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger5_03_ctl_grp|Princess:L_FK_Finger5_03_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger2_01_ctl_grp|Princess:L_FK_Finger2_01_ctl" 
-		"rotate" " -type \"double3\" 17.34886338649511117 -29.19088166188155853 -40.30202942394820553"
-		
+		"rotate" " -type \"double3\" 0 0 -91.97871763590087824"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger2_01_ctl_grp|Princess:L_FK_Finger2_01_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger2_01_ctl_grp|Princess:L_FK_Finger2_01_ctl" 
@@ -1681,11 +1681,11 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger2_01_ctl_grp|Princess:L_FK_Finger2_01_ctl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger2_02_ctl_grp|Princess:L_FK_Finger2_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger2_02_ctl_grp|Princess:L_FK_Finger2_02_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger2_03_ctl_grp|Princess:L_FK_Finger2_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -29.40581247651486407"
+		"rotate" " -type \"double3\" 0 0 -89.60544803168093608"
 		2 "|Princess:Princess|Princess:Controls|Princess:Controls|Princess:L_Arm_FK_Controls|Princess:L_FK_Finger2_03_ctl_grp|Princess:L_FK_Finger2_03_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_IKFK_Switch_ctl_grp1" 
@@ -1719,7 +1719,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_03_ctrl_grp|Princess:Neck_03_ctrl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_03_ctrl_grp|Princess:Neck_03_ctrl" 
-		"rotate" " -type \"double3\" -28.28958428028933625 16.17123734399444501 -31.72588643003225428"
+		"rotate" " -type \"double3\" -29.28198082829741722 20.39791724026657249 -24.17224982366900221"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_03_ctrl_grp|Princess:Neck_03_ctrl" 
 		"rotateX" " -av"
@@ -1769,7 +1769,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Master_ctl_grp|Princess:Master_ctl" 
 		"translate" " -type \"double3\" 0 1.73254898092904064 2.70356947053369812"
 		2 "|Princess:Princess|Princess:Controls|Princess:Head_Ctrl_grp|Princess:Head_Ctrl" 
-		"rotate" " -type \"double3\" 3.36696477790847526 0 -0.060350437532984497"
+		"rotate" " -type \"double3\" 0 0 8.26237194762245686"
 		2 "|Princess:Princess|Princess:Controls|Princess:Head_Ctrl_grp|Princess:Head_Ctrl" 
 		"rotateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Head_Ctrl_grp|Princess:Head_Ctrl" 
@@ -3361,19 +3361,19 @@ createNode animCurveTA -n "L_FK_Arm_01_ctl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -65.809255960079128 13 -129.89866181105594
-		 28 -109.86268071572556 36 -108.47561372774051 50 -108.47561372774051 60 -165.24826493689216;
+		 28 -111.75882129315727 36 -108.47561372774051 50 -108.47561372774051 60 -165.24826493689216;
 createNode animCurveTA -n "L_FK_Arm_01_ctl_rotateY";
 	rename -uid "6446101A-4FB5-93EC-1871-829506739917";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -65.009738342077625 13 -72.876182920521472
-		 28 -64.500518521851788 36 -68.537277144556953 50 -68.537277144556953 60 -48.14691164305674;
+		 28 -66.760264272250936 36 -68.537277144556953 50 -68.537277144556953 60 -48.14691164305674;
 createNode animCurveTA -n "L_FK_Arm_01_ctl_rotateZ";
 	rename -uid "A2DEBF02-42F3-52DB-3EE8-97A21B97052D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 62.99050877496866 13 124.3206734657969
-		 28 113.77322286065255 36 118.70426807853232 50 118.70426807853232 60 161.51145028281104;
+		 28 115.85438540325289 36 118.70426807853232 50 118.70426807853232 60 161.51145028281104;
 createNode animCurveTA -n "L_FK_Arm_02_ctl_rotateX";
 	rename -uid "5BAD5E2F-49AA-22A1-0F0B-C1A98584FFF3";
 	setAttr ".tan" 18;
@@ -3540,48 +3540,52 @@ createNode animCurveTA -n "L_FK_Finger1_03_ctl_rotateX";
 	rename -uid "9D23631E-4591-ADAD-1F9A-7EAF1DEAA7DC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "L_FK_Finger1_03_ctl_rotateY";
 	rename -uid "0D25CC32-4948-B858-8275-C887DBE3F4EC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 87.177603165393521;
+	setAttr -s 3 ".ktv[0:2]"  1 87.177603165393521 50 87.177603165393521
+		 60 11.859510127453289;
 createNode animCurveTA -n "L_FK_Finger1_03_ctl_rotateZ";
 	rename -uid "6172DE3F-4B19-6001-B3A2-3CA38DC09EB1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "L_FK_Finger1_02_ctl_rotateX";
 	rename -uid "1D3B3E7C-4D3E-DCF7-592C-5AACCCBA4C5F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 -12.058261337664979;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 -9.9507892314507043;
 createNode animCurveTA -n "L_FK_Finger1_02_ctl_rotateY";
 	rename -uid "9CC6AA4C-4F1E-F446-AC65-06984E9BC57B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 61.183115003813398 50 61.183115003813398
-		 60 -19.660211012683096;
+		 60 16.41295902318511;
 createNode animCurveTA -n "L_FK_Finger1_02_ctl_rotateZ";
 	rename -uid "2711AFEB-4B1F-75BB-30D4-6E93B3CF7CB4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 32.413036639137964;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 31.825139331621603;
 createNode animCurveTA -n "L_FK_Finger1_01_ctl_rotateX";
 	rename -uid "634CD3C9-4E99-7BEF-5FE5-87B61EDB9C35";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.5766747698492032;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.5766747698492032 50 -0.55139044417355387
+		 60 -0.55154474580983559;
 createNode animCurveTA -n "L_FK_Finger1_01_ctl_rotateY";
 	rename -uid "655CEE8A-48C5-796E-7648-5BB98DB43341";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -13.474678837616013;
+	setAttr -s 3 ".ktv[0:2]"  1 -13.474678837616013 50 6.1161368386791768
+		 60 6.2639436258052408;
 createNode animCurveTA -n "L_FK_Finger1_01_ctl_rotateZ";
 	rename -uid "E9E99A2E-4A2A-DB62-11C6-7C9DBBE3D637";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -13.336739864780048;
+	setAttr -s 3 ".ktv[0:2]"  1 -13.336739864780048 50 -4.4599588595528621
+		 60 -4.461389875588476;
 createNode animCurveTA -n "L_FK_Finger3_03_ctl_rotateX";
 	rename -uid "A6969197-4C0A-D1C9-1DEB-EA9D7663FECA";
 	setAttr ".tan" 18;
@@ -3634,98 +3638,105 @@ createNode animCurveTA -n "R_FK_Arm_01_ctl_rotateX";
 	rename -uid "400BF7D7-404B-D24D-4A87-78AF8E166C7B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 65.017627604445394 13 117.60853241098025
-		 26 41.353506275537939 36 57.88101598913628;
+	setAttr -s 7 ".ktv[0:6]"  1 65.017627604445394 13 117.60853241098025
+		 19 78.862547765734618 26 33.705332060054147 36 57.88101598913628 50 57.88101598913628
+		 60 37.55497156347684;
 createNode animCurveTA -n "R_FK_Arm_01_ctl_rotateY";
 	rename -uid "9EB9D342-4D48-4CF7-75EB-FBB65854488C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 65.59972049017081 13 76.75787781609273
-		 26 53.113712854428883 36 74.113434394480862;
+	setAttr -s 7 ".ktv[0:6]"  1 65.59972049017081 13 76.75787781609273
+		 19 71.398512105704157 26 57.20722418194616 36 74.113434394480862 50 74.113434394480862
+		 60 79.421497614675772;
 createNode animCurveTA -n "R_FK_Arm_01_ctl_rotateZ";
 	rename -uid "A0145E6C-4BA1-D795-A693-348F085ECAC0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 56.162553012563379 13 106.9544071477146
-		 26 23.96854678509791 36 30.082037106629144;
+	setAttr -s 7 ".ktv[0:6]"  1 56.162553012563379 13 106.9544071477146
+		 19 64.390847670935102 26 14.662691263743165 36 30.082037106629144 50 30.082037106629144
+		 60 9.2355118662661582;
 createNode animCurveTA -n "R_FK_Arm_02_ctl_rotateX";
 	rename -uid "3F4D50C1-40A0-4687-6D04-75843E9AA118";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 149.68630860608738 15 149.68630860608738
-		 40 150.60647032203633;
+	setAttr -s 5 ".ktv[0:4]"  1 149.68630860608738 15 149.68630860608738
+		 40 150.60647032203633 50 150.60647032203633 60 156.74457104893716;
 createNode animCurveTA -n "R_FK_Arm_02_ctl_rotateY";
 	rename -uid "D9D0A0D6-48EA-34BC-DE8A-8892445A70EC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 2.8364469732240938 15 2.8364469732240938
-		 40 8.26624515502394;
+	setAttr -s 5 ".ktv[0:4]"  1 2.8364469732240938 15 2.8364469732240938
+		 40 8.26624515502394 50 8.26624515502394 60 9.2059669586675348;
 createNode animCurveTA -n "R_FK_Arm_02_ctl_rotateZ";
 	rename -uid "3FFE5E86-4B94-82D3-B8A2-15AD8AAB5271";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 127.33977274326007 15 127.33977274326007
-		 40 136.81953599858136;
+	setAttr -s 5 ".ktv[0:4]"  1 127.33977274326007 15 127.33977274326007
+		 40 136.81953599858136 50 136.81953599858136 60 138.516063268365;
 createNode animCurveTA -n "R_FK_Finger5_01_ctl_rotateX";
 	rename -uid "678629D6-4612-C6FE-7358-A8A5BBDDE9DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger5_01_ctl_rotateY";
 	rename -uid "4D6AD626-48D5-9E1B-D3E6-069E1139C022";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger5_01_ctl_rotateZ";
 	rename -uid "1B730569-49FF-C5ED-2FBE-FA8F5AE3979F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "R_FK_Finger4_03_ctl_rotateX";
 	rename -uid "2BDAC8E5-48D3-EEA9-C3EA-A4BD6B28B8A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger4_03_ctl_rotateY";
 	rename -uid "87488486-4F29-7CA9-E5B4-0FA46373479B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger4_03_ctl_rotateZ";
 	rename -uid "BFEB2BDE-4018-3899-ACF3-E3A519634177";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "R_FK_Finger4_02_ctl_rotateX";
 	rename -uid "124F4EA0-437B-69FB-7900-0D88082EC42F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger4_02_ctl_rotateY";
 	rename -uid "FA92C53F-4FC4-4B2F-9F49-B6B2A83C0412";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger4_02_ctl_rotateZ";
 	rename -uid "6C223B37-4140-1357-C521-59B42428618C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "R_FK_Finger4_01_ctl_rotateX";
 	rename -uid "0F3B2F49-4961-8D7D-950B-DBA2B8A7E508";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger4_01_ctl_rotateY";
 	rename -uid "0C470E19-4ACE-4EEB-1161-0FBFABE34E7D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger4_01_ctl_rotateZ";
 	rename -uid "C313F047-42A0-FE51-ADF6-33BE51DE3CC9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -40.123406694217991;
 createNode animCurveTA -n "R_FK_Finger1_03_ctl_rotateX";
 	rename -uid "49917832-48DB-7F36-4DE0-D48D2492F82C";
 	setAttr ".tan" 18;
@@ -3760,122 +3771,130 @@ createNode animCurveTA -n "R_FK_Finger3_03_ctl_rotateX";
 	rename -uid "CB9A1461-47B8-1CB8-A0F6-5B8D55B0BD7F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger3_03_ctl_rotateY";
 	rename -uid "A3E62E22-40DD-C3A2-631F-B8ACBCD644B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger3_03_ctl_rotateZ";
 	rename -uid "1FD6BB23-48EC-D7D5-6EB7-5E93DC608B49";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "R_FK_Finger3_02_ctl_rotateX";
 	rename -uid "8FF017EB-436D-D2D2-D0F8-519303C69A3E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger3_02_ctl_rotateY";
 	rename -uid "8C383565-4C86-EE00-6EC2-67A9F6E5181E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger3_02_ctl_rotateZ";
 	rename -uid "8EE4ABC7-46E8-5706-7217-4F9FC8BF8C60";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "R_FK_Finger3_01_ctl_rotateX";
 	rename -uid "20283967-482C-FDBF-BB72-84B4C330DD5A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger3_01_ctl_rotateY";
 	rename -uid "DF19AB5B-4A28-E8EA-58AF-7C918E193CE4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger3_01_ctl_rotateZ";
 	rename -uid "698062C1-4810-8124-EE39-FD8A5B2A4BE2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -82.223540675639455;
+	setAttr -s 3 ".ktv[0:2]"  1 -82.223540675639455 50 -82.223540675639455
+		 60 -7.5838246524654114;
 createNode animCurveTA -n "R_FK_Finger2_03_ctl_rotateX";
 	rename -uid "8DB13FC6-4641-00B5-AFA4-B1B2C09B190B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger2_03_ctl_rotateY";
 	rename -uid "88EFFE9A-41BB-1ECA-AFAE-E6BBCE677AEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger2_03_ctl_rotateZ";
 	rename -uid "1E455669-4645-46E0-F0C6-4BBA9B4094FD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "R_FK_Finger2_02_ctl_rotateX";
 	rename -uid "E78B1B38-4BDA-9ED3-14A5-B9B945A71B19";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger2_02_ctl_rotateY";
 	rename -uid "C4275632-44F6-0311-04BE-6D8049FA0272";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger2_02_ctl_rotateZ";
 	rename -uid "5A1224A5-4FFD-3759-8562-809D0F4BA853";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "R_FK_Finger2_01_ctl_rotateX";
 	rename -uid "579684E8-478D-69C6-B0CA-24B3CD28ABFB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger2_01_ctl_rotateY";
 	rename -uid "1D6E152F-4B82-0948-C672-679AF7598AB7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger2_01_ctl_rotateZ";
 	rename -uid "B7519400-4C10-BB5C-EE46-348F1F517472";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -98.629364300765062;
+	setAttr -s 3 ".ktv[0:2]"  1 -98.629364300765062 50 -98.629364300765062
+		 60 -23.989648277591169;
 createNode animCurveTA -n "R_FK_Finger5_03_ctl_rotateX";
 	rename -uid "20E4A67F-4952-5EF1-CB98-228B74000264";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger5_03_ctl_rotateY";
 	rename -uid "DB315C6D-4177-EB02-D59F-A59740C18F70";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger5_03_ctl_rotateZ";
 	rename -uid "5B6DBE85-48AD-D774-475C-76AC363914A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "R_FK_Finger5_02_ctl_rotateX";
 	rename -uid "D129EEBF-41CC-E35D-EBF4-65BAC167680A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger5_02_ctl_rotateY";
 	rename -uid "CB0CAED9-47AD-39A5-9EB1-CCA769F84C90";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTA -n "R_FK_Finger5_02_ctl_rotateZ";
 	rename -uid "835E6BE1-4540-E65A-DAD7-C4BFE75DE871";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -97.057354222253991;
+	setAttr -s 3 ".ktv[0:2]"  1 -97.057354222253991 50 -97.057354222253991
+		 60 -22.417638199080063;
 createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "017037E2-4A37-0FE8-55D5-AB82BE1814C3";
 	setAttr ".tan" 18;
@@ -3917,21 +3936,23 @@ createNode animCurveTA -n "R_FK_Arm_03_ctl_rotateX";
 	rename -uid "B429412C-4EB6-CC8F-AFB8-6E8D5A290AAA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 14 0 26 0 36 0 50 0 60 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 14 0 26 23.372747606116146 36 0 50 0
+		 60 0;
 createNode animCurveTA -n "R_FK_Arm_03_ctl_rotateY";
 	rename -uid "8F8ECAD9-434F-F33B-46F4-8D9955F2D251";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 14 0 26 0 36 0 50 0 60 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 14 0 26 -7.9513867036587919e-16 36 0
+		 50 0 60 0;
 createNode animCurveTA -n "R_FK_Arm_03_ctl_rotateZ";
 	rename -uid "1F444DDD-4FB7-6387-4C73-108C9E95A994";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 66.62584975160695 14 67.724388658564564
-		 26 71.532952202456414 36 67.154019849843081 50 67.154019849843081 60 46.583209249979461;
+		 26 37.34236682558943 36 67.154019849843081 50 67.154019849843081 60 34.582272807670883;
 select -ne :time1;
-	setAttr ".o" 60;
-	setAttr ".unw" 60;
+	setAttr ".o" 40;
+	setAttr ".unw" 40;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
