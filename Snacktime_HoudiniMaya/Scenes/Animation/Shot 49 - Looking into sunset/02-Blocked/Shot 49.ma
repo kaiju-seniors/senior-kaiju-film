@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Shot 49.ma
-//Last modified: Thu, Dec 05, 2019 11:22:34 AM
+//Last modified: Thu, Dec 05, 2019 05:44:15 PM
 //Codeset: 1252
 file -rdi 1 -ns "Kong" -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -rdi 1 -ns "Princess" -dr 1 -rfn "PrincessRN" -op "v=0;" -typ "mayaAscii"
@@ -24,13 +24,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "6BEC6232-4C0D-3732-F1DC-19981CC59556";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 155.9145620403765 39.620399089542403 185.10335443638803 ;
-	setAttr ".r" -type "double3" -48.338352726720352 -832.59999999996512 0 ;
+	setAttr ".t" -type "double3" 237.461507614467 18.481171923845562 192.81138329371402 ;
+	setAttr ".r" -type "double3" -0.93835272669236025 -615.79999999996721 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DAC345C1-4D9A-30C4-724C-1BBDDF63290B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 35.607797796568128;
+	setAttr ".coi" 65.568209610432675;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
