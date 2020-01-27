@@ -37,6 +37,7 @@ sysinfo.txt
 # Houdini file caches
 *.bgeo.sc
 *.bgeo
+*.sim
 
 # Zbrush files because they're too damn big
 *.zpr
