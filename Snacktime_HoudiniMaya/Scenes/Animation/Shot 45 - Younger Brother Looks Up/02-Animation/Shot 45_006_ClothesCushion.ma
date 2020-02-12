@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Shot 45_006_ClothesCushion.ma
-//Last modified: Mon, Feb 10, 2020 03:24:10 PM
+//Last modified: Mon, Feb 10, 2020 05:08:04 PM
 //Codeset: 1252
 file -rdi 1 -ns "bedroom" -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
@@ -23,31 +23,30 @@ file -r -ns "OlderBrother1" -dr 1 -rfn "OlderBrotherRN" -op "v=0;" -typ "mayaAsc
 file -r -ns "CookiePrincess" -dr 1 -rfn "CookiePrincessRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Jamie/Desktop/kaiju senior film/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Cookie Princess/CookiePrincess.ma";
 requires maya "2018";
+requires "stereoCamera" "10.0";
 requires -nodeType "RedshiftOptions" "redshift4maya" "2.6.38";
-requires "stereoCamera" "10.0";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
-fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
+fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C13149B4-405E-DE7F-F490-1EA4CEE240A6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 34.537031835860489 27.877940434255038 73.53842500178574 ;
-	setAttr ".r" -type "double3" -13.538352728897587 700.59999999972308 -8.4300208828465767e-16 ;
+	setAttr ".t" -type "double3" -50.404039440049274 39.069016390806887 46.735175101512873 ;
+	setAttr ".r" -type "double3" -8.1383527288937891 634.59999999976469 -9.9145802398292111e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "421955A1-4B13-35B5-97E3-ED9FD7C431CF";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 60.240139470625621;
+	setAttr ".coi" 108.24986880740195;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 53.092363736186257 22.409964003896135 15.777016427121335 ;
+	setAttr ".tp" -type "double3" 53.571979522705078 12.455865472555161 15.759700298309326 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "F0C3AF17-45D5-C2F4-B0AB-E8B8D0D16A02";
@@ -123,29 +122,29 @@ createNode camera -n "Main_CameraShape" -p "Main_Camera";
 	setAttr ".man" -type "string" "camera1_mask";
 	setAttr ".tp" -type "double3" 49.626942482675979 16.738614461694553 24.936682776904767 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "67A30161-48F5-4E8A-2FB0-34A1669F83BD";
+	rename -uid "46F679BB-4B88-E8E2-1002-01BEC4D8DE48";
 	setAttr -s 80 ".lnk";
 	setAttr -s 80 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DE5485CA-4FF6-614C-8489-FE998140B19B";
+	rename -uid "A72EC59C-4F79-6925-5C6C-9C9D725C2FB9";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 1 2 0 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "50986627-4C2D-BD71-0A6A-828BEEABEA14";
+	rename -uid "2AC115F9-4857-BF5C-D537-939AFB165FEB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9FD709D5-45BC-57CB-AA1D-DAA5273AD9BF";
+	rename -uid "2433898F-46B2-9A90-9A00-9AB87C84D9AE";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "22E57F6B-4334-A0D4-5174-ABBBF08985D4";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AEB1472F-41CB-2061-2D11-B88615BEF595";
+	rename -uid "180F49A8-4936-BFCA-6DEB-C09FCF2C1BF3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "998E275D-47F4-0442-3A0B-D7AF6B148BD5";
 	setAttr ".g" yes;
 createNode reference -n "bedroomRN";
 	rename -uid "04C96064-4FC8-5397-2C8C-57861A1A4B74";
 	setAttr -s 2 ".fn";
-	setAttr ".fn[0]" -type "string" "C:/Users/10487246/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
+	setAttr ".fn[0]" -type "string" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
 	setAttr ".fn[1]" -type "string" "G:/bedroom.ma";
 	setAttr -s 372 ".phl";
 	setAttr ".phl[1]" 0;
@@ -522,7 +521,7 @@ createNode reference -n "bedroomRN";
 	setAttr ".phl[372]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroomRN"
-		"bedroomRN" 431
+		"bedroomRN" 885
 		2 "|bedroom:LittleBoy_Geometry|bedroom:LittleBoy_Body_Geo|bedroom:LittleBoy_Body_GeoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|bedroom:LittleBoy_Geometry|bedroom:LittleBoy_L_Eye_geo|bedroom:LittleBoy_L_Eye_geoShape" 
@@ -551,11 +550,21 @@ createNode reference -n "bedroomRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|bedroom:pCube1|bedroom:pCubeShape1" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube11|bedroom:pCubeShape11" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pPlane1|bedroom:transform2|bedroom:pPlaneShape1" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane2|bedroom:polySurfaceShape2" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pPlane2|bedroom:transform1|bedroom:pPlaneShape2" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane3|bedroom:transform3|bedroom:pPlane3Shape" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pPlane4|bedroom:transform4|bedroom:pPlaneShape3" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane5|bedroom:transform5|bedroom:pPlane5Shape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pPlane6|bedroom:transform6|bedroom:pPlaneShape4" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
 		2 "|bedroom:floor|bedroom:floorShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -564,6 +573,12 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:wall1|bedroom:wall1Shape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:floor1|bedroom:floor1Shape" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube13|bedroom:pCubeShape13" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube14|bedroom:pCubeShape14" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube15|bedroom:pCubeShape15" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube18|bedroom:pCubeShape18" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -574,6 +589,12 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:pCube21|bedroom:pCubeShape21" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube22|bedroom:pCubeShape22" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube25|bedroom:pCubeShape25" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube26|bedroom:pCubeShape26" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube27|bedroom:pCubeShape27" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube28|bedroom:pCubeShape28" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -625,8 +646,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube33|bedroom:pCubeShape33" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube33|bedroom:polySurfaceShape6" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube34|bedroom:pCubeShape34" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube35|bedroom:pCubeShape35" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -653,8 +674,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube46|bedroom:pCubeShape46" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube46|bedroom:polySurfaceShape6" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube47|bedroom:pCubeShape47" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube48|bedroom:pCubeShape48" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -709,6 +730,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube73|bedroom:pCubeShape73" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube82|bedroom:polySurface13|bedroom:polySurfaceShape15" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pCube83|bedroom:pCubeShape83" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube84|bedroom:pCubeShape84" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -727,14 +750,40 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube90|bedroom:pCubeShape90" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube90|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube91|bedroom:pCubeShape91" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube91|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube92|bedroom:pCubeShape92" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube92|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube93|bedroom:pCubeShape93" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube93|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube94|bedroom:pCubeShape94" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube94|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube104|bedroom:polySurface19|bedroom:polySurfaceShape21" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface20|bedroom:polySurfaceShape22" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface21|bedroom:polySurfaceShape23" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface22|bedroom:polySurfaceShape24" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface23|bedroom:polySurfaceShape25" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface24|bedroom:polySurfaceShape26" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface25|bedroom:polySurfaceShape27" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface26|bedroom:polySurfaceShape28" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:LittleBoy_Geometry|bedroom:LittleBoy_Body_Geo|bedroom:LittleBoy_Body_GeoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|bedroom:LittleBoy_Geometry|bedroom:LittleBoy_L_Eye_geo|bedroom:LittleBoy_L_Eye_geoShape" 
@@ -763,11 +812,21 @@ createNode reference -n "bedroomRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|bedroom:pCube1|bedroom:pCubeShape1" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube11|bedroom:pCubeShape11" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pPlane1|bedroom:transform2|bedroom:pPlaneShape1" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane2|bedroom:polySurfaceShape2" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pPlane2|bedroom:transform1|bedroom:pPlaneShape2" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane3|bedroom:transform3|bedroom:pPlane3Shape" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pPlane4|bedroom:transform4|bedroom:pPlaneShape3" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane5|bedroom:transform5|bedroom:pPlane5Shape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pPlane6|bedroom:transform6|bedroom:pPlaneShape4" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
 		2 "|bedroom:floor|bedroom:floorShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -776,6 +835,12 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:wall1|bedroom:wall1Shape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:floor1|bedroom:floor1Shape" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube13|bedroom:pCubeShape13" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube14|bedroom:pCubeShape14" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube15|bedroom:pCubeShape15" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube18|bedroom:pCubeShape18" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -786,6 +851,12 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:pCube21|bedroom:pCubeShape21" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube22|bedroom:pCubeShape22" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube25|bedroom:pCubeShape25" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube26|bedroom:pCubeShape26" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube27|bedroom:pCubeShape27" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube28|bedroom:pCubeShape28" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -837,8 +908,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube33|bedroom:pCubeShape33" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube33|bedroom:polySurfaceShape6" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube34|bedroom:pCubeShape34" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube35|bedroom:pCubeShape35" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -865,8 +936,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube46|bedroom:pCubeShape46" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube46|bedroom:polySurfaceShape6" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube47|bedroom:pCubeShape47" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube48|bedroom:pCubeShape48" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -921,6 +992,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube73|bedroom:pCubeShape73" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube82|bedroom:polySurface13|bedroom:polySurfaceShape15" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pCube83|bedroom:pCubeShape83" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube84|bedroom:pCubeShape84" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -939,14 +1012,40 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube90|bedroom:pCubeShape90" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube90|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube91|bedroom:pCubeShape91" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube91|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube92|bedroom:pCubeShape92" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube92|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube93|bedroom:pCubeShape93" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube93|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube94|bedroom:pCubeShape94" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube94|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube104|bedroom:polySurface19|bedroom:polySurfaceShape21" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface20|bedroom:polySurfaceShape22" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface21|bedroom:polySurfaceShape23" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface22|bedroom:polySurfaceShape24" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface23|bedroom:polySurfaceShape25" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface24|bedroom:polySurfaceShape26" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface25|bedroom:polySurfaceShape27" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface26|bedroom:polySurfaceShape28" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:LittleBoy_Geometry|bedroom:LittleBoy_Body_Geo|bedroom:LittleBoy_Body_GeoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|bedroom:LittleBoy_Geometry|bedroom:LittleBoy_L_Eye_geo|bedroom:LittleBoy_L_Eye_geoShape" 
@@ -975,11 +1074,21 @@ createNode reference -n "bedroomRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|bedroom:pCube1|bedroom:pCubeShape1" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube11|bedroom:pCubeShape11" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pPlane1|bedroom:transform2|bedroom:pPlaneShape1" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane2|bedroom:polySurfaceShape2" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pPlane2|bedroom:transform1|bedroom:pPlaneShape2" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane3|bedroom:transform3|bedroom:pPlane3Shape" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pPlane4|bedroom:transform4|bedroom:pPlaneShape3" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane5|bedroom:transform5|bedroom:pPlane5Shape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pPlane6|bedroom:transform6|bedroom:pPlaneShape4" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
 		2 "|bedroom:floor|bedroom:floorShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -988,6 +1097,12 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:wall1|bedroom:wall1Shape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:floor1|bedroom:floor1Shape" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube13|bedroom:pCubeShape13" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube14|bedroom:pCubeShape14" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube15|bedroom:pCubeShape15" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube18|bedroom:pCubeShape18" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -998,6 +1113,12 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:pCube21|bedroom:pCubeShape21" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube22|bedroom:pCubeShape22" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube25|bedroom:pCubeShape25" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube26|bedroom:pCubeShape26" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube27|bedroom:pCubeShape27" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube28|bedroom:pCubeShape28" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -1049,8 +1170,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube33|bedroom:pCubeShape33" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube33|bedroom:polySurfaceShape6" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube34|bedroom:pCubeShape34" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube35|bedroom:pCubeShape35" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -1077,8 +1198,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube46|bedroom:pCubeShape46" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube46|bedroom:polySurfaceShape6" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube47|bedroom:pCubeShape47" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube48|bedroom:pCubeShape48" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -1133,6 +1254,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube73|bedroom:pCubeShape73" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube82|bedroom:polySurface13|bedroom:polySurfaceShape15" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pCube83|bedroom:pCubeShape83" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube84|bedroom:pCubeShape84" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -1151,14 +1274,40 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube90|bedroom:pCubeShape90" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube90|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube91|bedroom:pCubeShape91" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube91|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube92|bedroom:pCubeShape92" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube92|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube93|bedroom:pCubeShape93" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube93|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube94|bedroom:pCubeShape94" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube94|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube104|bedroom:polySurface19|bedroom:polySurfaceShape21" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface20|bedroom:polySurfaceShape22" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface21|bedroom:polySurfaceShape23" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface22|bedroom:polySurfaceShape24" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface23|bedroom:polySurfaceShape25" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface24|bedroom:polySurfaceShape26" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface25|bedroom:polySurfaceShape27" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface26|bedroom:polySurfaceShape28" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:LittleBoy_Geometry" "visibility" " 0"
 		2 "|bedroom:LittleBoy_Geometry|bedroom:LittleBoy_Body_Geo" "visibility" " 1"
 		
@@ -1200,11 +1349,21 @@ createNode reference -n "bedroomRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|bedroom:pCube1|bedroom:pCubeShape1" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube11|bedroom:pCubeShape11" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pPlane1|bedroom:transform2|bedroom:pPlaneShape1" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane2|bedroom:polySurfaceShape2" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pPlane2|bedroom:transform1|bedroom:pPlaneShape2" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane3|bedroom:transform3|bedroom:pPlane3Shape" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pPlane4|bedroom:transform4|bedroom:pPlaneShape3" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pPlane5|bedroom:transform5|bedroom:pPlane5Shape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pPlane6|bedroom:transform6|bedroom:pPlaneShape4" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
 		2 "|bedroom:floor|bedroom:floorShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -1213,6 +1372,12 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:wall1|bedroom:wall1Shape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:floor1|bedroom:floor1Shape" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube13|bedroom:pCubeShape13" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube14|bedroom:pCubeShape14" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube15|bedroom:pCubeShape15" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube18|bedroom:pCubeShape18" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -1223,6 +1388,12 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:pCube21|bedroom:pCubeShape21" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube22|bedroom:pCubeShape22" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube25|bedroom:pCubeShape25" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube26|bedroom:pCubeShape26" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube27|bedroom:pCubeShape27" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube28|bedroom:pCubeShape28" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -1274,8 +1445,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube33|bedroom:pCubeShape33" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube33|bedroom:polySurfaceShape6" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube34|bedroom:pCubeShape34" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube35|bedroom:pCubeShape35" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -1302,8 +1473,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube46|bedroom:pCubeShape46" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube46|bedroom:polySurfaceShape6" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube47|bedroom:pCubeShape47" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube48|bedroom:pCubeShape48" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -1358,6 +1529,8 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube73|bedroom:pCubeShape73" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube82|bedroom:polySurface13|bedroom:polySurfaceShape15" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
 		2 "|bedroom:pCube83|bedroom:pCubeShape83" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube84|bedroom:pCubeShape84" "aiTranslator" " -type \"string\" \"polymesh\""
@@ -1376,21 +1549,299 @@ createNode reference -n "bedroomRN";
 		
 		2 "|bedroom:pCube90|bedroom:pCubeShape90" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube90|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube91|bedroom:pCubeShape91" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube91|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube92|bedroom:pCubeShape92" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|bedroom:pCube92|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
+		
 		2 "|bedroom:pCube93|bedroom:pCubeShape93" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:pCube93|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:pCube94|bedroom:pCubeShape94" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		"bedroomRN" 610
-		2 "|bedroom:Room" "visibility" " 1"
-		2 "|bedroom:Room|bedroom:Ball|bedroom:BallShape" "aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube94|bedroom:polySurfaceShape20" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		2 "|bedroom:Room|bedroom:Floor" "rotate" " -type \"double3\" 0 0 0"
-		2 "|bedroom:Room|bedroom:Floor" "rotateZ" " -av"
-		2 "|bedroom:Room|bedroom:Floor|bedroom:FloorShape" "uvPivot" " -type \"double2\" 0.35359290242195129 0.32971340417861938"
+		2 "|bedroom:pCube104|bedroom:polySurface19|bedroom:polySurfaceShape21" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface20|bedroom:polySurfaceShape22" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface21|bedroom:polySurfaceShape23" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface22|bedroom:polySurfaceShape24" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface23|bedroom:polySurfaceShape25" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface24|bedroom:polySurfaceShape26" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface25|bedroom:polySurfaceShape27" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:pCube104|bedroom:polySurface26|bedroom:polySurfaceShape28" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Rug|bedroom:outputCloth1" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Floor|bedroom:FloorShape" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:Room|bedroom:Ceiling|bedroom:CeilingShape" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:Room|bedroom:Rug|bedroom:RugShape" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:Room|bedroom:Rug|bedroom:outputCloth1" "aiTranslator" " -type \"string\" \"polymesh\""
+		
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_5|bedroom:Shelf_board_Shape5" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_4|bedroom:Shelf_board_Shape4" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_3|bedroom:Shelf_board_Shape3" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_2|bedroom:Shelf_board_Shape2" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_1|bedroom:Shelf_board_Shape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Top_board|bedroom:Shelf_Top_boardShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Right_board|bedroom:Shelf_Right_boardShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Left_board|bedroom:Shelf_Left_boardShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Back|bedroom:Shelf_BackShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book|bedroom:BookShape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book1|bedroom:BookShape1" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book2|bedroom:BookShape2" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book2|bedroom:polySurfaceShape6" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book3|bedroom:BookShape3" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book4|bedroom:BookShape4" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book5|bedroom:BookShape5" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book6|bedroom:BookShape6" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book7|bedroom:BookShape7" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book8|bedroom:BookShape8" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book9|bedroom:BookShape9" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book10|bedroom:BookShape10" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book11|bedroom:BookShape11" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book12|bedroom:BookShape12" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book13|bedroom:BookShape13" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book14|bedroom:BookShape14" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:BookShape15" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book15|bedroom:polySurfaceShape6" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book16|bedroom:BookShape16" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book17|bedroom:BookShape17" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book18|bedroom:BookShape18" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book19|bedroom:BookShape19" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book20|bedroom:BookShape20" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book21|bedroom:BookShape21" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book22|bedroom:BookShape22" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book23|bedroom:BookShape23" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book24|bedroom:BookShape24" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book25|bedroom:BookShape25" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book26|bedroom:BookShape26" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book27|bedroom:BookShape27" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book28|bedroom:BookShape28" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book29|bedroom:BookShape29" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book30|bedroom:BookShape30" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book31|bedroom:BookShape31" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book32|bedroom:BookShape32" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book33|bedroom:BookShape33" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book34|bedroom:BookShape34" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book35|bedroom:BookShape35" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book36|bedroom:BookShape36" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book37|bedroom:BookShape37" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book38|bedroom:BookShape38" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book39|bedroom:BookShape39" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book40|bedroom:BookShape40" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book41|bedroom:BookShape41" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book42|bedroom:BookShape42" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book43|bedroom:BookShape43" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book44|bedroom:BookShape44" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book45|bedroom:BookShape45" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book46|bedroom:BookShape46" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book47|bedroom:BookShape47" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book48|bedroom:BookShape48" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Book49|bedroom:BookShape49" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page6|bedroom:PageShape6" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page5|bedroom:PageShape5" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page|bedroom:PageShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page1|bedroom:PageShape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Book_Cover|bedroom:Book_CoverShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page2|bedroom:PageShape2" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page3|bedroom:PageShape3" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page4|bedroom:PageShape4" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Walls|bedroom:Floor_board_2|bedroom:Floor_board_Shape2" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Walls|bedroom:Floor_board_1|bedroom:Floor_board_Shape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Walls|bedroom:Wall_1|bedroom:Wall_1Shape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Walls|bedroom:Wall_2|bedroom:Wall_2Shape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Walls|bedroom:Wall_3|bedroom:Wall_3Shape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block17|bedroom:BlockShape17" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block16|bedroom:BlockShape16" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block15|bedroom:BlockShape15" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block14|bedroom:BlockShape14" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block13|bedroom:BlockShape13" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block12|bedroom:BlockShape12" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block11|bedroom:BlockShape11" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block10|bedroom:BlockShape10" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block9|bedroom:BlockShape9" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block8|bedroom:BlockShape8" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block7|bedroom:BlockShape7" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block6|bedroom:BlockShape6" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block5|bedroom:BlockShape5" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block4|bedroom:BlockShape4" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block3|bedroom:BlockShape3" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block2|bedroom:BlockShape2" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block1|bedroom:BlockShape1" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Blocks|bedroom:Block|bedroom:BlockShape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_1|bedroom:Rod_End_1Shape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_2|bedroom:Rod_End_Shape2" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod|bedroom:RodShape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring|bedroom:RingShape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring1|bedroom:RingShape1" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring2|bedroom:RingShape2" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring3|bedroom:RingShape3" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring4|bedroom:RingShape4" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring5|bedroom:RingShape5" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_1|bedroom:Rod_Back_Shape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_2|bedroom:Rod_Back_Shape2" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_2|bedroom:Curtain_Shape2" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_1|bedroom:Curtain_Shape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame2|bedroom:Window_FrameShape2" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame3|bedroom:Window_FrameShape3" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame4|bedroom:Window_FrameShape4" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame5|bedroom:Window_FrameShape5" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame6|bedroom:Window_FrameShape6" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame7|bedroom:Window_FrameShape7" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame8|bedroom:Window_FrameShape8" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame9|bedroom:Window_FrameShape9" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame10|bedroom:Window_FrameShape10" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame11|bedroom:Window_FrameShape11" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame1|bedroom:Window_FrameShape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame|bedroom:Window_FrameShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_2|bedroom:Leg_Shape2" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_1|bedroom:Leg_Shape1" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_3|bedroom:Leg_Shape3" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_4|bedroom:Leg_Shape4" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Box|bedroom:BoxShape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Lid|bedroom:LidShape" "aiTranslator" 
+		" -type \"string\" \"polymesh\""
+		2 "|bedroom:Room|bedroom:Ball|bedroom:BallShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
 		2 "|bedroom:Room|bedroom:Floor|bedroom:FloorShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -1838,6 +2289,14 @@ createNode reference -n "bedroomRN";
 		" -type \"string\" \"polymesh\""
 		2 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Lid|bedroom:polySurfaceShape37" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|bedroom:camera1|bedroom:cameraShape1" "aiTranslator" " -type \"string\" \"perspective\""
+		
+		"bedroomRN" 385
+		2 "|bedroom:Room" "visibility" " 1"
+		2 "|bedroom:Room|bedroom:Floor" "rotate" " -type \"double3\" 0 0 0"
+		2 "|bedroom:Room|bedroom:Floor" "rotateZ" " -av"
+		2 "|bedroom:Room|bedroom:Floor|bedroom:FloorShape" "uvPivot" " -type \"double2\" 0.35359290242195129 0.32971340417861938"
+		
 		2 "|bedroom:camera1" "translate" " -type \"double3\" 250.35300620770095748 64.95248418428604964 116.75041729733230511"
 		
 		2 "|bedroom:camera1" "translateX" " -av"
@@ -1849,32 +2308,6 @@ createNode reference -n "bedroomRN";
 		2 "|bedroom:camera1" "rotateY" " -av"
 		2 "|bedroom:camera1" "rotateZ" " -av"
 		2 "|bedroom:camera1|bedroom:cameraShape1" "renderable" " 0"
-		2 "|bedroom:camera1|bedroom:cameraShape1" "aiTranslator" " -type \"string\" \"perspective\""
-		
-		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Lid|bedroom:LidShape.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Box|bedroom:BoxShape.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_4|bedroom:Leg_Shape4.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_3|bedroom:Leg_Shape3.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_1|bedroom:Leg_Shape1.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_2|bedroom:Leg_Shape2.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Lid|bedroom:LidShape.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Box|bedroom:BoxShape.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_4|bedroom:Leg_Shape4.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_3|bedroom:Leg_Shape3.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_1|bedroom:Leg_Shape1.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_2|bedroom:Leg_Shape2.instObjGroups" 
-		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster9|bedroom:Poster9Shape.instObjGroups" 
 		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Posters|bedroom:Poster8|bedroom:Poster8Shape.instObjGroups" 
@@ -1915,32 +2348,106 @@ createNode reference -n "bedroomRN";
 		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Paper|bedroom:pPlane1|bedroom:pPlaneShape1.instObjGroups" 
 		"bedroom:rsMaterial7SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_1|bedroom:Curtain_Shape1.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_2|bedroom:Curtain_Shape2.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_2|bedroom:Rod_Back_Shape2.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_1|bedroom:Rod_Back_Shape1.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring5|bedroom:RingShape5.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring4|bedroom:RingShape4.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring3|bedroom:RingShape3.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring2|bedroom:RingShape2.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring1|bedroom:RingShape1.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring|bedroom:RingShape.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod|bedroom:RodShape.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_2|bedroom:Rod_End_Shape2.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_1|bedroom:Rod_End_1Shape.instObjGroups" 
-		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Back|bedroom:Shelf_BackShape.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Left_board|bedroom:Shelf_Left_boardShape.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Right_board|bedroom:Shelf_Right_boardShape.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Top_board|bedroom:Shelf_Top_boardShape.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_1|bedroom:Shelf_board_Shape1.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_2|bedroom:Shelf_board_Shape2.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_3|bedroom:Shelf_board_Shape3.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_4|bedroom:Shelf_board_Shape4.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_5|bedroom:Shelf_board_Shape5.instObjGroups" 
+		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block|bedroom:BlockShape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block1|bedroom:BlockShape1.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block2|bedroom:BlockShape2.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block3|bedroom:BlockShape3.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block4|bedroom:BlockShape4.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block5|bedroom:BlockShape5.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block6|bedroom:BlockShape6.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block7|bedroom:BlockShape7.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block8|bedroom:BlockShape8.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block9|bedroom:BlockShape9.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block10|bedroom:BlockShape10.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block11|bedroom:BlockShape11.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block12|bedroom:BlockShape12.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block13|bedroom:BlockShape13.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block14|bedroom:BlockShape14.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block15|bedroom:BlockShape15.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block16|bedroom:BlockShape16.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block17|bedroom:BlockShape17.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon4|bedroom:Crayon4Shape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon3|bedroom:Crayon3Shape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon2|bedroom:Crayon2Shape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon|bedroom:CrayonShape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon1|bedroom:Crayon1Shape.instObjGroups" 
+		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:Pillow|bedroom:PillowShape.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube16|bedroom:pCubeShape16.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube8|bedroom:pCubeShape27.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube9|bedroom:pCubeShape9.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube10|bedroom:pCubeShape10.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube11|bedroom:pCubeShape11.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube12|bedroom:pCubeShape12.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube13|bedroom:pCubeShape13.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube14|bedroom:pCubeShape14.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube15|bedroom:pCubeShape15.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube7|bedroom:pCubeShape26.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube6|bedroom:pCubeShape25.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube5|bedroom:pCubeShape5.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube4|bedroom:pCubeShape4.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube3|bedroom:pCubeShape3.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube2|bedroom:pCubeShape24.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube1|bedroom:pCubeShape23.instObjGroups" 
+		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Rug|bedroom:outputCloth1.instObjGroups" "bedroom:rsMaterial8SG.dagSetMembers" 
+		"-na"
 		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page4|bedroom:PageShape4.instObjGroups" 
 		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Books|bedroom:Fallen_Book|bedroom:Page3|bedroom:PageShape3.instObjGroups" 
@@ -2067,70 +2574,6 @@ createNode reference -n "bedroomRN";
 		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Books|bedroom:Book|bedroom:BookShape.instObjGroups" 
 		"bedroom:rsMaterial3SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Back|bedroom:Shelf_BackShape.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Left_board|bedroom:Shelf_Left_boardShape.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Right_board|bedroom:Shelf_Right_boardShape.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_Top_board|bedroom:Shelf_Top_boardShape.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_1|bedroom:Shelf_board_Shape1.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_2|bedroom:Shelf_board_Shape2.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_3|bedroom:Shelf_board_Shape3.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_4|bedroom:Shelf_board_Shape4.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Book_Shelf|bedroom:Shelf_board_5|bedroom:Shelf_board_Shape5.instObjGroups" 
-		"bedroom:rsMaterial4SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block|bedroom:BlockShape.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block1|bedroom:BlockShape1.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block2|bedroom:BlockShape2.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block3|bedroom:BlockShape3.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block4|bedroom:BlockShape4.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block5|bedroom:BlockShape5.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block6|bedroom:BlockShape6.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block7|bedroom:BlockShape7.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block8|bedroom:BlockShape8.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block9|bedroom:BlockShape9.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block10|bedroom:BlockShape10.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block11|bedroom:BlockShape11.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block12|bedroom:BlockShape12.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block13|bedroom:BlockShape13.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block14|bedroom:BlockShape14.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block15|bedroom:BlockShape15.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block16|bedroom:BlockShape16.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Blocks|bedroom:Block17|bedroom:BlockShape17.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon4|bedroom:Crayon4Shape.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon3|bedroom:Crayon3Shape.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon2|bedroom:Crayon2Shape.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon|bedroom:CrayonShape.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:Crayons|bedroom:Crayon1|bedroom:Crayon1Shape.instObjGroups" 
-		"bedroom:rsMaterial5SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Lamp|bedroom:LampBase|bedroom:LampBaseShape.instObjGroups" 
 		"bedroom:rsMaterial1SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Lamp|bedroom:Lightbulb|bedroom:LightbulbShape.instObjGroups" 
@@ -2139,6 +2582,56 @@ createNode reference -n "bedroomRN";
 		"bedroom:rsMaterial1SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Ball|bedroom:BallShape.instObjGroups" "bedroom:rsMaterial1SG.dagSetMembers" 
 		"-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Lid|bedroom:LidShape.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Box|bedroom:BoxShape.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_4|bedroom:Leg_Shape4.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_3|bedroom:Leg_Shape3.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_1|bedroom:Leg_Shape1.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest1|bedroom:Leg_2|bedroom:Leg_Shape2.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Lid|bedroom:LidShape.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Box|bedroom:BoxShape.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_4|bedroom:Leg_Shape4.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_3|bedroom:Leg_Shape3.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_1|bedroom:Leg_Shape1.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Toy_Chest|bedroom:Leg_2|bedroom:Leg_Shape2.instObjGroups" 
+		"bedroom:rsMaterial9SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_1|bedroom:Curtain_Shape1.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtains|bedroom:Curtain_2|bedroom:Curtain_Shape2.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_2|bedroom:Rod_Back_Shape2.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_Back_1|bedroom:Rod_Back_Shape1.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring5|bedroom:RingShape5.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring4|bedroom:RingShape4.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring3|bedroom:RingShape3.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring2|bedroom:RingShape2.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring1|bedroom:RingShape1.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Ring|bedroom:RingShape.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod|bedroom:RodShape.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_2|bedroom:Rod_End_Shape2.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
+		3 "|bedroom:Room|bedroom:Curtain_Rod|bedroom:Rod_End_1|bedroom:Rod_End_1Shape.instObjGroups" 
+		"bedroom:rsMaterial6SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame|bedroom:Window_FrameShape.instObjGroups" 
 		"bedroom:rsMaterial10SG.dagSetMembers" "-na"
 		3 "|bedroom:Room|bedroom:Window_Frame|bedroom:Window_Frame1|bedroom:Window_FrameShape1.instObjGroups" 
@@ -2177,42 +2670,6 @@ createNode reference -n "bedroomRN";
 		"-na"
 		3 "|bedroom:Room|bedroom:Floor|bedroom:FloorShape.instObjGroups" "bedroom:rsMaterial10SG.dagSetMembers" 
 		"-na"
-		3 "|bedroom:Room|bedroom:Rug|bedroom:outputCloth1.instObjGroups" "bedroom:rsMaterial8SG.dagSetMembers" 
-		"-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:Pillow|bedroom:PillowShape.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube16|bedroom:pCubeShape16.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube8|bedroom:pCubeShape27.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube9|bedroom:pCubeShape9.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube10|bedroom:pCubeShape10.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube11|bedroom:pCubeShape11.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube12|bedroom:pCubeShape12.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube13|bedroom:pCubeShape13.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube14|bedroom:pCubeShape14.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube15|bedroom:pCubeShape15.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube7|bedroom:pCubeShape26.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube6|bedroom:pCubeShape25.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube5|bedroom:pCubeShape5.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube4|bedroom:pCubeShape4.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube3|bedroom:pCubeShape3.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube2|bedroom:pCubeShape24.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
-		3 "|bedroom:Room|bedroom:BunkBed|bedroom:pCube1|bedroom:pCubeShape23.instObjGroups" 
-		"bedroom:rsMaterial2SG.dagSetMembers" "-na"
 		5 4 "bedroomRN" "|bedroom:camera1.translateX" "bedroomRN.placeHolderList[1]" 
 		""
 		5 4 "bedroomRN" "|bedroom:camera1.translateY" "bedroomRN.placeHolderList[2]" 
@@ -2781,9 +3238,9 @@ lockNode -l 1 ;
 createNode reference -n "OlderBrother_Rig_01RN";
 	rename -uid "3BD7063A-4877-E0B4-C7A4-60B0372CEA0C";
 	setAttr -s 3 ".fn";
-	setAttr ".fn[0]" -type "string" "C:/Users/10487246/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/OlderBrother.ma";
-	setAttr ".fn[1]" -type "string" "C:/Users/10487246/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_02.ma";
-	setAttr ".fn[2]" -type "string" "C:/Users/10487246/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_01.ma";
+	setAttr ".fn[0]" -type "string" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/OlderBrother.ma";
+	setAttr ".fn[1]" -type "string" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_02.ma";
+	setAttr ".fn[2]" -type "string" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Older Brother/03 - Rig/OlderBrother_Rig_01.ma";
 	setAttr -s 10 ".phl";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"OlderBrother_Rig_01RN"
@@ -2883,9 +3340,9 @@ lockNode -l 1 ;
 createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 	rename -uid "ADBF0E2A-44EB-C72A-2E36-4B94C2BC0BDE";
 	setAttr -s 2 ".fn";
-	setAttr ".fn[0]" -type "string" "C:/Users/10487246/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/YoungerBrother.ma";
-	setAttr ".fn[1]" -type "string" "C:/Users/10487246/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/04 - Rig/YoungerBrother_Rig_03 - ready for skinning.ma";
-	setAttr -s 861 ".phl";
+	setAttr ".fn[0]" -type "string" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/YoungerBrother.ma";
+	setAttr ".fn[1]" -type "string" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/Younger Brother/04 - Rig/YoungerBrother_Rig_03 - ready for skinning.ma";
+	setAttr -s 857 ".phl";
 	setAttr ".phl[669]" 0;
 	setAttr ".phl[670]" 0;
 	setAttr ".phl[671]" 0;
@@ -3738,13 +4195,9 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 	setAttr ".phl[1518]" 0;
 	setAttr ".phl[1519]" 0;
 	setAttr ".phl[1520]" 0;
-	setAttr ".phl[1521]" 0;
-	setAttr ".phl[1522]" 0;
-	setAttr ".phl[1523]" 0;
-	setAttr ".phl[1524]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"YoungerBrother_Rig_03___ready_for_skinningRN"
-		"YoungerBrother_Rig_03___ready_for_skinningRN" 74
+		"YoungerBrother_Rig_03___ready_for_skinningRN" 158
 		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_L_Eye_geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_L_Eye_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Geometry|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_R_Eye_geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_R_Eye_geoShape" 
@@ -3819,37 +4272,27 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother_Rig_03___ready_for_skinning:YoungerBrother|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_Geo|YoungerBrother_Rig_03___ready_for_skinning:LittleBoy_Body_GeoShapeOrig" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Wide|YoungerBrother:L_Mouth_WideShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:L_TearWell_grp|YoungerBrother:L_TearWell|YoungerBrother:L_TearWellShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Wide|YoungerBrother:R_Mouth_WideShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:R_TearWell_grp|YoungerBrother:R_TearWell|YoungerBrother:R_TearWellShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Up|YoungerBrother:L_Mouth_UpShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Up|YoungerBrother:R_Mouth_UpShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShapeOrig" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_in|YoungerBrother:R_brow_inShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_L_Eye_geo|YoungerBrother:LittleBoy_L_Eye_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_in|YoungerBrother:L_brow_inShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Eye_geo|YoungerBrother:LittleBoy_R_Eye_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_up|YoungerBrother:R_brow_upShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo|YoungerBrother:LittleBoy_R_Brow_geoShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_up|YoungerBrother:L_brow_upShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo2|YoungerBrother:LittleBoy_R_Brow_geo2Shape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Wide|YoungerBrother:L_Mouth_WideShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Wide|YoungerBrother:R_Mouth_WideShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShapeOrig" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Up|YoungerBrother:L_Mouth_UpShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Up|YoungerBrother:R_Mouth_UpShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_in|YoungerBrother:R_brow_inShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_in|YoungerBrother:L_brow_inShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_up|YoungerBrother:R_brow_upShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_up|YoungerBrother:L_brow_upShape" 
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Lip_Pout|YoungerBrother:Lip_PoutShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Wide|YoungerBrother:L_Mouth_WideShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
@@ -3859,6 +4302,10 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Up|YoungerBrother:R_Mouth_UpShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Down|YoungerBrother:R_Mouth_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Down|YoungerBrother:L_Mouth_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_in|YoungerBrother:R_brow_inShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_in|YoungerBrother:L_brow_inShape" 
@@ -3866,6 +4313,44 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_up|YoungerBrother:R_brow_upShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_up|YoungerBrother:L_brow_upShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_nose_sneer|YoungerBrother:R_nose_sneerShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_nose_sneer|YoungerBrother:L_nose_sneerShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Cheek_puff|YoungerBrother:R_Cheek_puffShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Cheek_puff|YoungerBrother:L_Cheek_puffShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:L_TearWell_grp|YoungerBrother:L_TearWell|YoungerBrother:L_TearWellShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:R_TearWell_grp|YoungerBrother:R_TearWell|YoungerBrother:R_TearWellShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_L_Eye_geo|YoungerBrother:LittleBoy_L_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Eye_geo|YoungerBrother:LittleBoy_R_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo|YoungerBrother:LittleBoy_R_Brow_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo2|YoungerBrother:LittleBoy_R_Brow_geo2Shape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Lip_Pout|YoungerBrother:Lip_PoutShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Wide|YoungerBrother:L_Mouth_WideShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
@@ -3875,6 +4360,10 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Up|YoungerBrother:R_Mouth_UpShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Down|YoungerBrother:R_Mouth_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Down|YoungerBrother:L_Mouth_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_in|YoungerBrother:R_brow_inShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_in|YoungerBrother:L_brow_inShape" 
@@ -3882,6 +4371,138 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_up|YoungerBrother:R_brow_upShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_up|YoungerBrother:L_brow_upShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_nose_sneer|YoungerBrother:R_nose_sneerShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_nose_sneer|YoungerBrother:L_nose_sneerShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Cheek_puff|YoungerBrother:R_Cheek_puffShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Cheek_puff|YoungerBrother:L_Cheek_puffShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:L_TearWell_grp|YoungerBrother:L_TearWell|YoungerBrother:L_TearWellShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:R_TearWell_grp|YoungerBrother:R_TearWell|YoungerBrother:R_TearWellShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_L_Eye_geo|YoungerBrother:LittleBoy_L_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Eye_geo|YoungerBrother:LittleBoy_R_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo|YoungerBrother:LittleBoy_R_Brow_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo2|YoungerBrother:LittleBoy_R_Brow_geo2Shape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Lip_Pout|YoungerBrother:Lip_PoutShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Wide|YoungerBrother:L_Mouth_WideShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Wide|YoungerBrother:R_Mouth_WideShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Up|YoungerBrother:L_Mouth_UpShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Up|YoungerBrother:R_Mouth_UpShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Down|YoungerBrother:R_Mouth_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Down|YoungerBrother:L_Mouth_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_in|YoungerBrother:R_brow_inShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_in|YoungerBrother:L_brow_inShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_up|YoungerBrother:R_brow_upShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_up|YoungerBrother:L_brow_upShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_nose_sneer|YoungerBrother:R_nose_sneerShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_nose_sneer|YoungerBrother:L_nose_sneerShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Cheek_puff|YoungerBrother:R_Cheek_puffShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Cheek_puff|YoungerBrother:L_Cheek_puffShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:L_TearWell_grp|YoungerBrother:L_TearWell|YoungerBrother:L_TearWellShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:R_TearWell_grp|YoungerBrother:R_TearWell|YoungerBrother:R_TearWellShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_L_Eye_geo|YoungerBrother:LittleBoy_L_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Eye_geo|YoungerBrother:LittleBoy_R_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo|YoungerBrother:LittleBoy_R_Brow_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo2|YoungerBrother:LittleBoy_R_Brow_geo2Shape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Lip_Pout|YoungerBrother:Lip_PoutShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Wide|YoungerBrother:L_Mouth_WideShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Wide|YoungerBrother:R_Mouth_WideShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Up|YoungerBrother:L_Mouth_UpShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Up|YoungerBrother:R_Mouth_UpShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Down|YoungerBrother:R_Mouth_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Down|YoungerBrother:L_Mouth_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_in|YoungerBrother:R_brow_inShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_in|YoungerBrother:L_brow_inShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_brow_up|YoungerBrother:R_brow_upShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_brow_up|YoungerBrother:L_brow_upShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_nose_sneer|YoungerBrother:R_nose_sneerShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_nose_sneer|YoungerBrother:L_nose_sneerShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Cheek_puff|YoungerBrother:R_Cheek_puffShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Cheek_puff|YoungerBrother:L_Cheek_puffShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShapeOrig" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.R_Brow_Up" 
 		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[664]" ""
@@ -3893,9 +4514,9 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[667]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.Lip_Pout" 
 		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[668]" ""
-		"YoungerBrother_Rig_03___ready_for_skinningRN" 1473
+		"YoungerBrother_Rig_03___ready_for_skinningRN" 1438
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl" 
-		"translate" " -type \"double3\" -3.03720944806497428 -21.67637455693816051 23.15435576036192344"
+		"translate" " -type \"double3\" -0.71222945980640873 -41.07877250794685153 -10.13107510304185332"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl" 
 		"translateX" " -av"
@@ -3905,14 +4526,6 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl" 
 		"Blink" " -av -k 1 0"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl" 
-		"R_UpperLid" " -av -k 1 0"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl" 
-		"L_Upper_Lid" " -av -k 1 0"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl" 
-		"R_Lower_Lid" " -av -k 1 3.80000000000000027"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl" 
-		"L_Lower_Lid" " -av -k 1 3.80000000000000027"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl|YoungerBrother:L_Eye_ctrl_grp|YoungerBrother:L_Eye_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Master_Eyes_ctrl_grp|YoungerBrother:Master_Eyes_ctrl|YoungerBrother:L_Eye_ctrl_grp|YoungerBrother:L_Eye_ctrl" 
@@ -3948,8 +4561,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
 		"visibility" " -av 1"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
-		"translate" " -type \"double3\" -0.032611715174180864 -0.034803622508689673 0.24379216710516888"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
 		"translateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
@@ -3957,7 +4569,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
-		"rotate" " -type \"double3\" -2.13153700909906485 0 0"
+		"rotate" " -type \"double3\" -0.9331920474247517 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
@@ -3973,7 +4585,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Jaw_ctrl_grp|YoungerBrother:Jaw_ctrl" 
 		"scaleZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Mouth_ctrl_grp|YoungerBrother:L_Mouth_ctrl" 
-		"translate" " -type \"double3\" 0 -1.31957418131016979 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Mouth_ctrl_grp|YoungerBrother:L_Mouth_ctrl" 
 		"translateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Mouth_ctrl_grp|YoungerBrother:L_Mouth_ctrl" 
@@ -3981,7 +4593,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Mouth_ctrl_grp|YoungerBrother:L_Mouth_ctrl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Mouth_ctrl_grp|YoungerBrother:R_Mouth_ctrl" 
-		"translate" " -type \"double3\" 0.1208784752424556 -0.97706150536927294 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Mouth_ctrl_grp|YoungerBrother:R_Mouth_ctrl" 
 		"translateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Mouth_ctrl_grp|YoungerBrother:R_Mouth_ctrl" 
@@ -3991,7 +4603,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Mouth_ctrl_grp|YoungerBrother:R_Mouth_ctrl|YoungerBrother:R_Mouth_ctrlShape" 
 		"lineWidth" " -1"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Nose_ctrl_grp|YoungerBrother:L_Nose_ctrl" 
-		"translate" " -type \"double3\" 0 0.44063028536158927 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Nose_ctrl_grp|YoungerBrother:L_Nose_ctrl" 
 		"translateY" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Nose_ctrl_grp|YoungerBrother:L_Nose_ctrl" 
@@ -3999,25 +4611,13 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Nose_ctrl_grp|YoungerBrother:L_Nose_ctrl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Nose_ctrl_grp|YoungerBrother:R_Nose_ctrl" 
-		"translate" " -type \"double3\" 0 0.44063028536158927 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Nose_ctrl_grp|YoungerBrother:R_Nose_ctrl" 
 		"translateY" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Nose_ctrl_grp|YoungerBrother:R_Nose_ctrl" 
 		"translateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Nose_ctrl_grp|YoungerBrother:R_Nose_ctrl" 
 		"translateZ" " -av"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Pout_ctrl_grp|YoungerBrother:Pout_ctrl" 
-		"translate" " -type \"double3\" 0 0.72955704630238793 0"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Pout_ctrl_grp|YoungerBrother:Pout_ctrl" 
-		"translateY" " -av"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Brow_In_ctrl_grp|YoungerBrother:L_Brow_In_ctrl" 
-		"translate" " -type \"double3\" -0.83752735452787508 0.98255511661250972 0"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Brow_In_ctrl_grp|YoungerBrother:R_Brow_In_ctrl" 
-		"translate" " -type \"double3\" -0.29812072287030017 0.98685125228136894 0"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:L_Brow_Out_ctrl_grp|YoungerBrother:L_Brow_Out_ctrl" 
-		"translate" " -type \"double3\" 0 -1 0"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Brow_Out_ctrl_grp|YoungerBrother:R_Brow_Out_ctrl" 
-		"translate" " -type \"double3\" 0 -1 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl" 
@@ -4107,7 +4707,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl" 
-		"rotate" " -type \"double3\" 0 0 -27.62944092756559655"
+		"rotate" " -type \"double3\" 0 0 -23.46451874804809989"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl" 
@@ -4155,7 +4755,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 20.51846761078860126"
+		"rotate" " -type \"double3\" 0 0 29.88506261047066914"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl" 
@@ -4171,7 +4771,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl" 
-		"rotate" " -type \"double3\" 9.67130460566446182 1.47344033722178369 -5.1520498722146284"
+		"rotate" " -type \"double3\" 11.78909731787210724 0.0039611641476445993 13.78848954112181247"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl" 
 		"rotateX" " -av"
@@ -4188,7 +4788,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl" 
-		"rotate" " -type \"double3\" 10.41818659335209141 0.81818654084656295 3.8154681243124644"
+		"rotate" " -type \"double3\" -6.89777027458123815 0.0067171114086941918 13.46959943117072278"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl" 
 		"rotateX" " -av"
@@ -4205,7 +4805,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl" 
-		"rotate" " -type \"double3\" -17.29525256608700445 30.70248318883460215 41.42886504718311613"
+		"rotate" " -type \"double3\" -12.15978804520991474 31.93559169680526466 39.20658194605620395"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl" 
 		"rotateX" " -av"
@@ -4222,8 +4822,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl" 
-		"rotate" " -type \"double3\" 27.8924621889682065 8.12296170234915671 3.9914841799011862"
-		
+		"rotate" " -type \"double3\" 0 36.71209674783345633 -16.41535245832267265"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl" 
@@ -4239,7 +4838,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" -68.29798748274826892 -7.02063554128575973 17.44401633770487692"
+		"rotate" " -type \"double3\" -70.14344181921943289 -9.1281423994267481 23.30649458074291402"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -4256,7 +4855,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" 26.63775315887176731 50.31832209739298634 108.2911801174525408"
+		"rotate" " -type \"double3\" -48.0557356382159 22.857956079635386 62.70531562371869683"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -4273,7 +4872,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" -27.20975528147266687 -17.32036959495638229 16.84227634573775845"
+		"rotate" " -type \"double3\" -17.79285825852406688 -9.12452790671432368 12.57635468522410171"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl" 
 		"rotateX" " -av"
@@ -4290,7 +4889,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl" 
-		"rotate" " -type \"double3\" 0 4.33434278991317257 0"
+		"rotate" " -type \"double3\" 0 21.8170750258200421 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl" 
@@ -4306,7 +4905,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl" 
-		"rotate" " -type \"double3\" 14.30275032821459824 -25.79969630654588286 -23.58879821870966254"
+		"rotate" " -type \"double3\" 0.91141786342742104 -1.64404072959327441 -1.5031550981426276"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl" 
 		"rotateX" " -av"
@@ -4339,7 +4938,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl" 
-		"rotate" " -type \"double3\" 3.66435826827940714 0.86682120021431674 -20.16170921439560004"
+		"rotate" " -type \"double3\" 3.69858371705213473 0.72195194188482747 -17.9005458430215576"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl" 
 		"rotateX" " -av"
@@ -4373,7 +4972,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl" 
-		"rotate" " -type \"double3\" 3.76729834689026521 0.08121620224765734 -8.10394396411183138"
+		"rotate" " -type \"double3\" 3.76812131383661697 0.035714739887997123 -7.41298242635392857"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl" 
 		"rotateX" " -av"
@@ -4390,8 +4989,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl" 
-		"rotate" " -type \"double3\" 2.93975306284820803 2.35854757792687231 -45.57815278487513666"
-		
+		"rotate" " -type \"double3\" 3.76829032041314482 0 -6.87072502881984271"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl" 
@@ -4407,8 +5005,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl" 
-		"rotate" " -type \"double3\" 3.09722703507134689 2.12415706743892674 -41.24204884669712357"
-		
+		"rotate" " -type \"double3\" 3.76829032041314482 0 -6.87072502881984271"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl" 
@@ -4424,8 +5021,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl" 
-		"rotate" " -type \"double3\" 3.45658164842817728 0.76692633427827117 -19.76623825553582492"
-		
+		"rotate" " -type \"double3\" 3.76829032041314482 0 -6.87072502881984271"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl" 
@@ -4441,7 +5037,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl" 
-		"rotate" " -type \"double3\" 3.05217923993065376 2.21107204819415193 -42.75868420567682193"
+		"rotate" " -type \"double3\" 3.76812131383661697 0.035714739887997123 -7.41298242635392857"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl" 
 		"rotateX" " -av"
@@ -4458,7 +5054,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl" 
-		"rotate" " -type \"double3\" 3.21824295500418733 1.34873734745596119 -29.5908419520823216"
+		"rotate" " -type \"double3\" 3.76812131383661697 0.035714739887997123 -7.41298242635392857"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl" 
 		"rotateX" " -av"
@@ -4492,7 +5088,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl" 
-		"rotate" " -type \"double3\" 3.37461336023642522 1.67787154046856446 -33.27779119542194763"
+		"rotate" " -type \"double3\" 3.76812131383661697 0.035714739887997123 -7.41298242635392857"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl" 
 		"rotateX" " -av"
@@ -4509,7 +5105,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl" 
-		"rotate" " -type \"double3\" 3.69734373366374713 0.72828407821527696 -17.99852671369391999"
+		"rotate" " -type \"double3\" 3.76812131383661697 0.035714739887997123 -7.41298242635392857"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl" 
 		"rotateX" " -av"
@@ -4526,7 +5122,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl" 
-		"rotate" " -type \"double3\" 3.61145951487797889 0.71764633694553726 -18.12248630964084484"
+		"rotate" " -type \"double3\" 3.76812131383661697 0.035714739887997123 -7.41298242635392857"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl" 
 		"rotateX" " -av"
@@ -4543,7 +5139,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" 69.73212412076124167 -34.64078598151629507 -85.289803251747486"
+		"rotate" " -type \"double3\" 77.25197977400729599 1.89203299345321518 -48.85603934527252079"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -4562,7 +5158,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" 55.97570582942308448 -32.368242442397829 52.8210526897954793"
+		"rotate" " -type \"double3\" 57.00325080386135568 -33.87687344055176197 68.64435804983575906"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -4591,7 +5187,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" -43.20437683392706418 7.50279582187406646 14.70990852212315225"
+		"rotate" " -type \"double3\" -9.39413104269339705 17.31531480477949358 0.63067028535984382"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl" 
 		"rotateX" " -av"
@@ -4608,7 +5204,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl" 
-		"rotate" " -type \"double3\" 0 -4.89312798118975412 0"
+		"rotate" " -type \"double3\" 0 22.44624173288169899 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl" 
@@ -4656,7 +5252,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl" 
-		"rotate" " -type \"double3\" 0 0 -9.90679644409491189"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl" 
@@ -4672,7 +5268,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -11.65883428637806496"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl" 
@@ -4704,7 +5300,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl" 
-		"rotate" " -type \"double3\" 0 0 -39.75140743932480092"
+		"rotate" " -type \"double3\" 0 0 -2.16425036458286657"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl" 
@@ -4720,7 +5316,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -24.89940714807451982"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl" 
 		"rotateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl" 
@@ -4752,7 +5348,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl" 
-		"rotate" " -type \"double3\" 0 0 -33.1367678365081062"
+		"rotate" " -type \"double3\" 0 0 -1.40488566620450839"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl" 
@@ -4768,7 +5364,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -32.49689903290315129"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl" 
 		"rotateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl" 
@@ -4800,7 +5396,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl" 
-		"rotate" " -type \"double3\" 0 0 -24.25973771065799411"
+		"rotate" " -type \"double3\" 0 0 -0.44860669443908036"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl" 
 		"rotateX" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl" 
@@ -4832,7 +5428,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -25.11488512349566449"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl" 
 		"rotateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl" 
@@ -4848,7 +5444,7 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl" 
 		"translateZ" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl" 
-		"rotate" " -type \"double3\" -10.20641471334461947 0.72633257915522698 -11.49967476181465997"
+		"rotate" " -type \"double3\" -5.9670408114678164 7.71020491065018643 15.30569413192098516"
 		
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl" 
 		"rotateX" " -av"
@@ -4856,10 +5452,6 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"rotateY" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl" 
 		"rotateZ" " -av"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:L_TearWell_grp|YoungerBrother:L_TearWell|YoungerBrother:L_TearWellShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl|YoungerBrother:R_TearWell_grp|YoungerBrother:R_TearWell|YoungerBrother:R_TearWellShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl" 
@@ -5119,44 +5711,6 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"rotateY" " -av"
 		2 "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl" 
 		"rotateZ" " -av"
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_Body_Geo_HighPoly|YoungerBrother:LittleBoy_Body_Geo_HighPolyShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_L_Eye_geo|YoungerBrother:LittleBoy_L_Eye_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Eye_geo|YoungerBrother:LittleBoy_R_Eye_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo|YoungerBrother:LittleBoy_R_Brow_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:LittleBoy_R_Brow_geo2|YoungerBrother:LittleBoy_R_Brow_geo2Shape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Head_BSH_Base|YoungerBrother:Head_BSH_BaseShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:Lip_Pout|YoungerBrother:Lip_PoutShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Mouth_Down|YoungerBrother:R_Mouth_DownShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Mouth_Down|YoungerBrother:L_Mouth_DownShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_nose_sneer|YoungerBrother:R_nose_sneerShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_nose_sneer|YoungerBrother:L_nose_sneerShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:R_Cheek_puff|YoungerBrother:R_Cheek_puffShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:BlendShapes_geo_grp|YoungerBrother:L_Cheek_puff|YoungerBrother:L_Cheek_puffShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Geometry|YoungerBrother:Base_to_snap_to|YoungerBrother:For_Snapping|YoungerBrother:For_SnappingShape1" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|YoungerBrother:YoungerBrother|YoungerBrother:LittleBoy_Body_Geo|YoungerBrother:LittleBoy_Body_GeoShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Master_ctl_grp|YoungerBrother:Master_ctl.translateX" 
 		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[669]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Master_ctl_grp|YoungerBrother:Master_ctl.translateY" 
@@ -5293,1601 +5847,1593 @@ createNode reference -n "YoungerBrother_Rig_03___ready_for_skinningRN";
 		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[735]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:R_Nose_ctrl_grp|YoungerBrother:R_Nose_ctrl.visibility" 
 		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[736]" ""
-		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Pout_ctrl_grp|YoungerBrother:Pout_ctrl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[737]" ""
-		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Pout_ctrl_grp|YoungerBrother:Pout_ctrl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[738]" ""
-		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Pout_ctrl_grp|YoungerBrother:Pout_ctrl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[739]" ""
-		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Face_Controls|YoungerBrother:Pout_ctrl_grp|YoungerBrother:Pout_ctrl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[740]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[741]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[737]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[742]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[738]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.Leg_IKFK" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[743]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[739]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[744]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[740]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[745]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[741]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[746]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[742]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[747]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[743]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[748]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[744]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[749]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[745]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[750]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[746]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[751]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[747]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[752]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[748]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Leg_IKFK_ctl_grp|YoungerBrother:R_Leg_IKFK_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[753]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[749]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[754]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[750]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[755]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[751]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.Leg_IKFK" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[756]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[752]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[757]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[753]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[758]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[754]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[759]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[755]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[760]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[756]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[761]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[757]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[762]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[758]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[763]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[759]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[764]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[760]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[765]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[761]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Leg_IKFK_ctl_grp|YoungerBrother:L_Leg_IKFK_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[766]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[762]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[767]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[763]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[768]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[764]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.Arm_IKFK" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[769]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[765]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[770]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[766]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[771]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[767]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[772]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[768]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[773]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[769]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[774]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[770]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[775]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[771]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[776]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[772]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[777]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[773]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[778]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[774]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Arm_IKFK_ctl_grp|YoungerBrother:L_Arm_IKFK_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[779]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[775]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[780]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[776]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[781]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[777]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.Arm_IKFK" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[782]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[778]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[783]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[779]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[784]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[780]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[785]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[781]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[786]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[782]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[787]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[783]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[788]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[784]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[789]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[785]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[790]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[786]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[791]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[787]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Arm_IKFK_ctl_grp|YoungerBrother:R_Arm_IKFK_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[792]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[788]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[793]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[789]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[794]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[790]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[795]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[791]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[796]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[792]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[797]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[793]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[798]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[794]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[799]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[795]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[800]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[796]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[801]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[797]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[802]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[798]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[803]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[799]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Hips_ctl_grp|YoungerBrother:Hips_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[804]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[800]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[805]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[801]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[806]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[802]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[807]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[803]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[808]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[804]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[809]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[805]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[810]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[806]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[811]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[807]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[812]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[808]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[813]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[809]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[814]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[810]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[815]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[811]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_01_ctl_grp|YoungerBrother:Spine_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[816]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[812]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[817]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[813]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[818]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[814]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[819]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[815]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[820]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[816]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[821]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[817]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[822]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[818]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[823]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[819]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[824]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[820]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[825]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[821]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[826]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[822]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[827]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[823]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:COG_ctl_grp|YoungerBrother:COG_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[828]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[824]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[829]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[825]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[830]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[826]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[831]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[827]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[832]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[828]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[833]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[829]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[834]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[830]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[835]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[831]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[836]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[832]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[837]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[833]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[838]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[834]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[839]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[835]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_02_ctl_grp|YoungerBrother:Spine_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[840]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[836]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[841]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[837]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[842]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[838]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[843]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[839]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[844]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[840]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[845]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[841]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[846]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[842]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[847]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[843]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[848]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[844]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[849]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[845]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[850]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[846]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[851]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[847]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_03_ctl_grp|YoungerBrother:Spine_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[852]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[848]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[853]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[849]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[854]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[850]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[855]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[851]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[856]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[852]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[857]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[853]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[858]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[854]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[859]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[855]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[860]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[856]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[861]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[857]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[862]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[858]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[863]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[859]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_04_ctl_grp|YoungerBrother:Spine_04_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[864]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[860]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[865]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[861]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[866]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[862]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[867]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[863]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[868]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[864]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[869]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[865]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[870]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[866]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[871]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[867]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[872]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[868]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[873]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[869]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[874]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[870]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[875]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[871]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Spine_05_ctl_grp|YoungerBrother:Spine_05_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[876]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[872]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[877]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[873]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[878]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[874]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[879]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[875]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[880]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[876]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[881]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[877]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[882]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[878]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[883]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[879]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[884]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[880]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[885]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[881]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[886]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[882]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[887]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[883]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:L_Clavicle_ctl_grp|YoungerBrother:L_Clavicle_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[888]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[884]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[889]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[885]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[890]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[886]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[891]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[887]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[892]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[888]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[893]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[889]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[894]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[890]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[895]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[891]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[896]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[892]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[897]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[893]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[898]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[894]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[899]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[895]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:R_Clavicle_ctl_grp|YoungerBrother:R_Clavicle_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[900]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[896]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[901]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[897]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[902]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[898]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[903]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[899]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[904]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[900]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[905]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[901]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[906]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[902]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[907]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[903]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[908]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[904]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[909]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[905]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[910]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[906]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[911]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[907]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_01_ctl_grp|YoungerBrother:L_FK_Arm_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[912]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[908]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[913]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[909]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[914]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[910]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[915]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[911]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[916]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[912]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[917]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[913]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[918]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[914]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[919]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[915]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[920]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[916]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[921]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[917]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[922]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[918]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[923]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[919]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_02_ctl_grp|YoungerBrother:L_FK_Arm_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[924]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[920]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[925]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[921]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[926]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[922]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[927]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[923]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[928]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[924]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[929]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[925]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[930]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[926]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[931]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[927]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[932]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[928]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[933]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[929]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[934]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[930]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[935]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[931]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Arm_03_ctl_grp|YoungerBrother:L_FK_Arm_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[936]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[932]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[937]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[933]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[938]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[934]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[939]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[935]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[940]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[936]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[941]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[937]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[942]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[938]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[943]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[939]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[944]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[940]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[945]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[941]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[946]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[942]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[947]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[943]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_01_ctl_grp|YoungerBrother:L_FK_Finger1_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[948]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[944]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[949]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[945]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[950]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[946]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[951]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[947]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[952]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[948]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[953]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[949]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[954]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[950]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[955]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[951]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[956]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[952]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[957]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[953]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[958]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[954]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[959]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[955]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_02_ctl_grp|YoungerBrother:L_FK_Finger1_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[960]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[956]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[961]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[957]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[962]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[958]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[963]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[959]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[964]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[960]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[965]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[961]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[966]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[962]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[967]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[963]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[968]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[964]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[969]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[965]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[970]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[966]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[971]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[967]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger1_03_ctl_grp|YoungerBrother:L_FK_Finger1_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[972]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[968]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[973]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[969]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[974]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[970]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[975]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[971]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[976]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[972]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[977]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[973]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[978]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[974]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[979]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[975]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[980]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[976]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[981]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[977]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[982]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[978]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[983]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[979]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_01_ctl_grp|YoungerBrother:L_FK_Finger2_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[984]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[980]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[985]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[981]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[986]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[982]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[987]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[983]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[988]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[984]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[989]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[985]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[990]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[986]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[991]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[987]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[992]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[988]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[993]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[989]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[994]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[990]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[995]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[991]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_02_ctl_grp|YoungerBrother:L_FK_Finger2_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[996]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[992]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[997]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[993]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[998]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[994]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[999]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[995]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1000]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[996]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1001]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[997]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1002]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[998]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1003]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[999]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1004]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1000]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1005]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1001]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1006]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1002]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1007]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1003]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger2_03_ctl_grp|YoungerBrother:L_FK_Finger2_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1008]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1004]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1009]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1005]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1010]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1006]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1011]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1007]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1012]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1008]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1013]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1009]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1014]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1010]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1015]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1011]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1016]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1012]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1017]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1013]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1018]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1014]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1019]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1015]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_01_ctl_grp|YoungerBrother:L_FK_Finger5_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1020]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1016]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1021]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1017]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1022]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1018]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1023]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1019]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1024]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1020]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1025]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1021]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1026]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1022]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1027]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1023]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1028]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1024]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1029]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1025]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1030]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1026]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1031]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1027]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_02_ctl_grp|YoungerBrother:L_FK_Finger5_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1032]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1028]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1033]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1029]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1034]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1030]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1035]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1031]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1036]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1032]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1037]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1033]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1038]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1034]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1039]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1035]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1040]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1036]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1041]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1037]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1042]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1038]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1043]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1039]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger5_03_ctl_grp|YoungerBrother:L_FK_Finger5_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1044]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1040]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1045]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1041]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1046]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1042]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1047]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1043]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1048]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1044]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1049]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1045]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1050]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1046]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1051]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1047]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1052]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1048]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1053]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1049]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1054]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1050]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1055]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1051]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_01_ctl_grp|YoungerBrother:L_FK_Finger4_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1056]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1052]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1057]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1053]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1058]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1054]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1059]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1055]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1060]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1056]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1061]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1057]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1062]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1058]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1063]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1059]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1064]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1060]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1065]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1061]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1066]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1062]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1067]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1063]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_02_ctl_grp|YoungerBrother:L_FK_Finger4_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1068]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1064]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1069]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1065]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1070]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1066]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1071]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1067]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1072]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1068]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1073]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1069]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1074]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1070]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1075]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1071]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1076]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1072]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1077]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1073]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1078]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1074]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1079]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1075]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger4_03_ctl_grp|YoungerBrother:L_FK_Finger4_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1080]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1076]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1081]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1077]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1082]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1078]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1083]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1079]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1084]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1080]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1085]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1081]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1086]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1082]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1087]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1083]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1088]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1084]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1089]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1085]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1090]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1086]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1091]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1087]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_01_ctl_grp|YoungerBrother:L_FK_Finger3_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1092]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1088]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1093]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1089]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1094]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1090]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1095]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1091]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1096]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1092]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1097]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1093]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1098]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1094]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1099]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1095]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1100]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1096]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1101]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1097]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1102]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1098]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1103]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1099]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_02_ctl_grp|YoungerBrother:L_FK_Finger3_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1104]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1100]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1105]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1101]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1106]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1102]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1107]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1103]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1108]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1104]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1109]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1105]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1110]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1106]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1111]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1107]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1112]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1108]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1113]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1109]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1114]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1110]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1115]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1111]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls4|YoungerBrother:L_Arm_FK_Controls|YoungerBrother:L_FK_Finger3_03_ctl_grp|YoungerBrother:L_FK_Finger3_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1116]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1112]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1117]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1113]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1118]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1114]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1119]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1115]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1120]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1116]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1121]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1117]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1122]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1118]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1123]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1119]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1124]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1120]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1125]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1121]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1126]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1122]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1127]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1123]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_01_ctl_grp|YoungerBrother:R_FK_Arm_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1128]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1124]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1129]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1125]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1130]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1126]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1131]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1127]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1132]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1128]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1133]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1129]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1134]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1130]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1135]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1131]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1136]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1132]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1137]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1133]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1138]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1134]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1139]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1135]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_02_ctl_grp|YoungerBrother:R_FK_Arm_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1140]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1136]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1141]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1137]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1142]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1138]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1143]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1139]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1144]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1140]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1145]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1141]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1146]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1142]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1147]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1143]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1148]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1144]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1149]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1145]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1150]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1146]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1151]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1147]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Arm_03_ctl_grp|YoungerBrother:R_FK_Arm_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1152]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1148]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1153]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1149]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1154]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1150]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1155]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1151]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1156]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1152]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1157]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1153]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1158]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1154]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1159]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1155]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1160]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1156]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1161]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1157]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1162]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1158]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1163]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1159]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_01_ctl_grp|YoungerBrother:R_FK_Finger1_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1164]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1160]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1165]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1161]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1166]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1162]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1167]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1163]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1168]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1164]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1169]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1165]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1170]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1166]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1171]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1167]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1172]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1168]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1173]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1169]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1174]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1170]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1175]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1171]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_02_ctl_grp|YoungerBrother:R_FK_Finger1_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1176]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1172]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1177]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1173]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1178]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1174]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1179]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1175]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1180]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1176]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1181]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1177]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1182]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1178]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1183]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1179]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1184]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1180]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1185]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1181]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1186]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1182]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1187]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1183]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger1_03_ctl_grp|YoungerBrother:R_FK_Finger1_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1188]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1184]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1189]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1185]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1190]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1186]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1191]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1187]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1192]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1188]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1193]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1189]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1194]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1190]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1195]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1191]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1196]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1192]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1197]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1193]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1198]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1194]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1199]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1195]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_01_ctl_grp|YoungerBrother:R_FK_Finger2_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1200]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1196]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1201]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1197]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1202]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1198]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1203]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1199]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1204]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1200]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1205]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1201]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1206]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1202]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1207]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1203]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1208]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1204]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1209]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1205]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1210]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1206]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1211]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1207]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_02_ctl_grp|YoungerBrother:R_FK_Finger2_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1212]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1208]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1213]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1209]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1214]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1210]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1215]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1211]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1216]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1212]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1217]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1213]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1218]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1214]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1219]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1215]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1220]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1216]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1221]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1217]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1222]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1218]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1223]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1219]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger2_03_ctl_grp|YoungerBrother:R_FK_Finger2_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1224]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1220]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1225]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1221]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1226]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1222]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1227]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1223]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1228]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1224]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1229]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1225]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1230]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1226]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1231]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1227]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1232]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1228]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1233]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1229]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1234]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1230]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1235]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1231]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_01_ctl_grp|YoungerBrother:R_FK_Finger5_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1236]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1232]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1237]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1233]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1238]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1234]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1239]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1235]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1240]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1236]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1241]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1237]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1242]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1238]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1243]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1239]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1244]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1240]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1245]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1241]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1246]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1242]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1247]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1243]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_02_ctl_grp|YoungerBrother:R_FK_Finger5_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1248]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1244]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1249]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1245]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1250]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1246]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1251]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1247]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1252]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1248]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1253]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1249]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1254]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1250]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1255]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1251]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1256]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1252]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1257]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1253]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1258]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1254]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1259]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1255]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger5_03_ctl_grp|YoungerBrother:R_FK_Finger5_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1260]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1256]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1261]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1257]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1262]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1258]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1263]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1259]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1264]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1260]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1265]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1261]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1266]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1262]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1267]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1263]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1268]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1264]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1269]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1265]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1270]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1266]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1271]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1267]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_01_ctl_grp|YoungerBrother:R_FK_Finger4_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1272]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1268]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1273]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1269]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1274]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1270]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1275]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1271]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1276]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1272]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1277]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1273]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1278]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1274]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1279]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1275]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1280]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1276]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1281]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1277]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1282]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1278]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1283]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1279]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_02_ctl_grp|YoungerBrother:R_FK_Finger4_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1284]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1280]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1285]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1281]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1286]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1282]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1287]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1283]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1288]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1284]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1289]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1285]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1290]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1286]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1291]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1287]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1292]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1288]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1293]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1289]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1294]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1290]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1295]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1291]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger4_03_ctl_grp|YoungerBrother:R_FK_Finger4_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1296]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1292]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1297]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1293]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1298]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1294]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1299]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1295]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1300]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1296]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1301]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1297]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1302]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1298]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1303]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1299]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1304]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1300]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1305]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1301]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1306]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1302]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1307]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1303]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_01_ctl_grp|YoungerBrother:R_FK_Finger3_01_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1308]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1304]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1309]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1305]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1310]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1306]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1311]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1307]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1312]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1308]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1313]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1309]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1314]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1310]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1315]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1311]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1316]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1312]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1317]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1313]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1318]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1314]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1319]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1315]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_02_ctl_grp|YoungerBrother:R_FK_Finger3_02_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1320]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1316]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1321]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1317]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1322]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1318]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1323]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1319]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1324]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1320]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1325]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1321]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1326]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1322]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1327]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1323]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1328]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1324]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1329]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1325]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1330]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1326]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1331]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1327]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls5|YoungerBrother:R_Arm_FK_Controls|YoungerBrother:R_FK_Finger3_03_ctl_grp|YoungerBrother:R_FK_Finger3_03_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1332]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1328]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1333]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1329]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1334]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1330]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1335]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1331]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1336]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1332]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1337]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1333]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1338]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1334]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1339]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1335]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1340]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1336]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1341]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1337]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Head_Ctrl_grp|YoungerBrother:Head_Ctrl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1342]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1338]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1343]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1339]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1344]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1340]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1345]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1341]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1346]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1342]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1347]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1343]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1348]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1344]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1349]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1345]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1350]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1346]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1351]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1347]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1352]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1348]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1353]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1349]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_IK_Leg_01_jnt_ctl_grp|YoungerBrother:L_IK_Leg_01_jnt_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1354]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1350]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1355]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1351]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1356]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1352]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1357]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1353]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1358]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1354]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1359]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1355]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.Length_1" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1360]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1356]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.Length_2" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1361]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1357]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.Stretchy" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1362]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1358]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1363]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1359]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1364]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1360]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1365]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1361]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1366]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1362]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1367]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1363]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1368]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1364]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_IK_Handle_ctl_grp|YoungerBrother:L_Leg_IK_Handle_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1369]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1365]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1370]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1366]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1371]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1367]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1372]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1368]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1373]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1369]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1374]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1370]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1375]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1371]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1376]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1372]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1377]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1373]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1378]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1374]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1379]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1375]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1380]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1376]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Leg_PV_ctl_grp|YoungerBrother:L_Leg_PV_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1381]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1377]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1382]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1378]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1383]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1379]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1384]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1380]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1385]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1381]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1386]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1382]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1387]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1383]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1388]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1384]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1389]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1385]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1390]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1386]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Heel_loc_ctl_grp|YoungerBrother:L_Heel_loc_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1391]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1387]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1392]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1388]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1393]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1389]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1394]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1390]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1395]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1391]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1396]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1392]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1397]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1393]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1398]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1394]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1399]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1395]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1400]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1396]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Tiptoe_loc_ctl_grp|YoungerBrother:L_Tiptoe_loc_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1401]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1397]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1402]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1398]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1403]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1399]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1404]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1400]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1405]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1401]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1406]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1402]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1407]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1403]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1408]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1404]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1409]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1405]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1410]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1406]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Ball_loc_ctl_grp|YoungerBrother:L_Ball_loc_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1411]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1407]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1412]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1408]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1413]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1409]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1414]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1410]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1415]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1411]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1416]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1412]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1417]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1413]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1418]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1414]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1419]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1415]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1420]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1416]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_ToeLifter_loc_ctl_grp|YoungerBrother:L_ToeLifter_loc_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1421]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1417]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1422]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1418]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1423]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1419]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1424]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1420]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1425]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1421]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1426]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1422]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1427]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1423]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1428]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1424]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1429]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1425]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1430]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1426]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1431]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1427]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1432]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1428]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls|YoungerBrother:L_Leg_IK_Controls|YoungerBrother:L_Foot_Master_ctl_grp|YoungerBrother:L_Foot_Master_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1433]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1429]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1434]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1430]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1435]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1431]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1436]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1432]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1437]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1433]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1438]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1434]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1439]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1435]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1440]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1436]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1441]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1437]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1442]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1438]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1443]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1439]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1444]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1440]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_IK_Leg_01_jnt_ctl_grp|YoungerBrother:R_IK_Leg_01_jnt_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1445]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1441]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1446]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1442]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1447]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1443]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1448]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1444]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1449]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1445]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1450]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1446]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.Length_1" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1451]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1447]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.Length_2" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1452]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1448]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.Stretchy" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1453]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1449]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1454]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1450]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1455]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1451]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1456]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1452]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1457]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1453]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1458]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1454]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1459]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1455]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_IK_Handle_ctl_grp|YoungerBrother:R_Leg_IK_Handle_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1460]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1456]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1461]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1457]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1462]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1458]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1463]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1459]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1464]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1460]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1465]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1461]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1466]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1462]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1467]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1463]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1468]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1464]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1469]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1465]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1470]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1466]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1471]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1467]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Leg_PV_ctl_grp|YoungerBrother:R_Leg_PV_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1472]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1468]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.Follow_Translates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1473]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1469]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.Follow_Rotates" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1474]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1470]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1475]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1471]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1476]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1472]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1477]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1473]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1478]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1474]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1479]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1475]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1480]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1476]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1481]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1477]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1482]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1478]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1483]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1479]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Foot_Master_ctl_grp|YoungerBrother:R_Foot_Master_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1484]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1480]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1485]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1481]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1486]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1482]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1487]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1483]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1488]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1484]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1489]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1485]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1490]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1486]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1491]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1487]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1492]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1488]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1493]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1489]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_ToeLifter_loc_ctl_grp|YoungerBrother:R_ToeLifter_loc_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1494]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1490]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1495]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1491]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1496]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1492]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1497]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1493]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1498]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1494]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1499]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1495]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1500]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1496]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1501]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1497]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1502]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1498]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1503]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1499]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Ball_loc_ctl_grp|YoungerBrother:R_Ball_loc_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1504]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1500]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1505]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1501]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1506]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1502]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1507]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1503]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1508]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1504]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1509]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1505]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1510]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1506]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1511]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1507]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1512]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1508]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1513]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1509]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Tiptoe_loc_ctl_grp|YoungerBrother:R_Tiptoe_loc_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1514]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1510]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.translateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1515]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1511]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.translateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1516]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1512]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.translateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1517]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1513]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.rotateX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1518]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1514]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.rotateY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1519]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1515]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.rotateZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1520]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1516]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.scaleX" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1521]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1517]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.scaleY" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1522]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1518]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.scaleZ" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1523]" ""
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1519]" ""
 		5 4 "YoungerBrother_Rig_03___ready_for_skinningRN" "|YoungerBrother:YoungerBrother|YoungerBrother:Controls|YoungerBrother:Controls6|YoungerBrother:R_Leg_IK_Controls|YoungerBrother:R_Heel_loc_ctl_grp|YoungerBrother:R_Heel_loc_ctl.visibility" 
-		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1524]" "";
+		"YoungerBrother_Rig_03___ready_for_skinningRN.placeHolderList[1520]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "3640EEB4-4C20-B906-10CA-ECB91DF91228";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
-		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
-		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1214\n            -height 716\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Main_Camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
+		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
+		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1184\n            -height 717\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 603\n            -height 336\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 588\n            -height 336\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 604\n            -height 336\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 589\n            -height 336\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Main_Camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n"
 		+ "            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
-		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n"
-		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 603\n            -height 336\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
+		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n"
+		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1184\n            -height 717\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
 		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
 		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"<function selCom at 0x7f29c5c04aa0>\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -6914,8 +7460,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n"
 		+ "                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1214\\n    -height 716\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1214\\n    -height 716\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Main_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1184\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Main_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1184\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -7830,7 +8376,51 @@ createNode reference -n "OlderBrotherRN";
 	setAttr ".phl[920]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"OlderBrotherRN"
-		"OlderBrotherRN" 16
+		"OlderBrotherRN" 38
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_L_Brow_geo|OlderBrother1:OlderBrother_L_Brow_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_R_Brow_geo|OlderBrother1:OlderBrother_R_Brow_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_R_Eye_geo|OlderBrother1:OlderBrother_R_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_R_Eye_geo|OlderBrother1:OlderBrother_R_Eye_geoShapeOrig1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_L_Eye_geo|OlderBrother1:OlderBrother_L_Eye_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_L_Eye_geo|OlderBrother1:OlderBrother_L_Eye_geoShapeOrig1" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:OlderBrother_Head_BSH_Base_geo|OlderBrother1:OlderBrother_Head_BSH_Base_geoShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:OlderBrother_Head_BSH_Base_geo|OlderBrother1:OlderBrother_Head_BSH_Base_geoShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:R_Brow_Up|OlderBrother1:R_Brow_UpShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:L_Brow_Up|OlderBrother1:L_Brow_UpShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:Brows_In|OlderBrother1:Brows_InShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:R_Brow_Down|OlderBrother1:R_Brow_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:L_Brow_Down|OlderBrother1:L_Brow_DownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:R_Mouth_Smile|OlderBrother1:R_Mouth_SmileShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:L_Mouth_Smile|OlderBrother1:L_Mouth_SmileShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:R_Mouth_Wide|OlderBrother1:R_Mouth_WideShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:L_Mouth_Wide|OlderBrother1:L_Mouth_WideShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:Low_Lip_Pout|OlderBrother1:Low_Lip_PoutShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:Base_Smoothed|OlderBrother1:Base_SmoothedShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_L_Eye_geo1|OlderBrother1:OlderBrother_L_Eye_geo1ShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_Body_geo1|OlderBrother1:OlderBrother_Body_geo1Shape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_Body_geo1|OlderBrother1:OlderBrother_Body_geo1ShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:L_Brow_ctrl_grp|OlderBrother1:L_Brow_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:L_Brow_ctrl_grp|OlderBrother1:L_Brow_ctrl" 
@@ -7863,7 +8453,7 @@ createNode reference -n "OlderBrotherRN";
 		"OlderBrotherRN.placeHolderList[71]" ""
 		5 4 "OlderBrotherRN" "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:R_Brow_ctrl_grp|OlderBrother1:R_Brow_ctrl.visibility" 
 		"OlderBrotherRN.placeHolderList[72]" ""
-		"OlderBrotherRN" 1442
+		"OlderBrotherRN" 1417
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls" "translate" " -type \"double3\" 0 0 -11.19949626528359765"
 		
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
@@ -7882,12 +8472,6 @@ createNode reference -n "OlderBrotherRN";
 		"rotateY" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
 		"rotateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
-		"Blink" " -av -k 1 -7.75547259259259203"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
-		"L_Down_Lid" " -av -k 1 1.77376093294460579"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl" 
-		"R_Down_Lid" " -av -k 1 1.77376093294460579"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:L_Eye_ctrl_grp|OlderBrother1:L_Eye_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:L_Eye_ctrl_grp|OlderBrother1:L_Eye_ctrl" 
@@ -9014,50 +9598,6 @@ createNode reference -n "OlderBrotherRN";
 		"rotateY" " -av"
 		2 "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Controls2|OlderBrother1:R_Leg_IK_Controls|OlderBrother1:R_Foot_Master_ctl_grp|OlderBrother1:R_Foot_Master_ctl" 
 		"rotateZ" " -av"
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_L_Brow_geo|OlderBrother1:OlderBrother_L_Brow_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_R_Brow_geo|OlderBrother1:OlderBrother_R_Brow_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_R_Eye_geo|OlderBrother1:OlderBrother_R_Eye_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_R_Eye_geo|OlderBrother1:OlderBrother_R_Eye_geoShapeOrig1" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_L_Eye_geo|OlderBrother1:OlderBrother_L_Eye_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_L_Eye_geo|OlderBrother1:OlderBrother_L_Eye_geoShapeOrig1" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:OlderBrother_Head_BSH_Base_geo|OlderBrother1:OlderBrother_Head_BSH_Base_geoShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:OlderBrother_Head_BSH_Base_geo|OlderBrother1:OlderBrother_Head_BSH_Base_geoShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:R_Brow_Up|OlderBrother1:R_Brow_UpShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:L_Brow_Up|OlderBrother1:L_Brow_UpShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:Brows_In|OlderBrother1:Brows_InShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:R_Brow_Down|OlderBrother1:R_Brow_DownShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:L_Brow_Down|OlderBrother1:L_Brow_DownShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:R_Mouth_Smile|OlderBrother1:R_Mouth_SmileShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:L_Mouth_Smile|OlderBrother1:L_Mouth_SmileShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:R_Mouth_Wide|OlderBrother1:R_Mouth_WideShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:L_Mouth_Wide|OlderBrother1:L_Mouth_WideShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:Low_Lip_Pout|OlderBrother1:Low_Lip_PoutShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:Blendshapes_geo|OlderBrother1:Base_Smoothed|OlderBrother1:Base_SmoothedShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_L_Eye_geo1|OlderBrother1:OlderBrother_L_Eye_geo1ShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_Body_geo1|OlderBrother1:OlderBrother_Body_geo1Shape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|OlderBrother1:OIder_Brother|OlderBrother1:OlderBrother_Geometry|OlderBrother1:OlderBrother_Body_geo1|OlderBrother1:OlderBrother_Body_geo1ShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
 		5 4 "OlderBrotherRN" "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl.Blink" 
 		"OlderBrotherRN.placeHolderList[73]" ""
 		5 4 "OlderBrotherRN" "|OlderBrother1:OIder_Brother|OlderBrother1:Controls|OlderBrother1:Face_ctrls_grp|OlderBrother1:Master_Eye_ctrl_grp|OlderBrother1:Master_Eye_ctrl.L_Up_Lid" 
@@ -10760,65 +11300,55 @@ createNode animCurveTA -n "Spine_05_ctl_rotateX";
 	rename -uid "1DDD1CC6-4F0A-8BA6-80E8-CE9CCBDBFE7B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -20 0 -10 -10.248529203054604 1 -10.248529203054604
-		 24 11.196327939174942 33 11.144476254602369 40 10.550184301878645 48 9.9143441110852155
-		 52 8.6425928763201068 56 7.063147436199138 60 6.7548685960209678 65 6.3739009166244944;
+	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 -10.248529203054604 1 -10.248529203054604
+		 25 11.196327939174942 65 9.9321003815806552;
 createNode animCurveTA -n "Spine_05_ctl_rotateY";
 	rename -uid "949FABA9-4844-5452-0094-F88A0E81B5C6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  -10 0 1 0 24 0.25351450544924214 33 0.44701040984094503
-		 40 0.76881001228566415 48 0.99537157038115043 52 1.6376356741108258 56 2.810706651266933
-		 60 2.7968042499072037 65 2.3380261176652311;
+	setAttr -s 4 ".ktv[0:3]"  -10 0 1 0 25 0.25351450544924214 65 1.8713332660764386;
 createNode animCurveTA -n "Spine_05_ctl_rotateZ";
 	rename -uid "23118413-470C-AE33-F1D7-7AB94514056E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -20 0 -10 13.919065750538708 1 13.919065750538708
-		 24 7.8586824488319609 33 3.8711683287808403 40 3.7811443739378467 48 4.1900817612075159
-		 52 4.727471298298406 56 4.4341916814085378 60 4.2384171113452291 65 4.0299290187718757;
+	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 13.919065750538708 1 13.919065750538708
+		 25 7.8586824488319609 65 -14.381368540586944;
 createNode animCurveTA -n "Spine_04_ctl_rotateX";
 	rename -uid "1C519FE9-426E-52AE-93F6-1793CEE73D68";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -20 0 -10 11.833852266576841 1 11.833852266576841
-		 24 11.196327939174942 33 10.732595748396761 40 9.824781746686547 48 9.2090095185783678
-		 52 8.0005821672882487 56 6.4185275929671155 60 6.1065434175488358 65 5.7209431919846692;
+	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 11.833852266576841 1 11.833852266576841
+		 25 11.196327939174942 40 9.9321003815806552;
 createNode animCurveTA -n "Spine_04_ctl_rotateY";
 	rename -uid "F63CACDF-48BD-4AC8-6C74-28A0DE81DA3E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  -10 1.987846675914698e-16 1 1.987846675914698e-16
-		 24 0.25351450544924214 33 0.92036449418457611 40 1.4072342489025114 48 1.6548799311928926
-		 52 2.2897048829576589 56 3.4575990014959133 60 3.4427914302710336 65 2.9833839902806174;
+	setAttr -s 4 ".ktv[0:3]"  -10 1.987846675914698e-16 1 1.987846675914698e-16
+		 25 0.25351450544924214 40 1.8713332660764386;
 createNode animCurveTA -n "Spine_04_ctl_rotateZ";
 	rename -uid "19192981-4400-6836-2181-4AA7F7A1F41F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -20 0 -10 13.919065750538714 1 13.919065750538714
-		 24 7.8586824488319609 33 -3.6611022726290479 40 -5.1821202318444604 48 -4.8126029202178904
-		 52 -4.2967851818662535 56 -4.5758682221075384 60 -4.8341088451122944 65 -5.0994284570583375;
+	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 13.919065750538714 1 13.919065750538714
+		 25 7.8586824488319609 40 -14.381368540586944;
 createNode animCurveTL -n "Master_Eyes_ctrl_translateX";
 	rename -uid "75773FDC-457A-180F-E910-B3A112834D9F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -20 0 -10 -0.86522697765806811 1 -0.86522697765806811
-		 28 1.1770301335712383 34 2.467618660880035 42 -3.0372094480649743 43 -8.9185898923079421
-		 47 -7.2913555018063505 54 -7.2913555018063505 57 -7.2913555018063505 61 -2.8590909992829836;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 -0.86522697765806811 1 -0.86522697765806811
+		 28 1.1770301335712383 34 2.467618660880035 42 0.14564801848287079 48 -0.42851199490988279;
 createNode animCurveTL -n "Master_Eyes_ctrl_translateY";
 	rename -uid "CD6781B9-4C56-87CB-68FC-52ACE1DEF4E9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -20 0 -10 -41.164910554717224 1 -41.164910554717224
-		 28 -37.579412490770252 34 -29.507041333833467 42 -21.676374556938161 43 -21.026608330710268
-		 47 -19.681507279418955 54 -18.569981789234539 57 -10.521916550395733 61 -4.6754836337543839;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 -41.164910554717224 1 -41.164910554717224
+		 28 -37.579412490770252 34 -29.507041333833467 42 -8.1983227327231454 48 -3.74000996793783;
 createNode animCurveTL -n "Master_Eyes_ctrl_translateZ";
 	rename -uid "2DBF5EA4-4893-37B3-2916-87B2AF8F333A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -20 0 -10 -11.73259445536376 1 -11.73259445536376
-		 28 9.6449699128499304 34 23.154355760361923 42 23.154355760361923 43 23.154355760361923
-		 47 23.154355760361923 54 23.154355760361923 57 23.154355760361923 61 23.154355760361923;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 -11.73259445536376 1 -11.73259445536376
+		 28 9.6449699128499304 34 23.154355760361923 42 23.154355760361923 48 23.154355760361923;
 createNode animCurveTA -n "L_FK_Arm_01_ctl_rotateX";
 	rename -uid "83B64591-4C46-732E-95E4-01805AA8D851";
 	setAttr ".tan" 18;
@@ -11290,18 +11820,18 @@ createNode animCurveTA -n "Spine_03_ctl_rotateX";
 	rename -uid "DC86D16C-400B-DBA9-D401-499AE5797A6B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  -10 0 1 0 21 0 43 0 49 0 56 -1.0287318187701973;
+	setAttr -s 4 ".ktv[0:3]"  -10 0 1 0 21 0 43 0;
 createNode animCurveTA -n "Spine_03_ctl_rotateY";
 	rename -uid "CB4254F8-4A76-99A7-A1B7-A3AF5FAD68F7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  -10 0 1 0 21 0 43 0 49 0 56 0.37558662121838293;
+	setAttr -s 4 ".ktv[0:3]"  -10 0 1 0 21 0 43 0;
 createNode animCurveTA -n "Spine_03_ctl_rotateZ";
 	rename -uid "8EE151AE-4230-B474-3303-B69938BE4AC4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 29.885062610470669 1 29.885062610470669
-		 21 29.885062610470669 43 20.461829092272005 49 20.461829092272005 56 20.455084849211666;
+	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 29.885062610470669 1 29.885062610470669
+		 21 29.885062610470669 43 20.461829092272005;
 createNode animCurveTL -n "R_Leg_PV_ctl_translateX";
 	rename -uid "DA0EFCE0-43F4-294B-825B-73A1EADF0A35";
 	setAttr ".tan" 18;
@@ -11461,58 +11991,48 @@ createNode animCurveTU -n "Spine_05_ctl_visibility";
 	rename -uid "28497C67-4E36-F29E-7AC9-33B63FD3B53D";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 1 1 1 33 1 40 1 48 1 52 1 56 1 60 1
-		 65 1;
-	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
-		5;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 1 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Spine_05_ctl_translateX";
 	rename -uid "713221CC-4376-0FFD-3E83-32AC9690ACEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 0 1 0 33 0 40 0 48 0 52 0 56 0 60 0
-		 65 0;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 1 0;
 createNode animCurveTL -n "Spine_05_ctl_translateY";
 	rename -uid "DD32F4DC-4CC4-86E8-8B0C-298D4EED8919";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 0 1 0 33 0 40 0 48 0 52 0 56 0 60 0
-		 65 0;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 1 0;
 createNode animCurveTL -n "Spine_05_ctl_translateZ";
 	rename -uid "21DF64BB-47F5-C656-1BC5-8DAE5510AFC7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 0 1 0 33 0 40 0 48 0 52 0 56 0 60 0
-		 65 0;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 1 0;
 createNode animCurveTU -n "Spine_05_ctl_scaleX";
 	rename -uid "A8811249-4C3C-87C7-A4EE-57AD668A26D4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 1 1 1 33 1 40 1 48 1 52 1 56 1 60 1
-		 65 1;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 1 1;
 createNode animCurveTU -n "Spine_05_ctl_scaleY";
 	rename -uid "2E87BC94-4CBE-9F7A-F7D9-B18275E9A4E7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 1 1 1 33 1 40 1 48 1 52 1 56 1 60 1
-		 65 1;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 1 1;
 createNode animCurveTU -n "Spine_05_ctl_scaleZ";
 	rename -uid "FCA40032-485F-A72D-F990-8F846199A086";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 1 1 1 33 1 40 1 48 1 52 1 56 1 60 1
-		 65 1;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 1 1;
 createNode animCurveTU -n "Spine_05_ctl_Follow_Translates";
 	rename -uid "58AD8795-4A35-7D17-F5EC-298FF7DD360A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 1 1 1 33 1 40 1 48 1 52 1 56 1 60 1
-		 65 1;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 1 1;
 createNode animCurveTU -n "Spine_05_ctl_Follow_Rotates";
 	rename -uid "0A678EF8-4CED-3010-313F-F48E17BDDE93";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  -10 1 1 1 33 1 40 1 48 1 52 1 56 1 60 1
-		 65 1;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 1 1;
 createNode animCurveTU -n "L_Clavicle_ctl_visibility";
 	rename -uid "B3817E86-48AB-00B2-15C2-6FBA53AF8252";
 	setAttr ".tan" 9;
@@ -11893,38 +12413,38 @@ createNode animCurveTU -n "Head_Ctrl_visibility";
 	rename -uid "81FF0AF8-41EA-CE7C-DA02-96AAA87813CB";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
-	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 65 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTU -n "Head_Ctrl_scaleZ";
 	rename -uid "B19BC4D4-4953-3340-D406-43AA1EA74195";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 65 1;
 createNode animCurveTU -n "Head_Ctrl_scaleY";
 	rename -uid "D6B074F1-4F72-0A1E-7B2A-D395311E7DCF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 65 1;
 createNode animCurveTU -n "Head_Ctrl_scaleX";
 	rename -uid "9D4854F7-4273-67AB-43B2-0C87CA924246";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
+	setAttr -s 2 ".ktv[0:1]"  -10 1 65 1;
 createNode animCurveTL -n "Head_Ctrl_translateZ";
 	rename -uid "180DEC39-4DE7-A0B8-E412-F6817243E3A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 0 33 0 40 0 48 0 52 0 56 0 60 0 65 0;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 65 0;
 createNode animCurveTL -n "Head_Ctrl_translateY";
 	rename -uid "09F157DC-4F04-AC46-525B-FA9BEF6621B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 0 33 0 40 0 48 0 52 0 56 0 60 0 65 0;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 65 0;
 createNode animCurveTL -n "Head_Ctrl_translateX";
 	rename -uid "C39CE8B2-4517-30F9-618B-59B0412078DF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 0 33 0 40 0 48 0 52 0 56 0 60 0 65 0;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 65 0;
 createNode animCurveTU -n "Head_Ctrl_Lip_Pout";
 	rename -uid "0D5255DD-46D3-CAB5-45CB-F588666C2210";
 	setAttr ".tan" 18;
@@ -11954,84 +12474,66 @@ createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	rename -uid "94370F09-4733-B0DE-3869-F98EFCE685D3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  -20 0 -10 15.569254890051429 1 15.569254890051429
-		 20 9.5904642680003978 30 -11.895230557416465 33 -11.895226029445327 40 -11.58313159295809
-		 48 -11.267005546028505 52 -11.165390794699562 56 -11.834009768907391 60 -12.049258670860985
-		 65 -12.147163255425578;
+	setAttr -s 6 ".ktv[0:5]"  -20 0 -10 15.569254890051429 1 15.569254890051429
+		 20 9.5904642680003978 32 -11.895230557416465 65 -11.881810211124016;
 createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "D36E0331-41A9-151B-C1E7-41B1BAA2A5BF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  -20 0 -10 7.8256438774403261 1 7.8256438774403261
-		 20 6.0253363230128691 30 0.41833693707526715 33 0.41844174432786591 40 0.66065274659966644
-		 48 1.0253589628385515 52 1.8390305104418008 56 2.8510409604365079 60 2.7723326906165555
-		 65 2.226180568188918;
+	setAttr -s 6 ".ktv[0:5]"  -20 0 -10 7.8256438774403261 1 7.8256438774403261
+		 20 6.0253363230128691 32 0.41833693707526715 65 0.72897266793221893;
 createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "4ABFE1E3-445B-6998-EE63-6D8F784D5B1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  -20 0 -10 -5.9434789469375007 1 -5.9434789469375007
-		 20 -6.6535271407827494 30 -9.3902495949010696 33 -9.4709940767702463 40 -10.074208743586032
-		 48 -10.708714109400349 52 -11.986672618695058 56 -13.580569987506385 60 -13.88858319283003
-		 65 -14.25899299194454;
+	setAttr -s 6 ".ktv[0:5]"  -20 0 -10 -5.9434789469375007 1 -5.9434789469375007
+		 20 -6.6535271407827494 32 -9.3902495949010696 65 -13.810800866603939;
 createNode animCurveTU -n "Master_Eyes_ctrl_visibility";
 	rename -uid "80EEB3D0-47A9-96EB-17A7-B992DFE2AC65";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -10 1 1 1 28 1 34 1 42 1 43 1 47 1 48 1
-		 54 1 57 1 61 1;
-	setAttr -s 11 ".kot[0:10]"  5 5 5 5 5 5 5 5 
-		5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  -10 1 1 1 28 1 34 1 42 1 48 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTU -n "Master_Eyes_ctrl_scaleX";
 	rename -uid "D700F3E3-4E3D-146C-CD5D-8EB8088E08C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -10 1 1 1 28 1 34 1 42 1 43 1 47 1 48 1
-		 54 1 57 1 61 1;
+	setAttr -s 6 ".ktv[0:5]"  -10 1 1 1 28 1 34 1 42 1 48 1;
 createNode animCurveTU -n "Master_Eyes_ctrl_scaleY";
 	rename -uid "D3EAC3CB-40CD-8421-E5BC-FFAD07BB7FB6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -10 1 1 1 28 1 34 1 42 1 43 1 47 1 48 1
-		 54 1 57 1 61 1;
+	setAttr -s 6 ".ktv[0:5]"  -10 1 1 1 28 1 34 1 42 1 48 1;
 createNode animCurveTU -n "Master_Eyes_ctrl_scaleZ";
 	rename -uid "0879E3BC-48D4-E56D-B5FE-B19B2C28FD84";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -10 1 1 1 28 1 34 1 42 1 43 1 47 1 48 1
-		 54 1 57 1 61 1;
+	setAttr -s 6 ".ktv[0:5]"  -10 1 1 1 28 1 34 1 42 1 48 1;
 createNode animCurveTU -n "Master_Eyes_ctrl_Blink";
 	rename -uid "5B5E0501-4F07-0733-BB01-228BA41DCC02";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  -10 0 1 0 28 0 34 10 42 0 43 0 47 0 48 0
-		 54 0 57 0 61 0;
+	setAttr -s 6 ".ktv[0:5]"  -10 0 1 0 28 0 34 10 42 0 48 0;
 createNode animCurveTU -n "Master_Eyes_ctrl_R_UpperLid";
 	rename -uid "88AD7F74-4B15-B84E-ABD8-C99068801BA6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  -10 0 1 0 28 0 34 0 42 0 43 -0.015625000000000031
-		 46 -0.099999999999999978 47 -0.050000000000000197 48 0 54 0 57 0 61 0;
+	setAttr -s 6 ".ktv[0:5]"  -10 0 1 0 28 0 34 0 42 0 48 0;
 createNode animCurveTU -n "Master_Eyes_ctrl_L_Upper_Lid";
 	rename -uid "CC4F758D-479E-ABDE-0D54-52BB7927368F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  -10 0 1 0 28 0 34 0 42 0 43 -0.015625000000000031
-		 46 -0.099999999999999978 47 -0.050000000000000197 48 0 54 0 57 0 61 0;
+	setAttr -s 6 ".ktv[0:5]"  -10 0 1 0 28 0 34 0 42 0 48 0;
 createNode animCurveTU -n "Master_Eyes_ctrl_R_Lower_Lid";
 	rename -uid "2E03998C-4060-6DC4-DAFD-F7BA552AC5D1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  -10 0 1 0 28 0 34 0 42 3.8000000000000003
-		 43 4.2015625000000014 46 4.8999999999999995 47 4.6500000000000012 48 4.4 54 4.4 57 4.4
-		 61 4.4;
+	setAttr -s 6 ".ktv[0:5]"  -10 0 1 0 28 0 34 0 42 0 48 0;
 createNode animCurveTU -n "Master_Eyes_ctrl_L_Lower_Lid";
 	rename -uid "DCEBB74D-4F2E-5DBB-DF49-F6AF558EA33D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  -10 0 1 0 28 0 34 0 42 3.8000000000000003
-		 43 4.2015625000000014 46 4.8999999999999995 47 4.6500000000000012 48 4.4 54 4.4 57 4.4
-		 61 4.4;
+	setAttr -s 6 ".ktv[0:5]"  -10 0 1 0 28 0 34 0 42 0 48 0;
 createNode animCurveTU -n "L_FK_Arm_01_ctl_visibility";
 	rename -uid "01BBDBFF-4DC5-001F-5AFA-8182F647FF72";
 	setAttr ".tan" 9;
@@ -12113,48 +12615,48 @@ createNode animCurveTU -n "Spine_03_ctl_visibility";
 	rename -uid "A9E89B45-4300-ED4F-A775-479C866453EB";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 1 21 1 43 1 49 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 3 ".ktv[0:2]"  -10 1 21 1 43 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "Spine_03_ctl_translateX";
 	rename -uid "1C82AB2C-481D-3041-380C-D2906DCA5C5D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 21 0 43 0 49 0;
+	setAttr -s 3 ".ktv[0:2]"  -10 0 21 0 43 0;
 createNode animCurveTL -n "Spine_03_ctl_translateY";
 	rename -uid "DCEF634B-4046-7480-05B2-F4BA9AEEBC87";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 21 0 43 0 49 0;
+	setAttr -s 3 ".ktv[0:2]"  -10 0 21 0 43 0;
 createNode animCurveTL -n "Spine_03_ctl_translateZ";
 	rename -uid "DE59BCEC-4AD4-18DF-2158-4B96D4231651";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 21 0 43 0 49 0;
+	setAttr -s 3 ".ktv[0:2]"  -10 0 21 0 43 0;
 createNode animCurveTU -n "Spine_03_ctl_scaleX";
 	rename -uid "331D461D-4109-D4A5-D020-5884F120C4FA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 1 21 1 43 1 49 1;
+	setAttr -s 3 ".ktv[0:2]"  -10 1 21 1 43 1;
 createNode animCurveTU -n "Spine_03_ctl_scaleY";
 	rename -uid "EB7BF1D3-44B9-1205-B5EF-54BF1EF80642";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 1 21 1 43 1 49 1;
+	setAttr -s 3 ".ktv[0:2]"  -10 1 21 1 43 1;
 createNode animCurveTU -n "Spine_03_ctl_scaleZ";
 	rename -uid "CDC97E0D-4515-5939-78BB-84AF0706B064";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 1 21 1 43 1 49 1;
+	setAttr -s 3 ".ktv[0:2]"  -10 1 21 1 43 1;
 createNode animCurveTU -n "Spine_03_ctl_Follow_Translates";
 	rename -uid "51E59AC0-49D6-A269-799F-B1B883A949BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 1 21 1 43 1 49 1;
+	setAttr -s 3 ".ktv[0:2]"  -10 1 21 1 43 1;
 createNode animCurveTU -n "Spine_03_ctl_Follow_Rotates";
 	rename -uid "63182795-4C44-6374-C751-67BBA2C2CC38";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 1 21 1 43 1 49 1;
+	setAttr -s 3 ".ktv[0:2]"  -10 1 21 1 43 1;
 createNode animCurveTA -n "Spine_01_ctl_rotateX";
 	rename -uid "F4F8D77E-4FBD-9036-4E90-A9904D30D63E";
 	setAttr ".tan" 18;
@@ -12221,9 +12723,7 @@ createNode animCurveTA -n "Jaw_ctrl_rotateX";
 	rename -uid "44922E1D-4856-69DF-DF25-EDA05A83D3D8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -20 0 -10 -0.9331920474247517 1 -0.9331920474247517
-		 31 12.165831056594193 37 3.8546527654008682 46 -4.5280021767411478 53 -0.16165797327794174
-		 65 -1.739864964983316;
+	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 -0.9331920474247517 1 -0.9331920474247517;
 createNode animCurveTA -n "Jaw_ctrl_rotateY";
 	rename -uid "FE91AABC-4153-A856-873F-2D895F3A91D3";
 	setAttr ".tan" 18;
@@ -12244,17 +12744,17 @@ createNode animCurveTL -n "Jaw_ctrl_translateX";
 	rename -uid "2CEDC47B-4D5E-A4F8-2DF8-5C9785F10B14";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 1 0 46 -0.035604237562587578 65 -0.042376001991700177;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 1 0;
 createNode animCurveTL -n "Jaw_ctrl_translateY";
 	rename -uid "B77034E4-4446-E255-1FB2-F79679E37E3A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 1 0 46 -0.03559741058337184 65 0.036462060460507692;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 1 0;
 createNode animCurveTL -n "Jaw_ctrl_translateZ";
 	rename -uid "41DAE487-43F6-D6F7-C328-E3B6B38A2C4B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 1 0 46 0.28029324408069678 65 0.58306135605483567;
+	setAttr -s 2 ".ktv[0:1]"  -10 0 1 0;
 createNode animCurveTU -n "Jaw_ctrl_scaleX";
 	rename -uid "EEE20DC8-4DC2-2A8E-8D2A-F09695995799";
 	setAttr ".tan" 18;
@@ -14688,7 +15188,7 @@ createNode animCurveTU -n "Master_Eye_ctrl_Blink";
 	rename -uid "38C88525-48B2-AE95-0297-BF8F8E5AD004";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 0 65 -10;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTU -n "Master_Eye_ctrl_L_Up_Lid";
 	rename -uid "E63E2F7D-4D9E-F62E-0E8A-7CA0EBE1AE36";
 	setAttr ".tan" 18;
@@ -14703,12 +15203,12 @@ createNode animCurveTU -n "Master_Eye_ctrl_L_Down_Lid";
 	rename -uid "9EB66281-4304-0373-3086-008838D7DBC6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 0 46 1.8;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTU -n "Master_Eye_ctrl_R_Down_Lid";
 	rename -uid "61FCB346-4FDC-C27A-CA93-45B11A070DF0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 0 46 1.8;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTU -n "Master_Eye_ctrl_Follow";
 	rename -uid "3CFF5DF8-4C0D-AF56-2210-ABA123243783";
 	setAttr ".tan" 9;
@@ -16570,110 +17070,109 @@ createNode animCurveTU -n "Spine_04_ctl_visibility1";
 	rename -uid "078513CE-45E3-4238-1180-B482AB79A39B";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
-	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+	setAttr ".ktv[0]"  -10 1;
+	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "Spine_04_ctl_translateX1";
 	rename -uid "06F4B9A5-4EE5-7087-67EA-18BC5506C05E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 0 33 0 40 0 48 0 52 0 56 0 60 0 65 0;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "Spine_04_ctl_translateY1";
 	rename -uid "3035A590-4B5A-255C-673E-40969413B39D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 0 33 0 40 0 48 0 52 0 56 0 60 0 65 0;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "Spine_04_ctl_translateZ1";
 	rename -uid "8239EA40-4259-CCC6-4932-BAA600322FE7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 0 33 0 40 0 48 0 52 0 56 0 60 0 65 0;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTU -n "Spine_04_ctl_scaleX1";
 	rename -uid "93120A26-4911-9206-FACF-4C8221716B65";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_04_ctl_scaleY1";
 	rename -uid "2B160854-4251-DAC7-9476-E5B2D6EF683D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_04_ctl_scaleZ1";
 	rename -uid "F0F466BF-4A5B-8458-6F21-51ADE7867EF4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_04_ctl_Follow_Translates1";
 	rename -uid "DB507FDD-4717-8CB0-125A-DFB8ABCC1E10";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_04_ctl_Follow_Rotates1";
 	rename -uid "A5CAB3CE-4EBD-CFC2-6E43-DCB0F3D44FF8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  -10 1 33 1 40 1 48 1 52 1 56 1 60 1 65 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_02_ctl_visibility1";
 	rename -uid "B31C12D4-44B2-FE53-8A06-EFAA7029F0CB";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 1 49 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr ".ktv[0]"  -10 1;
+	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "Spine_02_ctl_translateX1";
 	rename -uid "EB82731F-4B9A-BD62-1043-088949445166";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 0 49 0;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "Spine_02_ctl_translateY1";
 	rename -uid "3B311D7A-43FB-7EF5-3BE1-CDAEFDD2FC26";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 0 49 0;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "Spine_02_ctl_translateZ1";
 	rename -uid "523ACDA4-4B96-0235-83B7-9CA6C3955DB7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 0 49 0;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTA -n "Spine_02_ctl_rotateX1";
 	rename -uid "EA2EB3AC-4F12-969E-E524-E397EC3E478B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  -10 0 49 0 56 -1.0287318187701961;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTA -n "Spine_02_ctl_rotateY1";
 	rename -uid "1C926EA0-489D-FFEE-E296-9BAD6F7F132E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  -10 0 49 0 56 0.37558662121838138;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTA -n "Spine_02_ctl_rotateZ1";
 	rename -uid "554AAF63-47EF-ADF3-16EB-5B8CC699A522";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -20 0 -10 38.002510061959107 49 38.002510061959107
-		 56 37.995765818898782;
+	setAttr -s 2 ".ktv[0:1]"  -20 0 -10 38.002510061959107;
 createNode animCurveTU -n "Spine_02_ctl_scaleX1";
 	rename -uid "F0DB8D0F-495E-9A35-9CE1-0C94861E75EE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 1 49 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_02_ctl_scaleY1";
 	rename -uid "B52E9D0F-44B2-787C-5D4B-C8B6D52BB241";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 1 49 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_02_ctl_scaleZ1";
 	rename -uid "0371D89E-40EA-BA0A-7506-009425CA5CF1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 1 49 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_02_ctl_Follow_Translates1";
 	rename -uid "C679D67D-4FBC-88BF-909C-FCB1C908CDC3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 1 49 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "Spine_02_ctl_Follow_Rotates1";
 	rename -uid "8051FF67-432C-6358-3D5D-739812CC866C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 1 49 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "COG_ctl_visibility1";
 	rename -uid "D2E4B6A4-4E7B-CC27-6B9D-A2B4EDCB349E";
 	setAttr ".tan" 9;
@@ -19461,8 +19960,7 @@ createNode animCurveTL -n "R_Nose_ctrl_translateY";
 	rename -uid "953DDE80-4835-B19A-C256-B19967D353A9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 46 0.44714848484918673 52 0.34192112093624311
-		 65 0.53879370148871286;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "R_Nose_ctrl_translateZ";
 	rename -uid "FB385FF3-47AA-8FEC-7B47-8B91512C0723";
 	setAttr ".tan" 18;
@@ -19483,8 +19981,7 @@ createNode animCurveTL -n "L_Nose_ctrl_translateY";
 	rename -uid "ED7FDB83-48E2-9E32-F9FB-8CA16B14F126";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 46 0.44714848484918673 52 0.34192112093624311
-		 65 0.53879370148871286;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "L_Nose_ctrl_translateZ";
 	rename -uid "8C60E353-4955-A212-3DC2-7491E955C124";
 	setAttr ".tan" 18;
@@ -19500,13 +19997,12 @@ createNode animCurveTL -n "R_Mouth_ctrl_translateX1";
 	rename -uid "3CAE3E4F-448A-E2BC-FFAF-89885D797FA7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  -10 0 46 0.12266661836734404 47 0;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "R_Mouth_ctrl_translateY1";
 	rename -uid "B3F0DA03-4AD8-5805-B786-D78B952402D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -10 0 43 -0.978092964865931 46 -0.89404992166178898
-		 47 -0.63933218908202405;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "R_Mouth_ctrl_translateZ1";
 	rename -uid "4CF9A43A-45A3-E974-089E-F6A8061E6B62";
 	setAttr ".tan" 18;
@@ -19522,12 +20018,12 @@ createNode animCurveTL -n "L_Mouth_ctrl_translateX1";
 	rename -uid "612A0771-4B5F-4339-226F-BD91AD104102";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -10 0 46 0;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "L_Mouth_ctrl_translateY1";
 	rename -uid "19A12714-4EB8-ED22-DA79-B78E839C1F1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  -10 0 46 -1.3390945094360593 47 -1.1783345301341674;
+	setAttr ".ktv[0]"  -10 0;
 createNode animCurveTL -n "L_Mouth_ctrl_translateZ1";
 	rename -uid "797D31A0-440E-9A93-7A28-11B0E92195A4";
 	setAttr ".tan" 18;
@@ -19945,36 +20441,9 @@ createNode animCurveTU -n "Master_ctl_scaleZ2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  -10 1;
-createNode animCurveTL -n "Pout_ctrl_translateX";
-	rename -uid "FA10447A-4330-D673-B9A2-5FAF969E3DDF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1.9999801020408163 0 49.999994557823129 0;
-createNode animCurveTL -n "Pout_ctrl_translateY";
-	rename -uid "E9F01D97-48D3-CCEF-370F-BAB1B383542F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  1.9999801020408163 0.82353471214702034 4.2856955782312927 0.78150108044862465
-		 6.5714100340136055 0.88171253717420739 8.8571260204081632 0.84007354672804913 37 0.23110841672004157
-		 41 0.51014815516471468 43.142849489795921 0.92613495918734912 45.428565136054424 0.8430723111186621
-		 46 0.53427111386829629 47.714279251700681 0.90087163771706447 49.999994727891156 0.82353471214702034
-		 52.285709863945577 0.78150108044862465 54.571424489795916 0.88171253717420739 56.857138605442174 0.84007354672804913
-		 59.142854591836738 0.92613495918734912 61.42856904761905 0.8430723111186621 63.714284523809525 0.90087163771706447
-		 66 0.7746067152160534;
-createNode animCurveTL -n "Pout_ctrl_translateZ";
-	rename -uid "BBDB1769-42FF-BD6E-4F2A-CF92872A8147";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1.9999801020408163 0 49.999994557823129 0;
-createNode animCurveTU -n "Pout_ctrl_visibility";
-	rename -uid "CA8EA2D0-459A-E851-AF7D-699E51E81042";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1.9999801020408163 1 49.999994557823129 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
 select -ne :time1;
-	setAttr ".o" 42;
-	setAttr ".unw" 42;
+	setAttr ".o" 7;
+	setAttr ".unw" 7;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -20339,1581 +20808,1573 @@ connectAttr "R_Nose_ctrl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinni
 		;
 connectAttr "R_Nose_ctrl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[736]"
 		;
-connectAttr "Pout_ctrl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[737]"
+connectAttr "R_Leg_IKFK_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[737]"
 		;
-connectAttr "Pout_ctrl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[738]"
+connectAttr "R_Leg_IKFK_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[738]"
 		;
-connectAttr "Pout_ctrl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[739]"
+connectAttr "R_Leg_IKFK_ctl_Leg_IKFK.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[739]"
 		;
-connectAttr "Pout_ctrl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[740]"
+connectAttr "R_Leg_IKFK_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[740]"
 		;
-connectAttr "R_Leg_IKFK_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[741]"
+connectAttr "R_Leg_IKFK_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[741]"
 		;
-connectAttr "R_Leg_IKFK_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[742]"
+connectAttr "R_Leg_IKFK_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[742]"
 		;
-connectAttr "R_Leg_IKFK_ctl_Leg_IKFK.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[743]"
+connectAttr "R_Leg_IKFK_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[743]"
 		;
-connectAttr "R_Leg_IKFK_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[744]"
+connectAttr "R_Leg_IKFK_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[744]"
 		;
-connectAttr "R_Leg_IKFK_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[745]"
+connectAttr "R_Leg_IKFK_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[745]"
 		;
-connectAttr "R_Leg_IKFK_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[746]"
+connectAttr "R_Leg_IKFK_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[746]"
 		;
-connectAttr "R_Leg_IKFK_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[747]"
+connectAttr "R_Leg_IKFK_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[747]"
 		;
-connectAttr "R_Leg_IKFK_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[748]"
+connectAttr "R_Leg_IKFK_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[748]"
 		;
-connectAttr "R_Leg_IKFK_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[749]"
+connectAttr "R_Leg_IKFK_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[749]"
 		;
-connectAttr "R_Leg_IKFK_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[750]"
+connectAttr "L_Leg_IKFK_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[750]"
 		;
-connectAttr "R_Leg_IKFK_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[751]"
+connectAttr "L_Leg_IKFK_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[751]"
 		;
-connectAttr "R_Leg_IKFK_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[752]"
+connectAttr "L_Leg_IKFK_ctl_Leg_IKFK.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[752]"
 		;
-connectAttr "R_Leg_IKFK_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[753]"
+connectAttr "L_Leg_IKFK_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[753]"
 		;
-connectAttr "L_Leg_IKFK_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[754]"
+connectAttr "L_Leg_IKFK_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[754]"
 		;
-connectAttr "L_Leg_IKFK_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[755]"
+connectAttr "L_Leg_IKFK_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[755]"
 		;
-connectAttr "L_Leg_IKFK_ctl_Leg_IKFK.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[756]"
+connectAttr "L_Leg_IKFK_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[756]"
 		;
-connectAttr "L_Leg_IKFK_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[757]"
+connectAttr "L_Leg_IKFK_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[757]"
 		;
-connectAttr "L_Leg_IKFK_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[758]"
+connectAttr "L_Leg_IKFK_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[758]"
 		;
-connectAttr "L_Leg_IKFK_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[759]"
+connectAttr "L_Leg_IKFK_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[759]"
 		;
-connectAttr "L_Leg_IKFK_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[760]"
+connectAttr "L_Leg_IKFK_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[760]"
 		;
-connectAttr "L_Leg_IKFK_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[761]"
+connectAttr "L_Leg_IKFK_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[761]"
 		;
-connectAttr "L_Leg_IKFK_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[762]"
+connectAttr "L_Leg_IKFK_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[762]"
 		;
-connectAttr "L_Leg_IKFK_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[763]"
+connectAttr "L_Arm_IKFK_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[763]"
 		;
-connectAttr "L_Leg_IKFK_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[764]"
+connectAttr "L_Arm_IKFK_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[764]"
 		;
-connectAttr "L_Leg_IKFK_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[765]"
+connectAttr "L_Arm_IKFK_ctl_Arm_IKFK.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[765]"
 		;
-connectAttr "L_Leg_IKFK_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[766]"
+connectAttr "L_Arm_IKFK_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[766]"
 		;
-connectAttr "L_Arm_IKFK_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[767]"
+connectAttr "L_Arm_IKFK_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[767]"
 		;
-connectAttr "L_Arm_IKFK_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[768]"
+connectAttr "L_Arm_IKFK_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[768]"
 		;
-connectAttr "L_Arm_IKFK_ctl_Arm_IKFK.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[769]"
+connectAttr "L_Arm_IKFK_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[769]"
 		;
-connectAttr "L_Arm_IKFK_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[770]"
+connectAttr "L_Arm_IKFK_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[770]"
 		;
-connectAttr "L_Arm_IKFK_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[771]"
+connectAttr "L_Arm_IKFK_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[771]"
 		;
-connectAttr "L_Arm_IKFK_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[772]"
+connectAttr "L_Arm_IKFK_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[772]"
 		;
-connectAttr "L_Arm_IKFK_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[773]"
+connectAttr "L_Arm_IKFK_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[773]"
 		;
-connectAttr "L_Arm_IKFK_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[774]"
+connectAttr "L_Arm_IKFK_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[774]"
 		;
-connectAttr "L_Arm_IKFK_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[775]"
+connectAttr "L_Arm_IKFK_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[775]"
 		;
-connectAttr "L_Arm_IKFK_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[776]"
+connectAttr "R_Arm_IKFK_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[776]"
 		;
-connectAttr "L_Arm_IKFK_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[777]"
+connectAttr "R_Arm_IKFK_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[777]"
 		;
-connectAttr "L_Arm_IKFK_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[778]"
+connectAttr "R_Arm_IKFK_ctl_Arm_IKFK.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[778]"
 		;
-connectAttr "L_Arm_IKFK_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[779]"
+connectAttr "R_Arm_IKFK_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[779]"
 		;
-connectAttr "R_Arm_IKFK_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[780]"
+connectAttr "R_Arm_IKFK_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[780]"
 		;
-connectAttr "R_Arm_IKFK_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[781]"
+connectAttr "R_Arm_IKFK_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[781]"
 		;
-connectAttr "R_Arm_IKFK_ctl_Arm_IKFK.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[782]"
+connectAttr "R_Arm_IKFK_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[782]"
 		;
-connectAttr "R_Arm_IKFK_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[783]"
+connectAttr "R_Arm_IKFK_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[783]"
 		;
-connectAttr "R_Arm_IKFK_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[784]"
+connectAttr "R_Arm_IKFK_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[784]"
 		;
-connectAttr "R_Arm_IKFK_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[785]"
+connectAttr "R_Arm_IKFK_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[785]"
 		;
-connectAttr "R_Arm_IKFK_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[786]"
+connectAttr "R_Arm_IKFK_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[786]"
 		;
-connectAttr "R_Arm_IKFK_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[787]"
+connectAttr "R_Arm_IKFK_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[787]"
 		;
-connectAttr "R_Arm_IKFK_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[788]"
+connectAttr "R_Arm_IKFK_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[788]"
 		;
-connectAttr "R_Arm_IKFK_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[789]"
+connectAttr "Hips_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[789]"
 		;
-connectAttr "R_Arm_IKFK_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[790]"
+connectAttr "Hips_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[790]"
 		;
-connectAttr "R_Arm_IKFK_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[791]"
+connectAttr "Hips_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[791]"
 		;
-connectAttr "R_Arm_IKFK_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[792]"
+connectAttr "Hips_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[792]"
 		;
-connectAttr "Hips_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[793]"
+connectAttr "Hips_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[793]"
 		;
-connectAttr "Hips_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[794]"
+connectAttr "Hips_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[794]"
 		;
-connectAttr "Hips_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[795]"
+connectAttr "Hips_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[795]"
 		;
-connectAttr "Hips_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[796]"
+connectAttr "Hips_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[796]"
 		;
-connectAttr "Hips_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[797]"
+connectAttr "Hips_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[797]"
 		;
-connectAttr "Hips_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[798]"
+connectAttr "Hips_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[798]"
 		;
-connectAttr "Hips_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[799]"
+connectAttr "Hips_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[799]"
 		;
-connectAttr "Hips_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[800]"
+connectAttr "Hips_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[800]"
 		;
-connectAttr "Hips_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[801]"
+connectAttr "Spine_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[801]"
 		;
-connectAttr "Hips_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[802]"
+connectAttr "Spine_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[802]"
 		;
-connectAttr "Hips_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[803]"
+connectAttr "Spine_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[803]"
 		;
-connectAttr "Hips_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[804]"
+connectAttr "Spine_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[804]"
 		;
-connectAttr "Spine_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[805]"
+connectAttr "Spine_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[805]"
 		;
-connectAttr "Spine_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[806]"
+connectAttr "Spine_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[806]"
 		;
-connectAttr "Spine_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[807]"
+connectAttr "Spine_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[807]"
 		;
-connectAttr "Spine_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[808]"
+connectAttr "Spine_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[808]"
 		;
-connectAttr "Spine_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[809]"
+connectAttr "Spine_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[809]"
 		;
-connectAttr "Spine_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[810]"
+connectAttr "Spine_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[810]"
 		;
-connectAttr "Spine_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[811]"
+connectAttr "Spine_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[811]"
 		;
-connectAttr "Spine_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[812]"
+connectAttr "Spine_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[812]"
 		;
-connectAttr "Spine_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[813]"
+connectAttr "COG_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[813]"
 		;
-connectAttr "Spine_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[814]"
+connectAttr "COG_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[814]"
 		;
-connectAttr "Spine_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[815]"
+connectAttr "COG_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[815]"
 		;
-connectAttr "Spine_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[816]"
+connectAttr "COG_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[816]"
 		;
-connectAttr "COG_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[817]"
+connectAttr "COG_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[817]"
 		;
-connectAttr "COG_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[818]"
+connectAttr "COG_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[818]"
 		;
-connectAttr "COG_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[819]"
+connectAttr "COG_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[819]"
 		;
-connectAttr "COG_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[820]"
+connectAttr "COG_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[820]"
 		;
-connectAttr "COG_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[821]"
+connectAttr "COG_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[821]"
 		;
-connectAttr "COG_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[822]"
+connectAttr "COG_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[822]"
 		;
-connectAttr "COG_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[823]"
+connectAttr "COG_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[823]"
 		;
-connectAttr "COG_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[824]"
+connectAttr "COG_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[824]"
 		;
-connectAttr "COG_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[825]"
+connectAttr "Spine_02_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[825]"
 		;
-connectAttr "COG_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[826]"
+connectAttr "Spine_02_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[826]"
 		;
-connectAttr "COG_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[827]"
+connectAttr "Spine_02_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[827]"
 		;
-connectAttr "COG_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[828]"
+connectAttr "Spine_02_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[828]"
 		;
-connectAttr "Spine_02_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[829]"
+connectAttr "Spine_02_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[829]"
 		;
-connectAttr "Spine_02_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[830]"
+connectAttr "Spine_02_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[830]"
 		;
-connectAttr "Spine_02_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[831]"
+connectAttr "Spine_02_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[831]"
 		;
-connectAttr "Spine_02_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[832]"
+connectAttr "Spine_02_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[832]"
 		;
-connectAttr "Spine_02_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[833]"
+connectAttr "Spine_02_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[833]"
 		;
-connectAttr "Spine_02_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[834]"
+connectAttr "Spine_02_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[834]"
 		;
-connectAttr "Spine_02_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[835]"
+connectAttr "Spine_02_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[835]"
 		;
-connectAttr "Spine_02_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[836]"
+connectAttr "Spine_02_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[836]"
 		;
-connectAttr "Spine_02_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[837]"
+connectAttr "Spine_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[837]"
 		;
-connectAttr "Spine_02_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[838]"
+connectAttr "Spine_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[838]"
 		;
-connectAttr "Spine_02_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[839]"
+connectAttr "Spine_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[839]"
 		;
-connectAttr "Spine_02_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[840]"
+connectAttr "Spine_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[840]"
 		;
-connectAttr "Spine_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[841]"
+connectAttr "Spine_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[841]"
 		;
-connectAttr "Spine_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[842]"
+connectAttr "Spine_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[842]"
 		;
-connectAttr "Spine_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[843]"
+connectAttr "Spine_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[843]"
 		;
-connectAttr "Spine_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[844]"
+connectAttr "Spine_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[844]"
 		;
-connectAttr "Spine_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[845]"
+connectAttr "Spine_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[845]"
 		;
-connectAttr "Spine_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[846]"
+connectAttr "Spine_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[846]"
 		;
-connectAttr "Spine_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[847]"
+connectAttr "Spine_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[847]"
 		;
-connectAttr "Spine_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[848]"
+connectAttr "Spine_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[848]"
 		;
-connectAttr "Spine_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[849]"
+connectAttr "Spine_04_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[849]"
 		;
-connectAttr "Spine_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[850]"
+connectAttr "Spine_04_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[850]"
 		;
-connectAttr "Spine_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[851]"
+connectAttr "Spine_04_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[851]"
 		;
-connectAttr "Spine_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[852]"
+connectAttr "Spine_04_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[852]"
 		;
-connectAttr "Spine_04_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[853]"
+connectAttr "Spine_04_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[853]"
 		;
-connectAttr "Spine_04_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[854]"
+connectAttr "Spine_04_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[854]"
 		;
-connectAttr "Spine_04_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[855]"
+connectAttr "Spine_04_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[855]"
 		;
-connectAttr "Spine_04_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[856]"
+connectAttr "Spine_04_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[856]"
 		;
-connectAttr "Spine_04_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[857]"
+connectAttr "Spine_04_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[857]"
 		;
-connectAttr "Spine_04_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[858]"
+connectAttr "Spine_04_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[858]"
 		;
-connectAttr "Spine_04_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[859]"
+connectAttr "Spine_04_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[859]"
 		;
-connectAttr "Spine_04_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[860]"
+connectAttr "Spine_04_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[860]"
 		;
-connectAttr "Spine_04_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[861]"
+connectAttr "Spine_05_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[861]"
 		;
-connectAttr "Spine_04_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[862]"
+connectAttr "Spine_05_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[862]"
 		;
-connectAttr "Spine_04_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[863]"
+connectAttr "Spine_05_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[863]"
 		;
-connectAttr "Spine_04_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[864]"
+connectAttr "Spine_05_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[864]"
 		;
-connectAttr "Spine_05_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[865]"
+connectAttr "Spine_05_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[865]"
 		;
-connectAttr "Spine_05_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[866]"
+connectAttr "Spine_05_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[866]"
 		;
-connectAttr "Spine_05_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[867]"
+connectAttr "Spine_05_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[867]"
 		;
-connectAttr "Spine_05_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[868]"
+connectAttr "Spine_05_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[868]"
 		;
-connectAttr "Spine_05_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[869]"
+connectAttr "Spine_05_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[869]"
 		;
-connectAttr "Spine_05_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[870]"
+connectAttr "Spine_05_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[870]"
 		;
-connectAttr "Spine_05_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[871]"
+connectAttr "Spine_05_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[871]"
 		;
-connectAttr "Spine_05_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[872]"
+connectAttr "Spine_05_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[872]"
 		;
-connectAttr "Spine_05_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[873]"
+connectAttr "L_Clavicle_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[873]"
 		;
-connectAttr "Spine_05_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[874]"
+connectAttr "L_Clavicle_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[874]"
 		;
-connectAttr "Spine_05_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[875]"
+connectAttr "L_Clavicle_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[875]"
 		;
-connectAttr "Spine_05_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[876]"
+connectAttr "L_Clavicle_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[876]"
 		;
-connectAttr "L_Clavicle_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[877]"
+connectAttr "L_Clavicle_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[877]"
 		;
-connectAttr "L_Clavicle_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[878]"
+connectAttr "L_Clavicle_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[878]"
 		;
-connectAttr "L_Clavicle_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[879]"
+connectAttr "L_Clavicle_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[879]"
 		;
-connectAttr "L_Clavicle_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[880]"
+connectAttr "L_Clavicle_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[880]"
 		;
-connectAttr "L_Clavicle_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[881]"
+connectAttr "L_Clavicle_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[881]"
 		;
-connectAttr "L_Clavicle_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[882]"
+connectAttr "L_Clavicle_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[882]"
 		;
-connectAttr "L_Clavicle_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[883]"
+connectAttr "L_Clavicle_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[883]"
 		;
-connectAttr "L_Clavicle_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[884]"
+connectAttr "L_Clavicle_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[884]"
 		;
-connectAttr "L_Clavicle_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[885]"
+connectAttr "R_Clavicle_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[885]"
 		;
-connectAttr "L_Clavicle_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[886]"
+connectAttr "R_Clavicle_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[886]"
 		;
-connectAttr "L_Clavicle_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[887]"
+connectAttr "R_Clavicle_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[887]"
 		;
-connectAttr "L_Clavicle_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[888]"
+connectAttr "R_Clavicle_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[888]"
 		;
-connectAttr "R_Clavicle_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[889]"
+connectAttr "R_Clavicle_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[889]"
 		;
-connectAttr "R_Clavicle_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[890]"
+connectAttr "R_Clavicle_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[890]"
 		;
-connectAttr "R_Clavicle_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[891]"
+connectAttr "R_Clavicle_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[891]"
 		;
-connectAttr "R_Clavicle_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[892]"
+connectAttr "R_Clavicle_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[892]"
 		;
-connectAttr "R_Clavicle_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[893]"
+connectAttr "R_Clavicle_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[893]"
 		;
-connectAttr "R_Clavicle_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[894]"
+connectAttr "R_Clavicle_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[894]"
 		;
-connectAttr "R_Clavicle_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[895]"
+connectAttr "R_Clavicle_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[895]"
 		;
-connectAttr "R_Clavicle_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[896]"
+connectAttr "R_Clavicle_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[896]"
 		;
-connectAttr "R_Clavicle_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[897]"
+connectAttr "L_FK_Arm_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[897]"
 		;
-connectAttr "R_Clavicle_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[898]"
+connectAttr "L_FK_Arm_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[898]"
 		;
-connectAttr "R_Clavicle_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[899]"
+connectAttr "L_FK_Arm_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[899]"
 		;
-connectAttr "R_Clavicle_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[900]"
+connectAttr "L_FK_Arm_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[900]"
 		;
-connectAttr "L_FK_Arm_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[901]"
+connectAttr "L_FK_Arm_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[901]"
 		;
-connectAttr "L_FK_Arm_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[902]"
+connectAttr "L_FK_Arm_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[902]"
 		;
-connectAttr "L_FK_Arm_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[903]"
+connectAttr "L_FK_Arm_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[903]"
 		;
-connectAttr "L_FK_Arm_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[904]"
+connectAttr "L_FK_Arm_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[904]"
 		;
-connectAttr "L_FK_Arm_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[905]"
+connectAttr "L_FK_Arm_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[905]"
 		;
-connectAttr "L_FK_Arm_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[906]"
+connectAttr "L_FK_Arm_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[906]"
 		;
-connectAttr "L_FK_Arm_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[907]"
+connectAttr "L_FK_Arm_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[907]"
 		;
-connectAttr "L_FK_Arm_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[908]"
+connectAttr "L_FK_Arm_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[908]"
 		;
-connectAttr "L_FK_Arm_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[909]"
+connectAttr "L_FK_Arm_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[909]"
 		;
-connectAttr "L_FK_Arm_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[910]"
+connectAttr "L_FK_Arm_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[910]"
 		;
-connectAttr "L_FK_Arm_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[911]"
+connectAttr "L_FK_Arm_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[911]"
 		;
-connectAttr "L_FK_Arm_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[912]"
+connectAttr "L_FK_Arm_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[912]"
 		;
-connectAttr "L_FK_Arm_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[913]"
+connectAttr "L_FK_Arm_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[913]"
 		;
-connectAttr "L_FK_Arm_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[914]"
+connectAttr "L_FK_Arm_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[914]"
 		;
-connectAttr "L_FK_Arm_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[915]"
+connectAttr "L_FK_Arm_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[915]"
 		;
-connectAttr "L_FK_Arm_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[916]"
+connectAttr "L_FK_Arm_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[916]"
 		;
-connectAttr "L_FK_Arm_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[917]"
+connectAttr "L_FK_Arm_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[917]"
 		;
-connectAttr "L_FK_Arm_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[918]"
+connectAttr "L_FK_Arm_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[918]"
 		;
-connectAttr "L_FK_Arm_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[919]"
+connectAttr "L_FK_Arm_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[919]"
 		;
-connectAttr "L_FK_Arm_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[920]"
+connectAttr "L_FK_Arm_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[920]"
 		;
-connectAttr "L_FK_Arm_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[921]"
+connectAttr "L_FK_Arm_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[921]"
 		;
-connectAttr "L_FK_Arm_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[922]"
+connectAttr "L_FK_Arm_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[922]"
 		;
-connectAttr "L_FK_Arm_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[923]"
+connectAttr "L_FK_Arm_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[923]"
 		;
-connectAttr "L_FK_Arm_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[924]"
+connectAttr "L_FK_Arm_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[924]"
 		;
-connectAttr "L_FK_Arm_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[925]"
+connectAttr "L_FK_Arm_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[925]"
 		;
-connectAttr "L_FK_Arm_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[926]"
+connectAttr "L_FK_Arm_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[926]"
 		;
-connectAttr "L_FK_Arm_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[927]"
+connectAttr "L_FK_Arm_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[927]"
 		;
-connectAttr "L_FK_Arm_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[928]"
+connectAttr "L_FK_Arm_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[928]"
 		;
-connectAttr "L_FK_Arm_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[929]"
+connectAttr "L_FK_Arm_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[929]"
 		;
-connectAttr "L_FK_Arm_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[930]"
+connectAttr "L_FK_Arm_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[930]"
 		;
-connectAttr "L_FK_Arm_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[931]"
+connectAttr "L_FK_Arm_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[931]"
 		;
-connectAttr "L_FK_Arm_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[932]"
+connectAttr "L_FK_Arm_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[932]"
 		;
-connectAttr "L_FK_Arm_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[933]"
+connectAttr "L_FK_Finger1_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[933]"
 		;
-connectAttr "L_FK_Arm_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[934]"
+connectAttr "L_FK_Finger1_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[934]"
 		;
-connectAttr "L_FK_Arm_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[935]"
+connectAttr "L_FK_Finger1_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[935]"
 		;
-connectAttr "L_FK_Arm_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[936]"
+connectAttr "L_FK_Finger1_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[936]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[937]"
+connectAttr "L_FK_Finger1_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[937]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[938]"
+connectAttr "L_FK_Finger1_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[938]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[939]"
+connectAttr "L_FK_Finger1_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[939]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[940]"
+connectAttr "L_FK_Finger1_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[940]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[941]"
+connectAttr "L_FK_Finger1_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[941]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[942]"
+connectAttr "L_FK_Finger1_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[942]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[943]"
+connectAttr "L_FK_Finger1_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[943]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[944]"
+connectAttr "L_FK_Finger1_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[944]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[945]"
+connectAttr "L_FK_Finger1_02_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[945]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[946]"
+connectAttr "L_FK_Finger1_02_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[946]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[947]"
+connectAttr "L_FK_Finger1_02_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[947]"
 		;
-connectAttr "L_FK_Finger1_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[948]"
+connectAttr "L_FK_Finger1_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[948]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[949]"
+connectAttr "L_FK_Finger1_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[949]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[950]"
+connectAttr "L_FK_Finger1_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[950]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[951]"
+connectAttr "L_FK_Finger1_02_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[951]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[952]"
+connectAttr "L_FK_Finger1_02_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[952]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[953]"
+connectAttr "L_FK_Finger1_02_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[953]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[954]"
+connectAttr "L_FK_Finger1_02_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[954]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[955]"
+connectAttr "L_FK_Finger1_02_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[955]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[956]"
+connectAttr "L_FK_Finger1_02_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[956]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[957]"
+connectAttr "L_FK_Finger1_03_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[957]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[958]"
+connectAttr "L_FK_Finger1_03_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[958]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[959]"
+connectAttr "L_FK_Finger1_03_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[959]"
 		;
-connectAttr "L_FK_Finger1_02_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[960]"
+connectAttr "L_FK_Finger1_03_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[960]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[961]"
+connectAttr "L_FK_Finger1_03_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[961]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[962]"
+connectAttr "L_FK_Finger1_03_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[962]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[963]"
+connectAttr "L_FK_Finger1_03_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[963]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[964]"
+connectAttr "L_FK_Finger1_03_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[964]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[965]"
+connectAttr "L_FK_Finger1_03_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[965]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[966]"
+connectAttr "L_FK_Finger1_03_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[966]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[967]"
+connectAttr "L_FK_Finger1_03_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[967]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[968]"
+connectAttr "L_FK_Finger1_03_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[968]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[969]"
+connectAttr "L_FK_Finger2_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[969]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[970]"
+connectAttr "L_FK_Finger2_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[970]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[971]"
+connectAttr "L_FK_Finger2_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[971]"
 		;
-connectAttr "L_FK_Finger1_03_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[972]"
+connectAttr "L_FK_Finger2_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[972]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[973]"
+connectAttr "L_FK_Finger2_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[973]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[974]"
+connectAttr "L_FK_Finger2_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[974]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[975]"
+connectAttr "L_FK_Finger2_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[975]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[976]"
+connectAttr "L_FK_Finger2_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[976]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[977]"
+connectAttr "L_FK_Finger2_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[977]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[978]"
+connectAttr "L_FK_Finger2_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[978]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[979]"
+connectAttr "L_FK_Finger2_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[979]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[980]"
+connectAttr "L_FK_Finger2_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[980]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[981]"
+connectAttr "L_FK_Finger2_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[981]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[982]"
+connectAttr "L_FK_Finger2_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[982]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[983]"
+connectAttr "L_FK_Finger2_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[983]"
 		;
-connectAttr "L_FK_Finger2_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[984]"
+connectAttr "L_FK_Finger2_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[984]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[985]"
+connectAttr "L_FK_Finger2_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[985]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[986]"
+connectAttr "L_FK_Finger2_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[986]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[987]"
+connectAttr "L_FK_Finger2_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[987]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[988]"
+connectAttr "L_FK_Finger2_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[988]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[989]"
+connectAttr "L_FK_Finger2_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[989]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[990]"
+connectAttr "L_FK_Finger2_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[990]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[991]"
+connectAttr "L_FK_Finger2_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[991]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[992]"
+connectAttr "L_FK_Finger2_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[992]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[993]"
+connectAttr "L_FK_Finger2_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[993]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[994]"
+connectAttr "L_FK_Finger2_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[994]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[995]"
+connectAttr "L_FK_Finger2_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[995]"
 		;
-connectAttr "L_FK_Finger2_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[996]"
+connectAttr "L_FK_Finger2_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[996]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[997]"
+connectAttr "L_FK_Finger2_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[997]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[998]"
+connectAttr "L_FK_Finger2_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[998]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[999]"
+connectAttr "L_FK_Finger2_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[999]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1000]"
+connectAttr "L_FK_Finger2_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1000]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1001]"
+connectAttr "L_FK_Finger2_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1001]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1002]"
+connectAttr "L_FK_Finger2_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1002]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1003]"
+connectAttr "L_FK_Finger2_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1003]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1004]"
+connectAttr "L_FK_Finger2_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1004]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1005]"
+connectAttr "L_FK_Finger5_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1005]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1006]"
+connectAttr "L_FK_Finger5_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1006]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1007]"
+connectAttr "L_FK_Finger5_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1007]"
 		;
-connectAttr "L_FK_Finger2_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1008]"
+connectAttr "L_FK_Finger5_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1008]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1009]"
+connectAttr "L_FK_Finger5_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1009]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1010]"
+connectAttr "L_FK_Finger5_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1010]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1011]"
+connectAttr "L_FK_Finger5_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1011]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1012]"
+connectAttr "L_FK_Finger5_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1012]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1013]"
+connectAttr "L_FK_Finger5_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1013]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1014]"
+connectAttr "L_FK_Finger5_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1014]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1015]"
+connectAttr "L_FK_Finger5_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1015]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1016]"
+connectAttr "L_FK_Finger5_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1016]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1017]"
+connectAttr "L_FK_Finger5_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1017]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1018]"
+connectAttr "L_FK_Finger5_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1018]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1019]"
+connectAttr "L_FK_Finger5_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1019]"
 		;
-connectAttr "L_FK_Finger5_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1020]"
+connectAttr "L_FK_Finger5_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1020]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1021]"
+connectAttr "L_FK_Finger5_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1021]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1022]"
+connectAttr "L_FK_Finger5_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1022]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1023]"
+connectAttr "L_FK_Finger5_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1023]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1024]"
+connectAttr "L_FK_Finger5_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1024]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1025]"
+connectAttr "L_FK_Finger5_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1025]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1026]"
+connectAttr "L_FK_Finger5_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1026]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1027]"
+connectAttr "L_FK_Finger5_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1027]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1028]"
+connectAttr "L_FK_Finger5_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1028]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1029]"
+connectAttr "L_FK_Finger5_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1029]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1030]"
+connectAttr "L_FK_Finger5_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1030]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1031]"
+connectAttr "L_FK_Finger5_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1031]"
 		;
-connectAttr "L_FK_Finger5_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1032]"
+connectAttr "L_FK_Finger5_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1032]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1033]"
+connectAttr "L_FK_Finger5_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1033]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1034]"
+connectAttr "L_FK_Finger5_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1034]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1035]"
+connectAttr "L_FK_Finger5_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1035]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1036]"
+connectAttr "L_FK_Finger5_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1036]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1037]"
+connectAttr "L_FK_Finger5_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1037]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1038]"
+connectAttr "L_FK_Finger5_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1038]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1039]"
+connectAttr "L_FK_Finger5_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1039]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1040]"
+connectAttr "L_FK_Finger5_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1040]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1041]"
+connectAttr "L_FK_Finger4_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1041]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1042]"
+connectAttr "L_FK_Finger4_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1042]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1043]"
+connectAttr "L_FK_Finger4_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1043]"
 		;
-connectAttr "L_FK_Finger5_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1044]"
+connectAttr "L_FK_Finger4_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1044]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1045]"
+connectAttr "L_FK_Finger4_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1045]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1046]"
+connectAttr "L_FK_Finger4_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1046]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1047]"
+connectAttr "L_FK_Finger4_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1047]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1048]"
+connectAttr "L_FK_Finger4_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1048]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1049]"
+connectAttr "L_FK_Finger4_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1049]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1050]"
+connectAttr "L_FK_Finger4_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1050]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1051]"
+connectAttr "L_FK_Finger4_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1051]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1052]"
+connectAttr "L_FK_Finger4_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1052]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1053]"
+connectAttr "L_FK_Finger4_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1053]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1054]"
+connectAttr "L_FK_Finger4_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1054]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1055]"
+connectAttr "L_FK_Finger4_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1055]"
 		;
-connectAttr "L_FK_Finger4_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1056]"
+connectAttr "L_FK_Finger4_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1056]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1057]"
+connectAttr "L_FK_Finger4_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1057]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1058]"
+connectAttr "L_FK_Finger4_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1058]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1059]"
+connectAttr "L_FK_Finger4_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1059]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1060]"
+connectAttr "L_FK_Finger4_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1060]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1061]"
+connectAttr "L_FK_Finger4_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1061]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1062]"
+connectAttr "L_FK_Finger4_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1062]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1063]"
+connectAttr "L_FK_Finger4_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1063]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1064]"
+connectAttr "L_FK_Finger4_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1064]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1065]"
+connectAttr "L_FK_Finger4_03_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1065]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1066]"
+connectAttr "L_FK_Finger4_03_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1066]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1067]"
+connectAttr "L_FK_Finger4_03_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1067]"
 		;
-connectAttr "L_FK_Finger4_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1068]"
+connectAttr "L_FK_Finger4_03_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1068]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1069]"
+connectAttr "L_FK_Finger4_03_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1069]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1070]"
+connectAttr "L_FK_Finger4_03_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1070]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1071]"
+connectAttr "L_FK_Finger4_03_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1071]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1072]"
+connectAttr "L_FK_Finger4_03_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1072]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1073]"
+connectAttr "L_FK_Finger4_03_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1073]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1074]"
+connectAttr "L_FK_Finger4_03_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1074]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1075]"
+connectAttr "L_FK_Finger4_03_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1075]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1076]"
+connectAttr "L_FK_Finger4_03_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1076]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1077]"
+connectAttr "L_FK_Finger3_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1077]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1078]"
+connectAttr "L_FK_Finger3_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1078]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1079]"
+connectAttr "L_FK_Finger3_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1079]"
 		;
-connectAttr "L_FK_Finger4_03_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1080]"
+connectAttr "L_FK_Finger3_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1080]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1081]"
+connectAttr "L_FK_Finger3_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1081]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1082]"
+connectAttr "L_FK_Finger3_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1082]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1083]"
+connectAttr "L_FK_Finger3_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1083]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1084]"
+connectAttr "L_FK_Finger3_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1084]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1085]"
+connectAttr "L_FK_Finger3_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1085]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1086]"
+connectAttr "L_FK_Finger3_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1086]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1087]"
+connectAttr "L_FK_Finger3_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1087]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1088]"
+connectAttr "L_FK_Finger3_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1088]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1089]"
+connectAttr "L_FK_Finger3_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1089]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1090]"
+connectAttr "L_FK_Finger3_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1090]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1091]"
+connectAttr "L_FK_Finger3_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1091]"
 		;
-connectAttr "L_FK_Finger3_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1092]"
+connectAttr "L_FK_Finger3_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1092]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1093]"
+connectAttr "L_FK_Finger3_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1093]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1094]"
+connectAttr "L_FK_Finger3_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1094]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1095]"
+connectAttr "L_FK_Finger3_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1095]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1096]"
+connectAttr "L_FK_Finger3_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1096]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1097]"
+connectAttr "L_FK_Finger3_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1097]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1098]"
+connectAttr "L_FK_Finger3_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1098]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1099]"
+connectAttr "L_FK_Finger3_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1099]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1100]"
+connectAttr "L_FK_Finger3_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1100]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1101]"
+connectAttr "L_FK_Finger3_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1101]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1102]"
+connectAttr "L_FK_Finger3_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1102]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1103]"
+connectAttr "L_FK_Finger3_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1103]"
 		;
-connectAttr "L_FK_Finger3_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1104]"
+connectAttr "L_FK_Finger3_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1104]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1105]"
+connectAttr "L_FK_Finger3_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1105]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1106]"
+connectAttr "L_FK_Finger3_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1106]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1107]"
+connectAttr "L_FK_Finger3_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1107]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1108]"
+connectAttr "L_FK_Finger3_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1108]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1109]"
+connectAttr "L_FK_Finger3_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1109]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1110]"
+connectAttr "L_FK_Finger3_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1110]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1111]"
+connectAttr "L_FK_Finger3_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1111]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1112]"
+connectAttr "L_FK_Finger3_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1112]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1113]"
+connectAttr "R_FK_Arm_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1113]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1114]"
+connectAttr "R_FK_Arm_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1114]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1115]"
+connectAttr "R_FK_Arm_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1115]"
 		;
-connectAttr "L_FK_Finger3_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1116]"
+connectAttr "R_FK_Arm_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1116]"
 		;
-connectAttr "R_FK_Arm_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1117]"
+connectAttr "R_FK_Arm_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1117]"
 		;
-connectAttr "R_FK_Arm_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1118]"
+connectAttr "R_FK_Arm_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1118]"
 		;
-connectAttr "R_FK_Arm_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1119]"
+connectAttr "R_FK_Arm_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1119]"
 		;
-connectAttr "R_FK_Arm_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1120]"
+connectAttr "R_FK_Arm_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1120]"
 		;
-connectAttr "R_FK_Arm_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1121]"
+connectAttr "R_FK_Arm_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1121]"
 		;
-connectAttr "R_FK_Arm_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1122]"
+connectAttr "R_FK_Arm_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1122]"
 		;
-connectAttr "R_FK_Arm_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1123]"
+connectAttr "R_FK_Arm_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1123]"
 		;
-connectAttr "R_FK_Arm_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1124]"
+connectAttr "R_FK_Arm_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1124]"
 		;
-connectAttr "R_FK_Arm_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1125]"
+connectAttr "R_FK_Arm_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1125]"
 		;
-connectAttr "R_FK_Arm_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1126]"
+connectAttr "R_FK_Arm_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1126]"
 		;
-connectAttr "R_FK_Arm_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1127]"
+connectAttr "R_FK_Arm_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1127]"
 		;
-connectAttr "R_FK_Arm_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1128]"
+connectAttr "R_FK_Arm_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1128]"
 		;
-connectAttr "R_FK_Arm_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1129]"
+connectAttr "R_FK_Arm_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1129]"
 		;
-connectAttr "R_FK_Arm_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1130]"
+connectAttr "R_FK_Arm_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1130]"
 		;
-connectAttr "R_FK_Arm_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1131]"
+connectAttr "R_FK_Arm_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1131]"
 		;
-connectAttr "R_FK_Arm_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1132]"
+connectAttr "R_FK_Arm_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1132]"
 		;
-connectAttr "R_FK_Arm_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1133]"
+connectAttr "R_FK_Arm_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1133]"
 		;
-connectAttr "R_FK_Arm_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1134]"
+connectAttr "R_FK_Arm_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1134]"
 		;
-connectAttr "R_FK_Arm_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1135]"
+connectAttr "R_FK_Arm_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1135]"
 		;
-connectAttr "R_FK_Arm_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1136]"
+connectAttr "R_FK_Arm_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1136]"
 		;
-connectAttr "R_FK_Arm_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1137]"
+connectAttr "R_FK_Arm_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1137]"
 		;
-connectAttr "R_FK_Arm_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1138]"
+connectAttr "R_FK_Arm_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1138]"
 		;
-connectAttr "R_FK_Arm_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1139]"
+connectAttr "R_FK_Arm_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1139]"
 		;
-connectAttr "R_FK_Arm_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1140]"
+connectAttr "R_FK_Arm_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1140]"
 		;
-connectAttr "R_FK_Arm_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1141]"
+connectAttr "R_FK_Arm_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1141]"
 		;
-connectAttr "R_FK_Arm_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1142]"
+connectAttr "R_FK_Arm_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1142]"
 		;
-connectAttr "R_FK_Arm_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1143]"
+connectAttr "R_FK_Arm_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1143]"
 		;
-connectAttr "R_FK_Arm_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1144]"
+connectAttr "R_FK_Arm_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1144]"
 		;
-connectAttr "R_FK_Arm_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1145]"
+connectAttr "R_FK_Arm_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1145]"
 		;
-connectAttr "R_FK_Arm_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1146]"
+connectAttr "R_FK_Arm_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1146]"
 		;
-connectAttr "R_FK_Arm_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1147]"
+connectAttr "R_FK_Arm_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1147]"
 		;
-connectAttr "R_FK_Arm_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1148]"
+connectAttr "R_FK_Arm_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1148]"
 		;
-connectAttr "R_FK_Arm_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1149]"
+connectAttr "R_FK_Finger1_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1149]"
 		;
-connectAttr "R_FK_Arm_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1150]"
+connectAttr "R_FK_Finger1_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1150]"
 		;
-connectAttr "R_FK_Arm_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1151]"
+connectAttr "R_FK_Finger1_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1151]"
 		;
-connectAttr "R_FK_Arm_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1152]"
+connectAttr "R_FK_Finger1_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1152]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1153]"
+connectAttr "R_FK_Finger1_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1153]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1154]"
+connectAttr "R_FK_Finger1_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1154]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1155]"
+connectAttr "R_FK_Finger1_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1155]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1156]"
+connectAttr "R_FK_Finger1_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1156]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1157]"
+connectAttr "R_FK_Finger1_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1157]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1158]"
+connectAttr "R_FK_Finger1_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1158]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1159]"
+connectAttr "R_FK_Finger1_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1159]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1160]"
+connectAttr "R_FK_Finger1_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1160]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1161]"
+connectAttr "R_FK_Finger1_02_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1161]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1162]"
+connectAttr "R_FK_Finger1_02_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1162]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1163]"
+connectAttr "R_FK_Finger1_02_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1163]"
 		;
-connectAttr "R_FK_Finger1_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1164]"
+connectAttr "R_FK_Finger1_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1164]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1165]"
+connectAttr "R_FK_Finger1_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1165]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1166]"
+connectAttr "R_FK_Finger1_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1166]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1167]"
+connectAttr "R_FK_Finger1_02_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1167]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1168]"
+connectAttr "R_FK_Finger1_02_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1168]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1169]"
+connectAttr "R_FK_Finger1_02_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1169]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1170]"
+connectAttr "R_FK_Finger1_02_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1170]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1171]"
+connectAttr "R_FK_Finger1_02_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1171]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1172]"
+connectAttr "R_FK_Finger1_02_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1172]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1173]"
+connectAttr "R_FK_Finger1_03_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1173]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1174]"
+connectAttr "R_FK_Finger1_03_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1174]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1175]"
+connectAttr "R_FK_Finger1_03_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1175]"
 		;
-connectAttr "R_FK_Finger1_02_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1176]"
+connectAttr "R_FK_Finger1_03_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1176]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1177]"
+connectAttr "R_FK_Finger1_03_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1177]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1178]"
+connectAttr "R_FK_Finger1_03_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1178]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1179]"
+connectAttr "R_FK_Finger1_03_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1179]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1180]"
+connectAttr "R_FK_Finger1_03_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1180]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1181]"
+connectAttr "R_FK_Finger1_03_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1181]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1182]"
+connectAttr "R_FK_Finger1_03_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1182]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1183]"
+connectAttr "R_FK_Finger1_03_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1183]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1184]"
+connectAttr "R_FK_Finger1_03_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1184]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1185]"
+connectAttr "R_FK_Finger2_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1185]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1186]"
+connectAttr "R_FK_Finger2_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1186]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1187]"
+connectAttr "R_FK_Finger2_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1187]"
 		;
-connectAttr "R_FK_Finger1_03_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1188]"
+connectAttr "R_FK_Finger2_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1188]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1189]"
+connectAttr "R_FK_Finger2_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1189]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1190]"
+connectAttr "R_FK_Finger2_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1190]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1191]"
+connectAttr "R_FK_Finger2_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1191]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1192]"
+connectAttr "R_FK_Finger2_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1192]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1193]"
+connectAttr "R_FK_Finger2_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1193]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1194]"
+connectAttr "R_FK_Finger2_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1194]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1195]"
+connectAttr "R_FK_Finger2_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1195]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1196]"
+connectAttr "R_FK_Finger2_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1196]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1197]"
+connectAttr "R_FK_Finger2_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1197]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1198]"
+connectAttr "R_FK_Finger2_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1198]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1199]"
+connectAttr "R_FK_Finger2_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1199]"
 		;
-connectAttr "R_FK_Finger2_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1200]"
+connectAttr "R_FK_Finger2_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1200]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1201]"
+connectAttr "R_FK_Finger2_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1201]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1202]"
+connectAttr "R_FK_Finger2_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1202]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1203]"
+connectAttr "R_FK_Finger2_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1203]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1204]"
+connectAttr "R_FK_Finger2_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1204]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1205]"
+connectAttr "R_FK_Finger2_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1205]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1206]"
+connectAttr "R_FK_Finger2_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1206]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1207]"
+connectAttr "R_FK_Finger2_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1207]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1208]"
+connectAttr "R_FK_Finger2_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1208]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1209]"
+connectAttr "R_FK_Finger2_03_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1209]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1210]"
+connectAttr "R_FK_Finger2_03_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1210]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1211]"
+connectAttr "R_FK_Finger2_03_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1211]"
 		;
-connectAttr "R_FK_Finger2_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1212]"
+connectAttr "R_FK_Finger2_03_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1212]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_translateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1213]"
+connectAttr "R_FK_Finger2_03_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1213]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_translateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1214]"
+connectAttr "R_FK_Finger2_03_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1214]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_translateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1215]"
+connectAttr "R_FK_Finger2_03_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1215]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_rotateX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1216]"
+connectAttr "R_FK_Finger2_03_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1216]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_rotateY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1217]"
+connectAttr "R_FK_Finger2_03_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1217]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_rotateZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1218]"
+connectAttr "R_FK_Finger2_03_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1218]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_scaleX1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1219]"
+connectAttr "R_FK_Finger2_03_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1219]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_scaleY1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1220]"
+connectAttr "R_FK_Finger2_03_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1220]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_scaleZ1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1221]"
+connectAttr "R_FK_Finger5_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1221]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_Follow_Translates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1222]"
+connectAttr "R_FK_Finger5_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1222]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_Follow_Rotates1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1223]"
+connectAttr "R_FK_Finger5_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1223]"
 		;
-connectAttr "R_FK_Finger2_03_ctl_visibility1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1224]"
+connectAttr "R_FK_Finger5_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1224]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1225]"
+connectAttr "R_FK_Finger5_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1225]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1226]"
+connectAttr "R_FK_Finger5_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1226]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1227]"
+connectAttr "R_FK_Finger5_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1227]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1228]"
+connectAttr "R_FK_Finger5_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1228]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1229]"
+connectAttr "R_FK_Finger5_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1229]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1230]"
+connectAttr "R_FK_Finger5_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1230]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1231]"
+connectAttr "R_FK_Finger5_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1231]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1232]"
+connectAttr "R_FK_Finger5_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1232]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1233]"
+connectAttr "R_FK_Finger5_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1233]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1234]"
+connectAttr "R_FK_Finger5_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1234]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1235]"
+connectAttr "R_FK_Finger5_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1235]"
 		;
-connectAttr "R_FK_Finger5_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1236]"
+connectAttr "R_FK_Finger5_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1236]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1237]"
+connectAttr "R_FK_Finger5_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1237]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1238]"
+connectAttr "R_FK_Finger5_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1238]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1239]"
+connectAttr "R_FK_Finger5_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1239]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1240]"
+connectAttr "R_FK_Finger5_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1240]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1241]"
+connectAttr "R_FK_Finger5_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1241]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1242]"
+connectAttr "R_FK_Finger5_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1242]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1243]"
+connectAttr "R_FK_Finger5_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1243]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1244]"
+connectAttr "R_FK_Finger5_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1244]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1245]"
+connectAttr "R_FK_Finger5_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1245]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1246]"
+connectAttr "R_FK_Finger5_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1246]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1247]"
+connectAttr "R_FK_Finger5_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1247]"
 		;
-connectAttr "R_FK_Finger5_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1248]"
+connectAttr "R_FK_Finger5_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1248]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1249]"
+connectAttr "R_FK_Finger5_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1249]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1250]"
+connectAttr "R_FK_Finger5_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1250]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1251]"
+connectAttr "R_FK_Finger5_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1251]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1252]"
+connectAttr "R_FK_Finger5_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1252]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1253]"
+connectAttr "R_FK_Finger5_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1253]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1254]"
+connectAttr "R_FK_Finger5_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1254]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1255]"
+connectAttr "R_FK_Finger5_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1255]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1256]"
+connectAttr "R_FK_Finger5_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1256]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1257]"
+connectAttr "R_FK_Finger4_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1257]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1258]"
+connectAttr "R_FK_Finger4_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1258]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1259]"
+connectAttr "R_FK_Finger4_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1259]"
 		;
-connectAttr "R_FK_Finger5_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1260]"
+connectAttr "R_FK_Finger4_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1260]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1261]"
+connectAttr "R_FK_Finger4_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1261]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1262]"
+connectAttr "R_FK_Finger4_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1262]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1263]"
+connectAttr "R_FK_Finger4_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1263]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1264]"
+connectAttr "R_FK_Finger4_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1264]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1265]"
+connectAttr "R_FK_Finger4_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1265]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1266]"
+connectAttr "R_FK_Finger4_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1266]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1267]"
+connectAttr "R_FK_Finger4_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1267]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1268]"
+connectAttr "R_FK_Finger4_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1268]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1269]"
+connectAttr "R_FK_Finger4_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1269]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1270]"
+connectAttr "R_FK_Finger4_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1270]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1271]"
+connectAttr "R_FK_Finger4_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1271]"
 		;
-connectAttr "R_FK_Finger4_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1272]"
+connectAttr "R_FK_Finger4_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1272]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1273]"
+connectAttr "R_FK_Finger4_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1273]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1274]"
+connectAttr "R_FK_Finger4_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1274]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1275]"
+connectAttr "R_FK_Finger4_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1275]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1276]"
+connectAttr "R_FK_Finger4_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1276]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1277]"
+connectAttr "R_FK_Finger4_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1277]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1278]"
+connectAttr "R_FK_Finger4_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1278]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1279]"
+connectAttr "R_FK_Finger4_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1279]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1280]"
+connectAttr "R_FK_Finger4_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1280]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1281]"
+connectAttr "R_FK_Finger4_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1281]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1282]"
+connectAttr "R_FK_Finger4_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1282]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1283]"
+connectAttr "R_FK_Finger4_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1283]"
 		;
-connectAttr "R_FK_Finger4_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1284]"
+connectAttr "R_FK_Finger4_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1284]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1285]"
+connectAttr "R_FK_Finger4_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1285]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1286]"
+connectAttr "R_FK_Finger4_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1286]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1287]"
+connectAttr "R_FK_Finger4_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1287]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1288]"
+connectAttr "R_FK_Finger4_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1288]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1289]"
+connectAttr "R_FK_Finger4_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1289]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1290]"
+connectAttr "R_FK_Finger4_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1290]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1291]"
+connectAttr "R_FK_Finger4_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1291]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1292]"
+connectAttr "R_FK_Finger4_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1292]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1293]"
+connectAttr "R_FK_Finger3_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1293]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1294]"
+connectAttr "R_FK_Finger3_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1294]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1295]"
+connectAttr "R_FK_Finger3_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1295]"
 		;
-connectAttr "R_FK_Finger4_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1296]"
+connectAttr "R_FK_Finger3_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1296]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1297]"
+connectAttr "R_FK_Finger3_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1297]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1298]"
+connectAttr "R_FK_Finger3_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1298]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1299]"
+connectAttr "R_FK_Finger3_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1299]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1300]"
+connectAttr "R_FK_Finger3_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1300]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1301]"
+connectAttr "R_FK_Finger3_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1301]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1302]"
+connectAttr "R_FK_Finger3_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1302]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1303]"
+connectAttr "R_FK_Finger3_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1303]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1304]"
+connectAttr "R_FK_Finger3_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1304]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1305]"
+connectAttr "R_FK_Finger3_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1305]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1306]"
+connectAttr "R_FK_Finger3_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1306]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1307]"
+connectAttr "R_FK_Finger3_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1307]"
 		;
-connectAttr "R_FK_Finger3_01_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1308]"
+connectAttr "R_FK_Finger3_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1308]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1309]"
+connectAttr "R_FK_Finger3_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1309]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1310]"
+connectAttr "R_FK_Finger3_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1310]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1311]"
+connectAttr "R_FK_Finger3_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1311]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1312]"
+connectAttr "R_FK_Finger3_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1312]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1313]"
+connectAttr "R_FK_Finger3_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1313]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1314]"
+connectAttr "R_FK_Finger3_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1314]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1315]"
+connectAttr "R_FK_Finger3_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1315]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1316]"
+connectAttr "R_FK_Finger3_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1316]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1317]"
+connectAttr "R_FK_Finger3_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1317]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1318]"
+connectAttr "R_FK_Finger3_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1318]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1319]"
+connectAttr "R_FK_Finger3_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1319]"
 		;
-connectAttr "R_FK_Finger3_02_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1320]"
+connectAttr "R_FK_Finger3_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1320]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1321]"
+connectAttr "R_FK_Finger3_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1321]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1322]"
+connectAttr "R_FK_Finger3_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1322]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1323]"
+connectAttr "R_FK_Finger3_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1323]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1324]"
+connectAttr "R_FK_Finger3_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1324]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1325]"
+connectAttr "R_FK_Finger3_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1325]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1326]"
+connectAttr "R_FK_Finger3_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1326]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1327]"
+connectAttr "R_FK_Finger3_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1327]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1328]"
+connectAttr "R_FK_Finger3_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1328]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1329]"
+connectAttr "Head_Ctrl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1329]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1330]"
+connectAttr "Head_Ctrl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1330]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1331]"
+connectAttr "Head_Ctrl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1331]"
 		;
-connectAttr "R_FK_Finger3_03_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1332]"
+connectAttr "Head_Ctrl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1332]"
 		;
-connectAttr "Head_Ctrl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1333]"
+connectAttr "Head_Ctrl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1333]"
 		;
-connectAttr "Head_Ctrl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1334]"
+connectAttr "Head_Ctrl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1334]"
 		;
-connectAttr "Head_Ctrl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1335]"
+connectAttr "Head_Ctrl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1335]"
 		;
-connectAttr "Head_Ctrl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1336]"
+connectAttr "Head_Ctrl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1336]"
 		;
-connectAttr "Head_Ctrl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1337]"
+connectAttr "Head_Ctrl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1337]"
 		;
-connectAttr "Head_Ctrl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1338]"
+connectAttr "Head_Ctrl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1338]"
 		;
-connectAttr "Head_Ctrl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1339]"
+connectAttr "L_IK_Leg_01_jnt_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1339]"
 		;
-connectAttr "Head_Ctrl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1340]"
+connectAttr "L_IK_Leg_01_jnt_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1340]"
 		;
-connectAttr "Head_Ctrl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1341]"
+connectAttr "L_IK_Leg_01_jnt_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1341]"
 		;
-connectAttr "Head_Ctrl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1342]"
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1342]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1343]"
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1343]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1344]"
+connectAttr "L_IK_Leg_01_jnt_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1344]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1345]"
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1345]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1346]"
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1346]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1347]"
+connectAttr "L_IK_Leg_01_jnt_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1347]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1348]"
+connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1348]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1349]"
+connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1349]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1350]"
+connectAttr "L_IK_Leg_01_jnt_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1350]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1351]"
+connectAttr "L_Leg_IK_Handle_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1351]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1352]"
+connectAttr "L_Leg_IK_Handle_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1352]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1353]"
+connectAttr "L_Leg_IK_Handle_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1353]"
 		;
-connectAttr "L_IK_Leg_01_jnt_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1354]"
+connectAttr "L_Leg_IK_Handle_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1354]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1355]"
+connectAttr "L_Leg_IK_Handle_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1355]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1356]"
+connectAttr "L_Leg_IK_Handle_ctl_Length_1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1356]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1357]"
+connectAttr "L_Leg_IK_Handle_ctl_Length_2.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1357]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1358]"
+connectAttr "L_Leg_IK_Handle_ctl_Stretchy.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1358]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1359]"
+connectAttr "L_Leg_IK_Handle_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1359]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_Length_1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1360]"
+connectAttr "L_Leg_IK_Handle_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1360]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_Length_2.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1361]"
+connectAttr "L_Leg_IK_Handle_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1361]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_Stretchy.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1362]"
+connectAttr "L_Leg_IK_Handle_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1362]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1363]"
+connectAttr "L_Leg_IK_Handle_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1363]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1364]"
+connectAttr "L_Leg_IK_Handle_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1364]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1365]"
+connectAttr "L_Leg_IK_Handle_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1365]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1366]"
+connectAttr "L_Leg_PV_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1366]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1367]"
+connectAttr "L_Leg_PV_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1367]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1368]"
+connectAttr "L_Leg_PV_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1368]"
 		;
-connectAttr "L_Leg_IK_Handle_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1369]"
+connectAttr "L_Leg_PV_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1369]"
 		;
-connectAttr "L_Leg_PV_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1370]"
+connectAttr "L_Leg_PV_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1370]"
 		;
-connectAttr "L_Leg_PV_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1371]"
+connectAttr "L_Leg_PV_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1371]"
 		;
-connectAttr "L_Leg_PV_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1372]"
+connectAttr "L_Leg_PV_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1372]"
 		;
-connectAttr "L_Leg_PV_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1373]"
+connectAttr "L_Leg_PV_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1373]"
 		;
-connectAttr "L_Leg_PV_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1374]"
+connectAttr "L_Leg_PV_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1374]"
 		;
-connectAttr "L_Leg_PV_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1375]"
+connectAttr "L_Leg_PV_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1375]"
 		;
-connectAttr "L_Leg_PV_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1376]"
+connectAttr "L_Leg_PV_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1376]"
 		;
-connectAttr "L_Leg_PV_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1377]"
+connectAttr "L_Leg_PV_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1377]"
 		;
-connectAttr "L_Leg_PV_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1378]"
+connectAttr "L_Heel_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1378]"
 		;
-connectAttr "L_Leg_PV_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1379]"
+connectAttr "L_Heel_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1379]"
 		;
-connectAttr "L_Leg_PV_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1380]"
+connectAttr "L_Heel_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1380]"
 		;
-connectAttr "L_Leg_PV_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1381]"
+connectAttr "L_Heel_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1381]"
 		;
-connectAttr "L_Heel_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1382]"
+connectAttr "L_Heel_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1382]"
 		;
-connectAttr "L_Heel_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1383]"
+connectAttr "L_Heel_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1383]"
 		;
-connectAttr "L_Heel_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1384]"
+connectAttr "L_Heel_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1384]"
 		;
-connectAttr "L_Heel_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1385]"
+connectAttr "L_Heel_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1385]"
 		;
-connectAttr "L_Heel_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1386]"
+connectAttr "L_Heel_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1386]"
 		;
-connectAttr "L_Heel_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1387]"
+connectAttr "L_Heel_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1387]"
 		;
-connectAttr "L_Heel_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1388]"
+connectAttr "L_Tiptoe_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1388]"
 		;
-connectAttr "L_Heel_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1389]"
+connectAttr "L_Tiptoe_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1389]"
 		;
-connectAttr "L_Heel_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1390]"
+connectAttr "L_Tiptoe_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1390]"
 		;
-connectAttr "L_Heel_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1391]"
+connectAttr "L_Tiptoe_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1391]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1392]"
+connectAttr "L_Tiptoe_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1392]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1393]"
+connectAttr "L_Tiptoe_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1393]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1394]"
+connectAttr "L_Tiptoe_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1394]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1395]"
+connectAttr "L_Tiptoe_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1395]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1396]"
+connectAttr "L_Tiptoe_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1396]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1397]"
+connectAttr "L_Tiptoe_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1397]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1398]"
+connectAttr "L_Ball_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1398]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1399]"
+connectAttr "L_Ball_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1399]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1400]"
+connectAttr "L_Ball_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1400]"
 		;
-connectAttr "L_Tiptoe_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1401]"
+connectAttr "L_Ball_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1401]"
 		;
-connectAttr "L_Ball_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1402]"
+connectAttr "L_Ball_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1402]"
 		;
-connectAttr "L_Ball_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1403]"
+connectAttr "L_Ball_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1403]"
 		;
-connectAttr "L_Ball_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1404]"
+connectAttr "L_Ball_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1404]"
 		;
-connectAttr "L_Ball_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1405]"
+connectAttr "L_Ball_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1405]"
 		;
-connectAttr "L_Ball_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1406]"
+connectAttr "L_Ball_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1406]"
 		;
-connectAttr "L_Ball_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1407]"
+connectAttr "L_Ball_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1407]"
 		;
-connectAttr "L_Ball_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1408]"
+connectAttr "L_ToeLifter_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1408]"
 		;
-connectAttr "L_Ball_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1409]"
+connectAttr "L_ToeLifter_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1409]"
 		;
-connectAttr "L_Ball_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1410]"
+connectAttr "L_ToeLifter_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1410]"
 		;
-connectAttr "L_Ball_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1411]"
+connectAttr "L_ToeLifter_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1411]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1412]"
+connectAttr "L_ToeLifter_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1412]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1413]"
+connectAttr "L_ToeLifter_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1413]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1414]"
+connectAttr "L_ToeLifter_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1414]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1415]"
+connectAttr "L_ToeLifter_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1415]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1416]"
+connectAttr "L_ToeLifter_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1416]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1417]"
+connectAttr "L_ToeLifter_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1417]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1418]"
+connectAttr "L_Foot_Master_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1418]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1419]"
+connectAttr "L_Foot_Master_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1419]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1420]"
+connectAttr "L_Foot_Master_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1420]"
 		;
-connectAttr "L_ToeLifter_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1421]"
+connectAttr "L_Foot_Master_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1421]"
 		;
-connectAttr "L_Foot_Master_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1422]"
+connectAttr "L_Foot_Master_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1422]"
 		;
-connectAttr "L_Foot_Master_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1423]"
+connectAttr "L_Foot_Master_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1423]"
 		;
-connectAttr "L_Foot_Master_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1424]"
+connectAttr "L_Foot_Master_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1424]"
 		;
-connectAttr "L_Foot_Master_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1425]"
+connectAttr "L_Foot_Master_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1425]"
 		;
-connectAttr "L_Foot_Master_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1426]"
+connectAttr "L_Foot_Master_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1426]"
 		;
-connectAttr "L_Foot_Master_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1427]"
+connectAttr "L_Foot_Master_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1427]"
 		;
-connectAttr "L_Foot_Master_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1428]"
+connectAttr "L_Foot_Master_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1428]"
 		;
-connectAttr "L_Foot_Master_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1429]"
+connectAttr "L_Foot_Master_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1429]"
 		;
-connectAttr "L_Foot_Master_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1430]"
+connectAttr "R_IK_Leg_01_jnt_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1430]"
 		;
-connectAttr "L_Foot_Master_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1431]"
+connectAttr "R_IK_Leg_01_jnt_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1431]"
 		;
-connectAttr "L_Foot_Master_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1432]"
+connectAttr "R_IK_Leg_01_jnt_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1432]"
 		;
-connectAttr "L_Foot_Master_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1433]"
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1433]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1434]"
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1434]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1435]"
+connectAttr "R_IK_Leg_01_jnt_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1435]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1436]"
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1436]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1437]"
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1437]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1438]"
+connectAttr "R_IK_Leg_01_jnt_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1438]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1439]"
+connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1439]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1440]"
+connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1440]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1441]"
+connectAttr "R_IK_Leg_01_jnt_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1441]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1442]"
+connectAttr "R_Leg_IK_Handle_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1442]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1443]"
+connectAttr "R_Leg_IK_Handle_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1443]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1444]"
+connectAttr "R_Leg_IK_Handle_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1444]"
 		;
-connectAttr "R_IK_Leg_01_jnt_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1445]"
+connectAttr "R_Leg_IK_Handle_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1445]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1446]"
+connectAttr "R_Leg_IK_Handle_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1446]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1447]"
+connectAttr "R_Leg_IK_Handle_ctl_Length_1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1447]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1448]"
+connectAttr "R_Leg_IK_Handle_ctl_Length_2.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1448]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1449]"
+connectAttr "R_Leg_IK_Handle_ctl_Stretchy.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1449]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1450]"
+connectAttr "R_Leg_IK_Handle_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1450]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_Length_1.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1451]"
+connectAttr "R_Leg_IK_Handle_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1451]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_Length_2.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1452]"
+connectAttr "R_Leg_IK_Handle_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1452]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_Stretchy.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1453]"
+connectAttr "R_Leg_IK_Handle_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1453]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1454]"
+connectAttr "R_Leg_IK_Handle_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1454]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1455]"
+connectAttr "R_Leg_IK_Handle_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1455]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1456]"
+connectAttr "R_Leg_IK_Handle_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1456]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1457]"
+connectAttr "R_Leg_PV_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1457]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1458]"
+connectAttr "R_Leg_PV_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1458]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1459]"
+connectAttr "R_Leg_PV_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1459]"
 		;
-connectAttr "R_Leg_IK_Handle_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1460]"
+connectAttr "R_Leg_PV_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1460]"
 		;
-connectAttr "R_Leg_PV_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1461]"
+connectAttr "R_Leg_PV_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1461]"
 		;
-connectAttr "R_Leg_PV_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1462]"
+connectAttr "R_Leg_PV_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1462]"
 		;
-connectAttr "R_Leg_PV_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1463]"
+connectAttr "R_Leg_PV_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1463]"
 		;
-connectAttr "R_Leg_PV_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1464]"
+connectAttr "R_Leg_PV_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1464]"
 		;
-connectAttr "R_Leg_PV_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1465]"
+connectAttr "R_Leg_PV_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1465]"
 		;
-connectAttr "R_Leg_PV_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1466]"
+connectAttr "R_Leg_PV_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1466]"
 		;
-connectAttr "R_Leg_PV_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1467]"
+connectAttr "R_Leg_PV_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1467]"
 		;
-connectAttr "R_Leg_PV_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1468]"
+connectAttr "R_Leg_PV_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1468]"
 		;
-connectAttr "R_Leg_PV_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1469]"
+connectAttr "R_Foot_Master_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1469]"
 		;
-connectAttr "R_Leg_PV_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1470]"
+connectAttr "R_Foot_Master_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1470]"
 		;
-connectAttr "R_Leg_PV_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1471]"
+connectAttr "R_Foot_Master_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1471]"
 		;
-connectAttr "R_Leg_PV_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1472]"
+connectAttr "R_Foot_Master_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1472]"
 		;
-connectAttr "R_Foot_Master_ctl_Follow_Translates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1473]"
+connectAttr "R_Foot_Master_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1473]"
 		;
-connectAttr "R_Foot_Master_ctl_Follow_Rotates.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1474]"
+connectAttr "R_Foot_Master_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1474]"
 		;
-connectAttr "R_Foot_Master_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1475]"
+connectAttr "R_Foot_Master_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1475]"
 		;
-connectAttr "R_Foot_Master_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1476]"
+connectAttr "R_Foot_Master_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1476]"
 		;
-connectAttr "R_Foot_Master_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1477]"
+connectAttr "R_Foot_Master_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1477]"
 		;
-connectAttr "R_Foot_Master_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1478]"
+connectAttr "R_Foot_Master_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1478]"
 		;
-connectAttr "R_Foot_Master_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1479]"
+connectAttr "R_Foot_Master_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1479]"
 		;
-connectAttr "R_Foot_Master_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1480]"
+connectAttr "R_Foot_Master_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1480]"
 		;
-connectAttr "R_Foot_Master_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1481]"
+connectAttr "R_ToeLifter_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1481]"
 		;
-connectAttr "R_Foot_Master_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1482]"
+connectAttr "R_ToeLifter_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1482]"
 		;
-connectAttr "R_Foot_Master_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1483]"
+connectAttr "R_ToeLifter_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1483]"
 		;
-connectAttr "R_Foot_Master_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1484]"
+connectAttr "R_ToeLifter_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1484]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1485]"
+connectAttr "R_ToeLifter_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1485]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1486]"
+connectAttr "R_ToeLifter_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1486]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1487]"
+connectAttr "R_ToeLifter_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1487]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1488]"
+connectAttr "R_ToeLifter_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1488]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1489]"
+connectAttr "R_ToeLifter_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1489]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1490]"
+connectAttr "R_ToeLifter_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1490]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1491]"
+connectAttr "R_Ball_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1491]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1492]"
+connectAttr "R_Ball_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1492]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1493]"
+connectAttr "R_Ball_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1493]"
 		;
-connectAttr "R_ToeLifter_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1494]"
+connectAttr "R_Ball_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1494]"
 		;
-connectAttr "R_Ball_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1495]"
+connectAttr "R_Ball_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1495]"
 		;
-connectAttr "R_Ball_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1496]"
+connectAttr "R_Ball_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1496]"
 		;
-connectAttr "R_Ball_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1497]"
+connectAttr "R_Ball_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1497]"
 		;
-connectAttr "R_Ball_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1498]"
+connectAttr "R_Ball_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1498]"
 		;
-connectAttr "R_Ball_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1499]"
+connectAttr "R_Ball_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1499]"
 		;
-connectAttr "R_Ball_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1500]"
+connectAttr "R_Ball_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1500]"
 		;
-connectAttr "R_Ball_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1501]"
+connectAttr "R_Tiptoe_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1501]"
 		;
-connectAttr "R_Ball_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1502]"
+connectAttr "R_Tiptoe_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1502]"
 		;
-connectAttr "R_Ball_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1503]"
+connectAttr "R_Tiptoe_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1503]"
 		;
-connectAttr "R_Ball_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1504]"
+connectAttr "R_Tiptoe_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1504]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1505]"
+connectAttr "R_Tiptoe_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1505]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1506]"
+connectAttr "R_Tiptoe_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1506]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1507]"
+connectAttr "R_Tiptoe_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1507]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1508]"
+connectAttr "R_Tiptoe_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1508]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1509]"
+connectAttr "R_Tiptoe_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1509]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1510]"
+connectAttr "R_Tiptoe_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1510]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1511]"
+connectAttr "R_Heel_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1511]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1512]"
+connectAttr "R_Heel_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1512]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1513]"
+connectAttr "R_Heel_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1513]"
 		;
-connectAttr "R_Tiptoe_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1514]"
+connectAttr "R_Heel_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1514]"
 		;
-connectAttr "R_Heel_loc_ctl_translateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1515]"
+connectAttr "R_Heel_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1515]"
 		;
-connectAttr "R_Heel_loc_ctl_translateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1516]"
+connectAttr "R_Heel_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1516]"
 		;
-connectAttr "R_Heel_loc_ctl_translateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1517]"
+connectAttr "R_Heel_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1517]"
 		;
-connectAttr "R_Heel_loc_ctl_rotateX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1518]"
+connectAttr "R_Heel_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1518]"
 		;
-connectAttr "R_Heel_loc_ctl_rotateY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1519]"
+connectAttr "R_Heel_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1519]"
 		;
-connectAttr "R_Heel_loc_ctl_rotateZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1520]"
-		;
-connectAttr "R_Heel_loc_ctl_scaleX.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1521]"
-		;
-connectAttr "R_Heel_loc_ctl_scaleY.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1522]"
-		;
-connectAttr "R_Heel_loc_ctl_scaleZ.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1523]"
-		;
-connectAttr "R_Heel_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1524]"
+connectAttr "R_Heel_loc_ctl_visibility.o" "YoungerBrother_Rig_03___ready_for_skinningRN.phl[1520]"
 		;
 connectAttr "Master_Eye_ctrl_Blink.o" "OlderBrotherRN.phl[73]";
 connectAttr "Master_Eye_ctrl_L_Up_Lid.o" "OlderBrotherRN.phl[74]";
