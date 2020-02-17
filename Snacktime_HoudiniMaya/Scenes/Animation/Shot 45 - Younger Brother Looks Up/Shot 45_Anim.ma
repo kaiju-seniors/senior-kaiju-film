@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 45_008_polishing.ma
-//Last modified: Mon, Feb 17, 2020 02:43:28 PM
+//Name: Shot 45_Anim.ma
+//Last modified: Mon, Feb 17, 2020 02:43:37 PM
 //Codeset: 1252
 file -rdi 1 -ns "bedroom" -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
@@ -123,7 +123,7 @@ createNode camera -n "Main_CameraShape" -p "Main_Camera";
 	setAttr ".man" -type "string" "camera1_mask";
 	setAttr ".tp" -type "double3" 49.626942482675979 16.738614461694553 24.936682776904767 ;
 createNode fosterParent -n "CookiePrincessRNfosterParent1";
-	rename -uid "0E9DBB6D-4926-E660-4400-759BD54E48F5";
+	rename -uid "F4FAB779-4C8D-5BEC-367D-F5A53E79A159";
 createNode parentConstraint -n "TopCookie_ctl_grp_parentConstraint1" -p "CookiePrincessRNfosterParent1";
 	rename -uid "E362D058-4933-D6AD-54AC-AF9BC1DDFB51";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_FK_Arm_03_ctlW0" -dv 1 -min 0 -at "double";
@@ -28725,4 +28725,4 @@ connectAttr "R_Brow_ctrl_translateZ.o" "OlderBrotherRN.phl[71]";
 connectAttr "R_Brow_ctrl_visibility.o" "OlderBrotherRN.phl[72]";
 connectAttr "CookiePrincessRNfosterParent1.msg" "CookiePrincessRN.fp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Shot 45_008_polishing.ma
+// End of Shot 45_Anim.ma
