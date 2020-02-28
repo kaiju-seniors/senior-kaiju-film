@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot_41_Anim.ma
-//Last modified: Fri, Feb 28, 2020 02:09:17 PM
+//Name: Shot 41.5_ClothSimCushion.ma
+//Last modified: Fri, Feb 28, 2020 02:09:48 PM
 //Codeset: 1252
 file -rdi 1 -ns "Kong" -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -rdi 1 -ns "Zilla" -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
@@ -419,7 +419,7 @@ createNode camera -n "cameraShape2" -p "camera2";
 	setAttr ".man" -type "string" "camera2_mask";
 	setAttr ".tp" -type "double3" -2.9357382720901901 23.518141816245659 35.393262773174541 ;
 createNode fosterParent -n "PrincessRNfosterParent1";
-	rename -uid "78C96C9E-426F-E007-88E3-2EB19E55840E";
+	rename -uid "3250AB13-4177-1E86-3487-2EA3546CB818";
 createNode parentConstraint -n "Master_ctl_parentConstraint1" -p "PrincessRNfosterParent1";
 	rename -uid "BA451458-49DC-3558-2175-1EA555C64DFA";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_FK_Arm_03_ctlW0" -dv 1 -min 0 -at "double";
@@ -13490,4 +13490,4 @@ connectAttr "pairBlend1_inRotateY1.o" "pairBlend1.iry1";
 connectAttr "pairBlend1_inRotateZ1.o" "pairBlend1.irz1";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Shot_41_Anim.ma
+// End of Shot 41.5_ClothSimCushion.ma
