@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 42 Anim.ma
-//Last modified: Thu, Mar 05, 2020 03:56:32 PM
+//Name: Shot 42.5_polishTweaks.ma
+//Last modified: Thu, Mar 05, 2020 03:54:06 PM
 //Codeset: 1252
 file -rdi 1 -ns "bedroom" -rfn "bedroomRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Sets-Environments/bedroom/bedroom.ma";
@@ -116,7 +116,7 @@ createNode camera -n "Main_CameraShape" -p "Main_Camera";
 	setAttr ".man" -type "string" "camera1_mask";
 	setAttr ".tp" -type "double3" 69.719029219470428 29.399093913591066 86.940705408939365 ;
 createNode fosterParent -n "CookiePrincessRNfosterParent1";
-	rename -uid "6C7D4DE7-497E-F0E1-BF35-B4B74EDDC3A7";
+	rename -uid "D87DBBD9-4E8E-CE2F-8E71-D6B6151CB8A4";
 createNode parentConstraint -n "BottomCookie_ctl_parentConstraint1" -p "CookiePrincessRNfosterParent1";
 	rename -uid "59C0EDE0-482F-F0DF-B463-DFBB1B086776";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_FK_Arm_03_ctlW0" -dv 1 -min 0 -at "double";
@@ -134,7 +134,7 @@ createNode parentConstraint -n "BottomCookie_ctl_parentConstraint1" -p "CookiePr
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 2.2599431038874016 -0.70294931407610406 -0.52561563445168247 ;
 	setAttr ".tg[0].tor" -type "double3" -82.052977676301438 -14.797355588119652 14.305131734589427 ;
-	setAttr ".lr" -type "double3" 69.213882227068311 3.9855016726234931 -14.289872347911004 ;
+	setAttr ".lr" -type "double3" 71.724141349763812 6.3721201063056219 -9.724230787141142 ;
 	setAttr ".rst" -type "double3" 67.546865045327706 32.955484981796232 88.769187511442468 ;
 	setAttr ".rsrr" -type "double3" -85.556008511575328 -7.6947085015253851 20.697332665951013 ;
 	setAttr -k on ".w0";
@@ -155,7 +155,7 @@ createNode parentConstraint -n "TopCookie_ctl_grp_parentConstraint1" -p "CookieP
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -97.293790213199756 -29.267821603164688 -42.803965391654501 ;
 	setAttr ".tg[0].tor" -type "double3" -3.3924765037587288 28.205878074494667 0.29221062768974798 ;
-	setAttr ".lr" -type "double3" -148.61766070349154 -42.059649061475987 -7.1802977927560523 ;
+	setAttr ".lr" -type "double3" -155.45329441844856 -40.262909445191923 -2.5644277746902095 ;
 	setAttr ".rst" -type "double3" 1.4210854715202004e-14 5.0284670591354477 2.7298927321339761e-05 ;
 	setAttr ".rsrr" -type "double3" 3.1805546814635168e-15 -6.3611093629270335e-15 -3.975693351829396e-15 ;
 	setAttr -k on ".w0";
@@ -1733,7 +1733,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl" 
-		"translate" " -type \"double3\" -0.50574899403049589 -0.048660718188770949 2.87526125433577784"
+		"translate" " -type \"double3\" -0.50404829890778413 0.018162562985170973 2.87418000941000429"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:R_Clavicle_ctl_grp|OlderBrother:R_Clavicle_ctl" 
 		"translateX" " -av"
@@ -1764,7 +1764,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl" 
-		"translate" " -type \"double3\" 0.46179416386550987 0.013865946874448722 0.32052446234995741"
+		"translate" " -type \"double3\" 0.46178438580788245 0.014403296525498852 0.32051431519594664"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:L_Clavicle_ctl_grp|OlderBrother:L_Clavicle_ctl" 
 		"translateX" " -av"
@@ -1848,7 +1848,8 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 8.5780974996243255e-05 0.00021342394218485002 0.0003393794909963484"
+		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl" 
 		"translateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl" 
@@ -1856,7 +1857,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" 75.43694625374746465 21.60459086361430892 8.58073908142694286"
+		"rotate" " -type \"double3\" 75.63359085184394814 21.36807980441667709 8.27572262654405932"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_02_ctl_grp|OlderBrother:R_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -1887,7 +1888,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" 46.42790685739346657 16.81531832605656618 -14.06892188450274972"
+		"rotate" " -type \"double3\" 48.51492923336588348 20.95643846084752226 -16.86346684438288079"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Arm_03_ctl_grp|OlderBrother:R_FK_Arm_03_ctl" 
 		"rotateX" " -av"
@@ -1910,7 +1911,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl" 
 		"visibility" " -av 1"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl" 
-		"translate" " -type \"double3\" -0.025545393011378464 0.15945168505501128 0.033522124271689289"
+		"translate" " -type \"double3\" -0.025480948958055007 0.1590155227209826 0.033423462823045313"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl" 
 		"translateX" " -av"
@@ -1919,7 +1920,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl" 
-		"rotate" " -type \"double3\" -8.25685570991380224 -14.84569119118486213 -15.90234473796137848"
+		"rotate" " -type \"double3\" 2.37087012964639721 -17.80751394199423743 -67.29583313244025078"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_01_ctl_grp|OlderBrother:R_FK_Finger5_01_ctl" 
 		"rotateX" " -av"
@@ -1938,7 +1939,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -36.04529869339035031"
+		"rotate" " -type \"double3\" 0 0 -56.75083265705696789"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_02_ctl_grp|OlderBrother:R_FK_Finger5_02_ctl" 
@@ -1956,7 +1957,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -38.62547821955116945"
+		"rotate" " -type \"double3\" 0 0 -49.86570469506951753"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger5_03_ctl_grp|OlderBrother:R_FK_Finger5_03_ctl" 
@@ -1974,7 +1975,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl" 
-		"rotate" " -type \"double3\" -5.7956037115081136 -10.94077917696099433 -20.2250026693500935"
+		"rotate" " -type \"double3\" -3.69024649827231466 -9.40764120266673309 -31.54630255132866523"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_01_ctl_grp|OlderBrother:R_FK_Finger4_01_ctl" 
 		"rotateX" " -av"
@@ -2005,7 +2006,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -18.96741454849461661"
+		"rotate" " -type \"double3\" 0 0 -75.371697352089285"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_02_ctl_grp|OlderBrother:R_FK_Finger4_02_ctl" 
@@ -2023,7 +2024,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -39.35058795484765426"
+		"rotate" " -type \"double3\" 0 0 -44.24693792092621436"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger4_03_ctl_grp|OlderBrother:R_FK_Finger4_03_ctl" 
@@ -2042,7 +2043,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl" 
-		"rotate" " -type \"double3\" -6.5604045888903082 7.03217725263974547 3.7585449080229254"
+		"rotate" " -type \"double3\" -8.23843471409235306 4.29839443556433398 -13.55207348184246463"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_01_ctl_grp|OlderBrother:R_FK_Finger2_01_ctl" 
 		"rotateX" " -av"
@@ -2061,7 +2062,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -12.5092048795440629"
+		"rotate" " -type \"double3\" 0 0 -29.63349408885141756"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_02_ctl_grp|OlderBrother:R_FK_Finger2_02_ctl" 
@@ -2079,7 +2080,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -48.41414868736809751"
+		"rotate" " -type \"double3\" 0 0 -68.77362623478232706"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger2_03_ctl_grp|OlderBrother:R_FK_Finger2_03_ctl" 
@@ -2136,7 +2137,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl" 
-		"rotate" " -type \"double3\" -0.23630989455753906 33.68116495368816032 -4.2467158781997183"
+		"rotate" " -type \"double3\" 36.4978693359617381 42.43767160025890206 30.06712667423147067"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger1_03_ctl_grp|OlderBrother:R_FK_Finger1_03_ctl" 
 		"rotateX" " -av"
@@ -2155,7 +2156,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl" 
-		"rotate" " -type \"double3\" -14.84874414996764536 -7.49253097360099396 -7.46701874091557816"
+		"rotate" " -type \"double3\" -1.38793925078425628 -3.08387972223876083 -22.5925040366019978"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_01_ctl_grp|OlderBrother:R_FK_Finger3_01_ctl" 
 		"rotateX" " -av"
@@ -2174,7 +2175,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -18.82716179637737852"
+		"rotate" " -type \"double3\" 0 0 -42.33425829200491108"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_02_ctl_grp|OlderBrother:R_FK_Finger3_02_ctl" 
@@ -2192,7 +2193,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -40.33933199167717021"
+		"rotate" " -type \"double3\" 0 0 -76.69860029045666749"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls1|OlderBrother:R_Arm_FK_Controls|OlderBrother:R_FK_Finger3_03_ctl_grp|OlderBrother:R_FK_Finger3_03_ctl" 
@@ -2228,7 +2229,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl" 
-		"rotate" " -type \"double3\" -43.28011014855405136 -61.28283428050399806 1.75273846004763345"
+		"rotate" " -type \"double3\" -49.51455062444833999 -61.65636967062981455 4.13235684657727997"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_02_ctl_grp|OlderBrother:L_FK_Arm_02_ctl" 
 		"rotateX" " -av"
@@ -2259,7 +2260,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl" 
-		"rotate" " -type \"double3\" -49.37642678063643586 -3.63062441658631752 -6.9213540835825107"
+		"rotate" " -type \"double3\" -49.59722270607623074 -5.35341468378590779 -5.22169316016818463"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Arm_03_ctl_grp|OlderBrother:L_FK_Arm_03_ctl" 
 		"rotateX" " -av"
@@ -2290,7 +2291,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl" 
-		"rotate" " -type \"double3\" -3.09732014473059403 -7.04028465154318628 -33.1333729891840818"
+		"rotate" " -type \"double3\" 2.2876846055255351 -15.48889876231209506 -99.63092696812769589"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_01_ctl_grp|OlderBrother:L_FK_Finger5_01_ctl" 
 		"rotateX" " -av"
@@ -2309,7 +2310,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -32.07427747122747519"
+		"rotate" " -type \"double3\" -18.90600481457459026 0 -72.5908133524200565"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_02_ctl_grp|OlderBrother:L_FK_Finger5_02_ctl" 
@@ -2339,7 +2340,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -11.94399994179299718"
+		"rotate" " -type \"double3\" -18.90600481457456894 0 -51.07824531430215842"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger5_03_ctl_grp|OlderBrother:L_FK_Finger5_03_ctl" 
@@ -2357,7 +2358,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl" 
-		"rotate" " -type \"double3\" -3.63838104263404283 -4.29342616691337575 -17.56398165216696583"
+		"rotate" " -type \"double3\" 0.29060783240941612 -4.16476675969925747 -71.48027214552743658"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_01_ctl_grp|OlderBrother:L_FK_Finger4_01_ctl" 
 		"rotateX" " -av"
@@ -2376,7 +2377,8 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -36.93741598348461963"
+		"rotate" " -type \"double3\" 0.51724979956058703 -5.24249370253730884 -81.15188041740826463"
+		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_02_ctl_grp|OlderBrother:L_FK_Finger4_02_ctl" 
@@ -2394,7 +2396,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -28.50493742341620163"
+		"rotate" " -type \"double3\" 0 0 -37.09725095957975327"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger4_03_ctl_grp|OlderBrother:L_FK_Finger4_03_ctl" 
@@ -2413,7 +2415,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl" 
-		"rotate" " -type \"double3\" -2.93909250868003991 0.50367389578666988 -23.01855759313319183"
+		"rotate" " -type \"double3\" -0.34825493613375053 -6.36204889908224924 -39.13015085753085032"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_01_ctl_grp|OlderBrother:L_FK_Finger2_01_ctl" 
 		"rotateX" " -av"
@@ -2432,7 +2434,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -26.67408163225492856"
+		"rotate" " -type \"double3\" 0 0 -69.50512741195714739"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_02_ctl_grp|OlderBrother:L_FK_Finger2_02_ctl" 
@@ -2450,7 +2452,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -9.45448515086050989"
+		"rotate" " -type \"double3\" 0 0 -43.76335696418676235"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger2_03_ctl_grp|OlderBrother:L_FK_Finger2_03_ctl" 
@@ -2468,7 +2470,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl" 
-		"rotate" " -type \"double3\" -26.64010065910695602 1.29155492126298999 4.64516533471621251"
+		"rotate" " -type \"double3\" -11.61044223263163033 -6.0896123726851652 -9.1246792322399255"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_01_ctl_grp|OlderBrother:L_FK_Finger1_01_ctl" 
 		"rotateX" " -av"
@@ -2487,7 +2489,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl" 
-		"rotate" " -type \"double3\" 52.79316374850574078 7.7401337246677544 -14.60974059520539647"
+		"rotate" " -type \"double3\" 7.4795974319221683 50.6650020858731267 -80.69732261798633033"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_02_ctl_grp|OlderBrother:L_FK_Finger1_02_ctl" 
 		"rotateX" " -av"
@@ -2506,7 +2508,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl" 
-		"rotate" " -type \"double3\" 19.20654523716767059 -0.24187510450798558 -38.87836184798502615"
+		"rotate" " -type \"double3\" 17.14168359785059792 6.84039961237575156 -60.61110212648258511"
 		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger1_03_ctl_grp|OlderBrother:L_FK_Finger1_03_ctl" 
 		"rotateX" " -av"
@@ -2537,7 +2539,8 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl" 
-		"rotate" " -type \"double3\" 0 -7.70858657253086843 -17.63999990387745953"
+		"rotate" " -type \"double3\" -7.56785811514961892 -16.87171706558746465 -56.07407999584408032"
+		
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_01_ctl_grp|OlderBrother:L_FK_Finger3_01_ctl" 
@@ -2555,7 +2558,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -26.6391591773714147"
+		"rotate" " -type \"double3\" 0 10.86823869522169161 -65.63012255314873755"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_02_ctl_grp|OlderBrother:L_FK_Finger3_02_ctl" 
@@ -2573,7 +2576,7 @@ createNode reference -n "OlderBrother_Rig_01RN";
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl" 
 		"translateZ" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -10.96548375617824256"
+		"rotate" " -type \"double3\" 0 0 -44.74403114959871175"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl" 
 		"rotateX" " -av"
 		2 "|OlderBrother:OIder_Brother|OlderBrother:Controls|OlderBrother:Controls|OlderBrother:L_Arm_FK_Controls|OlderBrother:L_FK_Finger3_03_ctl_grp|OlderBrother:L_FK_Finger3_03_ctl" 
@@ -9254,7 +9257,7 @@ createNode reference -n "CookiePrincessRN";
 		"-s -r "
 		1 |CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp|CookiePrincess:BottomCookie_ctl 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "translate" " -type \"double3\" 67.55907934786308999 34.08230752157173526 90.7522786231037486"
+		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "translate" " -type \"double3\" 67.46959458067637172 34.26184521291399676 90.75236194583354177"
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "translateX" " -av"
 		
@@ -9262,17 +9265,17 @@ createNode reference -n "CookiePrincessRN";
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "translateZ" " -av"
 		
-		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "rotate" " -type \"double3\" 69.21388222706832494 3.98550167262349442 -14.28987234791100569"
+		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "rotate" " -type \"double3\" 71.72414134976382627 6.37212010630562276 -9.72423078714114375"
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "rotateX" " -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "rotateY" " -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie" "rotateZ" " -av"
-		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "translate" " -type \"double3\" 67.61039368989635534 24.4933827809673339 85.53407526004392025"
+		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "translate" " -type \"double3\" 67.6736623845721823 24.69079912528733445 85.30084119828629241"
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "translateX" " -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "translateY" " -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "translateZ" " -av"
-		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "rotate" " -type \"double3\" -242.76137819555455621 -32.48219384874403914 -7.50613208865994341"
+		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "rotate" " -type \"double3\" -248.83987044046799042 -30.77467696777829076 -4.20278799596666808"
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "rotateX" " -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie" "rotateY" " -av"
@@ -9307,7 +9310,7 @@ createNode reference -n "CookiePrincessRN";
 		2 "|CookiePrincess:Cookie|CookiePrincess:TopCookie_ctl_grp|CookiePrincess:TopCookie_ctl" 
 		"scaleZ" " -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp|CookiePrincess:BottomCookie_ctl" 
-		"translate" " -type \"double3\" 67.55907934786308999 34.08230752157173526 90.7522786231037486"
+		"translate" " -type \"double3\" 67.46959458067637172 34.26184521291399676 90.75236194583354177"
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp|CookiePrincess:BottomCookie_ctl" 
 		"translateX" " -av"
@@ -9316,7 +9319,7 @@ createNode reference -n "CookiePrincessRN";
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp|CookiePrincess:BottomCookie_ctl" 
 		"translateZ" " -av"
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp|CookiePrincess:BottomCookie_ctl" 
-		"rotate" " -type \"double3\" 69.21388222706831073 3.98550167262349309 -14.28987234791100391"
+		"rotate" " -type \"double3\" 71.72414134976381206 6.37212010630562187 -9.72423078714114197"
 		
 		2 "|CookiePrincess:Cookie|CookiePrincess:BottomCookie_ctl_grp|CookiePrincess:BottomCookie_ctl" 
 		"rotateX" " -av"
@@ -10888,8 +10891,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 110;
-	setAttr -av ".unw" 110;
+	setAttr ".o" 54;
+	setAttr -av ".unw" 54;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -12266,4 +12269,4 @@ connectAttr "BottomCookie_ctl_parentConstraint1.crx" "pairBlend2.irx2";
 connectAttr "BottomCookie_ctl_parentConstraint1.cry" "pairBlend2.iry2";
 connectAttr "BottomCookie_ctl_parentConstraint1.crz" "pairBlend2.irz2";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Shot 42 Anim.ma
+// End of Shot 42.5_polishTweaks.ma
