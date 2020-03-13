@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 14 Anim.ma
-//Last modified: Thu, Mar 12, 2020 07:59:53 PM
+//Name: Shot 14 005 b polishing.ma
+//Last modified: Thu, Mar 12, 2020 07:59:42 PM
 //Codeset: 1252
 file -rdi 1 -ns "Princess" -rfn "PrincessRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Princess/Princess.ma";
 file -rdi 1 -ns "Princess_Tower" -rfn "Princess_TowerRN" -op "mo=1" -typ "OBJexport"
@@ -15598,4 +15598,4 @@ connectAttr "sharedReferenceNode.sr" "PrincessRN.sr";
 connectAttr "sharedReferenceNode.sr" "Princess_TowerRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Shot 14 Anim.ma
+// End of Shot 14 005 b polishing.ma
