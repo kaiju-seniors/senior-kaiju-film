@@ -1,0 +1,73 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                },
+                "Subsurface Scattering Parameters": {
+                    "sssColor": [
+                        0.7009999752044678,
+                        0.3009999990463257,
+                        0.3050000071525574
+                    ],
+                    "sssEnabled": true,
+                    "sssScale": 0.5,
+                    "sssType": 1
+                }
+            },
+            "shader": "pbr-metal-rough",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "Ball&Lamp_2": {
+            "shader": "Main shader"
+        },
+        "Bed_2": {
+            "shader": "Main shader"
+        },
+        "Books_2": {
+            "shader": "Main shader"
+        },
+        "Bookshelf_2": {
+            "shader": "Main shader"
+        },
+        "Ceiling": {
+            "shader": "Main shader"
+        },
+        "Crayons&Blocks_2": {
+            "shader": "Main shader"
+        },
+        "Curtain_2": {
+            "shader": "Main shader"
+        },
+        "Posters_2": {
+            "shader": "Main shader"
+        },
+        "Rug_2": {
+            "shader": "Main shader"
+        },
+        "ToyBoxes_2": {
+            "shader": "Main shader"
+        },
+        "Walls_2": {
+            "shader": "Main shader"
+        },
+        "Wood_Floor": {
+            "shader": "Main shader"
+        }
+    }
+}
