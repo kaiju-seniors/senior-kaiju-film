@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 """
 Implements support for general colorspaces conversions and transfer functions.
 """
@@ -24,16 +23,14 @@ __maintainer__ = 'ACES Developers'
 __email__ = 'aces@oscars.org'
 __status__ = 'Production'
 
-__all__ = ['create_matrix_colorspace',
-           'create_transfer_colorspace',
-           'create_matrix_plus_transfer_colorspace',
-           'transfer_function_sRGB_to_linear',
-           'transfer_function_Rec709_to_linear',
-           'transfer_function_Rec2020_10bit_to_linear',
-           'transfer_function_Rec2020_12bit_to_linear',
-           'transfer_function_Rec1886_to_linear',
-           'create_colorspaces',
-           'create_raw']
+__all__ = [
+    'create_matrix_colorspace', 'create_transfer_colorspace',
+    'create_matrix_plus_transfer_colorspace', 'linear_to_sRGB',
+    'sRGB_to_linear', 'linear_to_Rec709', 'Rec709_to_linear',
+    'linear_to_Rec2020_10bit', 'Rec2020_10bit_to_linear',
+    'linear_to_Rec2020_12bit', 'Rec2020_12bit_to_linear', 'linear_to_Rec1886',
+    'Rec1886_to_linear', 'create_colorspaces', 'create_raw'
+]
 
 
 # -------------------------------------------------------------------------
@@ -75,7 +72,7 @@ def create_matrix_colorspace(name='matrix',
         aliases = []
 
     cs = ColorSpace(name)
-    cs.description = 'The %s color space' % name
+    cs.description = 'The {0} color space'.format(name)
     cs.aliases = aliases
     cs.equality_group = name
     cs.family = 'Utility'
@@ -89,17 +86,25 @@ def create_matrix_colorspace(name='matrix',
     if to_reference_values:
         for matrix in to_reference_values:
             cs.to_reference_transforms.append({
-                'type': 'matrix',
-                'matrix': mat44_from_mat33(matrix),
-                'direction': 'forward'})
+                'type':
+                'matrix',
+                'matrix':
+                mat44_from_mat33(matrix),
+                'direction':
+                'forward'
+            })
 
     cs.from_reference_transforms = []
     if from_reference_values:
         for matrix in from_reference_values:
             cs.from_reference_transforms.append({
-                'type': 'matrix',
-                'matrix': mat44_from_mat33(matrix),
-                'direction': 'forward'})
+                'type':
+                'matrix',
+                'matrix':
+                mat44_from_mat33(matrix),
+                'direction':
+                'forward'
+            })
 
     return cs
 
@@ -111,7 +116,7 @@ def create_transfer_colorspace(name='transfer',
                                transfer_function_name='transfer_function',
                                transfer_function=lambda x: x,
                                lut_directory='/tmp',
-                               lut_resolution_1d=1024,
+                               lut_resolution_1D=1024,
                                aliases=None):
     """
     Creates a colorspace that only uses transfer functions encoded as 1D LUTs.
@@ -126,7 +131,7 @@ def create_transfer_colorspace(name='transfer',
         The transfer function to be evaluated.
     lut_directory : str or unicode 
         The directory to use when generating LUTs.
-    lut_resolution_1d : int
+    lut_resolution_1D : int
         The resolution of generated 1D LUTs.
     aliases : list of str
         Aliases for this colorspace.
@@ -141,7 +146,7 @@ def create_transfer_colorspace(name='transfer',
         aliases = []
 
     cs = ColorSpace(name)
-    cs.description = 'The %s color space' % name
+    cs.description = 'The {0} color space'.format(name)
     cs.aliases = aliases
     cs.equality_group = name
     cs.family = 'Utility'
@@ -152,19 +157,14 @@ def create_transfer_colorspace(name='transfer',
     cs.allocation_vars = [0, 1]
 
     # Sampling the transfer function.
-    data = array.array('f', '\0' * lut_resolution_1d * 4)
-    for c in range(lut_resolution_1d):
-        data[c] = transfer_function(c / (lut_resolution_1d - 1))
+    data = array.array('f', '\0' * lut_resolution_1D * 4)
+    for c in range(lut_resolution_1D):
+        data[c] = transfer_function(c / (lut_resolution_1D - 1))
 
     # Writing the sampled data to a *LUT*.
-    lut = '%s_to_linear.spi1d' % transfer_function_name
-    genlut.write_SPI_1d(
-        os.path.join(lut_directory, lut),
-        0,
-        1,
-        data,
-        lut_resolution_1d,
-        1)
+    lut = 'linear_to_{0}.spi1d'.format(transfer_function_name)
+    genlut.write_SPI_1D(
+        os.path.join(lut_directory, lut), 0, 1, data, lut_resolution_1D, 1)
 
     # Creating the *to_reference* transforms.
     cs.to_reference_transforms = []
@@ -172,7 +172,8 @@ def create_transfer_colorspace(name='transfer',
         'type': 'lutFile',
         'path': lut,
         'interpolation': 'linear',
-        'direction': 'forward'})
+        'direction': 'inverse'
+    })
 
     # Creating the *from_reference* transforms.
     cs.from_reference_transforms = []
@@ -188,7 +189,7 @@ def create_matrix_plus_transfer_colorspace(
         transfer_function_name='transfer_function',
         transfer_function=lambda x: x,
         lut_directory='/tmp',
-        lut_resolution_1d=1024,
+        lut_resolution_1D=1024,
         from_reference_values=None,
         to_reference_values=None,
         aliases=None):
@@ -206,7 +207,7 @@ def create_matrix_plus_transfer_colorspace(
         The transfer function to be evaluated.
     lut_directory : str or unicode 
         The directory to use when generating LUTs.
-    lut_resolution_1d : int
+    lut_resolution_1D : int
         The resolution of generated 1D LUTs.
     from_reference_values : list of matrices
         List of matrices to convert from the reference colorspace to this
@@ -234,7 +235,7 @@ def create_matrix_plus_transfer_colorspace(
         aliases = []
 
     cs = ColorSpace(name)
-    cs.description = 'The %s color space' % name
+    cs.description = 'The {0} color space'.format(name)
     cs.aliases = aliases
     cs.equality_group = name
     cs.family = 'Utility'
@@ -245,19 +246,14 @@ def create_matrix_plus_transfer_colorspace(
     cs.allocation_vars = [0, 1]
 
     # Sampling the transfer function.
-    data = array.array('f', '\0' * lut_resolution_1d * 4)
-    for c in range(lut_resolution_1d):
-        data[c] = transfer_function(c / (lut_resolution_1d - 1))
+    data = array.array('f', '\0' * lut_resolution_1D * 4)
+    for c in range(lut_resolution_1D):
+        data[c] = transfer_function(c / (lut_resolution_1D - 1))
 
     # Writing the sampled data to a *LUT*.
-    lut = '%s_to_linear.spi1d' % transfer_function_name
-    genlut.write_SPI_1d(
-        os.path.join(lut_directory, lut),
-        0,
-        1,
-        data,
-        lut_resolution_1d,
-        1)
+    lut = 'linear_to_{0}.spi1d'.format(transfer_function_name)
+    genlut.write_SPI_1D(
+        os.path.join(lut_directory, lut), 0, 1, data, lut_resolution_1D, 1)
 
     # Creating the *to_reference* transforms.
     cs.to_reference_transforms = []
@@ -266,41 +262,51 @@ def create_matrix_plus_transfer_colorspace(
             'type': 'lutFile',
             'path': lut,
             'interpolation': 'linear',
-            'direction': 'forward'})
+            'direction': 'inverse'
+        })
 
         for matrix in to_reference_values:
             cs.to_reference_transforms.append({
-                'type': 'matrix',
-                'matrix': mat44_from_mat33(matrix),
-                'direction': 'forward'})
+                'type':
+                'matrix',
+                'matrix':
+                mat44_from_mat33(matrix),
+                'direction':
+                'forward'
+            })
 
     # Creating the *from_reference* transforms.
     cs.from_reference_transforms = []
     if from_reference_values:
         for matrix in from_reference_values:
             cs.from_reference_transforms.append({
-                'type': 'matrix',
-                'matrix': mat44_from_mat33(matrix),
-                'direction': 'forward'})
+                'type':
+                'matrix',
+                'matrix':
+                mat44_from_mat33(matrix),
+                'direction':
+                'forward'
+            })
 
         cs.from_reference_transforms.append({
             'type': 'lutFile',
             'path': lut,
             'interpolation': 'linear',
-            'direction': 'inverse'})
+            'direction': 'forward'
+        })
 
     return cs
 
 
 # Transfer functions for standard colorspaces.
-def transfer_function_sRGB_to_linear(v):
+def linear_to_sRGB(L):
     """
-    The sRGB (IEC 61966-2-1) transfer function.
+    The *sRGB (IEC 61966-2-1)* encoding transfer function.
 
     Parameters
     ----------
-    v : float
-        The normalized value to pass through the function.
+    L : float
+        *Luminance* :math:`L` of the image.
 
     Returns
     -------
@@ -308,24 +314,20 @@ def transfer_function_sRGB_to_linear(v):
         A converted value.
     """
 
-    a = 1.055
-    b = 0.04045
-    d = 12.92
-    g = 2.4
-
-    if v < b:
-        return v / d
-    return pow(((v + (a - 1)) / a), g)
+    if L <= 0.0031308:
+        return L * 12.92
+    else:
+        return 1.055 * pow(L, 1.0 / 2.4) - 0.055
 
 
-def transfer_function_Rec709_to_linear(v):
+def sRGB_to_linear(V):
     """
-    The Rec.709 transfer function.
+    The *sRGB (IEC 61966-2-1)* decoding transfer function.
 
     Parameters
     ----------
-    v : float
-        The normalized value to pass through the function.
+    V : float
+         Electrical signal :math:`V`.
 
     Returns
     -------
@@ -333,25 +335,20 @@ def transfer_function_Rec709_to_linear(v):
         A converted value.
     """
 
-    a = 1.099
-    b = 0.018
-    d = 4.5
-    g = (1.0 / 0.45)
-
-    if v < b * d:
-        return v / d
-
-    return pow(((v + (a - 1)) / a), g)
+    if V < linear_to_sRGB(0.0031308):
+        return V / 12.92
+    else:
+        return pow((V + 0.055) / 1.055, 2.4)
 
 
-def transfer_function_Rec2020_10bit_to_linear(v):
+def linear_to_Rec709(L):
     """
-    The Rec.2020 10-bit transfer function.
+    The *Rec.709* encoding transfer function.
 
     Parameters
     ----------
-    v : float
-        The normalized value to pass through the function.
+    L : float
+        *Luminance* :math:`L` of the image.
 
     Returns
     -------
@@ -359,25 +356,20 @@ def transfer_function_Rec2020_10bit_to_linear(v):
         A converted value.
     """
 
-    a = 1.099
-    b = 0.018
-    d = 4.5
-    g = (1.0 / 0.45)
-
-    if v < b * d:
-        return v / d
-
-    return pow(((v + (a - 1)) / a), g)
+    if L < 0.018:
+        return L * 4.5
+    else:
+        return 1.099 * pow(L, 0.45) - 0.099
 
 
-def transfer_function_Rec2020_12bit_to_linear(v):
+def Rec709_to_linear(E):
     """
-    The Rec.2020 12-bit transfer function.
+    The *Rec.709* decoding transfer function.
 
     Parameters
     ----------
-    v : float
-        The normalized value to pass through the function.
+    E : float
+        Electrical signal :math:`E`.
 
     Returns
     -------
@@ -385,25 +377,22 @@ def transfer_function_Rec2020_12bit_to_linear(v):
         A converted value.
     """
 
-    a = 1.0993
-    b = 0.0181
-    d = 4.5
-    g = (1.0 / 0.45)
-
-    if v < b * d:
-        return v / d
-
-    return pow(((v + (a - 1)) / a), g)
+    if E < linear_to_Rec709(0.018):
+        return E / 4.5
+    else:
+        return pow((E + 0.099) / 1.099, 1.0 / 0.45)
 
 
-def transfer_function_Rec1886_to_linear(v):
+def linear_to_Rec2020_10bit(E):
     """
-    The Rec.1886 transfer function.
+    The *Rec.2020* 10-bit encoding transfer function.
 
     Parameters
     ----------
-    v : float
-        The normalized value to pass through the function.
+    E : float
+        Voltage :math:`E` normalised by the reference white level and
+        proportional to the implicit light intensity that would be detected
+        with a reference camera colour channel R, G, B.
 
     Returns
     -------
@@ -411,22 +400,143 @@ def transfer_function_Rec1886_to_linear(v):
         A converted value.
     """
 
-    g = 2.4
-    Lw = 1
-    Lb = 0
-
-    # Ignoring legal to full scaling for now.
-    # v = (1023.0*v - 64.0)/876.0
-
-    t = pow(Lw, 1.0 / g) - pow(Lb, 1.0 / g)
-    a = pow(t, g)
-    b = pow(Lb, 1.0 / g) / t
-
-    return a * pow(max((v + b), 0.0), g)
+    if E < 0.018:
+        return E * 4.5
+    else:
+        return 1.099 * pow(E, 0.45) - (1.099 - 1)
 
 
-def create_colorspaces(lut_directory,
-                       lut_resolution_1d):
+def Rec2020_10bit_to_linear(E_p):
+    """
+    The *Rec.2020* 10-bit decoding transfer function.
+
+    Parameters
+    ----------
+    E_p : float
+        Non-linear signal :math:`E'`.
+
+    Returns
+    -------
+    float
+        A converted value.
+    """
+
+    if E_p < linear_to_Rec2020_10bit(0.018):
+        return E_p / 4.5
+    else:
+        return pow((E_p + 0.099) / 1.099, 1.0 / 0.45)
+
+
+def linear_to_Rec2020_12bit(E):
+    """
+    The *Rec.2020* 12-bit encoding transfer function.
+
+    Parameters
+    ----------
+    E : float
+        Voltage :math:`E` normalised by the reference white level and
+        proportional to the implicit light intensity that would be detected
+        with a reference camera colour channel R, G, B.
+
+    Returns
+    -------
+    float
+        A converted value.
+    """
+
+    if E < 0.0181:
+        return E * 4.5
+    else:
+        return 1.0993 * pow(E, 0.45) - (1.0993 - 1)
+
+
+def Rec2020_12bit_to_linear(E_p):
+    """
+    The *Rec.2020* 12-bit decoding transfer function.
+
+    Parameters
+    ----------
+    E_p : float
+        Non-linear signal :math:`E'`.
+
+    Returns
+    -------
+    float
+        A converted value.
+    """
+
+    if E_p < linear_to_Rec2020_10bit(0.0181):
+        return E_p / 4.5
+    else:
+        return pow((E_p + 0.0993) / 1.0993, 1.0 / 0.45)
+
+
+def linear_to_Rec1886(L, L_B=0, L_W=1):
+    """
+    The *Rec.1886* encoding transfer function.
+
+    Parameters
+    ----------
+    L : numeric or array_like
+        Screen luminance in :math:`cd/m^2`.
+    L_B : numeric, optional
+        Screen luminance for black.
+    L_W : numeric, optional
+        Screen luminance for white.
+
+    Returns
+    -------
+    float
+        A converted value.
+    """
+
+    gamma = 2.40
+    gamma_d = 1.0 / gamma
+
+    n = L_W**gamma_d - L_B**gamma_d
+    a = n**gamma
+    b = L_B**gamma_d / n
+
+    V = (L / a)**gamma_d - b
+
+    return V
+
+
+def Rec1886_to_linear(V, L_B=0, L_W=1):
+    """
+    The *Rec.1886* decoding transfer function.
+
+    Parameters
+    ----------
+    V : numeric or array_like
+        Input video signal level (normalised, black at :math:`V = 0`, to white
+        at :math:`V = 1`. For content mastered per
+        *Recommendation ITU-R BT.709*, 10-bit digital code values :math:`D` map
+        into values of :math:`V` per the following equation:
+        :math:`V = (D-64)/876`
+    L_B : numeric, optional
+        Screen luminance for black.
+    L_W : numeric, optional
+        Screen luminance for white.
+
+    Returns
+    -------
+    float
+        A converted value.
+    """
+
+    gamma = 2.40
+    gamma_d = 1.0 / gamma
+
+    n = L_W**gamma_d - L_B**gamma_d
+    a = n**gamma
+    b = L_B**gamma_d / n
+    L = a * max(V + b, 0)**gamma
+
+    return L
+
+
+def create_colorspaces(lut_directory, lut_resolution_1D=1024):
     """
     Generates the colorspace conversions.
 
@@ -434,7 +544,7 @@ def create_colorspaces(lut_directory,
     ----------
     lut_directory : str or unicode 
         The directory to use when generating LUTs.
-    lut_resolution_1d : int
+    lut_resolution_1D : int, optional
         The resolution of generated 1D LUTs.
 
     Returns
@@ -448,19 +558,21 @@ def create_colorspaces(lut_directory,
     # -------------------------------------------------------------------------
     # XYZ
     # -------------------------------------------------------------------------
-    cs = create_matrix_colorspace('XYZ - D60',
-                                  to_reference_values=[aces.ACES_XYZ_TO_AP0],
-                                  from_reference_values=[aces.ACES_AP0_TO_XYZ],
-                                  aliases=['lin_xyz_d60'])
+    cs = create_matrix_colorspace(
+        'XYZ - D60',
+        to_reference_values=[aces.ACES_XYZ_TO_AP0],
+        from_reference_values=[aces.ACES_AP0_TO_XYZ],
+        aliases=['lin_xyz_d60'])
     colorspaces.append(cs)
 
     # -------------------------------------------------------------------------
     # P3-D60
     # -------------------------------------------------------------------------
     # *ACES* to *Linear*, *P3D60* primaries
-    XYZ_to_P3D60 = [2.4027414142, -0.8974841639, -0.3880533700,
-                    -0.8325796487, 1.7692317536, 0.0237127115,
-                    0.0388233815, -0.0824996856, 1.0363685997]
+    XYZ_to_P3D60 = [
+        2.4027414142, -0.8974841639, -0.3880533700, -0.8325796487,
+        1.7692317536, 0.0237127115, 0.0388233815, -0.0824996856, 1.0363685997
+    ]
 
     cs = create_matrix_colorspace(
         'Linear - P3-D60',
@@ -472,9 +584,10 @@ def create_colorspaces(lut_directory,
     # P3-D65
     # -------------------------------------------------------------------------
     # *ACES* to *Linear*, *P3D65* primaries
-    XYZ_to_P3D65 = [2.46741247, -0.94626093, -0.40077353,
-                    -0.83221072, 1.77089071, 0.02171988,
-                    0.03890671, -0.08141143, 1.03521109]
+    XYZ_to_P3D65 = [
+        2.46741247, -0.94626093, -0.40077353, -0.83221072, 1.77089071,
+        0.02171988, 0.03890671, -0.08141143, 1.03521109
+    ]
 
     cs = create_matrix_colorspace(
         'Linear - P3-D65',
@@ -485,11 +598,12 @@ def create_colorspaces(lut_directory,
     # -------------------------------------------------------------------------
     # P3-DCI
     # -------------------------------------------------------------------------
-    # *ACES* to *Linear*, *P3DCI* primaries, using Bradford chromatic 
+    # *ACES* to *Linear*, *P3DCI* primaries, using Bradford chromatic
     # adaptation
-    XYZ_to_P3DCI = [2.66286135, -1.11031783, -0.42271635,
-                    -0.82282376, 1.75861704, 0.02502194,
-                    0.03932561, -0.08383448, 1.0372175]
+    XYZ_to_P3DCI = [
+        2.66286135, -1.11031783, -0.42271635, -0.82282376, 1.75861704,
+        0.02502194, 0.03932561, -0.08383448, 1.0372175
+    ]
 
     cs = create_matrix_colorspace(
         'Linear - P3-DCI',
@@ -502,11 +616,12 @@ def create_colorspaces(lut_directory,
     # -------------------------------------------------------------------------
     # *sRGB* and *Rec 709* use the same gamut.
 
-    # *ACES* to *Linear*, *Rec. 709* primaries, D65 white point, using 
+    # *ACES* to *Linear*, *Rec. 709* primaries, D65 white point, using
     # Bradford chromatic adaptation
-    XYZ_to_Rec709 = [3.20959735, -1.55742955, -0.49580497,
-                     -0.97098887, 1.88517118, 0.03948941,
-                     0.05971934, -0.21010444, 1.14312482]
+    XYZ_to_Rec709 = [
+        3.20959735, -1.55742955, -0.49580497, -0.97098887, 1.88517118,
+        0.03948941, 0.05971934, -0.21010444, 1.14312482
+    ]
 
     cs = create_matrix_colorspace(
         'Linear - sRGB',
@@ -518,9 +633,9 @@ def create_colorspaces(lut_directory,
     cs = create_transfer_colorspace(
         'Curve - sRGB',
         'sRGB',
-        transfer_function_sRGB_to_linear,
+        linear_to_sRGB,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         aliases=['crv_srgb'])
     colorspaces.append(cs)
 
@@ -528,9 +643,9 @@ def create_colorspaces(lut_directory,
     cs = create_matrix_plus_transfer_colorspace(
         'sRGB - Texture',
         'sRGB',
-        transfer_function_sRGB_to_linear,
+        linear_to_sRGB,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         from_reference_values=[aces.ACES_AP0_TO_XYZ, XYZ_to_Rec709],
         aliases=['srgb_texture'])
     colorspaces.append(cs)
@@ -555,9 +670,9 @@ def create_colorspaces(lut_directory,
     cs = create_transfer_colorspace(
         'Curve - Rec.709',
         'rec709',
-        transfer_function_Rec709_to_linear,
+        linear_to_Rec709,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         aliases=['crv_rec709'])
     colorspaces.append(cs)
 
@@ -565,9 +680,9 @@ def create_colorspaces(lut_directory,
     cs = create_matrix_plus_transfer_colorspace(
         'Rec.709 - Camera',
         'rec709',
-        transfer_function_Rec709_to_linear,
+        linear_to_Rec709,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         from_reference_values=[aces.ACES_AP0_TO_XYZ, XYZ_to_Rec709],
         aliases=['rec709_camera'])
     colorspaces.append(cs)
@@ -575,11 +690,12 @@ def create_colorspaces(lut_directory,
     # -------------------------------------------------------------------------
     # Rec 2020
     # -------------------------------------------------------------------------
-    # *ACES* to *Linear*, *Rec. 2020* primaries, D65 white point, using 
+    # *ACES* to *Linear*, *Rec. 2020* primaries, D65 white point, using
     # Bradford chromatic adaptation
-    XYZ_to_Rec2020 = [1.69662619, -0.36551982, -0.24857099,
-                      -0.67039877, 1.62348187, 0.01503821,
-                      0.02063163, -0.04775634, 1.01910818]
+    XYZ_to_Rec2020 = [
+        1.69662619, -0.36551982, -0.24857099, -0.67039877, 1.62348187,
+        0.01503821, 0.02063163, -0.04775634, 1.01910818
+    ]
 
     cs = create_matrix_colorspace(
         'Linear - Rec.2020',
@@ -591,9 +707,9 @@ def create_colorspaces(lut_directory,
     cs = create_transfer_colorspace(
         'Curve - Rec.2020',
         'rec2020',
-        transfer_function_Rec2020_10bit_to_linear,
+        linear_to_Rec2020_10bit,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         aliases=['crv_rec2020'])
     colorspaces.append(cs)
 
@@ -601,9 +717,9 @@ def create_colorspaces(lut_directory,
     cs = create_matrix_plus_transfer_colorspace(
         'Rec.2020 - Camera',
         'rec2020',
-        transfer_function_Rec2020_10bit_to_linear,
+        linear_to_Rec2020_10bit,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         from_reference_values=[aces.ACES_AP0_TO_XYZ, XYZ_to_Rec2020],
         aliases=['rec2020_camera'])
     colorspaces.append(cs)
@@ -615,9 +731,9 @@ def create_colorspaces(lut_directory,
     cs = create_transfer_colorspace(
         'Curve - Rec.1886',
         'rec1886',
-        transfer_function_Rec1886_to_linear,
+        linear_to_Rec1886,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         aliases=['crv_rec1886'])
     colorspaces.append(cs)
 
@@ -625,9 +741,9 @@ def create_colorspaces(lut_directory,
     cs = create_matrix_plus_transfer_colorspace(
         'Rec.709 - Display',
         'rec1886',
-        transfer_function_Rec1886_to_linear,
+        linear_to_Rec1886,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         from_reference_values=[aces.ACES_AP0_TO_XYZ, XYZ_to_Rec709],
         aliases=['rec709_display'])
     colorspaces.append(cs)
@@ -636,9 +752,9 @@ def create_colorspaces(lut_directory,
     cs = create_matrix_plus_transfer_colorspace(
         'Rec.2020 - Display',
         'rec1886',
-        transfer_function_Rec1886_to_linear,
+        linear_to_Rec1886,
         lut_directory,
-        lut_resolution_1d,
+        lut_resolution_1D,
         from_reference_values=[aces.ACES_AP0_TO_XYZ, XYZ_to_Rec2020],
         aliases=['rec2020_display'])
     colorspaces.append(cs)
@@ -646,11 +762,12 @@ def create_colorspaces(lut_directory,
     # -------------------------------------------------------------------------
     # ProPhoto
     # -------------------------------------------------------------------------
-    # *ACES* to *Linear*, *Pro Photo* primaries, D50 white point, using 
+    # *ACES* to *Linear*, *Pro Photo* primaries, D50 white point, using
     # Bradford chromatic adaptation
-    AP0_to_RIMM = [1.2412367771, -0.1685692287, -0.0726675484,
-                   0.0061203066, 1.083151174, -0.0892714806,
-                   -0.0032853314, 0.0099796402, 0.9933056912]
+    AP0_to_RIMM = [
+        1.2412367771, -0.1685692287, -0.0726675484, 0.0061203066, 1.083151174,
+        -0.0892714806, -0.0032853314, 0.0099796402, 0.9933056912
+    ]
 
     cs = create_matrix_colorspace(
         'Linear - RIMM ROMM (ProPhoto)',
@@ -661,11 +778,12 @@ def create_colorspaces(lut_directory,
     # -------------------------------------------------------------------------
     # Adobe RGB
     # -------------------------------------------------------------------------
-    # *ACES* to *Linear*, *Adobe RGB* primaries, D65 white point, using 
+    # *ACES* to *Linear*, *Adobe RGB* primaries, D65 white point, using
     # Bradford chromatic adaptation
-    AP0_to_ADOBERGB = [1.7245603168, -0.4199935942, -0.3045667227,
-                       -0.2764799142, 1.3727190877, -0.0962391734,
-                       -0.0261255258, -0.0901747807, 1.1163003065]
+    AP0_to_ADOBERGB = [
+        1.7245603168, -0.4199935942, -0.3045667227, -0.2764799142,
+        1.3727190877, -0.0962391734, -0.0261255258, -0.0901747807, 1.1163003065
+    ]
 
     cs = create_matrix_colorspace(
         'Linear - Adobe RGB',
@@ -676,11 +794,12 @@ def create_colorspaces(lut_directory,
     # -------------------------------------------------------------------------
     # Adobe Wide Gamut RGB
     # -------------------------------------------------------------------------
-    # *ACES* to *Linear*, *Adobe Wide Gamut RGB* primaries, D50 white point, 
+    # *ACES* to *Linear*, *Adobe Wide Gamut RGB* primaries, D50 white point,
     # using Bradford chromatic adaptation
-    AP0_to_ADOBEWIDEGAMUT = [1.3809814778, -0.1158594573, -0.2651220205,
-                             0.0057015535, 1.0402949043, -0.0459964578,
-                             -0.0038908746, -0.0597091815, 1.0636000561]
+    AP0_to_ADOBEWIDEGAMUT = [
+        1.3809814778, -0.1158594573, -0.2651220205, 0.0057015535, 1.0402949043,
+        -0.0459964578, -0.0038908746, -0.0597091815, 1.0636000561
+    ]
 
     cs = create_matrix_colorspace(
         'Linear - Adobe Wide Gamut RGB',
@@ -720,7 +839,7 @@ def create_raw():
     # *Raw* utility space
     name = 'Raw'
     raw = ColorSpace(name)
-    raw.description = 'The %s color space' % name
+    raw.description = 'The {0} color space'.format(name)
     raw.aliases = ['raw']
     raw.equality_group = name
     raw.family = 'Utility'
