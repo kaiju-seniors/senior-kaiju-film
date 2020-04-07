@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 06 Anim.ma
-//Last modified: Mon, Apr 06, 2020 07:21:58 PM
+//Name: Shot 06_004_Tweaking the wrist.ma
+//Last modified: Mon, Apr 06, 2020 07:22:21 PM
 //Codeset: 1252
 file -rdi 1 -ns "Zilla" -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
 file -rdi 1 -ns "Princess" -rfn "PrincessRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Princess/Princess.ma";
@@ -31770,4 +31770,4 @@ connectAttr "pairBlend32_inTranslateZ1.o" "pairBlend32.itz1";
 connectAttr "sharedReferenceNode.sr" "PrincessTowerRN2.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Shot 06 Anim.ma
+// End of Shot 06_004_Tweaking the wrist.ma
