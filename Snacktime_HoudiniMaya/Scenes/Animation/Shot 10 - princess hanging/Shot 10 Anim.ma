@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Shot 10 Anim.ma
-//Last modified: Thu, Apr 09, 2020 06:34:08 PM
+//Last modified: Thu, Apr 09, 2020 06:38:41 PM
 //Codeset: 1252
 file -rdi 1 -ns "Princess" -rfn "PrincessRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Princess/Princess.ma";
 file -r -ns "Princess" -dr 1 -rfn "PrincessRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Princess/Princess.ma";
@@ -19,18 +19,18 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "6BEC6232-4C0D-3732-F1DC-19981CC59556";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -27.075827350662308 45.665407120984845 77.758615909121346 ;
-	setAttr ".r" -type "double3" -18.338352727249752 697.39999999996746 -4.3063792819179779e-16 ;
+	setAttr ".t" -type "double3" 1.4801527637732832 18.996606083390674 34.011171869077728 ;
+	setAttr ".r" -type "double3" -1.5383527272558506 723.79999999995857 6.2257082792895982e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DAC345C1-4D9A-30C4-724C-1BBDDF63290B";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 81.146452524458084;
+	setAttr ".coi" 22.280254583881458;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.095845637657794747 13.343706276209446 9.6542606234688542 ;
+	setAttr ".tp" -type "double3" 0.0040855885404827152 18.398468266003796 11.787913755826544 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "A57138EA-43D1-4FA5-980E-3595086E7949";
@@ -401,20 +401,20 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B1209915-42D5-A5EF-2F78-ACB7A2F338B5";
+	rename -uid "D099209C-4C1C-85E5-9B39-21A1E4B7380E";
 	setAttr -s 23 ".lnk";
 	setAttr -s 23 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "828D83A2-4D34-E380-148E-659484532FBF";
+	rename -uid "674395AB-423B-B40D-0716-FDA91AFCE43D";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 2 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E74E9867-4647-1B15-C107-0B8AF0D890CE";
+	rename -uid "CDF2BDBC-4322-F490-19EE-D18F37B903C6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E40DAD09-4656-34EF-3D02-A88198C383FE";
+	rename -uid "3AFB0E2B-4578-4BEA-6F6B-DE9C654464F1";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A407C3C7-4578-2E46-9023-0D96CB853F1D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "39844B59-4CA8-6C7B-FEE2-968B18950F15";
+	rename -uid "3DE5B40F-447A-0AF1-20F1-50B12E1F11E0";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "ABCD2AC1-4B84-3248-35AC-589F68DD492A";
 	setAttr ".g" yes;
@@ -454,16 +454,16 @@ createNode script -n "uiConfigurationScriptNode";
 	rename -uid "FCB53A73-4C16-A5EB-6E6C-E6AF6602F02E";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1245\n            -height 523\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1245\n            -height 522\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1245\n            -height 522\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
 		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2498\n            -height 1111\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
@@ -504,7 +504,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode reference -n "PrincessRN";
 	rename -uid "9AD7C2DD-464D-CAAC-A11B-A992E9F5D6E1";
-	setAttr -s 812 ".phl";
+	setAttr -s 806 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -1311,12 +1311,6 @@ createNode reference -n "PrincessRN";
 	setAttr ".phl[804]" 0;
 	setAttr ".phl[805]" 0;
 	setAttr ".phl[806]" 0;
-	setAttr ".phl[807]" 0;
-	setAttr ".phl[808]" 0;
-	setAttr ".phl[809]" 0;
-	setAttr ".phl[810]" 0;
-	setAttr ".phl[811]" 0;
-	setAttr ".phl[812]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PrincessRN"
 		"PrincessRN" 4
@@ -1328,14 +1322,10 @@ createNode reference -n "PrincessRN";
 		" 0"
 		2 "|Princess:Princess|Princess:Princess_geo|Princess:R_Eye_Gloss_Geo" "visibility" 
 		" 0"
-		"PrincessRN" 1505
-		1 |Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl "blendEyeMasterctrlparent2" 
-		"blendEyeMasterctrlparent2" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		1 |Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl "blendEyeMasterctrlparent1" 
-		"blendEyeMasterctrlparent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		"PrincessRN" 1489
 		2 "|Princess:Princess|Princess:Joints" "visibility" " 0"
 		2 "|Princess:Princess|Princess:Joints|Princess:transform1|Princess:L_IK_Hand_jnt" 
-		"translate" " -type \"double3\" 1.26058009661289372 19.62781085015576821 19.05649407438802001"
+		"translate" " -type \"double3\" 2.58902146036186931 36.33386939016856587 17.35248706729845125"
 		
 		2 "|Princess:Princess|Princess:Joints|Princess:transform1|Princess:L_IK_Hand_jnt" 
 		"translateX" " -av"
@@ -1344,8 +1334,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Joints|Princess:transform1|Princess:L_IK_Hand_jnt" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Joints|Princess:transform1|Princess:L_IK_Hand_jnt|Princess:L_IK_Finger5_01_jnt" 
-		"rotate" " -type \"double3\" -1.84088582045993276 22.36822235855041541 -38.18823499526061482"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Joints|Princess:transform1|Princess:L_IK_Hand_jnt|Princess:L_IK_Finger5_01_jnt" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Joints|Princess:transform1|Princess:L_IK_Hand_jnt|Princess:L_IK_Finger5_01_jnt" 
@@ -1373,8 +1362,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
-		"translate" " -type \"double3\" -0.85746397009489406 -2.43453694895905359 -2.33749288498217744"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
@@ -1382,8 +1370,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
-		"rotate" " -type \"double3\" -10.49715513632593655 16.54873134041701022 -42.16722713594351291"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_IK_Handle_ctl_grp|Princess:R_Arm_IK_Handle_ctl" 
@@ -1409,7 +1396,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_03_ctl_grp|Princess:R_IK_Finger3_03_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_03_ctl_grp|Princess:R_IK_Finger3_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -12.56091273822913479"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_03_ctl_grp|Princess:R_IK_Finger3_03_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_03_ctl_grp|Princess:R_IK_Finger3_03_ctl" 
@@ -1425,7 +1412,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_02_ctl_grp|Princess:R_IK_Finger3_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_02_ctl_grp|Princess:R_IK_Finger3_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -22.41606418454533767"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_02_ctl_grp|Princess:R_IK_Finger3_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_02_ctl_grp|Princess:R_IK_Finger3_02_ctl" 
@@ -1441,8 +1428,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_01_ctl_grp|Princess:R_IK_Finger3_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_01_ctl_grp|Princess:R_IK_Finger3_01_ctl" 
-		"rotate" " -type \"double3\" -0.093247124943431486 -2.93468600632286858 -12.90646943353895892"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_01_ctl_grp|Princess:R_IK_Finger3_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger3_01_ctl_grp|Princess:R_IK_Finger3_01_ctl" 
@@ -1458,7 +1444,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_03_ctl_grp|Princess:R_IK_Finger2_03_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_03_ctl_grp|Princess:R_IK_Finger2_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -12.56091273822913479"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_03_ctl_grp|Princess:R_IK_Finger2_03_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_03_ctl_grp|Princess:R_IK_Finger2_03_ctl" 
@@ -1474,7 +1460,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_02_ctl_grp|Princess:R_IK_Finger2_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_02_ctl_grp|Princess:R_IK_Finger2_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -26.05329222223945607"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_02_ctl_grp|Princess:R_IK_Finger2_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_02_ctl_grp|Princess:R_IK_Finger2_02_ctl" 
@@ -1490,8 +1476,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_01_ctl_grp|Princess:R_IK_Finger2_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_01_ctl_grp|Princess:R_IK_Finger2_01_ctl" 
-		"rotate" " -type \"double3\" -11.81844570901353642 -11.97785853904911235 25.40321542496812768"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_01_ctl_grp|Princess:R_IK_Finger2_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger2_01_ctl_grp|Princess:R_IK_Finger2_01_ctl" 
@@ -1507,7 +1492,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_03_ctl_grp|Princess:R_IK_Finger5_03_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_03_ctl_grp|Princess:R_IK_Finger5_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -8.90672477077698233"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_03_ctl_grp|Princess:R_IK_Finger5_03_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_03_ctl_grp|Princess:R_IK_Finger5_03_ctl" 
@@ -1523,7 +1508,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_02_ctl_grp|Princess:R_IK_Finger5_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_02_ctl_grp|Princess:R_IK_Finger5_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -15.36263684801733653"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_02_ctl_grp|Princess:R_IK_Finger5_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_02_ctl_grp|Princess:R_IK_Finger5_02_ctl" 
@@ -1539,8 +1524,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_01_ctl_grp|Princess:R_IK_Finger5_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_01_ctl_grp|Princess:R_IK_Finger5_01_ctl" 
-		"rotate" " -type \"double3\" -14.92589276283128896 23.47442682128696489 -50.40268864938726523"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_01_ctl_grp|Princess:R_IK_Finger5_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger5_01_ctl_grp|Princess:R_IK_Finger5_01_ctl" 
@@ -1556,7 +1540,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_03_ctl_grp|Princess:R_IK_Finger4_03_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_03_ctl_grp|Princess:R_IK_Finger4_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -21.46763750900611001"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_03_ctl_grp|Princess:R_IK_Finger4_03_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_03_ctl_grp|Princess:R_IK_Finger4_03_ctl" 
@@ -1572,7 +1556,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_02_ctl_grp|Princess:R_IK_Finger4_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_02_ctl_grp|Princess:R_IK_Finger4_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -21.20737998983843298"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_02_ctl_grp|Princess:R_IK_Finger4_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_02_ctl_grp|Princess:R_IK_Finger4_02_ctl" 
@@ -1588,8 +1572,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_01_ctl_grp|Princess:R_IK_Finger4_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_01_ctl_grp|Princess:R_IK_Finger4_01_ctl" 
-		"rotate" " -type \"double3\" -3.14017581518998901 5.8451010552020275 -25.29362270216058306"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_01_ctl_grp|Princess:R_IK_Finger4_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger4_01_ctl_grp|Princess:R_IK_Finger4_01_ctl" 
@@ -1623,7 +1606,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_02_ctl_grp|Princess:R_IK_Finger1_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_02_ctl_grp|Princess:R_IK_Finger1_02_ctl" 
-		"rotate" " -type \"double3\" 0 -3.04748923777118952 10.36888884709570569"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_02_ctl_grp|Princess:R_IK_Finger1_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_02_ctl_grp|Princess:R_IK_Finger1_02_ctl" 
@@ -1645,8 +1628,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_01_ctl_grp|Princess:R_IK_Finger1_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_01_ctl_grp|Princess:R_IK_Finger1_01_ctl" 
-		"rotate" " -type \"double3\" -36.63895319193875366 -17.57336260347107881 -2.69224363902113906"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_01_ctl_grp|Princess:R_IK_Finger1_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_01_ctl_grp|Princess:R_IK_Finger1_01_ctl" 
@@ -1658,8 +1640,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_IK_Finger1_01_ctl_grp|Princess:R_IK_Finger1_01_ctl" 
 		"Follow_Rotates" " -av -k 1 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_PV_ctl_grp|Princess:R_Arm_PV_ctl" 
-		"translate" " -type \"double3\" -0.069250884717874064 -2.20582680927871966 0.0021157829062284196"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_PV_ctl_grp|Princess:R_Arm_PV_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_PV_ctl_grp|Princess:R_Arm_PV_ctl" 
@@ -1675,7 +1656,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_IK_Controls|Princess:R_Arm_PV_ctl_grp|Princess:R_Arm_PV_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_FK_Controls|Princess:R_FK_Arm_01_ctl_grp|Princess:R_FK_Arm_01_ctl" 
-		"rotate" " -type \"double3\" 74.23851777772463834 -33.03340455415341381 60.6066491204543496"
+		"rotate" " -type \"double3\" 76.82294714755160214 -2.60928630674047479 52.47038279022212492"
 		
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Arm_grp|Princess:R_Arm_FK_Controls|Princess:R_FK_Arm_01_ctl_grp|Princess:R_FK_Arm_01_ctl" 
 		"rotateX" " -av"
@@ -1727,8 +1708,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Leg_IK_Handle_ctl_grp|Princess:R_Leg_IK_Handle_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Leg_PV_ctl_grp|Princess:R_Leg_PV_ctl" 
-		"translate" " -type \"double3\" -1.39126049068319801 0.0039023950147038002 -3.7979041624243921"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Leg_PV_ctl_grp|Princess:R_Leg_PV_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Leg_PV_ctl_grp|Princess:R_Leg_PV_ctl" 
@@ -1810,8 +1790,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Foot_Master_ctl_grp|Princess:R_Foot_Master_ctl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Foot_Master_ctl_grp|Princess:R_Foot_Master_ctl" 
-		"translate" " -type \"double3\" -1.05082438236907327 1.22384759999509085 0.40893150399970829"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Foot_Master_ctl_grp|Princess:R_Foot_Master_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Foot_Master_ctl_grp|Princess:R_Foot_Master_ctl" 
@@ -1819,8 +1798,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Foot_Master_ctl_grp|Princess:R_Foot_Master_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Foot_Master_ctl_grp|Princess:R_Foot_Master_ctl" 
-		"rotate" " -type \"double3\" -32.04490814150525324 -42.5233070229155885 29.84152269767414722"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Foot_Master_ctl_grp|Princess:R_Foot_Master_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Leg_grp|Princess:R_Leg_IK_Controls|Princess:R_Foot_Master_ctl_grp|Princess:R_Foot_Master_ctl" 
@@ -1864,8 +1842,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Leg_IK_Handle_ctl_grp|Princess:L_Leg_IK_Handle_ctl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Leg_PV_ctl_grp|Princess:L_Leg_PV_ctl" 
-		"translate" " -type \"double3\" -2.05386448563619917 -0.0018120158450768099 5.1052492252690076"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Leg_PV_ctl_grp|Princess:L_Leg_PV_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Leg_PV_ctl_grp|Princess:L_Leg_PV_ctl" 
@@ -1883,8 +1860,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Foot_Master_ctl_grp|Princess:L_Foot_Master_ctl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Foot_Master_ctl_grp|Princess:L_Foot_Master_ctl" 
-		"translate" " -type \"double3\" 1.57451633878717323 1.35672836433484911 0.70317658213815393"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Foot_Master_ctl_grp|Princess:L_Foot_Master_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Foot_Master_ctl_grp|Princess:L_Foot_Master_ctl" 
@@ -1892,8 +1868,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Foot_Master_ctl_grp|Princess:L_Foot_Master_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Foot_Master_ctl_grp|Princess:L_Foot_Master_ctl" 
-		"rotate" " -type \"double3\" -4.87884693174383699 19.05758587011648331 10.7115092064922095"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Foot_Master_ctl_grp|Princess:L_Foot_Master_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Leg_grp|Princess:L_Leg_IK_Controls|Princess:L_Foot_Master_ctl_grp|Princess:L_Foot_Master_ctl" 
@@ -1979,8 +1954,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
-		"translate" " -type \"double3\" -0.89574273011292838 -2.9024149662106371 1.6916768625132852"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
@@ -1988,8 +1962,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
-		"rotate" " -type \"double3\" -170.60978306048676245 -158.73338487210816083 140.28887892570466533"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_Arm_IK_Handle_ctl_grp|Princess:L_Arm_IK_Handle_ctl" 
@@ -2015,7 +1988,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_03_ctl_grp|Princess:L_IK_Finger2_03_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_03_ctl_grp|Princess:L_IK_Finger2_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -13.15066033068982954"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_03_ctl_grp|Princess:L_IK_Finger2_03_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_03_ctl_grp|Princess:L_IK_Finger2_03_ctl" 
@@ -2031,7 +2004,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_02_ctl_grp|Princess:L_IK_Finger2_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_02_ctl_grp|Princess:L_IK_Finger2_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -26.34433977446238018"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_02_ctl_grp|Princess:L_IK_Finger2_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_02_ctl_grp|Princess:L_IK_Finger2_02_ctl" 
@@ -2047,8 +2020,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_01_ctl_grp|Princess:L_IK_Finger2_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_01_ctl_grp|Princess:L_IK_Finger2_01_ctl" 
-		"rotate" " -type \"double3\" -16.56018019325155777 -11.73537388498988498 21.59730954411406501"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_01_ctl_grp|Princess:L_IK_Finger2_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger2_01_ctl_grp|Princess:L_IK_Finger2_01_ctl" 
@@ -2064,7 +2036,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_03_ctl_grp|Princess:L_IK_Finger5_03_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_03_ctl_grp|Princess:L_IK_Finger5_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -10.0424650946247791"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_03_ctl_grp|Princess:L_IK_Finger5_03_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_03_ctl_grp|Princess:L_IK_Finger5_03_ctl" 
@@ -2080,7 +2052,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_02_ctl_grp|Princess:L_IK_Finger5_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_02_ctl_grp|Princess:L_IK_Finger5_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -19.24420135769106466"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_02_ctl_grp|Princess:L_IK_Finger5_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_02_ctl_grp|Princess:L_IK_Finger5_02_ctl" 
@@ -2096,8 +2068,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_01_ctl_grp|Princess:L_IK_Finger5_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_01_ctl_grp|Princess:L_IK_Finger5_01_ctl" 
-		"rotate" " -type \"double3\" -1.84088582045991211 22.36822235855041185 -38.18823499526063614"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_01_ctl_grp|Princess:L_IK_Finger5_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger5_01_ctl_grp|Princess:L_IK_Finger5_01_ctl" 
@@ -2113,7 +2084,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_03_ctl_grp|Princess:L_IK_Finger4_03_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_03_ctl_grp|Princess:L_IK_Finger4_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -10.0424650946247791"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_03_ctl_grp|Princess:L_IK_Finger4_03_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_03_ctl_grp|Princess:L_IK_Finger4_03_ctl" 
@@ -2129,7 +2100,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_02_ctl_grp|Princess:L_IK_Finger4_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_02_ctl_grp|Princess:L_IK_Finger4_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -26.5327965155022909"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_02_ctl_grp|Princess:L_IK_Finger4_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_02_ctl_grp|Princess:L_IK_Finger4_02_ctl" 
@@ -2145,7 +2116,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
-		"rotate" " -type \"double3\" 0 2.23784483837194115 -32.43946590274854458"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger4_01_ctl_grp|Princess:L_IK_Finger4_01_ctl" 
@@ -2177,7 +2148,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_02_ctl_grp|Princess:L_IK_Finger1_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_02_ctl_grp|Princess:L_IK_Finger1_02_ctl" 
-		"rotate" " -type \"double3\" 0 0.64487658782440349 10.83932703983283297"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_02_ctl_grp|Princess:L_IK_Finger1_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_02_ctl_grp|Princess:L_IK_Finger1_02_ctl" 
@@ -2195,8 +2166,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_01_ctl_grp|Princess:L_IK_Finger1_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_01_ctl_grp|Princess:L_IK_Finger1_01_ctl" 
-		"rotate" " -type \"double3\" 15.05590229518459289 -17.94188605855326557 -18.61435580160398473"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_01_ctl_grp|Princess:L_IK_Finger1_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger1_01_ctl_grp|Princess:L_IK_Finger1_01_ctl" 
@@ -2216,7 +2186,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_03_ctl_grp|Princess:L_IK_Finger3_03_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_03_ctl_grp|Princess:L_IK_Finger3_03_ctl" 
-		"rotate" " -type \"double3\" 0 0 -13.15066033068982954"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_03_ctl_grp|Princess:L_IK_Finger3_03_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_03_ctl_grp|Princess:L_IK_Finger3_03_ctl" 
@@ -2232,7 +2202,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_02_ctl_grp|Princess:L_IK_Finger3_02_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_02_ctl_grp|Princess:L_IK_Finger3_02_ctl" 
-		"rotate" " -type \"double3\" 0 0 -25.68771297266276932"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_02_ctl_grp|Princess:L_IK_Finger3_02_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_02_ctl_grp|Princess:L_IK_Finger3_02_ctl" 
@@ -2248,8 +2218,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_01_ctl_grp|Princess:L_IK_Finger3_01_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_01_ctl_grp|Princess:L_IK_Finger3_01_ctl" 
-		"rotate" " -type \"double3\" -5.8292783362840046 -6.6104562258582984 12.19904788447409061"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_01_ctl_grp|Princess:L_IK_Finger3_01_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Arm_grp|Princess:L_Arm_IK_Controls|Princess:L_IK_Finger3_01_ctl_grp|Princess:L_IK_Finger3_01_ctl" 
@@ -2354,8 +2323,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_03_ctrl_grp|Princess:Neck_03_ctrl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_03_ctrl_grp|Princess:Neck_03_ctrl" 
-		"rotate" " -type \"double3\" -6.22824653758281421 5.57915879486244126 -18.45134066599194256"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_03_ctrl_grp|Princess:Neck_03_ctrl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_03_ctrl_grp|Princess:Neck_03_ctrl" 
@@ -2373,8 +2341,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_02_ctrl_grp|Princess:Neck_02_ctrl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_02_ctrl_grp|Princess:Neck_02_ctrl" 
-		"rotate" " -type \"double3\" -4.9902960706176982 2.21028425858853739 -17.05940013772916686"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_02_ctrl_grp|Princess:Neck_02_ctrl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_02_ctrl_grp|Princess:Neck_02_ctrl" 
@@ -2394,8 +2361,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_01_ctrl_grp|Princess:Neck_01_ctrl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_01_ctrl_grp|Princess:Neck_01_ctrl" 
-		"rotate" " -type \"double3\" -11.92532936597001481 -3.64033641320527046 47.53322002970541149"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_01_ctrl_grp|Princess:Neck_01_ctrl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Neck_01_ctrl_grp|Princess:Neck_01_ctrl" 
@@ -2405,8 +2371,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
-		"translate" " -type \"double3\" -0.15328122689736493 -0.38473630765508804 -0.27430258489225867"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
@@ -2414,8 +2379,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
-		"rotate" " -type \"double3\" 4.80139201952118988 8.37747905988523378 5.46402776810191515"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
@@ -2427,8 +2391,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:R_Clavicle_ctl_grp|Princess:R_Clavicle_ctl" 
 		"Follow_Rotates" " -av -k 1 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Clavicle_ctl_grp|Princess:L_Clavicle_ctl" 
-		"translate" " -type \"double3\" -0.082433495688705366 -0.20690847813540247 0.14751803803777597"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Clavicle_ctl_grp|Princess:L_Clavicle_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Clavicle_ctl_grp|Princess:L_Clavicle_ctl" 
@@ -2436,7 +2399,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Clavicle_ctl_grp|Princess:L_Clavicle_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Clavicle_ctl_grp|Princess:L_Clavicle_ctl" 
-		"rotate" " -type \"double3\" 0 0 2.92798080105116076"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Clavicle_ctl_grp|Princess:L_Clavicle_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:L_Clavicle_ctl_grp|Princess:L_Clavicle_ctl" 
@@ -2514,7 +2477,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Hips_ctl_grp|Princess:Hips_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Hips_ctl_grp|Princess:Hips_ctl" 
-		"rotate" " -type \"double3\" 0 -3.83944532612954781 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Hips_ctl_grp|Princess:Hips_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Hips_ctl_grp|Princess:Hips_ctl" 
@@ -2528,8 +2491,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
-		"translate" " -type \"double3\" 0.10075895818571139 0.05994032897913032 -0.00083987161524681894"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
@@ -2537,7 +2499,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
-		"rotate" " -type \"double3\" 0 0 -39.23943898409548581"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
@@ -2549,7 +2511,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:COG_ctl_grp|Princess:COG_ctl" 
 		"Follow_Rotates" " -av -k 1 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:Master_ctl_grp|Princess:Master_ctl" 
-		"translate" " -type \"double3\" 0 7.50629265573619975 2.70356947053369812"
+		"translate" " -type \"double3\" 0 15.31226556877034284 2.70356947053369812"
 		2 "|Princess:Princess|Princess:Controls|Princess:Master_ctl_grp|Princess:Master_ctl" 
 		"translateY" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Head_Ctrl_grp|Princess:Head_Ctrl" 
@@ -2563,8 +2525,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Head_Ctrl_grp|Princess:Head_Ctrl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Head_Ctrl_grp|Princess:Head_Ctrl" 
-		"rotate" " -type \"double3\" -3.88761144230181133 9.63451246351642432 -56.81478974074793342"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Head_Ctrl_grp|Princess:Head_Ctrl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Head_Ctrl_grp|Princess:Head_Ctrl" 
@@ -2590,7 +2551,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Jaw_jnt_ctrl_grp|Princess:Jaw_jnt_ctrl" 
 		"translateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Jaw_jnt_ctrl_grp|Princess:Jaw_jnt_ctrl" 
-		"rotate" " -type \"double3\" 0 0 -24.91502299268519138"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Jaw_jnt_ctrl_grp|Princess:Jaw_jnt_ctrl" 
 		"rotateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Jaw_jnt_ctrl_grp|Princess:Jaw_jnt_ctrl" 
@@ -2602,8 +2563,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
-		"translate" " -type \"double3\" -0.38274258818305584 -12.83012071413909361 2.51747775757802916"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
@@ -2619,17 +2579,17 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
 		"rotateZ" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
-		"Blink" " -av -k 1 10"
+		"Blink" " -av -k 1 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
-		"R_UpperLid" " -av -k 1 0"
+		"R_UpperLid" " -av -k 1 -9"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
-		"L_UpperLid" " -av -k 1 0"
+		"L_UpperLid" " -av -k 1 -9"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
-		"R_LowerLid" " -av -k 1 0"
+		"R_LowerLid" " -av -k 1 -9"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl" 
-		"L_LowerLid" " -av -k 1 0"
+		"L_LowerLid" " -av -k 1 -9"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl|Princess:L_EyeAim_ctrl_grp|Princess:L_EyeAim_ctrl" 
-		"translate" " -type \"double3\" -0.081236991154068572 0 0"
+		"translate" " -type \"double3\" 0.5834261729029071 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl|Princess:L_EyeAim_ctrl_grp|Princess:L_EyeAim_ctrl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl|Princess:L_EyeAim_ctrl_grp|Princess:L_EyeAim_ctrl" 
@@ -2639,7 +2599,7 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl|Princess:R_EyeAim_ctrl_grp|Princess:R_EyeAim_ctrl" 
 		"visibility" " -av 1"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl|Princess:R_EyeAim_ctrl_grp|Princess:R_EyeAim_ctrl" 
-		"translate" " -type \"double3\" -0.87174952629144409 0 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl|Princess:R_EyeAim_ctrl_grp|Princess:R_EyeAim_ctrl" 
 		"translateX" " -av"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_MasterAim_ctrl_grp|Princess:Eyes_MasterAim_ctrl|Princess:R_EyeAim_ctrl_grp|Princess:R_EyeAim_ctrl" 
@@ -2667,21 +2627,21 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_warp_ctrls|Princess:L_upLid_ctrl_grp|Princess:L_upLid_ctrl" 
 		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_warp_ctrls|Princess:R_lowLid_ctrl_grp|Princess:R_lowLid_ctrl" 
-		"translateX" " -av 0.0066736339068624913"
+		"translateX" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_warp_ctrls|Princess:R_lowLid_ctrl_grp|Princess:R_lowLid_ctrl" 
-		"translateY" " -av 0.028525697556552015"
+		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_warp_ctrls|Princess:L_lowLid_ctrl_grp|Princess:L_lowLid_ctrl" 
-		"translateX" " -av 0.0025723436816424911"
+		"translateX" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_warp_ctrls|Princess:L_lowLid_ctrl_grp|Princess:L_lowLid_ctrl" 
-		"translateY" " -av 0.05"
+		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_warp_ctrls|Princess:R_upLid_ctrl_grp|Princess:R_upLid_ctrl" 
 		"translateX" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:Eyes_warp_ctrls|Princess:R_upLid_ctrl_grp|Princess:R_upLid_ctrl" 
 		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:brow_master_ctrl_grp|Princess:brow_master_ctrl" 
-		"translateY" " -av -0.044923340646398885"
+		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:brow_master_ctrl_grp|Princess:brow_master_ctrl" 
-		"translateZ" " -av 0.049204681665810997"
+		"translateZ" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:brow_master_ctrl_grp|Princess:brow_master_ctrl|Princess:L_innerBrow_ctrl_grp|Princess:L_innerBrow_ctrl" 
 		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:brow_master_ctrl_grp|Princess:brow_master_ctrl|Princess:L_outerBrow_ctrl_grp|Princess:L_outerBrow_ctrl" 
@@ -2691,23 +2651,23 @@ createNode reference -n "PrincessRN";
 		2 "|Princess:Princess|Princess:Controls|Princess:brow_master_ctrl_grp|Princess:brow_master_ctrl|Princess:R_outerBrow_ctrl_grp|Princess:R_outerBrow_ctrl" 
 		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:nose_master_ctrl_grp|Princess:nose_master_ctrl" 
-		"translateX" " -av -0.0095614674992031481"
+		"translateX" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:nose_master_ctrl_grp|Princess:nose_master_ctrl" 
-		"translateY" " -av 0.0048177258010423732"
+		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl" 
 		"translateX" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl" 
 		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:R_mouth_ctrl_grp|Princess:R_mouth_ctrl" 
-		"translateX" " -av -0.0088902594357554016"
+		"translateX" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:R_mouth_ctrl_grp|Princess:R_mouth_ctrl" 
-		"translateY" " -av 0.03987852078790214"
+		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:L_mouth_ctrl_grp|Princess:L_mouth_ctrl" 
-		"translateX" " -av 0.011779550376928821"
+		"translateX" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:L_mouth_ctrl_grp|Princess:L_mouth_ctrl" 
-		"translateY" " -av 0.05"
+		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:upperLips_master_ctrl_grp|Princess:upperLips_master_ctrl" 
-		"translateY" " -av 0.031316672423059071"
+		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:upperLips_master_ctrl_grp|Princess:upperLips_master_ctrl|Princess:L_upperLip_ctrl_grp|Princess:L_upperLip_ctrl" 
 		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:upperLips_master_ctrl_grp|Princess:upperLips_master_ctrl|Princess:R_upperLip_ctrl_grp|Princess:R_upperLip_ctrl" 
@@ -2720,10 +2680,19 @@ createNode reference -n "PrincessRN";
 		"translateY" " -av 0"
 		2 "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:lowerLips_master_ctrl_grp|Princess:lowerLips_master_ctrl|Princess:lowerLip_pout_ctrl_grp|Princess:lowerLip_pout_ctrl" 
 		"translateY" " -av 0"
-		2 "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl" "blendEyeMasterctrlparent2" 
-		" -k 1"
-		2 "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl" "blendEyeMasterctrlparent1" 
-		" -k 1"
+		2 "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl" "visibility" 
+		" 1"
+		2 "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl" "translate" 
+		" -type \"double3\" -0.1560462415218353 22.19205778221027714 3.00730576981005093"
+		
+		2 "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl" "translateX" 
+		" -av"
+		2 "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl" "translateY" 
+		" -av"
+		2 "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl" "translateZ" 
+		" -av"
+		2 "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl" "visibility" 
+		" 1"
 		3 "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintTranslateX" 
 		"|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.translateX" ""
 		3 "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintTranslateY" 
@@ -4252,126 +4221,102 @@ createNode reference -n "PrincessRN";
 		"PrincessRN.placeHolderList[751]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:mouth_master_ctrl_grp|Princess:mouth_master_ctrl|Princess:lowerLips_master_ctrl_grp|Princess:lowerLips_master_ctrl|Princess:lowerLip_pout_ctrl_grp|Princess:lowerLip_pout_ctrl.visibility" 
 		"PrincessRN.placeHolderList[752]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.rotateZ" 
-		"PrincessRN.placeHolderList[753]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.rotateX" 
-		"PrincessRN.placeHolderList[754]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.rotateY" 
-		"PrincessRN.placeHolderList[755]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.translateX" 
-		"PrincessRN.placeHolderList[756]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.translateY" 
-		"PrincessRN.placeHolderList[757]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.translateZ" 
-		"PrincessRN.placeHolderList[758]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.visibility" 
-		"PrincessRN.placeHolderList[759]" ""
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.blendEyeMasterctrlparent2" 
-		"PrincessRN.placeHolderList[760]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.blendEyeMasterctrlparent2" 
-		"PrincessRN.placeHolderList[761]" ""
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintRotateZ" 
-		"PrincessRN.placeHolderList[762]" "Princess:R_Eye_Master_ctrl.rz"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintRotateX" 
-		"PrincessRN.placeHolderList[763]" "Princess:R_Eye_Master_ctrl.rx"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintRotateY" 
-		"PrincessRN.placeHolderList[764]" "Princess:R_Eye_Master_ctrl.ry"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintTranslateX" 
-		"PrincessRN.placeHolderList[765]" "Princess:R_Eye_Master_ctrl.tx"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintTranslateY" 
-		"PrincessRN.placeHolderList[766]" "Princess:R_Eye_Master_ctrl.ty"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintTranslateZ" 
-		"PrincessRN.placeHolderList[767]" "Princess:R_Eye_Master_ctrl.tz"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintRotateZ" 
+		"|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.rotateZ" "PrincessRN.placeHolderList[753]" 
+		"PrincessRN.placeHolderList[754]" "Princess:R_Eye_Master_ctrl.rz"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintRotateX" 
+		"|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.rotateX" "PrincessRN.placeHolderList[755]" 
+		"PrincessRN.placeHolderList[756]" "Princess:R_Eye_Master_ctrl.rx"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintRotateY" 
+		"|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.rotateY" "PrincessRN.placeHolderList[757]" 
+		"PrincessRN.placeHolderList[758]" "Princess:R_Eye_Master_ctrl.ry"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintTranslateX" 
+		"|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.translateX" "PrincessRN.placeHolderList[759]" 
+		"PrincessRN.placeHolderList[760]" "Princess:R_Eye_Master_ctrl.tx"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintTranslateY" 
+		"|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.translateY" "PrincessRN.placeHolderList[761]" 
+		"PrincessRN.placeHolderList[762]" "Princess:R_Eye_Master_ctrl.ty"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint2.constraintTranslateZ" 
+		"|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl.translateZ" "PrincessRN.placeHolderList[763]" 
+		"PrincessRN.placeHolderList[764]" "Princess:R_Eye_Master_ctrl.tz"
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.translateZ" 
-		"PrincessRN.placeHolderList[768]" ""
+		"PrincessRN.placeHolderList[765]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.translateX" 
-		"PrincessRN.placeHolderList[769]" ""
+		"PrincessRN.placeHolderList[766]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.translateY" 
-		"PrincessRN.placeHolderList[770]" ""
+		"PrincessRN.placeHolderList[767]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.visibility" 
-		"PrincessRN.placeHolderList[771]" ""
+		"PrincessRN.placeHolderList[768]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.rotateX" 
-		"PrincessRN.placeHolderList[772]" ""
+		"PrincessRN.placeHolderList[769]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.rotateY" 
-		"PrincessRN.placeHolderList[773]" ""
+		"PrincessRN.placeHolderList[770]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.rotateZ" 
-		"PrincessRN.placeHolderList[774]" ""
+		"PrincessRN.placeHolderList[771]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.scaleX" 
-		"PrincessRN.placeHolderList[775]" ""
+		"PrincessRN.placeHolderList[772]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.scaleY" 
-		"PrincessRN.placeHolderList[776]" ""
+		"PrincessRN.placeHolderList[773]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:R_Eye_Master_ctrl|Princess:R_Pupil_Dilate_ctrl_grp|Princess:Eyeball:Pupil_Dilate_ctrl.scaleZ" 
-		"PrincessRN.placeHolderList[777]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.rotateZ" 
-		"PrincessRN.placeHolderList[778]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.rotateX" 
-		"PrincessRN.placeHolderList[779]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.rotateY" 
-		"PrincessRN.placeHolderList[780]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.translateX" 
-		"PrincessRN.placeHolderList[781]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.translateY" 
-		"PrincessRN.placeHolderList[782]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.translateZ" 
-		"PrincessRN.placeHolderList[783]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.visibility" 
-		"PrincessRN.placeHolderList[784]" ""
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.blendEyeMasterctrlparent1" 
-		"PrincessRN.placeHolderList[785]" ""
-		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.blendEyeMasterctrlparent1" 
-		"PrincessRN.placeHolderList[786]" ""
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintRotateZ" 
-		"PrincessRN.placeHolderList[787]" "Princess:L_Eye_Master_ctrl.rz"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintRotateX" 
-		"PrincessRN.placeHolderList[788]" "Princess:L_Eye_Master_ctrl.rx"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintRotateY" 
-		"PrincessRN.placeHolderList[789]" "Princess:L_Eye_Master_ctrl.ry"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintTranslateX" 
-		"PrincessRN.placeHolderList[790]" "Princess:L_Eye_Master_ctrl.tx"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintTranslateY" 
-		"PrincessRN.placeHolderList[791]" "Princess:L_Eye_Master_ctrl.ty"
-		5 3 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintTranslateZ" 
-		"PrincessRN.placeHolderList[792]" "Princess:L_Eye_Master_ctrl.tz"
+		"PrincessRN.placeHolderList[774]" ""
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintRotateZ" 
+		"|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.rotateZ" "PrincessRN.placeHolderList[775]" 
+		"PrincessRN.placeHolderList[776]" "Princess:L_Eye_Master_ctrl.rz"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintRotateX" 
+		"|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.rotateX" "PrincessRN.placeHolderList[777]" 
+		"PrincessRN.placeHolderList[778]" "Princess:L_Eye_Master_ctrl.rx"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintRotateY" 
+		"|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.rotateY" "PrincessRN.placeHolderList[779]" 
+		"PrincessRN.placeHolderList[780]" "Princess:L_Eye_Master_ctrl.ry"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintTranslateX" 
+		"|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.translateX" "PrincessRN.placeHolderList[781]" 
+		"PrincessRN.placeHolderList[782]" "Princess:L_Eye_Master_ctrl.tx"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintTranslateY" 
+		"|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.translateY" "PrincessRN.placeHolderList[783]" 
+		"PrincessRN.placeHolderList[784]" "Princess:L_Eye_Master_ctrl.ty"
+		5 0 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:Eye_Master_ctrl_parentConstraint1.constraintTranslateZ" 
+		"|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl.translateZ" "PrincessRN.placeHolderList[785]" 
+		"PrincessRN.placeHolderList[786]" "Princess:L_Eye_Master_ctrl.tz"
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.translateZ" 
-		"PrincessRN.placeHolderList[793]" ""
+		"PrincessRN.placeHolderList[787]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.translateX" 
-		"PrincessRN.placeHolderList[794]" ""
+		"PrincessRN.placeHolderList[788]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.translateY" 
-		"PrincessRN.placeHolderList[795]" ""
+		"PrincessRN.placeHolderList[789]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.visibility" 
-		"PrincessRN.placeHolderList[796]" ""
+		"PrincessRN.placeHolderList[790]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.rotateX" 
-		"PrincessRN.placeHolderList[797]" ""
+		"PrincessRN.placeHolderList[791]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.rotateY" 
-		"PrincessRN.placeHolderList[798]" ""
+		"PrincessRN.placeHolderList[792]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.rotateZ" 
-		"PrincessRN.placeHolderList[799]" ""
+		"PrincessRN.placeHolderList[793]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.scaleX" 
-		"PrincessRN.placeHolderList[800]" ""
+		"PrincessRN.placeHolderList[794]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.scaleY" 
-		"PrincessRN.placeHolderList[801]" ""
+		"PrincessRN.placeHolderList[795]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:L_Eye_Master_ctrl|Princess:L_Pupil_Dilate_ctrl_grp|Princess:Eyeball1:Pupil_Dilate_ctrl.scaleZ" 
-		"PrincessRN.placeHolderList[802]" ""
+		"PrincessRN.placeHolderList[796]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.translateX" 
-		"PrincessRN.placeHolderList[803]" ""
+		"PrincessRN.placeHolderList[797]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.translateY" 
-		"PrincessRN.placeHolderList[804]" ""
+		"PrincessRN.placeHolderList[798]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.translateZ" 
-		"PrincessRN.placeHolderList[805]" ""
+		"PrincessRN.placeHolderList[799]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.rotateX" 
-		"PrincessRN.placeHolderList[806]" ""
+		"PrincessRN.placeHolderList[800]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.rotateY" 
-		"PrincessRN.placeHolderList[807]" ""
+		"PrincessRN.placeHolderList[801]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.rotateZ" 
-		"PrincessRN.placeHolderList[808]" ""
+		"PrincessRN.placeHolderList[802]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.scaleX" 
-		"PrincessRN.placeHolderList[809]" ""
+		"PrincessRN.placeHolderList[803]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.scaleY" 
-		"PrincessRN.placeHolderList[810]" ""
+		"PrincessRN.placeHolderList[804]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.scaleZ" 
-		"PrincessRN.placeHolderList[811]" ""
+		"PrincessRN.placeHolderList[805]" ""
 		5 4 "PrincessRN" "|Princess:Princess|Princess:Controls|Princess:uvula_ctrl_grp|Princess:uvula_ctrl.visibility" 
-		"PrincessRN.placeHolderList[812]" "";
+		"PrincessRN.placeHolderList[806]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "Master_ctl_translateX";
@@ -12102,44 +12047,6 @@ createNode animCurveTU -n "Pupil_Dilate_ctrl_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  -25 1 -10 1;
-createNode animCurveTU -n "L_Eye_Master_ctrl_visibility";
-	rename -uid "86576CDD-4AF9-15EA-1A35-96A71B164955";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 1 -10 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode pairBlend -n "pairBlend1";
-	rename -uid "F8CDDB76-4EA4-D782-5708-569872628C6C";
-createNode animCurveTL -n "pairBlend1_inTranslateX1";
-	rename -uid "9F8BDCEC-4628-87EF-52B4-0894F13C62A0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 0.15604624152183566 -10 0.15604624152183566;
-createNode animCurveTL -n "pairBlend1_inTranslateY1";
-	rename -uid "6FFC1FE9-473A-C498-7723-8281C4802FA4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 22.192057782210277 -10 22.192057782210277;
-createNode animCurveTL -n "pairBlend1_inTranslateZ1";
-	rename -uid "99D5AF83-4A2F-7D67-55CD-95A37DAB8834";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 3.0073057698100509 -10 3.0073057698100509;
-createNode animCurveTA -n "pairBlend1_inRotateX1";
-	rename -uid "57023ABB-4FFE-15F2-EC2E-F4A637811D7B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 -69.30128479305057 -10 -69.30128479305057;
-createNode animCurveTA -n "pairBlend1_inRotateY1";
-	rename -uid "9459AAF1-468C-9422-068C-5D9F85F5D717";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 26.986806238067491 -10 26.986806238067491;
-createNode animCurveTA -n "pairBlend1_inRotateZ1";
-	rename -uid "7BF27789-44C0-3653-2495-7D879CEF10ED";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 -7.1384025735292411e-15 -10 -7.1384025735292411e-15;
 createNode animCurveTU -n "Pupil_Dilate_ctrl_visibility1";
 	rename -uid "5F75358B-49F0-9B15-1AE8-71BD11032748";
 	setAttr ".tan" 9;
@@ -12191,61 +12098,13 @@ createNode animCurveTU -n "Pupil_Dilate_ctrl_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  -25 1 -10 1;
-createNode animCurveTU -n "R_Eye_Master_ctrl_visibility";
-	rename -uid "1042B1B9-4AA3-B215-8886-4DA067811ACE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 1 -10 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode pairBlend -n "pairBlend2";
-	rename -uid "6C85AC04-4400-4B41-9A5E-178ABDADF932";
-createNode animCurveTL -n "pairBlend2_inTranslateX1";
-	rename -uid "3CF2DF82-439A-F8BA-E2D0-16A864706780";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 -0.1560462415218353 -10 -0.1560462415218353;
-createNode animCurveTL -n "pairBlend2_inTranslateY1";
-	rename -uid "AD53B045-4F92-6172-2A81-FF9AB2D09BF5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 22.192057782210277 -10 22.192057782210277;
-createNode animCurveTL -n "pairBlend2_inTranslateZ1";
-	rename -uid "776ECFAF-4847-2D7F-6E00-90AA0FAB1D55";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 3.0073057698100509 -10 3.0073057698100509;
-createNode animCurveTA -n "pairBlend2_inRotateX1";
-	rename -uid "1D0BC52C-4A42-C8E5-B34C-84B5D6A1A25F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 -71.39162227857355 -10 -71.39162227857355;
-createNode animCurveTA -n "pairBlend2_inRotateY1";
-	rename -uid "4FEC3265-4F04-BE7C-10AC-0CBE501AEAF0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 -5.1660234924870154e-15 -10 -5.1660234924870154e-15;
-createNode animCurveTA -n "pairBlend2_inRotateZ1";
-	rename -uid "C845C113-414F-3A16-DE4A-6FA6D054B86C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -25 3.7115917881941496e-15 -10 3.7115917881941496e-15;
-createNode animCurveTU -n "L_Eye_Master_ctrl_blendEyeMasterctrlparent1";
-	rename -uid "76748DF7-496A-8E0A-7460-15AFFEFF0585";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  -10 0;
-createNode animCurveTU -n "R_Eye_Master_ctrl_blendEyeMasterctrlparent2";
-	rename -uid "91BC3D51-4325-23F5-E4E9-8DB26079F3B4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  -10 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 80;
-	setAttr -av ".unw" 80;
+	setAttr ".o" -25;
+	setAttr -av ".unw" -25;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -13064,68 +12923,48 @@ connectAttr "R_lowerLip_ctrl_translateY.o" "PrincessRN.phl[749]";
 connectAttr "R_lowerLip_ctrl_visibility.o" "PrincessRN.phl[750]";
 connectAttr "lowerLip_pout_ctrl_translateY.o" "PrincessRN.phl[751]";
 connectAttr "lowerLip_pout_ctrl_visibility.o" "PrincessRN.phl[752]";
-connectAttr "pairBlend2.orz" "PrincessRN.phl[753]";
-connectAttr "pairBlend2.orx" "PrincessRN.phl[754]";
-connectAttr "pairBlend2.ory" "PrincessRN.phl[755]";
-connectAttr "pairBlend2.otx" "PrincessRN.phl[756]";
-connectAttr "pairBlend2.oty" "PrincessRN.phl[757]";
-connectAttr "pairBlend2.otz" "PrincessRN.phl[758]";
-connectAttr "R_Eye_Master_ctrl_visibility.o" "PrincessRN.phl[759]";
-connectAttr "PrincessRN.phl[760]" "pairBlend2.w";
-connectAttr "R_Eye_Master_ctrl_blendEyeMasterctrlparent2.o" "PrincessRN.phl[761]"
-		;
-connectAttr "PrincessRN.phl[762]" "pairBlend2.irz2";
-connectAttr "PrincessRN.phl[763]" "pairBlend2.irx2";
-connectAttr "PrincessRN.phl[764]" "pairBlend2.iry2";
-connectAttr "PrincessRN.phl[765]" "pairBlend2.itx2";
-connectAttr "PrincessRN.phl[766]" "pairBlend2.ity2";
-connectAttr "PrincessRN.phl[767]" "pairBlend2.itz2";
-connectAttr "Pupil_Dilate_ctrl_translateZ1.o" "PrincessRN.phl[768]";
-connectAttr "Pupil_Dilate_ctrl_translateX1.o" "PrincessRN.phl[769]";
-connectAttr "Pupil_Dilate_ctrl_translateY1.o" "PrincessRN.phl[770]";
-connectAttr "Pupil_Dilate_ctrl_visibility1.o" "PrincessRN.phl[771]";
-connectAttr "Pupil_Dilate_ctrl_rotateX1.o" "PrincessRN.phl[772]";
-connectAttr "Pupil_Dilate_ctrl_rotateY1.o" "PrincessRN.phl[773]";
-connectAttr "Pupil_Dilate_ctrl_rotateZ1.o" "PrincessRN.phl[774]";
-connectAttr "Pupil_Dilate_ctrl_scaleX1.o" "PrincessRN.phl[775]";
-connectAttr "Pupil_Dilate_ctrl_scaleY1.o" "PrincessRN.phl[776]";
-connectAttr "Pupil_Dilate_ctrl_scaleZ1.o" "PrincessRN.phl[777]";
-connectAttr "pairBlend1.orz" "PrincessRN.phl[778]";
-connectAttr "pairBlend1.orx" "PrincessRN.phl[779]";
-connectAttr "pairBlend1.ory" "PrincessRN.phl[780]";
-connectAttr "pairBlend1.otx" "PrincessRN.phl[781]";
-connectAttr "pairBlend1.oty" "PrincessRN.phl[782]";
-connectAttr "pairBlend1.otz" "PrincessRN.phl[783]";
-connectAttr "L_Eye_Master_ctrl_visibility.o" "PrincessRN.phl[784]";
-connectAttr "PrincessRN.phl[785]" "pairBlend1.w";
-connectAttr "L_Eye_Master_ctrl_blendEyeMasterctrlparent1.o" "PrincessRN.phl[786]"
-		;
-connectAttr "PrincessRN.phl[787]" "pairBlend1.irz2";
-connectAttr "PrincessRN.phl[788]" "pairBlend1.irx2";
-connectAttr "PrincessRN.phl[789]" "pairBlend1.iry2";
-connectAttr "PrincessRN.phl[790]" "pairBlend1.itx2";
-connectAttr "PrincessRN.phl[791]" "pairBlend1.ity2";
-connectAttr "PrincessRN.phl[792]" "pairBlend1.itz2";
-connectAttr "Pupil_Dilate_ctrl_translateZ.o" "PrincessRN.phl[793]";
-connectAttr "Pupil_Dilate_ctrl_translateX.o" "PrincessRN.phl[794]";
-connectAttr "Pupil_Dilate_ctrl_translateY.o" "PrincessRN.phl[795]";
-connectAttr "Pupil_Dilate_ctrl_visibility.o" "PrincessRN.phl[796]";
-connectAttr "Pupil_Dilate_ctrl_rotateX.o" "PrincessRN.phl[797]";
-connectAttr "Pupil_Dilate_ctrl_rotateY.o" "PrincessRN.phl[798]";
-connectAttr "Pupil_Dilate_ctrl_rotateZ.o" "PrincessRN.phl[799]";
-connectAttr "Pupil_Dilate_ctrl_scaleX.o" "PrincessRN.phl[800]";
-connectAttr "Pupil_Dilate_ctrl_scaleY.o" "PrincessRN.phl[801]";
-connectAttr "Pupil_Dilate_ctrl_scaleZ.o" "PrincessRN.phl[802]";
-connectAttr "uvula_ctrl_translateX.o" "PrincessRN.phl[803]";
-connectAttr "uvula_ctrl_translateY.o" "PrincessRN.phl[804]";
-connectAttr "uvula_ctrl_translateZ.o" "PrincessRN.phl[805]";
-connectAttr "uvula_ctrl_rotateX.o" "PrincessRN.phl[806]";
-connectAttr "uvula_ctrl_rotateY.o" "PrincessRN.phl[807]";
-connectAttr "uvula_ctrl_rotateZ.o" "PrincessRN.phl[808]";
-connectAttr "uvula_ctrl_scaleX.o" "PrincessRN.phl[809]";
-connectAttr "uvula_ctrl_scaleY.o" "PrincessRN.phl[810]";
-connectAttr "uvula_ctrl_scaleZ.o" "PrincessRN.phl[811]";
-connectAttr "uvula_ctrl_visibility.o" "PrincessRN.phl[812]";
+connectAttr "PrincessRN.phl[753]" "PrincessRN.phl[754]";
+connectAttr "PrincessRN.phl[755]" "PrincessRN.phl[756]";
+connectAttr "PrincessRN.phl[757]" "PrincessRN.phl[758]";
+connectAttr "PrincessRN.phl[759]" "PrincessRN.phl[760]";
+connectAttr "PrincessRN.phl[761]" "PrincessRN.phl[762]";
+connectAttr "PrincessRN.phl[763]" "PrincessRN.phl[764]";
+connectAttr "Pupil_Dilate_ctrl_translateZ1.o" "PrincessRN.phl[765]";
+connectAttr "Pupil_Dilate_ctrl_translateX1.o" "PrincessRN.phl[766]";
+connectAttr "Pupil_Dilate_ctrl_translateY1.o" "PrincessRN.phl[767]";
+connectAttr "Pupil_Dilate_ctrl_visibility1.o" "PrincessRN.phl[768]";
+connectAttr "Pupil_Dilate_ctrl_rotateX1.o" "PrincessRN.phl[769]";
+connectAttr "Pupil_Dilate_ctrl_rotateY1.o" "PrincessRN.phl[770]";
+connectAttr "Pupil_Dilate_ctrl_rotateZ1.o" "PrincessRN.phl[771]";
+connectAttr "Pupil_Dilate_ctrl_scaleX1.o" "PrincessRN.phl[772]";
+connectAttr "Pupil_Dilate_ctrl_scaleY1.o" "PrincessRN.phl[773]";
+connectAttr "Pupil_Dilate_ctrl_scaleZ1.o" "PrincessRN.phl[774]";
+connectAttr "PrincessRN.phl[775]" "PrincessRN.phl[776]";
+connectAttr "PrincessRN.phl[777]" "PrincessRN.phl[778]";
+connectAttr "PrincessRN.phl[779]" "PrincessRN.phl[780]";
+connectAttr "PrincessRN.phl[781]" "PrincessRN.phl[782]";
+connectAttr "PrincessRN.phl[783]" "PrincessRN.phl[784]";
+connectAttr "PrincessRN.phl[785]" "PrincessRN.phl[786]";
+connectAttr "Pupil_Dilate_ctrl_translateZ.o" "PrincessRN.phl[787]";
+connectAttr "Pupil_Dilate_ctrl_translateX.o" "PrincessRN.phl[788]";
+connectAttr "Pupil_Dilate_ctrl_translateY.o" "PrincessRN.phl[789]";
+connectAttr "Pupil_Dilate_ctrl_visibility.o" "PrincessRN.phl[790]";
+connectAttr "Pupil_Dilate_ctrl_rotateX.o" "PrincessRN.phl[791]";
+connectAttr "Pupil_Dilate_ctrl_rotateY.o" "PrincessRN.phl[792]";
+connectAttr "Pupil_Dilate_ctrl_rotateZ.o" "PrincessRN.phl[793]";
+connectAttr "Pupil_Dilate_ctrl_scaleX.o" "PrincessRN.phl[794]";
+connectAttr "Pupil_Dilate_ctrl_scaleY.o" "PrincessRN.phl[795]";
+connectAttr "Pupil_Dilate_ctrl_scaleZ.o" "PrincessRN.phl[796]";
+connectAttr "uvula_ctrl_translateX.o" "PrincessRN.phl[797]";
+connectAttr "uvula_ctrl_translateY.o" "PrincessRN.phl[798]";
+connectAttr "uvula_ctrl_translateZ.o" "PrincessRN.phl[799]";
+connectAttr "uvula_ctrl_rotateX.o" "PrincessRN.phl[800]";
+connectAttr "uvula_ctrl_rotateY.o" "PrincessRN.phl[801]";
+connectAttr "uvula_ctrl_rotateZ.o" "PrincessRN.phl[802]";
+connectAttr "uvula_ctrl_scaleX.o" "PrincessRN.phl[803]";
+connectAttr "uvula_ctrl_scaleY.o" "PrincessRN.phl[804]";
+connectAttr "uvula_ctrl_scaleZ.o" "PrincessRN.phl[805]";
+connectAttr "uvula_ctrl_visibility.o" "PrincessRN.phl[806]";
 connectAttr "Shot_10_Camera_translateX.o" "Shot_10_Camera.tx" -l on;
 connectAttr "Shot_10_Camera_translateY.o" "Shot_10_Camera.ty" -l on;
 connectAttr "Shot_10_Camera_translateZ.o" "Shot_10_Camera.tz" -l on;
@@ -13140,18 +12979,6 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "sharedReferenceNode.sr" "PrincessRN.sr";
-connectAttr "pairBlend1_inTranslateX1.o" "pairBlend1.itx1";
-connectAttr "pairBlend1_inTranslateY1.o" "pairBlend1.ity1";
-connectAttr "pairBlend1_inTranslateZ1.o" "pairBlend1.itz1";
-connectAttr "pairBlend1_inRotateX1.o" "pairBlend1.irx1";
-connectAttr "pairBlend1_inRotateY1.o" "pairBlend1.iry1";
-connectAttr "pairBlend1_inRotateZ1.o" "pairBlend1.irz1";
-connectAttr "pairBlend2_inTranslateX1.o" "pairBlend2.itx1";
-connectAttr "pairBlend2_inTranslateY1.o" "pairBlend2.ity1";
-connectAttr "pairBlend2_inTranslateZ1.o" "pairBlend2.itz1";
-connectAttr "pairBlend2_inRotateX1.o" "pairBlend2.irx1";
-connectAttr "pairBlend2_inRotateY1.o" "pairBlend2.iry1";
-connectAttr "pairBlend2_inRotateZ1.o" "pairBlend2.irz1";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Shot 10 Anim.ma
