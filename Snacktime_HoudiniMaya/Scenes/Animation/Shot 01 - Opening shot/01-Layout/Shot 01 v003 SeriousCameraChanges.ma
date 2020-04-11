@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 01 Anim.ma
-//Last modified: Sat, Apr 11, 2020 05:22:16 PM
+//Name: Shot 01 v003 SeriousCameraChanges.ma
+//Last modified: Sat, Apr 11, 2020 05:23:03 PM
 //Codeset: 1252
 file -rdi 1 -ns "Princess" -rfn "PrincessRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/Princess/Princess.ma";
 file -rdi 1 -ns "Princess Tower" -rfn "Princess_TowerRN11" -op "mo=1" -typ "OBJexport"
@@ -11246,4 +11246,4 @@ connectAttr ":timeEditor.cmp[0]" "Composition1.cmp";
 connectAttr "sharedReferenceNode.sr" "WBCityRN10.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Shot 01 Anim.ma
+// End of Shot 01 v003 SeriousCameraChanges.ma
