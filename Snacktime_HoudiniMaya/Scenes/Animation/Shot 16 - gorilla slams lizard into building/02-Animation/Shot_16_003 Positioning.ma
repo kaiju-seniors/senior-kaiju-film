@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 16 Anim.ma
-//Last modified: Wed, Apr 15, 2020 05:25:52 PM
+//Name: Shot_16_003 Positioning.ma
+//Last modified: Wed, Apr 15, 2020 05:26:29 PM
 //Codeset: 1252
 file -rdi 1 -ns "Kong" -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -rdi 1 -ns "Zilla" -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
@@ -170,7 +170,7 @@ createNode parentConstraint -n "Shot_16_Camera_grp_parentConstraint1" -p "Shot_1
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode fosterParent -n "KongRNfosterParent1";
-	rename -uid "F4CDD664-4C94-45A1-382D-10A4D80B7130";
+	rename -uid "F6EB92A4-4D05-C483-FCE2-4AAF407D0C42";
 createNode parentConstraint -n "Master_Offset_parentConstraint1" -p "KongRNfosterParent1";
 	rename -uid "5B0640C0-408C-0B30-1021-C592E693A79A";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "locator1W0" -dv 1 -min 0 -at "double";
@@ -188,7 +188,7 @@ createNode parentConstraint -n "Master_Offset_parentConstraint1" -p "KongRNfoste
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode fosterParent -n "ZillaRNfosterParent1";
-	rename -uid "D335DB63-49C7-E2A7-025C-CE85B14DB6EF";
+	rename -uid "BA9D8458-43B5-21C9-65D6-EFBA40EAFAC0";
 createNode parentConstraint -n "Master_ctl_grp_parentConstraint1" -p "ZillaRNfosterParent1";
 	rename -uid "4CE97A05-49D0-B2A5-6B31-889747377897";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "locator1W0" -dv 1 -min 0 -at "double";
@@ -42705,4 +42705,4 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
-// End of Shot 16 Anim.ma
+// End of Shot_16_003 Positioning.ma
