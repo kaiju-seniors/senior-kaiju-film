@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 12 Anim.ma
-//Last modified: Tue, Apr 14, 2020 10:57:16 PM
+//Name: Shot 12 003 Eye tweaks, camera, transform.ma
+//Last modified: Tue, Apr 14, 2020 10:57:24 PM
 //Codeset: 1252
 file -rdi 1 -ns "Zilla" -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
 file -rdi 1 -ns "cathedral2" -rfn "cathedral2RN" -op "mo=1" -typ "OBJexport"
@@ -16139,4 +16139,4 @@ connectAttr "sharedReferenceNode.sr" "ZillaRN.sr";
 connectAttr "sharedReferenceNode.sr" "whiteboxCityRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Shot 12 Anim.ma
+// End of Shot 12 003 Eye tweaks, camera, transform.ma
