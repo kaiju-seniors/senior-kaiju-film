@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot_32_Anim.ma
-//Last modified: Thu, Apr 16, 2020 01:30:58 PM
+//Name: Shot_32_004_EyesEarsFixes.ma
+//Last modified: Thu, Apr 16, 2020 01:31:56 PM
 //Codeset: 1252
 file -rdi 1 -ns "Kong" -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -rdi 1 -ns "Zilla" -dr 1 -rfn "ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10668747/Documents/Senior_Kaiju_Film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
@@ -35170,4 +35170,4 @@ connectAttr "Tongue_05_ctl_visibility.o" "ZillaRN.phl[1452]";
 connectAttr "sharedReferenceNode.sr" "ZillaRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Shot_32_Anim.ma
+// End of Shot_32_004_EyesEarsFixes.ma
