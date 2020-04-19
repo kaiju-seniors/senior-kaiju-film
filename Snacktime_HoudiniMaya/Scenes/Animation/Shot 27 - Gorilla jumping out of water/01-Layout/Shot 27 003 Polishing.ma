@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 27 Anim.ma
-//Last modified: Sun, Apr 19, 2020 12:26:58 AM
+//Name: Shot 27 003 Polishing.ma
+//Last modified: Sun, Apr 19, 2020 12:23:14 AM
 //Codeset: 1252
 file -rdi 1 -ns "Kong" -rfn "KongRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/00_Kong/Kong.ma";
 file -rdi 1 -ns "whiteboxCity" -rfn "whiteboxCityRN" -op "mo=1" -typ "OBJexport"
@@ -195,7 +195,7 @@ createNode camera -n "Shot_27_CameraShape" -p "Shot_27_Camera";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dgm" no;
 createNode fosterParent -n "KongRNfosterParent1";
-	rename -uid "CA8B0013-4B97-03A8-CFB9-93AB14ED1B4D";
+	rename -uid "E44F8945-4A6B-4BBF-F5C4-FE998291940D";
 createNode parentConstraint -n "Master_Offset_parentConstraint1" -p "KongRNfosterParent1";
 	rename -uid "435C9052-49C3-45BC-2715-A4A747CB71A1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "group1W0" -dv 1 -min 0 -at "double";
@@ -18723,4 +18723,4 @@ connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Shot 27 Anim.ma
+// End of Shot 27 003 Polishing.ma
