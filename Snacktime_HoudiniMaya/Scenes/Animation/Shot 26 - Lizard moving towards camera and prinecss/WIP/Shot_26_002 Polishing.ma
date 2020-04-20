@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Shot 26 Anim.ma
-//Last modified: Sun, Apr 19, 2020 06:40:55 PM
+//Name: Shot_26_002 Polishing.ma
+//Last modified: Sun, Apr 19, 2020 06:40:44 PM
 //Codeset: 1252
 file -rdi 1 -ns "Zilla" -rfn "WBCity:ZillaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Spencer/Documents/10487246/senior-kaiju-film/Snacktime_HoudiniMaya//Scenes/Characters/01_Zilla/Zilla.ma";
 file -rdi 1 -ns "WBCity" -rfn "WBCity:WBCityRN6" -op "mo=1" -typ "OBJexport"
@@ -21617,4 +21617,4 @@ connectAttr "WBCity:pPlaneShape1.iog" ":WBCity:initialShadingGroup.dsm" -na;
 connectAttr "WBCity:polySurfaceShape1HiddenFacesSet.msg" ":WBCity:defaultHideFaceDataSet.dnsm"
 		 -na;
 connectAttr "WBCity:groupId5.msg" ":WBCity:defaultLastHiddenSet.gn" -na;
-// End of Shot 26 Anim.ma
+// End of Shot_26_002 Polishing.ma
