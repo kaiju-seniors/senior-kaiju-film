@@ -104,7 +104,7 @@
    <UserSetup>
     <SM_UserSetup DbId="ded5a767-b81d-44ab-9956-4e60a1de4e5a">
      <FieldsBlob>000000010000000200000022005500730065004f007000740069006d0069007a00650064004d00650064006900610000000100010000005000530069007a0069006e00670049006e0074006500720061006300740069006f006e00730046006f007200570069006e0064006f007700730041006e00640046005800560065007200730069006f006e000000020000000003</FieldsBlob>
-     <LastWorkingProject>Snacktime_Bedroom_Shots</LastWorkingProject>
+     <LastWorkingProject>Snacktime</LastWorkingProject>
      <LastWorkingProjectFolder/>
      <DefaultToLocalVersion>true</DefaultToLocalVersion>
      <SaveClipVSR>false</SaveClipVSR>
@@ -360,5 +360,5 @@
  <SsnId>0</SsnId>
  <Name>User Default Config</Name>
  <LockSysId/>
- <DbSavedTime>329843</DbSavedTime>
+ <DbSavedTime>382850</DbSavedTime>
 </SM_Config>
